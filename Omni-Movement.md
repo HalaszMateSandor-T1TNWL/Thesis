@@ -1,0 +1,2 @@
+Egy olyan mozgásfajta, ahol a játékos teste a fejétől függetlenül mozog, tehát a test és a fej mutathat két különböző irányba. Egyik játék, amely ezt alkalmazza mostanában, az a Call of Duty: Black Ops 6.
+https://www.destructoid.com/call-of-duty-black-ops-6-omnimovement-explained/
