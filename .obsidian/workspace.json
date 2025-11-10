@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bevezetés.md",
+                "file": "Koncepció.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bevezetés"
+              "title": "Koncepció"
             }
           }
         ]
@@ -160,6 +160,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -171,10 +172,14 @@
   },
   "active": "5bea851b28245218",
   "lastOpenFiles": [
-    "Útmutató.md",
-    "Szakdolgozat.md",
+    "Omni-Movement.md",
+    "A szoftver megtervezésének lépései.md",
+    "Koncepció.md",
     "Bevezetés.md",
-    "Shibuya-punk.md",
-    "Omni-Movement.md"
+    "Útmutató.md",
+    "Diagrams/StateTransitions.png",
+    "Segédlet.md",
+    "Szakdolgozat.md",
+    "Shibuya-punk.md"
   ]
 }

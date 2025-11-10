@@ -14,6 +14,7 @@ Miben készültek a(z):
 2. Modellek textúrái,
 3. Hangok,
 4. Diagramok?
+5. Git
 Milyen Hardware volt alkalmazva?
 - PL.: Deco Rajztábla, milyen gépen volt tesztelve, milyen OS alatt a program, stb..
 FSM, természetesen.
