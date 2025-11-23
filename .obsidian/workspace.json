@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 251.5
   },
   "right": {
     "id": "21629ad4c8f6d33e",
@@ -172,14 +172,18 @@
   },
   "active": "5bea851b28245218",
   "lastOpenFiles": [
+    "Images/JetSetRadio_Gameplay.gif",
+    "Images/CulturaGeek_JetSetRadio.png",
+    "Images/JetSetRadio_Logo.jpg",
+    "Images",
+    "Útmutató.md",
+    "Szakdolgozat.md",
+    "Segédlet.md",
     "Omni-Movement.md",
-    "A szoftver megtervezésének lépései.md",
     "Koncepció.md",
     "Bevezetés.md",
-    "Útmutató.md",
+    "A szoftver megtervezésének lépései.md",
     "Diagrams/StateTransitions.png",
-    "Segédlet.md",
-    "Szakdolgozat.md",
     "Shibuya-punk.md"
   ]
 }
