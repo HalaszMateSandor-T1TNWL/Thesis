@@ -7,14 +7,14 @@ Játékról, mint úgy nem lehet beszélni, viszont hordozható rendszerről má
 
 A használt technológiákat két részre osztanám fel: Szoftver és Hardver. Most egyenlőre, csak egy rövidebb felsorolást tennék a technológiákról és a későbbiekben, amikor a megfelelő részekhez érek, bővebben beszámolok róluk.
 
-Szoftver szempontjából:
+**Szoftver szempontjából:**
 - [Blender-t](https://www.blender.org/download/) használtam a 3Ds modellek elkészítéséhez.
 - [Krita-t](https://krita.org/en/) használtam a Modellek textúráinak megrajzolásához és [SLK_img2pixel-t](https://captain4lk.itch.io/slk-img2pixel) használtam a színek állításához.
 - A hangok megvágásához Audacity-t és LMSS-t használtam.
 - A diagramok megszerkesztéséhez Violet-et használtam.
 - A verziókövetéshez Git-et használtam.
 
-Hardver szempontjából a szoftvert két különböző rendszeren teszteltem és fejlesztettem:
+**Hardver szempontjából a szoftvert két különböző rendszeren teszteltem és fejlesztettem:**
 - Asztali Számítógép:
 	- Windows 10
 	- Processzor: AMD Ryzen 5 7600X 6-Core
@@ -45,19 +45,25 @@ A játékmotor megválasztása során fontos volt számomra az elérhetőség, k
 - **Verziókezelés támogatása:** Akármilyen rendszer fejlesztése során fontos a megbízható verziókezelés. Háromdimenziós terekben 
 - **Tapasztalat:** Végül, de nem utoljára fontos volt a meglévő tapasztalat a választott motorral, hogy a lehető legjobbat tudjam kihozni a választott projektből reális időn belül.
 
-Így mindezeket a szempontokat összevetve a választásaim végül a: Godot motorra, C# programozási nyelvre és a Visual Studio Code fejlesztőkörnyezetre esett. 
+**Így mindezeket a szempontokat összevetve a választásaim végül a: Godot motorra, C# programozási nyelvre és a Visual Studio Code fejlesztőkörnyezetre esett.** 
 ## Vizuális világ megtervezése
 
-A vizuális világ, amit már említettem a Shibuya punk esztétikára alapszik. Agresszív vonalak, elmosott, neon színek erőteljes használata és dinamikus kompozíciók definiálják. Műfajalkotó játéknak számít a Jet Set Radio (JSR).
+A vizuális világ, amint már említettem a Shibuya punk esztétikára alapszik. Agresszív vonalak, elmosott, neon színek erőteljes használata és dinamikus kompozíciók definiálják. Műfajalkotó játéknak számít a Jet Set Radio (amire mostantól **JSR**-ként fogok hivatkozni).
 ![[JetSetRadio_Logo.jpg]] 
 									Figure 1
 ![[CulturaGeek_JetSetRadio.png]]
 									Figure 2
 
-A JSR a játékmenetében is megtartja a dinamikusságot és az agresszív vonalakat, ami a játékélményt is javítja. Azt az érzést adja át a játékosnak, hogy gyors, flexibilis és precíz.
+A JSR 2000-ben jött ki a DreamCast konzolra. És korszakalkotó volt a játék vizuális világa, játékmenete és mozgásrendszere. Milliókat fogott meg és évekig utána nem volt semmi olyan játék, ami el tudta volna csípni, hogy mi is tette a játékot annyira ikonikussá.
+A játékmenetében is megtartja a dinamikusságot és az agresszív vonalakat, ami a játékosban azt az érzést kelti, hogy gyorsabb és pontosabb mint valójában.
 ![[JetSetRadio_Gameplay.gif]]
 					Figure 3
 
-
-
-[Pictures go here]
+Ahhoz, hogy pontosan replikálni tudjam ezeket a tulajdonságokat mélyen bele kellett magam ásnom a játék világába, de mivel egy eléggé régi játékról van szó, nem könnyen hozzáférhető. Szerencsére erre a problémára megoldást találtam egy 2023-mas ún. "Szerelmi Vallomásban" (Love Letter), a Bomb Rush Cyberfunk-ban (amire mostatntól **BRCF**-ként fogok hivatkozni).
+![[BombRushCyberfunk_Logo.jpg]]
+									Figure4
+A játék teljes mértékben a JSR-t veszi alapul és megpróbálja replikálni a játékot annyira, amennyire csak tudja, miközben újít és iterál a meglévő koncepciókon. A játékmenet kifinomultabb, mint a JSR-nak, de képes megtartani azt az érzést, amit annak idején az elődje keltet.
+![[BombRushCyberfunk_InAction.jpg]]
+									Figure5
+Látszatra a két játék ugyan azt a stílust tartja, azzal a különbséggel, hogy míg a JSR egy földhöz-ragadtabb játékmenetet és világot ad át, mint ha egy, a 20-as éveiben lévő lázadó punk tini lennél, addig a BRCF egy sokkal sci-fi-sebb világba dob minket, ahol mindenkinek lehet egy jetpack a hátán, ami eszméletlen sebességekre gyorsít fel minket és rásegít a trükkjeinkre
+A vizuális világ megtervezésében tehát ezeket a szempontokat vettem alapul és ezek szerint alakítottam a világot és a karaktert.
