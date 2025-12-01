@@ -6,7 +6,7 @@
       {
         "id": "d479cf4557110ab9",
         "type": "tabs",
-        "dimension": 49.81527093596059,
+        "dimension": 49.81527093596058,
         "children": [
           {
             "id": "c2990fc0e1a60f3f",
@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Véges Automaták (Finite State Machines - FSMs).md",
+                "file": "Bevezetés.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Véges Automaták (Finite State Machines - FSMs)"
+              "title": "Bevezetés"
             }
           }
         ]
@@ -27,7 +27,7 @@
       {
         "id": "5947a2f2b5cd370f",
         "type": "tabs",
-        "dimension": 50.184729064039416,
+        "dimension": 50.18472906403942,
         "children": [
           {
             "id": "8decce9910b893bd",
@@ -194,11 +194,11 @@
   },
   "active": "c2990fc0e1a60f3f",
   "lastOpenFiles": [
-    "Útmutató.md",
+    "Koncepció.md",
     "Véges Automaták (Finite State Machines - FSMs).md",
+    "Útmutató.md",
     "Shibuya-punk.md",
     "Untitled",
-    "Koncepció.md",
     "Bevezetés.md",
     "Szakdolgozat.md",
     "Omni-Movement.md",
