@@ -1,5 +1,4 @@
-Az évek alatt sok olyan játékkal játszottam, amelyek mélyen kidolgozott mozgásrendszerekre vannak építve, ilyen műfajok például a: Movement-Shooter, bizonyos Sport játékok többnyire azok, amik gördeszkákra, görkorcsolyákra és a hasonlókra épülnek. Említettem, hogy a témámat nem a Black Ops 6 "[Omni-Movement](/Omni-Movement)" rendszere inspirálta, viszont fontosnak tartottam itt is megemlíteni a Movement-Shooter műfajt, mivel az ebbe tartozó játékok szerettették meg igazán velem a szofisztikált mozgásrendszereket és belőlük tanultam sokat.
-A projekt maga viszont egy játszható prototípus, amely egyben egy hordozható rendszer is, így a terv szerint nem lesz műfajhoz és programhoz kötve, hanem mint egy Lego darab, kivehető és átrakható egy másik programba.
+Az évek alatt sok olyan játékkal játszottam, amelyek mélyen kidolgozott mozgásrendszerekre vannak építve, ilyen műfajok például a: Movement-Shooter, bizonyos Sport játékok többnyire azok, amik gördeszkákra, görkorcsolyákra és a hasonlókra épülnek. Fontosnak tartottam itt megemlíteni a Movement-Shooter műfajt, mivel az ebbe tartozó játékok szerettették meg igazán velem a szofisztikált mozgásrendszereket és belőlük tanultam sokat. Ezen játékok tökéletesen összehangolják a finom mozdultokat az aréna-lövöldék gyors döntéshozatalával és precíz célzás igényével. Erre már az eredeti Quake játék többjátékos módját is fel tudnám hozni, de manapság inkább az "Ultrakill" nevű játékot szokták felhozni, mint ékes példája. A projekt maga viszont egy játszható prototípus, amely egyben egy hordozható rendszer is, így a terv szerint nem lesz műfajhoz és programhoz kötve, hanem mint egy Lego darab, kivehető és átrakható egy másik programba.
 ## Játékmenet
 
 Játékról, mint úgy nem lehet beszélni, viszont hordozható rendszerről már inkább. A mozgásrendszert úgy terveztem meg, hogy akármilyen olyan környezetben használható legyen, amelyben a játékos karakteren, vagy esetleg nem-játékos karakteren (NPC-n) valamilyen gurulásra vagy csúszásra alkalmas eszköz van (pl.: gördeszka, görkorcsolya, síléc, jégkorcsolya). Ehhez a Tony Hawk's Proskater játéksorozatot és Bomb Rush Cyberfunk / Jet Set Radio játékmenetét és mozgásrendszerét vettem alapul. Azzal az eltéréssel, hogy a prototípusban, megnyerési pont nincs, mivel ez túlmutatott a prototípusnak megszabott feladaton.
@@ -11,7 +10,7 @@ A használt technológiákat két részre osztanám fel: Szoftver és Hardver. M
 - [Blender-t](https://www.blender.org/download/) használtam a 3Ds modellek elkészítéséhez.
 - [Krita-t](https://krita.org/en/) használtam a Modellek textúráinak megrajzolásához és [SLK_img2pixel-t](https://captain4lk.itch.io/slk-img2pixel) használtam a színek állításához.
 - A hangok megvágásához Audacity-t és LMSS-t használtam.
-- A diagramok megszerkesztéséhez Violet-et használtam.
+- A diagramok megszerkesztéséhez Draw.io-t használtam.
 - A verziókövetéshez Git-et használtam.
 
 **Hardver szempontjából a szoftvert két különböző rendszeren teszteltem és fejlesztettem:**
@@ -67,3 +66,26 @@ A játék teljes mértékben a JSR-t veszi alapul és megpróbálja replikálni 
 									Figure5
 Látszatra a két játék ugyan azt a stílust tartja, azzal a különbséggel, hogy míg a JSR egy földhöz-ragadtabb játékmenetet és világot ad át, mint ha egy, a 20-as éveiben lévő lázadó punk tini lennél, addig a BRCF egy sokkal sci-fi-sebb világba dob minket, ahol mindenkinek lehet egy jetpack a hátán, ami eszméletlen sebességekre gyorsít fel minket és rásegít a trükkjeinkre
 A vizuális világ megtervezésében tehát ezeket a szempontokat vettem alapul és ezek szerint alakítottam a világot és a karaktert.
+## Mozgásrendszer megtervezése
+
+Most, hogy a vizuális világ megbeszélésre került, ideje áttérni arra, ami igazán fontos: a mozgásrendszer.
+Ahhoz, hogy egy minél folyékonyabb mozgásrendszert tudjak alkotni sok tervezés és előre gondolás kellet. A véges automaták egyik előnye az, hogy nagyon könnyen bővíthetőek, így ha el is rontottam volna valamit, vagy esetleg kellett volna még egy állapot ahhoz, hogy az animáció vagy a mozgás jól jöjjön ki, akkor azt könnyen megtehettem volna. Ennek a tulajdonságnak köszönhetően volt egy kis mozgásterem a kísérletezésre, ami újoncként nagy előny.
+### Állapotok
+
+Át kellet gondolnom, hogy hogyan is szeretném, hogy kinézzen egyes mozdulat és, hogy egyes, a játékos által megadott bemenetre, milyen mozdulat lehet végrehajtható, bizonyos időkben. Egyszóval, a mozgás-láncokat meg kellett alkotnom. Viszont, nem csak a játékos kezdeményezhet állapotváltozásokat, hanem a program maga is. Előfordulhatnak események, amelyek befolyásolják a játékos mozgását és egyben az állapotát is. Ahhoz, hogy megkülönböztessem a program eseményeit a játékos bementeitől elneveztem azokat az eseményeket, amik a játékos irányítása fölött vannak "E"-nek, mint "Event" és a játékos bemeneteit "I"-nak, mint "Input". Most már tárgyalásra kerülhet az állapot diagram.
+Minden a belépéssel vagy leidézéssel (spawn) kezdődik. A felhasználó itt kapja meg az irányítást a karaktere fölött.
+![[SpawnIn-Grounded.png]]
+								Figure6
+A karakter minding egy szilárd, állható talaj fölött éled le, vagy éled újra, ezzel garantálva az állapotok közötti folytonosságot. Az alap állapot minden esetben az ún. "Idle", avagy nyugalmi állapot lesz, ahol a karakter egy állható, szilárd talajon van és játékos nem ad meg bemenetet.
+![[Grounded-Idle.png]]
+			    Figure7
+Ebben az állapotban egy nyugalmi animáció játszódik le, ami életszerűbbé teszi a karaktert. A szilárd talajon való állásból (Grounded) elindulhat a játékos valamely mozgás gomb lenyomásával az egyik irányba ezzel átlökve az automatát a mozgásban levés állapotába (Moving). 
+![[Grounded-Movement.png]]
+									Figure8
+Ebből az állapotból a játékos visszatérhet a Grounded állapotba ha abba hagyja a mozgást. Viszont, ha a játékos mozgás közben lenyomja az ugrás gombot (ami ebben az esetben a "SPACE"), akkor átlöki az automatát a levegőben lévő állapotba (InAir).
+![[Moving-InAir.png]]
+									Figure9
+Az ugrás időhöz van kötve, amit a gravitációs vonzóerőből és a sebességből számol ki a program. Amint ez az idő lejár és a karakter földet ér a program kiad egy "földet ért" (LANDED) eseményt, amiből, abban az esetben ha a játékos még mindig mozog, akkor visszatér a Moving állapotba. Ammenyiben, viszont a játékos már nem ad meg bemenetet a mozgásra, akkor az InAir állapotból visszatérünk a Grounded állapotra.
+![[InAir-Grounded.png]]
+									Figure10
+Vegyük észre, hogy a Grounded állapotból is el lehet jutni az InAir állapotba, abban az esetben, ha a játékos nem ad meg mozgásra bemenetet, viszont ugrásra igen. Itt érdemes megjegyezni, hogy az állapot-diagram, amit készítettem, az nem-determinisztikus. Ez a döntés csupán az egyszerű megrajzolhatóság érdekében született. A programon belül minden determinisztikusan van megoldva.

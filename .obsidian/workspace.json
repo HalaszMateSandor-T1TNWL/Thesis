@@ -6,20 +6,18 @@
       {
         "id": "d479cf4557110ab9",
         "type": "tabs",
-        "dimension": 49.81527093596058,
+        "dimension": 76.69543773119607,
         "children": [
           {
             "id": "c2990fc0e1a60f3f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Bevezetés.md",
-                "mode": "source",
-                "source": false
+                "file": "Diagrams/MovementSystem.png"
               },
-              "icon": "lucide-file",
-              "title": "Bevezetés"
+              "icon": "lucide-image",
+              "title": "MovementSystem"
             }
           }
         ]
@@ -27,7 +25,7 @@
       {
         "id": "5947a2f2b5cd370f",
         "type": "tabs",
-        "dimension": 50.18472906403942,
+        "dimension": 23.304562268803945,
         "children": [
           {
             "id": "8decce9910b893bd",
@@ -182,35 +180,39 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "c2990fc0e1a60f3f",
   "lastOpenFiles": [
+    "Diagrams/Moving-InAir.png",
+    "Diagrams/SpawnIn-Grounded.png",
     "Koncepció.md",
+    "Diagrams/InAir-Grounded.png",
+    "Bevezetés.md",
+    "Diagrams/Grounded-Movement.png",
+    "Diagrams/Grounded-ContinuousDash.png",
+    "Diagrams/Grounded-Idle.png",
+    "Diagrams/StateTransitions.png",
+    "Diagrams/MovementSystem.png",
+    "Diagrams/MovementSystem.drawio",
+    "Omni-Movement.md",
+    "Shibuya-punk.md",
+    "A szoftver megtervezésének lépései.md",
+    "Szakdolgozat.md",
     "Véges Automaták (Finite State Machines - FSMs).md",
     "Útmutató.md",
-    "Shibuya-punk.md",
     "Untitled",
-    "Bevezetés.md",
-    "Szakdolgozat.md",
-    "Omni-Movement.md",
-    "A szoftver megtervezésének lépései.md",
     "Segédlet.md",
     "Images/BombRushCyberfunk_InAction.jpg",
     "Images/BombRushCyberfunk_Logo.jpg",
-    "Pasted image 20251124080333.png",
-    "Images/JetSetRadio_Gameplay.gif",
-    "Images/CulturaGeek_JetSetRadio.png",
-    "Images/JetSetRadio_Logo.jpg",
-    "Images",
-    "Diagrams/StateTransitions.png"
+    "Images"
   ]
 }
