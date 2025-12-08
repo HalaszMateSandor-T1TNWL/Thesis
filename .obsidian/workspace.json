@@ -6,18 +6,20 @@
       {
         "id": "d479cf4557110ab9",
         "type": "tabs",
-        "dimension": 76.69543773119607,
+        "dimension": 68.557336621455,
         "children": [
           {
             "id": "c2990fc0e1a60f3f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Diagrams/MovementSystem.png"
+                "file": "Koncepció.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "MovementSystem"
+              "icon": "lucide-file",
+              "title": "Koncepció"
             }
           }
         ]
@@ -25,7 +27,7 @@
       {
         "id": "5947a2f2b5cd370f",
         "type": "tabs",
-        "dimension": 23.304562268803945,
+        "dimension": 31.442663378545006,
         "children": [
           {
             "id": "8decce9910b893bd",
@@ -190,29 +192,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c2990fc0e1a60f3f",
+  "active": "7304a965e5fd18d2",
   "lastOpenFiles": [
-    "Diagrams/Moving-InAir.png",
-    "Diagrams/SpawnIn-Grounded.png",
-    "Koncepció.md",
-    "Diagrams/InAir-Grounded.png",
     "Bevezetés.md",
-    "Diagrams/Grounded-Movement.png",
-    "Diagrams/Grounded-ContinuousDash.png",
-    "Diagrams/Grounded-Idle.png",
-    "Diagrams/StateTransitions.png",
-    "Diagrams/MovementSystem.png",
-    "Diagrams/MovementSystem.drawio",
+    "Koncepció.md",
+    "LaTEX/Thesis.synctex(busy)",
+    "LaTEX/Thesis.synctex.gz",
+    "LaTEX/Thesis.pdf",
+    "LaTEX/Diagrams/SpawnIn-Grounded.png",
+    "LaTEX/Diagrams/Moving-InAir.png",
+    "LaTEX/Diagrams/MovementSystem.png",
+    "LaTEX/Diagrams/MovementSystem.drawio",
+    "LaTEX/Diagrams/InAir-Grounded.png",
+    "LaTEX/Diagrams/Grounded-Movement.png",
+    "LaTEX/Diagrams/Grounded-Idle.png",
+    "LaTEX/Diagrams/Grounded-ContinuousDash.png",
+    "LaTEX/Diagrams",
+    "LaTEX/Diagramsű",
+    "LaTEX/Images/JSR_Gameplay/JetSetRadio_Gameplay-26.png",
+    "LaTEX/Images/JSR_Gameplay/JetSetRadio_Gameplay-25.png",
+    "LaTEX/Images/JSR_Gameplay/JetSetRadio_Gameplay-24.png",
+    "LaTEX/Images/JSR_Gameplay",
+    "LaTEX/TitleCard.tex",
+    "LaTEX/Cover/TitleCard.synctex(busy)",
+    "LaTEX/Cover/TitleCard.pdf",
     "Omni-Movement.md",
     "Shibuya-punk.md",
     "A szoftver megtervezésének lépései.md",
     "Szakdolgozat.md",
     "Véges Automaták (Finite State Machines - FSMs).md",
     "Útmutató.md",
-    "Untitled",
-    "Segédlet.md",
-    "Images/BombRushCyberfunk_InAction.jpg",
-    "Images/BombRushCyberfunk_Logo.jpg",
-    "Images"
+    "Segédlet.md"
   ]
 }
