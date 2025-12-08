@@ -170,6 +170,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
+<<<<<<< HEAD
   "active": "e5a217cfb4cd904b",
   "lastOpenFiles": [
     "Images/Pasted image 20260121153334.png",
@@ -186,6 +187,13 @@
     "LaTEX/ThesisDetails.log",
     "LaTEX/Thesis.toc",
     "LaTEX/Thesis.tex",
+=======
+  "active": "c2990fc0e1a60f3f",
+  "lastOpenFiles": [
+    "LaTEX/Thesis.synctex(busy)",
+    "Bevezetés.md",
+    "Koncepció.md",
+>>>>>>> 9aebeae (Fixed image heights and widths)
     "LaTEX/Thesis.synctex.gz",
     "LaTEX/Thesis.pdf",
     "LaTEX/Thesis.out",
