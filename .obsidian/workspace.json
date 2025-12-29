@@ -6,18 +6,20 @@
       {
         "id": "d479cf4557110ab9",
         "type": "tabs",
-        "dimension": 76.69543773119607,
+        "dimension": 69.79038224414303,
         "children": [
           {
             "id": "c2990fc0e1a60f3f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Diagrams/MovementSystem.png"
+                "file": "Véges Állapotú Automaták.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "MovementSystem"
+              "icon": "lucide-file",
+              "title": "Véges Állapotú Automaták"
             }
           }
         ]
@@ -25,7 +27,7 @@
       {
         "id": "5947a2f2b5cd370f",
         "type": "tabs",
-        "dimension": 23.304562268803945,
+        "dimension": 30.209617755856964,
         "children": [
           {
             "id": "8decce9910b893bd",
@@ -40,8 +42,23 @@
               "icon": "lucide-file",
               "title": "Útmutató"
             }
+          },
+          {
+            "id": "58e089296bf35e92",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Segédlet.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Segédlet"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +115,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 254.5
+    "width": 253.5
   },
   "right": {
     "id": "21629ad4c8f6d33e",
@@ -192,27 +209,30 @@
   },
   "active": "c2990fc0e1a60f3f",
   "lastOpenFiles": [
-    "Diagrams/Moving-InAir.png",
-    "Diagrams/SpawnIn-Grounded.png",
+    "CodeSnippets/StateAbstract.png",
+    "CodeSnippets",
+    "Új mappa",
+    "Segédlet.md",
+    "Véges Állapotú Automaták.md",
     "Koncepció.md",
-    "Diagrams/InAir-Grounded.png",
     "Bevezetés.md",
-    "Diagrams/Grounded-Movement.png",
-    "Diagrams/Grounded-ContinuousDash.png",
-    "Diagrams/Grounded-Idle.png",
-    "Diagrams/StateTransitions.png",
-    "Diagrams/MovementSystem.png",
-    "Diagrams/MovementSystem.drawio",
     "Omni-Movement.md",
     "Shibuya-punk.md",
-    "A szoftver megtervezésének lépései.md",
-    "Szakdolgozat.md",
-    "Véges Automaták (Finite State Machines - FSMs).md",
+    "Diagrams/Grounded-Idle.png",
+    "Diagrams/ExampleStateMachine.png",
+    "Diagrams/MovementSystem.png",
+    "Diagrams/Moving-InAir.png",
+    "Diagrams/SpawnIn-Grounded.png",
+    "Diagrams/Grounded-ContinuousDash.png",
+    "Diagrams/Grounded-Movement.png",
+    "Diagrams/InAir-Grounded.png",
     "Útmutató.md",
+    "Szakdolgozat.md",
+    "Diagrams/StateTransitions.png",
+    "Diagrams/MovementSystem.drawio",
+    "A szoftver megtervezésének lépései.md",
     "Untitled",
-    "Segédlet.md",
     "Images/BombRushCyberfunk_InAction.jpg",
-    "Images/BombRushCyberfunk_Logo.jpg",
     "Images"
   ]
 }
