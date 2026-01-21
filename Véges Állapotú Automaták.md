@@ -54,11 +54,11 @@ Egy rendszeren belül, vegyünk most egy játékot példának, akármilyen objek
 - A pálya időjárása (eshet, süthet a nap, fújhat a szél),
 - a karakter fizikai állapota (futhat, ugorhat, csúszhat, támadhat),
 - a fegyver állapota, amivel támadni akarunk (készenlétben, töltődik újra, elhasználva)
-Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közbe vagyunk és a csúszda végén ott van egy ellenfél, akit meg akarunk támadni, ezért elővesszük a fegyverünk, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk vele, hogy milyen állapotban vannak a világunk egyes részei, megkönnyítjük a magunk dolgát a hibakeresésben és a játékosok dolgát azzal, hogy nem zavarjuk őket össze.
+Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közbe vagyunk és a csúszda végén ott van egy ellenfél, akit meg akarunk támadni, ezért elővesszük a fegyverünk, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk vele, hogy milyen állapotban vannak a világunk egyes részei, megkönnyebbítjük a magunk dolgát a hibakeresésben és a játékosok dolgát azzal, hogy nem zavarjuk őket össze.
 Amikor egy rendszernél állapotgépeket használunk, akkor általában kéz-a-kézben jár a
-"kompozíció", és az "öröklődés" használata mint Objektum Orientált Programozásban használt tervezési minta. Ahhoz, hogy jobban megértsük hogyan is nézne ez ki kódban kezdés képpen készítettem egy mintaprogramot, amely mintaprogram egy egyszerű jelzőlámpa működését mutatja be. 
+"kompozíció", és az "öröklődés" használata mint Objektum Orientált Programozásban használt tervezési minta. Ahhoz, hogy jobban megértsük hogyan is nézne ez ki kódban kezdés képpen készítettem egy mintaprogramot, amely mintaprogram egy egyszerű jelzőlámpa működését mutatja be.
 
-
+Elsőként is létrehoztam egy vázat az állapotok számára, minden állapot egy külön Node lesz a Godot-n belül. Ez egy teljesen absztrakt osztály, amit valójában nem fogunk futtatni mint script, ezt csak örökölni fogják az egyes állapotaink. 
 ```C#
 using Godot;
 using Godot.Collections;
@@ -77,6 +77,8 @@ public partial class State : Node
 	
 }
 ```
+Lehet, hogy megfordul a gondolat: "De, akkor miért nem egy absztrakt osztály?" Azért mert, akkor nem tudnánk elérni, mint scriptet. Egy állapotnak 5 metódusa van: Enter, Exit, Update, PhysicsUpdate, HandleInput. Ezek mind a megfelelő pillanatban lesznek meghívva, lehet, hogy nem mindegyik állapot enged majd inputot feldolgozni, vagy lehet, hogy nem mindegyikre fog kihatni a fizika, viszont ez a metódus-ötös az alapja a legtöbb állapotnak. Az "Enter" metódusban az állapot ellenőrizni fog egy pár feltételt és fel fogja építeni az állapotban végrehajtható cselekvésekhez szükséges környezetet. Az "Exit" egyértelműen ennek az ellenkezőjét fogja csinálni. Az "Update" és "PhysicsUpdate" metódusok mind az eltelt (delta) idő szerint fognak végrehajtani eseményeket, pl.: a levegőben töltött idő mérése, esési sebesség, féktáv, stb. Végül a HandleInput akármilyen bemenetre fog reagálni és azokat lekezelni. Ha például a karakter éppen a levegőben van és elkezd mozogni, akkor azt elkapja a HandleInput metódus és megoldja, hogy ne csak egyhelyben tudjon a karakter ugrani, de különböző irányokba is.
+A metódusokon kívül van még egy változónk, ami az "fsm".
 
 ```C#
 using Godot;
@@ -139,14 +141,9 @@ public partial class StateMachine : Node
 		_currentState.Exit();
 		_currentState = _states[key];
 		_currentState.Enter();
-		
-		GD.Print("List of states: ");
-		
-		foreach(var node in _states)
-		{
-			GD.Print(node.Key.ToString());
-		}	
 	}
 }
 ```
-
+Ez itt a "StateMachine" osztályunk. Ő fel lesz használva mint futtatható script, ő lesz nekünk az állapotgépünk gyökere, minden más Node, ami állapot, hozzá fog tartozni. Itt sok minden történik, de leegyszerűsítve az "initialState" változónk, egy "NodePath", avagy Node-hoz vezető út. Az \[Export\], ami elé van írva egyszerűen annyit jelent, hogy az editor-ból is meg tudjuk változtatni annak értékét.
+			![[Pasted image 20260121153334.png]] ![[Pasted image 20260121153325.png]] 
+Az állapotgépünknek minden képpen kell egy kiindulópont, egy első állapot és ezt mi választjuk ki itt. Továbbá egy Dictionary-ként tárolom a helyes állapotokat és lementem egy "\_currentState" változóba a jelenlegi állapotot, hogy mindig számon tudjam tartani.

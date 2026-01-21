@@ -216,6 +216,13 @@
       "value": "∏",
       "group": "Mathematical Operators"
     },
+    "delta": {
+      "replaced": "delta",
+      "value": "δ",
+      "disabled": false,
+      "group": "Greek Letters",
+      "count": 5
+    },
     "alpha": {
       "replaced": "alpha",
       "value": "α",
@@ -253,13 +260,6 @@
       "value": "Δ",
       "group": "Greek Letters",
       "count": 1
-    },
-    "delta": {
-      "replaced": "delta",
-      "value": "δ",
-      "disabled": false,
-      "group": "Greek Letters",
-      "count": 2
     },
     "inset": {
       "replaced": "inset",
