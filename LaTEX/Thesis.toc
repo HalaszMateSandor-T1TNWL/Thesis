@@ -1,9 +1,9 @@
-\contentsline {section}{\numberline {1}Bevezetés}{1}{section.1}%
-\contentsline {section}{\numberline {2}Koncepció}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Játékmenet}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Használt technológiák}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Fejlesztési Környezet Választása}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Játékmotor Választása}{4}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Vizuális Világ Megtervezése}{5}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Mozgásrendszer megtervezése}{8}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Állapotok}{9}{subsection.2.7}%
+\contentsline {chapter}{\numberline {1}Bevezetés}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Koncepció}{3}{chapter.2}%
+\contentsline {subsection}{\numberline {2.0.1}Játékmenet}{3}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}Használt technológiák}{4}{subsection.2.0.2}%
+\contentsline {subsection}{\numberline {2.0.3}Fejlesztési Környezet Választása}{5}{subsection.2.0.3}%
+\contentsline {subsection}{\numberline {2.0.4}Játékmotor Választása}{5}{subsection.2.0.4}%
+\contentsline {subsection}{\numberline {2.0.5}Vizuális Világ Megtervezése}{6}{subsection.2.0.5}%
+\contentsline {subsection}{\numberline {2.0.6}Mozgásrendszer megtervezése}{10}{subsection.2.0.6}%
+\contentsline {subsubsection}{Állapotok}{10}{section*.2}%
