@@ -77,8 +77,7 @@ public partial class State : Node
 	
 }
 ```
-Lehet, hogy megfordul a gondolat: "De, akkor miért nem egy absztrakt osztály?" Azért mert, akkor nem tudnánk elérni, mint scriptet. Egy állapotnak 5 metódusa van: Enter, Exit, Update, PhysicsUpdate, HandleInput. Ezek mind a megfelelő pillanatban lesznek meghívva, lehet, hogy nem mindegyik állapot enged majd inputot feldolgozni, vagy lehet, hogy nem mindegyikre fog kihatni a fizika, viszont ez a metódus-ötös az alapja a legtöbb állapotnak. Az "Enter" metódusban az állapot ellenőrizni fog egy pár feltételt és fel fogja építeni az állapotban végrehajtható cselekvésekhez szükséges környezetet. Az "Exit" egyértelműen ennek az ellenkezőjét fogja csinálni. Az "Update" és "PhysicsUpdate" metódusok mind az eltelt (delta) idő szerint fognak végrehajtani eseményeket, pl.: a levegőben töltött idő mérése, esési sebesség, féktáv, stb. Végül a HandleInput akármilyen bemenetre fog reagálni és azokat lekezelni. Ha például a karakter éppen a levegőben van és elkezd mozogni, akkor azt elkapja a HandleInput metódus és megoldja, hogy ne csak egyhelyben tudjon a karakter ugrani, de különböző irányokba is.
-A metódusokon kívül van még egy változónk, ami az "fsm".
+Lehet, hogy megfordul a gondolat: "De, akkor miért nem egy absztrakt osztály?" Azért mert, akkor nem tudnánk felvenni az állapotokat egy Dictionary-be, erre később vissza is térek. Egy állapotnak 5 metódusa van: Enter, Exit, Update, PhysicsUpdate, HandleInput. Ezek mind a megfelelő pillanatban lesznek meghívva, lehet, hogy nem mindegyik állapot enged majd inputot feldolgozni, vagy lehet, hogy nem mindegyikre fog kihatni a fizika, viszont ez a metódus-ötös az alapja a legtöbb állapotnak. Az "Enter" metódusban az állapot ellenőrizni fog egy pár feltételt és fel fogja építeni az állapotban végrehajtható cselekvésekhez szükséges környezetet. Az "Exit" egyértelműen ennek az ellenkezőjét fogja csinálni. Az "Update" és "PhysicsUpdate" metódusok mind az eltelt (delta) idő szerint fognak végrehajtani eseményeket, pl.: a levegőben töltött idő mérése, esési sebesség, féktáv, stb. Végül a HandleInput akármilyen bemenetre fog reagálni és azokat lekezelni. Ha például a karakter éppen a levegőben van és elkezd mozogni, akkor azt elkapja a HandleInput metódus és megoldja, hogy ne csak egyhelyben tudjon a karakter ugrani, de különböző irányokba is. A metódusokon kívül van még egy változónk, ami az "fsm".
 
 ```C#
 using Godot;
@@ -147,3 +146,57 @@ public partial class StateMachine : Node
 Ez itt a "StateMachine" osztályunk. Ő fel lesz használva mint futtatható script, ő lesz nekünk az állapotgépünk gyökere, minden más Node, ami állapot, hozzá fog tartozni. Itt sok minden történik, de leegyszerűsítve az "initialState" változónk, egy "NodePath", avagy Node-hoz vezető út. Az \[Export\], ami elé van írva egyszerűen annyit jelent, hogy az editor-ból is meg tudjuk változtatni annak értékét.
 			![[Pasted image 20260121153334.png]] ![[Pasted image 20260121153325.png]] 
 Az állapotgépünknek minden képpen kell egy kiindulópont, egy első állapot és ezt mi választjuk ki itt. Továbbá egy Dictionary-ként tárolom a helyes állapotokat és lementem egy "\_currentState" változóba a jelenlegi állapotot, hogy mindig számon tudjam tartani.
+A \_Ready() metódusban, ahogyan látjuk végigiterálunk minden "Node" típusú változón. Itt térek vissza az előbbi kijelentésemre, muszáj volt megtartani a "State" osztályt Node-ként, mivel a "GetChildren()" beépített metódus Node típusú változókat ad vissza. A \_Process(), \_PhysicsProcess() és \_UnhandledInput() metódusok mind meghívják a jelenlegi állapot saját metódusát ezekre az alkalmakra. Végül a TransitionTo(string key) metódus felelős az állapotok közötti váltásért. A "kulcs" ebben az esetben nem más mint egy string, ami magának a Node-nak is a neve. Ez a jobb olvashatóság és struktúra érdekében volt így megoldva.
+
+Példaképpen:
+![[Pasted image 20260216181449.png]]
+Az állapotgépünk áll négy állapotból. Mindegyik állapothoz hozzá van rendelve egy fényforrás és egy időzítő.
+```C#
+public partial class State3 : State
+{
+	public override void Enter()
+	{
+		GetNode<Node3D>("Light").Visible = true;
+		GetNode<Timer>("Timer").Start();
+	}
+	
+	public override void HandleInput(InputEvent @event)
+	{
+		if(@event is InputEventKey eventKey)
+		{
+			if(eventKey.Pressed)
+			{
+				if(eventKey.Keycode == Key.Key1)
+				{
+					EmitSignal(SignalName.Transition, "State1");
+				}
+				if(eventKey.Keycode == Key.Key2)
+				{
+					EmitSignal(SignalName.Transition, "State2");
+				}
+				if(eventKey.Keycode == Key.Key3)
+				{
+					EmitSignal(SignalName.Transition, "State3");
+				}
+				if(eventKey.Keycode == Key.Ctrl)
+				{
+					EmitSignal(SignalName.Transition, "State4");
+				}
+			}
+		}
+	}
+	
+	public override void Exit()
+	{
+		GetNode<Node3D>("Light").Visible = false;
+		GetNode<Timer>("Timer").Stop();
+	}
+	
+	private void _OnTimerTimeout()
+	{
+		EmitSignal(SignalName.Transition, "State1");
+	}
+}
+```
+A "State3"-nak elnevezett állapotban vagyunk jelenleg, ami ebben az esetben a "Piros" állapot a jelzőlámpánkon. Amikor erre az állapotra váltunk, akkor a State3-hoz csatolt fényforrást láthatóvá kell tennünk, valamint el kell indítanunk az időzítőnket, hogy nehogy benne ragadjunk. Amikor az időzítő lejár átmegyünk a "State1"-ba, ami a mi estünkben a "Zöld". *Amikor* átlépünk a következő állapotba fontos, hogy az előző állapotból sikeresen kilépjünk és megszüntessünk minden olyan dolgot, ami bezavarna más állapotok működésébe. Ezért az állapotgépünk meg fogja hívni a State3-nak az "Exit()" metódusát, amelyben is elrejtjük a fényforrását és megállítjuk az időzítőjét, arra az esetre, ha nem állna meg magától.
+Ezen felül van egy egyszerű switch statement, ami felhasználói bemenetre reagál ezzel lehetővé téve az állapotok közötti egyszerű ugrálást.
