@@ -170,6 +170,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
+<<<<<<< HEAD
   "active": "e5a217cfb4cd904b",
   "lastOpenFiles": [
     "Koncepció.md",
@@ -188,6 +189,29 @@
     "LaTEX/ThesisDetails.log",
     "LaTEX/Thesis.toc",
     "LaTEX/Thesis.tex",
+=======
+  "active": "c2990fc0e1a60f3f",
+  "lastOpenFiles": [
+    "LaTEX/Thesis.synctex(busy)",
+    "LaTEX/Chapters/concept.synctex(busy)",
+    "LaTEX/Chapters/concept.pdf",
+    "LaTEX/Chapters/concept.log",
+    "LaTEX/Thesis.synctex.gz",
+    "LaTEX/Chapters/concept.aux",
+    "LaTEX/Thesis.pdf",
+    "LaTEX/Chapters/concept.tex",
+    "LaTEX/Chapters/introduction.aux",
+    "LaTEX/Chapters/introduction.tex",
+    "LaTEX/Chapters",
+    "LaTEX/Diagrams/BaseTrio.png",
+    "LaTEX/Diagrams/InAirTrio.png",
+    "LaTEX/Diagrams/InAirMovement-DoubleJump.png",
+    "LaTEX/Diagrams/InAir-DoubleJump.png",
+    "LaTEX/Diagrams/InAir-InAirMovement.png",
+    "Bevezetés.md",
+    "Koncepció.md",
+<<<<<<< Updated upstream
+>>>>>>> 9aebeae (Fixed image heights and widths)
     "LaTEX/Thesis.synctex.gz",
     "LaTEX/Thesis.out",
     "LaTEX/Thesis.log",
@@ -202,5 +226,19 @@
     "LaTEX/Images/JSR_Gameplay/JetSetRadio_Gameplay-6.png",
     "LaTEX/Images/JSR_Gameplay",
     "Szakdolgozat.md"
+=======
+    "LaTEX/Diagrams/SpawnIn-Grounded.png",
+    "LaTEX/Diagrams/Moving-InAir.png",
+    "LaTEX/Diagrams/MovementSystem.png",
+    "LaTEX/Diagrams/InAir-Grounded.png",
+    "LaTEX/Diagrams/Grounded-Movement.png",
+    "Omni-Movement.md",
+    "Shibuya-punk.md",
+    "A szoftver megtervezésének lépései.md",
+    "Szakdolgozat.md",
+    "Véges Automaták (Finite State Machines - FSMs).md",
+    "Útmutató.md",
+    "Segédlet.md"
+>>>>>>> Stashed changes
   ]
 }

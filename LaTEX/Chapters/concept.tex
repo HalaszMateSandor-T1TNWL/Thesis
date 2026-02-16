@@ -1,0 +1,213 @@
+\chapter{Koncepció}
+
+Az évek alatt sok olyan játékkal játszottam, amelyek mélyen kidolgozott mozgásrendszerekre vannak építve, ilyen műfajok például a: Movement-Shooter, bizonyos Sport játékok többnyire azok, amik gördeszkákra, görkorcsolyákra és a hasonlókra épülnek. Fontosnak tartottam itt megemlíteni a Movement-Shooter műfajt, mivel az ebbe tartozó játékok szerettették meg igazán velem a szofisztikált mozgásrendszereket és belőlük tanultam sokat. Ezen játékok tökéletesen összehangolják a finom mozdulatokat az aréna-lövöldék gyors döntéshozatalával és precíz célzás igényével. Erre már az eredeti Quake játék többjátékos módját is fel tudnám hozni, de manapság inkább az "Ultrakill" nevű játékot szokták felhozni, mint ékes példája. A projekt maga viszont egy játszható prototípus, amely egyben egy hordozható rendszer is, így nincs műfajhoz és programhoz kötve, hanem mint egy Lego darab, kivehető és átrakható egy másik programba.
+
+\subsection{Játékmenet}
+
+Játékról, mint úgy nem lehet beszélni, viszont hordozható rendszerről már inkább. A mozgásrendszert úgy terveztem meg, hogy akármilyen olyan környezetben használható legyen, amelyben a játékos karakteren, vagy esetleg nem-játékos karakteren (NPC-n) valamilyen gurulásra vagy csúszásra alkalmas eszköz van (pl.: gördeszka, görkorcsolya, síléc, jégkorcsolya). Ehhez a Tony Hawk's Proskater játéksorozatot és Bomb Rush Cyberfunk / Jet Set Radio játékmenetét és mozgásrendszerét vettem alapul. Azzal az eltéréssel, hogy a prototípusban, megnyerési pont nincs, mivel ez túlmutatott a prototípusnak megszabott feladaton.
+
+\subsection{Használt technológiák}
+
+A használt technológiákat két részre osztanám fel: Szoftver és Hardver. Most egyenlőre, csak egy rövidebb felsorolást tennék a technológiákról és a későbbiekben, amikor a megfelelő részekhez érek, bővebben beszámolok róluk.
+\\
+\textbf{Szoftver szempontjából:}
+\begin{itemize}
+\item \href{https://www.blender.org/download/}{\underline{Blender}}-t használtam a 3Ds modellek elkészítéséhez.
+\item \href{https://krita.org/en/}{\underline{Krita}}-t használtam a Modellek textúráinak megrajzolásához és \href{https://captain4lk.itch.io/slk-img2pixel}{\underline{SLK\_img2pixel}}-t használtam a színek állításához.
+\item A hangok megvágásához \href{https://www.audacityteam.org/download/}{\underline{Audacity}}-t és \href{https://lmms.io/}{\underline{LMMS}}-t használtam.
+\item A diagramok megszerkesztéséhez \href{https://www.drawio.com/}{\underline{Draw.io}}-t használtam.
+\item A verziókövetéshez Git-et használtam.
+\end{itemize}
+
+\textbf{Hardver szempontjából a szoftvert két különböző rendszeren teszteltem és fejlesztettem:}
+\begin{itemize}
+\item Asztali Számítógép:
+	\begin{itemize}
+	\item Windows 10
+	\item Processzor: AMD Ryzen 5 7600X 6-Core
+	\item AMD Radeon RX 6600
+	\item Memória (RAM): 32GB 
+	\end{itemize}
+\item LENOVO IdeaPad Slim 3 15AMN8:
+	\begin{itemize}
+	\item Kubuntu 25.10
+	\item Processzor: 8 x AMD Ryzen 5 7520U with Radeon Graphics
+	\item Videókártya: AMD Radeon 610M
+	\item Memória (RAM): 16GB
+	\end{itemize}
+\end{itemize}
+
+Megjegyezném, hogy ez nem jelenti azt, hogy csak ezen gépigényeket elérő rendszereken működne a rendszer, egyszerűen csak ezeken tudtam kipróbálni. 
+Valamint a digitális koncepció rajzok elkészítéséhez és a textúrák megalkotásához az: XP-Pen Deco 02-őt használtam.
+
+\subsection{Fejlesztési Környezet Választása}
+A fejlesztési környezet választásakor több szempontot is figyelembe kellett vennem:
+\begin{itemize}
+\item \underline{Elérhetőség:} Mivel a fejlesztést két különböző rendszeren, két különböző operációs rendszer alatt végeztem fontos volt számomra, hogy a fejlesztési környezet elérhető legyen mind a két operációs rendszeren.
+\item \underline{Programozási Nyelv Támogatása:} A Godot-n belül van számos programozási nyelvhez támogatás, ezek a:
+	\begin{itemize}
+	\item GDScript a Godot saját script nyelve,
+	\item C\# a Godot Mono támogatásával,
+	\item Valamint C és C++ számos kiegészítő támogatásával.
+	\end{itemize}
+\end{itemize}
+
+Fontos volt, hogy ezek közül az egyikhez legalább támogatást nyújtson a fejlesztési környezet.
+\begin{itemize}
+\item \underline{Kényelem:} A fejlesztési környezet által nyújtott kiegészítési, valamint emlékeztető segédletek fontosak voltak, mivel a rendszer sok hasonló kódrészt tartalmaz (pl. Dictionaries, Leképzések, stb.).
+\item \textbf{Integráció a motorral:} Ez egy bónusz pont a listán, de sokat segít, ha a fejlesztési környezet integrálja a játékmotort az egyszerű dokumentáció olvasás és metódus / függvény hívás érdekében.
+\end{itemize}
+
+\subsection{Játékmotor Választása}
+
+A játékmotor megválasztása során fontos volt számomra az elérhetőség, kompatibilitás és a hordozhatóság.
+\begin{itemize}
+\item \underline{Elérhetőség:} Mivel a szoftvert két különböző operációs rendszeren fejlesztettem ezért az elérhetőségi szempont elengedhetetlen volt. A játékmotorok  mindig szóba jön a Unity és az Unreal Engine, viszont ezeknél az opcióknál a licensz kérdése is szóba jön. Nem egy utolsó szempont az se, hogy ezzel a rendszerrel én majd a jövőben tovább dolgozzak akármilyen fennakadás vagy hátráltatás nélkül.
+\item \underline{Verziókezelés támogatása:} Akármilyen rendszer fejlesztése során fontos a megbízható verziókezelés. Háromdimenziós terekben
+\item \underline{Tapasztalat:} Végül, de nem utoljára fontos volt a meglévő tapasztalat a választott motorral, hogy a lehető legjobbat tudjam kihozni a választott projektből reális időn belül.
+\end{itemize}
+\textbf{Így mindezeket a szempontokat összevetve a választásaim végül a: Godot motorra, C\# programozási nyelvre és a Visual Studio Code fejlesztőkörnyezetre esett.}
+
+\subsection{Vizuális Világ Megtervezése}
+
+A vizuális világ, amint már említettem a Shibuya punk esztétikára alapszik. [\ref{JSR_Logo}] Agresszív vonalak, elmosott, neon színek erőteljes használata és dinamikus kompozíciók definiálják. Műfajalkotó játéknak számít a Jet Set Radio (amire mostantól \textbf{JSR}-ként fogok hivatkozni).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Images/JetSetRadio_Logo.jpg}
+\caption{Demonstráció az agresszív vonalakra}
+\label{JSR_Logo}
+\end{figure}
+
+A JSR 2000-ben jött ki a DreamCast konzolra. És korszakalkotó volt a játék vizuális világa, [\ref{JSR_Gameplay}] játékmenete és mozgásrendszere. Százezreket fogott meg és évekig utána nem volt semmi olyan játék, ami el tudta volna csípni, hogy mi is tette a játékot annyira ikonikussá.
+A játékmenetében is megtartja a dinamikusságot és az agresszív vonalakat, ami a játékosban azt az érzést kelti, hogy gyorsabb és pontosabb mint valójában.
+
+\begin{figure}[H]
+\centering
+\animategraphics[loop,controls,width=\textwidth]{12}{./Images/JSR_Gameplay/JetSetRadio_Gameplay-}{0}{26}
+\caption{Rövid gif a JSR játékmenetéről}
+\label{JSR_Gameplay}
+\end{figure}
+
+Ahhoz, hogy pontosan replikálni tudjam ezeket a tulajdonságokat mélyen bele kellett magam ásnom a játék világába, de mivel egy eléggé régi játékról van szó, nem könnyen hozzáférhető. Szerencsére erre a problémára megoldást találtam egy 2023-mas ún. "Szerelmi Vallomásban" (Love Letter), a \href{https://store.steampowered.com/app/1353230/Bomb_Rush_Cyberfunk/}{Bomb Rush Cyberfunk}-ban [\ref{BRCF_Logo}] (amire mostatntól \textbf{BRCF}-ként fogok hivatkozni).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Images/BombRushCyberfunk_Logo.jpg}
+\caption{Reklámkép a Bomb Rush Cyberfunk-ról}
+\label{BRCF_Logo}
+\end{figure}
+
+A játék teljes mértékben a JSR-t veszi alapul és megpróbálja replikálni a játékot annyira, amennyire csak tudja [\ref{BRCF_InAction}], miközben újít és iterál a meglévő koncepciókon. A játékmenet kifinomultabb, mint a JSR-nak, de képes megtartani azt az érzést, amit annak idején az elődje keltet. A Team Reptile leírása alapján: "Dion Koster elmevilágában, ahol saját-stílusú bandák személyi jetpack-ekkel vannak felruházva, a graffiti művészet új magaslatokba szárnyal. Vágj bele te is a világba és táncolj, fess, trükköz, verd vissza a korrupt rendörséget és foglald el a város minden zegét-zugát egy alternatív jövőben, amit életre kelt Hideki Naganuma zenéje"\cite{reptile2020}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Images/BombRushCyberfunk_InAction.jpg}
+\caption{Játékbeli kép a Bomb Rush Cyberfunk-ról}
+\label{BRCF_InAction}
+\end{figure}
+
+Látszatra a két játék ugyan azt a stílust tartja, azzal a különbséggel, hogy míg a JSR egy földhöz-ragadtabb játékmenetet és világot ad át, mint ha egy, a 20-as éveiben lévő lázadó punk tini lennél, addig a BRCF egy sokkal sci-fi-sebb világba dob minket, ahol mindenkinek lehet egy jetpack a hátán, ami eszméletlen sebességekre gyorsít fel minket és rásegít a trükkjeinkre
+A vizuális világ megtervezésében tehát ezeket a szempontokat vettem alapul és ezek szerint alakítottam a világot és a karaktert.
+
+
+\subsection{Mozgásrendszer megtervezése}
+
+Most, hogy a vizuális világ megbeszélésre került, ideje áttérni arra, ami igazán fontos: a mozgásrendszer.\\
+Ahhoz, hogy egy minél folyékonyabb mozgásrendszert tudjak alkotni sok tervezés és előre gondolás kellet. A véges automaták egyik előnye az, hogy nagyon könnyen bővíthetőek, így ha el is rontottam volna valamit, vagy esetleg kellett volna még egy állapot ahhoz, hogy az animáció vagy a mozgás jól jöjjön ki, akkor azt könnyen megtehettem volna. Ennek a tulajdonságnak köszönhetően volt egy kis mozgásterem a kísérletezésre, ami újoncként nagy előny.
+
+\subsubsection{Állapotok}
+
+Át kellet gondolnom, hogy hogyan is szeretném, hogy kinézzen egyes mozdulat és, hogy egyes, a játékos által megadott bemenetre, milyen mozdulat lehet végrehajtható, bizonyos időkben. Egyszóval, a mozgás-láncokat meg kellett alkotnom. Viszont, nem csak a játékos kezdeményezhet állapotváltozásokat, hanem a program maga is. Előfordulhatnak események, amelyek befolyásolják a játékos mozgását és egyben az állapotát is. Ahhoz, hogy megkülönböztessem a program eseményeit a játékos bementeitől elneveztem azokat az eseményeket, amik a játékos irányítása fölött vannak "E"-nek, mint "Event" és a játékos bemeneteit "I"-nek, mint "Input". Most már tárgyalásra kerülhet az állapot diagram.\\
+Minden a belépéssel vagy leidézéssel (spawn) kezdődik. A felhasználó itt kapja meg az irányítást a karaktere fölött, ezt a [\ref{Spawn_Grounded}] kép demonstrálja.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Diagrams/SpawnIn-Grounded.png}
+\caption{A program elindítása / a karakter újraéledése utáni állapot}
+\label{Spawn_Grounded}
+\end{figure}
+
+A karakter minding egy szilárd, állható talaj fölött éled le, vagy éled újra, ezzel garantálva az állapotok közötti folytonosságot. Az alap állapot minden esetben az ún. "Idle", avagy nyugalmi állapot lesz, ahol a karakter egy állható, szilárd talajon van és játékos nem ad meg bemenetet, ennek a vizualizálása a [\ref{Grounded_Idle}] képen látható.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=\textheight, width=\linewidth]{Diagrams/Grounded-Idle.png}
+\caption{A karakter egyhelyben állása}
+\label{Grounded_Idle}
+\end{figure}
+
+Ebben az állapotban egy nyugalmi animáció játszódik le, ami életszerűbbé teszi a karaktert. A szilárd talajon való állásból (Grounded) elindulhat a játékos valamely mozgás gomb lenyomásával az egyik irányba ezzel átlökve az automatát a mozgásban levés állapotába (Moving), ahogyan azt a [\ref{Grounded_Moving}] kép is mutatja. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Diagrams/Grounded-Movement.png}
+\caption{A karakter állható talajon való mozgása}
+\label{Grounded_Moving}
+\end{figure}
+
+Ebből az állapotból a játékos visszatérhet a Grounded állapotba ha abba hagyja a mozgást. Viszont, ha a játékos mozgás közben lenyomja az ugrás gombot (ami ebben az esetben a "SPACE"), akkor átlöki az automatát a levegőben lévő állapotba (InAir), ami az alábbi [\ref{Moving_InAir}] képen látható.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Diagrams/Moving-InAir.png}
+\caption{A karakter mozgásból való ugrása}
+\label{Moving_InAir}
+\end{figure}
+
+Az ugrás időhöz van kötve, amit a gravitációs vonzóerőből és a sebességből számol ki a program. Amint ez az idő lejár és a karakter földet ér a program kiad egy "földet ért" (LANDED) eseményt, amiből, abban az esetben ha a játékos még mindig mozog, akkor visszatér a Moving állapotba. Ammenyiben, viszont a játékos már nem ad meg bemenetet a mozgásra, akkor az InAir állapotból visszatérünk a Grounded állapotra, amit a [\ref{Grounded_InAir}] kép demonstrál.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Diagrams/InAir-Grounded.png}
+\caption{A karakter állható talajról való ugrása}
+\label{Grounded_InAir}
+\end{figure}
+
+Vegyük észre, hogy a Grounded állapotból is el lehet jutni az InAir állapotba, abban az esetben, ha a játékos nem ad meg mozgásra bemenetet, viszont ugrásra igen. Ha a játékosnak viszont kell még egy kis idő a levegőben, akkor mégegyszer megnyomva az ugrás gombot, akkor átlöki az automatát a dupla ugrás (DoubleJump) állapotba, ahogy azt a [\ref{InAir_DoubleJump}] képen is lehet látni. Ebben az állapotban megtartja a momentumát a játékos csak a felfele mutató vektorhoz adódik hozzá megint az érték.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Diagrams/InAir-DoubleJump.png}
+\caption{A karakter levegőből való ugrása}
+\label{InAir_DoubleJump}
+\end{figure}
+
+Vegyük észre, hogy a játékosnak most már nincs irányítása a karakter levegőben maradása fölött, mivel kaptunk egy eseményt, ami megmondta nekünk, hogy nincs több ugrásunk ("DASH\_OUT"). Abban az esetben ha a játékos a dupla ugrás után tovább szeretné mozgatni a karaktert a levegőben valamilyen okból kifolyólag, akkor a mozgás billentyűket lenyomva át tudja lökni az automatát a levegőben lévő mozgás (InAirMovement) állapotba, ahogyan azt a [\ref{DoubleJump_InAirMovement}] kép is mutatja. Amíg a játékos lenyomva tartja a mozgás gombokat, addig ebben az állapotban marad.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Diagrams/InAirMovement-DoubleJump.png}
+\caption{A karakter levegőben való mozgása egy dupla ugrás után}
+\label{DoubleJump_InAirMovement}
+\end{figure}
+
+Amennyiben a játékos abba hagyja a mozgást, és még nem futott ki a levegőben tölthető időből az automata vissza lesz lökve a levegőbeli állapotba (InAir). Viszont, ha ismét el kezd mozogni, akkor vissza lesz lökve a levegőben lévő mozgás állapotába, ezzel befejezve a kört, ahogy az az alábbi [\ref{InAir_InAirMovement}] ábrán is látható.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Diagrams/InAir-InAirMovement.png}
+\caption{A karakter levegőben való mozgása és esésbe való visszatérése}
+\label{InAir_InAirMovement}
+\end{figure}
+
+Érdemes megjegyezni, hogy az eddig felsorolt állapotok össze vannak kötve egymással. Ezeket mozgás hármasoknak hívom. A legtöbb mozgásfajtát le lehet bontani kisebb csoportokra amiknek van hozzáférése 1 vagy 2 olyan állapothoz, amely átviszi őket egy másik csoportba.
+Példa képpen a levegőben történő mozgáscsoport hármasa a [\ref{InAirTrio}] képen látható.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Diagrams/InAirTrio.png}
+\caption{A levegőben történő mozgáscsoport}
+\label{InAirTrio}
+\end{figure}
+
+Valamint a földön történő mozgáscsoport hármasa a [\ref{GroundedTrio}] képen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Diagrams/BaseTrio.png}
+\caption{Az állható talajon történő mozgáscsoport}
+\label{GroundedTrio}
+\end{figure}
+
+Ezen mozgáscsoportok közötti átjárást az \textbf{ugrás} cselekvés biztosítja, ami további mozgáslehetőségeket tár fel.
