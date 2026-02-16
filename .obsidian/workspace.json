@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bevezetés.md",
+                "file": "Véges Állapotú Automaták.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bevezetés"
+              "title": "Véges Állapotú Automaták"
             }
           }
         ]
@@ -170,75 +170,37 @@
       "obsidian-git:Open Git source control": false
     }
   },
-<<<<<<< HEAD
-  "active": "e5a217cfb4cd904b",
+  "active": "7304a965e5fd18d2",
   "lastOpenFiles": [
-    "Koncepció.md",
-    "LaTEX/Thesis.pdf",
-    "Véges Állapotú Automaták.md",
-    "Pasted image 20260216181449.png",
-    "Images/Pasted image 20260121153334.png",
-    "Images/Pasted image 20260121153325.png",
-    "Bevezetés.md",
     "Útmutató.md",
     "Shibuya-punk.md",
     "Segédlet.md",
-    "Omni-Movement.md",
-    "A szoftver megtervezésének lépései.md",
-    "Az egész szöveg.md",
-    "LaTEX/ThesisDetails.log",
-    "LaTEX/Thesis.toc",
-    "LaTEX/Thesis.tex",
-=======
-  "active": "c2990fc0e1a60f3f",
-  "lastOpenFiles": [
-    "LaTEX/Thesis.synctex(busy)",
-    "LaTEX/Chapters/concept.synctex(busy)",
-    "LaTEX/Chapters/concept.pdf",
-    "LaTEX/Chapters/concept.log",
-    "LaTEX/Thesis.synctex.gz",
-    "LaTEX/Chapters/concept.aux",
-    "LaTEX/Thesis.pdf",
-    "LaTEX/Chapters/concept.tex",
-    "LaTEX/Chapters/introduction.aux",
-    "LaTEX/Chapters/introduction.tex",
-    "LaTEX/Chapters",
-    "LaTEX/Diagrams/BaseTrio.png",
+    "Images/Pasted image 20260216181449.png",
+    "Véges Állapotú Automaták.md",
+    "Bevezetés.md",
+    "LaTEX/thesis.bib",
+    "LaTEX/Thesis.blg",
+    "LaTEX/Thesis.bbl",
     "LaTEX/Diagrams/InAirTrio.png",
+    "LaTEX/Diagrams/InAir-InAirMovement.png",
     "LaTEX/Diagrams/InAirMovement-DoubleJump.png",
     "LaTEX/Diagrams/InAir-DoubleJump.png",
-    "LaTEX/Diagrams/InAir-InAirMovement.png",
-    "Bevezetés.md",
-    "Koncepció.md",
-<<<<<<< Updated upstream
->>>>>>> 9aebeae (Fixed image heights and widths)
-    "LaTEX/Thesis.synctex.gz",
-    "LaTEX/Thesis.out",
-    "LaTEX/Thesis.log",
-    "LaTEX/Thesis.dvi",
-    "LaTEX/Thesis.aux",
-    "LaTEX/Images/me_logo.png",
-    "LaTEX/Images/JetSetRadio_Logo.jpg",
-    "LaTEX/Images/JetSetRadio_Gameplay.gif",
-    "LaTEX/Images/JSR_Gameplay/JetSetRadio_Gameplay-8.png",
-    "LaTEX/Images/JSR_Gameplay/JetSetRadio_Gameplay-9.png",
-    "LaTEX/Images/JSR_Gameplay/JetSetRadio_Gameplay-7.png",
-    "LaTEX/Images/JSR_Gameplay/JetSetRadio_Gameplay-6.png",
-    "LaTEX/Images/JSR_Gameplay",
-    "Szakdolgozat.md"
-=======
+    "LaTEX/Diagrams/BaseTrio.png",
+    "LaTEX/Diagrams",
+    "LaTEX/Chapters/introduction.tex",
+    "LaTEX/Chapters/introduction.aux",
+    "LaTEX/Chapters/concept.tex",
+    "LaTEX/Chapters/concept.log",
+    "LaTEX/Chapters/concept.aux",
+    "LaTEX/Chapters",
     "LaTEX/Diagrams/SpawnIn-Grounded.png",
     "LaTEX/Diagrams/Moving-InAir.png",
     "LaTEX/Diagrams/MovementSystem.png",
     "LaTEX/Diagrams/InAir-Grounded.png",
-    "LaTEX/Diagrams/Grounded-Movement.png",
+    "Koncepció.md",
     "Omni-Movement.md",
-    "Shibuya-punk.md",
     "A szoftver megtervezésének lépései.md",
-    "Szakdolgozat.md",
-    "Véges Automaták (Finite State Machines - FSMs).md",
-    "Útmutató.md",
-    "Segédlet.md"
->>>>>>> Stashed changes
+    "Az egész szöveg.md",
+    "Szakdolgozat.md"
   ]
 }
