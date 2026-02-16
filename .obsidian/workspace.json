@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "ed2f00b49b5eb518",
+    "id": "bc3c5f56da5d7ca6",
     "type": "split",
     "children": [
       {
-        "id": "d479cf4557110ab9",
+        "id": "ac52eb2089176ea2",
         "type": "tabs",
         "children": [
           {
-            "id": "e5a217cfb4cd904b",
+            "id": "b0dfb63d288224d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "555dd6150882d23b",
+    "id": "9a12d87c468e5922",
     "type": "split",
     "children": [
       {
-        "id": "ae72a49ffc6694fd",
+        "id": "a0f08d80cbc3cd34",
         "type": "tabs",
         "children": [
           {
-            "id": "7304a965e5fd18d2",
+            "id": "86711cf8d7c054ba",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "82b80a52e2204163",
+            "id": "81239fa94299f9ca",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "e583d08ea6436a04",
+            "id": "485f5d7bd3390458",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,23 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 300
   },
   "right": {
-    "id": "21629ad4c8f6d33e",
+    "id": "a256c5aa1447bfe2",
     "type": "split",
     "children": [
       {
-        "id": "4212591fd3e65d93",
+        "id": "7d2efa885791ae2a",
         "type": "tabs",
         "children": [
           {
-            "id": "ce977e0a7844ee7d",
+            "id": "9a72deb41bb818a2",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bevezetés.md",
+                "file": "Véges Állapotú Automaták.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Bevezetés"
+              "title": "Backlinks for Véges Állapotú Automaták"
             }
           },
           {
-            "id": "ff8d2fa1164e4729",
+            "id": "50dc0bf79ed6aa6b",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bevezetés.md",
+                "file": "Véges Állapotú Automaták.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Bevezetés"
+              "title": "Outgoing links from Véges Állapotú Automaták"
             }
           },
           {
-            "id": "e6e6101b7d70acbe",
+            "id": "57dd5bf79da163a4",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,18 +137,18 @@
             }
           },
           {
-            "id": "de2f0b9a5a8ece53",
+            "id": "5ae66ea902052e2b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bevezetés.md",
+                "file": "Véges Állapotú Automaták.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Bevezetés"
+              "title": "Outline of Véges Állapotú Automaták"
             }
           }
         ]
@@ -170,6 +170,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
+<<<<<<< Updated upstream
   "active": "7304a965e5fd18d2",
   "lastOpenFiles": [
     "Útmutató.md",
@@ -203,4 +204,8 @@
     "Az egész szöveg.md",
     "Szakdolgozat.md"
   ]
+=======
+  "active": "b0dfb63d288224d2",
+  "lastOpenFiles": []
+>>>>>>> Stashed changes
 }
