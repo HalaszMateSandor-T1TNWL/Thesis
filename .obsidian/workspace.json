@@ -170,11 +170,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
+<<<<<<< Updated upstream
   "active": "3d5730fbfc36a0ae",
   "lastOpenFiles": [
+=======
+  "active": "e5a217cfb4cd904b",
+  "lastOpenFiles": [
+    "LaTEX/Chapters/fsm.tex",
+    "LaTEX/Chapters/FSM.tex",
+    "Útmutató.md",
+>>>>>>> Stashed changes
     "Shibuya-punk.md",
     "Útmutató.md",
     "Véges Állapotú Automaták.md",
+<<<<<<< Updated upstream
     "LaTEX/Thesis.synctex(busy)",
     "LaTEX/Images/CurrentStateSet.png",
     "LaTEX/Images/TreeExample.png",
@@ -191,5 +200,31 @@
     "LaTEX/Chapters/FSM.log",
     "LaTEX/Chapters/FSM.aux",
     "LaTEX/Chapters/FSM.tex"
+=======
+    "Bevezetés.md",
+    "LaTEX/thesis.bib",
+    "LaTEX/Thesis.blg",
+    "LaTEX/Thesis.bbl",
+    "LaTEX/Diagrams/InAirTrio.png",
+    "LaTEX/Diagrams/InAir-InAirMovement.png",
+    "LaTEX/Diagrams/InAirMovement-DoubleJump.png",
+    "LaTEX/Diagrams/InAir-DoubleJump.png",
+    "LaTEX/Diagrams/BaseTrio.png",
+    "LaTEX/Diagrams",
+    "LaTEX/Chapters/introduction.tex",
+    "LaTEX/Chapters/introduction.aux",
+    "LaTEX/Chapters/concept.tex",
+    "LaTEX/Chapters/concept.log",
+    "LaTEX/Chapters/concept.aux",
+    "LaTEX/Diagrams/SpawnIn-Grounded.png",
+    "LaTEX/Diagrams/Moving-InAir.png",
+    "LaTEX/Diagrams/MovementSystem.png",
+    "LaTEX/Diagrams/InAir-Grounded.png",
+    "Koncepció.md",
+    "Omni-Movement.md",
+    "A szoftver megtervezésének lépései.md",
+    "Az egész szöveg.md",
+    "Szakdolgozat.md"
+>>>>>>> Stashed changes
   ]
 }
