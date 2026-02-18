@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "bc3c5f56da5d7ca6",
+    "id": "ad41471362346364",
     "type": "split",
     "children": [
       {
-        "id": "ac52eb2089176ea2",
+        "id": "f12e64c976fc6062",
         "type": "tabs",
         "children": [
           {
-            "id": "b0dfb63d288224d2",
+            "id": "3d5730fbfc36a0ae",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Véges Állapotú Automaták.md",
+                "file": "Koncepció.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Véges Állapotú Automaták"
+              "title": "Koncepció"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "9a12d87c468e5922",
+    "id": "20f10cef89ff7820",
     "type": "split",
     "children": [
       {
-        "id": "a0f08d80cbc3cd34",
+        "id": "2ad9a07b9a5d56dc",
         "type": "tabs",
         "children": [
           {
-            "id": "86711cf8d7c054ba",
+            "id": "5678d3b44fc834ec",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "81239fa94299f9ca",
+            "id": "db0a377ceca3dbf2",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "485f5d7bd3390458",
+            "id": "7853b9f8d7ea81bc",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,15 +81,15 @@
     "width": 300
   },
   "right": {
-    "id": "a256c5aa1447bfe2",
+    "id": "6744aecf0751ea47",
     "type": "split",
     "children": [
       {
-        "id": "7d2efa885791ae2a",
+        "id": "3b10c486efb3a1ab",
         "type": "tabs",
         "children": [
           {
-            "id": "9a72deb41bb818a2",
+            "id": "5df9345a113d9429",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -108,7 +108,7 @@
             }
           },
           {
-            "id": "50dc0bf79ed6aa6b",
+            "id": "696fa476c76000d2",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -122,7 +122,7 @@
             }
           },
           {
-            "id": "57dd5bf79da163a4",
+            "id": "b78e4e5a729f8f12",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +137,7 @@
             }
           },
           {
-            "id": "5ae66ea902052e2b",
+            "id": "1faaf96515d5db59",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -170,42 +170,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-<<<<<<< Updated upstream
-  "active": "7304a965e5fd18d2",
+  "active": "3d5730fbfc36a0ae",
   "lastOpenFiles": [
-    "Útmutató.md",
     "Shibuya-punk.md",
-    "Segédlet.md",
-    "Images/Pasted image 20260216181449.png",
+    "Útmutató.md",
     "Véges Állapotú Automaták.md",
-    "Bevezetés.md",
-    "LaTEX/thesis.bib",
-    "LaTEX/Thesis.blg",
-    "LaTEX/Thesis.bbl",
-    "LaTEX/Diagrams/InAirTrio.png",
-    "LaTEX/Diagrams/InAir-InAirMovement.png",
-    "LaTEX/Diagrams/InAirMovement-DoubleJump.png",
-    "LaTEX/Diagrams/InAir-DoubleJump.png",
-    "LaTEX/Diagrams/BaseTrio.png",
-    "LaTEX/Diagrams",
-    "LaTEX/Chapters/introduction.tex",
-    "LaTEX/Chapters/introduction.aux",
-    "LaTEX/Chapters/concept.tex",
-    "LaTEX/Chapters/concept.log",
-    "LaTEX/Chapters/concept.aux",
-    "LaTEX/Chapters",
-    "LaTEX/Diagrams/SpawnIn-Grounded.png",
-    "LaTEX/Diagrams/Moving-InAir.png",
-    "LaTEX/Diagrams/MovementSystem.png",
-    "LaTEX/Diagrams/InAir-Grounded.png",
-    "Koncepció.md",
-    "Omni-Movement.md",
-    "A szoftver megtervezésének lépései.md",
-    "Az egész szöveg.md",
-    "Szakdolgozat.md"
+    "LaTEX/Thesis.synctex(busy)",
+    "LaTEX/Images/CurrentStateSet.png",
+    "LaTEX/Images/TreeExample.png",
+    "LaTEX/Images/GodotTree.png",
+    "LaTEX/Images/Pasted image 20260121153325.png",
+    "LaTEX/Images/Pasted image 20260121153334.png",
+    "LaTEX/Images/Pasted image 20260216181449.png",
+    "LaTEX/Chapters/FSM.synctex(busy)",
+    "LaTEX/Chapters/FSM.pdf",
+    "Diagrams/ExampleStateMachine.png",
+    "LaTEX/Diagrams/ExampleStateMachine.png",
+    "LaTEX/Diagrams/Grounded-ContinuousDash.png",
+    "LaTEX/Diagrams/Grounded-Idle.png",
+    "LaTEX/Chapters/FSM.log",
+    "LaTEX/Chapters/FSM.aux",
+    "LaTEX/Chapters/FSM.tex"
   ]
-=======
-  "active": "b0dfb63d288224d2",
-  "lastOpenFiles": []
->>>>>>> Stashed changes
 }

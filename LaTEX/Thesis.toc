@@ -1,9 +1,12 @@
 \contentsline {chapter}{\numberline {1}Bevezetés}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Koncepció}{3}{chapter.2}%
-\contentsline {subsection}{\numberline {2.0.1}Játékmenet}{3}{subsection.2.0.1}%
-\contentsline {subsection}{\numberline {2.0.2}Használt technológiák}{4}{subsection.2.0.2}%
-\contentsline {subsection}{\numberline {2.0.3}Fejlesztési Környezet Választása}{5}{subsection.2.0.3}%
-\contentsline {subsection}{\numberline {2.0.4}Játékmotor Választása}{5}{subsection.2.0.4}%
-\contentsline {subsection}{\numberline {2.0.5}Vizuális Világ Megtervezése}{6}{subsection.2.0.5}%
-\contentsline {subsection}{\numberline {2.0.6}Mozgásrendszer megtervezése}{10}{subsection.2.0.6}%
-\contentsline {subsubsection}{Állapotok}{10}{section*.2}%
+\contentsline {chapter}{\numberline {2}Véges Állapotú Automaták}{3}{chapter.2}%
+\contentsline {subsection}{\numberline {2.0.1}Matematikai szempont}{3}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}Programozói szempont}{5}{subsection.2.0.2}%
+\contentsline {chapter}{\numberline {3}Koncepció}{12}{chapter.3}%
+\contentsline {subsection}{\numberline {3.0.1}Játékmenet}{12}{subsection.3.0.1}%
+\contentsline {subsection}{\numberline {3.0.2}Használt technológiák}{13}{subsection.3.0.2}%
+\contentsline {subsection}{\numberline {3.0.3}Fejlesztési Környezet Választása}{14}{subsection.3.0.3}%
+\contentsline {subsection}{\numberline {3.0.4}Játékmotor Választása}{14}{subsection.3.0.4}%
+\contentsline {subsection}{\numberline {3.0.5}Vizuális Világ Megtervezése}{15}{subsection.3.0.5}%
+\contentsline {subsection}{\numberline {3.0.6}Mozgásrendszer megtervezése}{18}{subsection.3.0.6}%
+\contentsline {subsubsection}{Állapotok}{19}{section*.2}%
