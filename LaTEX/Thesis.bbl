@@ -1,9 +1,50 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Audacity}
+Audacity's website.
+\newblock \url{https://www.audacityteam.org/download/}.
+\newblock Accessed: 2026.03.01.
+
+\bibitem{Blender}
+Blender's website.
+\newblock \url{https://www.blender.org/download/}.
+\newblock Accessed: 2026.03.01.
+
+\bibitem{Draw.io}
+Draw.io's website.
+\newblock \url{https://www.drawio.com/}.
+\newblock Accessed: 2026.03.01.
+
+\bibitem{Krita}
+Krita's website.
+\newblock \url{https://krita.org/en/}.
+\newblock Accessed: 2026.03.01.
+
+\bibitem{LMMS}
+Lmms's website.
+\newblock \url{https://lmms.io/}.
+\newblock Accessed: 2026.03.01.
+
+\bibitem{SLKimg2pixel}
+Slkimg2pixel's itch.io page.
+\newblock \url{https://captain4lk.itch.io/slk-img2pixel/}.
+\newblock Accessed: 2026.03.01.
 
 \bibitem{charles2024}
 Charles Burgar.
 \newblock How omnimovement works in black ops 6.
 \newblock 2024.
+
+\bibitem{Georges2024}
+Georges Ltief.
+\newblock Finite state machines: An introduction to fsms and their role in
+  computer science.
+\newblock 2024.
+
+\bibitem{Yoko2023}
+Tom Mancini.
+\newblock Jet set radio - tokyo in cel-shade.
+\newblock 2023.
 
 \bibitem{reptile2020}
 Team Reptile.
