@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c8fypktihpj1c"]
+
+[ext_resource type="PackedScene" uid="uid://62fmxd8clwa" path="res://Player/Yagi.fbx" id="1_gy42m"]
+
+[node name="Yagi" unique_id=1090901705 instance=ExtResource("1_gy42m")]
+
+[node name="Body" parent="." index="0" unique_id=895489452]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0.10419798, 2.6015558, -0.037384033)
+
+[node name="Head" parent="." index="1" unique_id=1189644918]
+transform = Transform3D(30.795563, 0, 0, 0, -3.6711172e-06, 30.79556, 0, -30.79556, -3.6711172e-06, 0.03977284, 3.9462435, -0.021886706)
+
+[node name="LeftArm" parent="." index="2" unique_id=412239685]
+transform = Transform3D(7.8193455, -12.279932, -4.3386578e-07, 4.3386584e-07, 0, 14.55812, 12.279932, 7.8193455, 0, 0.100158006, 3.3062909, -0.47888255)
+
+[node name="LeftHand" parent="." index="3" unique_id=111947780]
+transform = Transform3D(27.56842, -1.9588541e-13, -2.410108e-06, 2.410108e-06, 3.2864118e-06, 27.56842, 0, 27.56842, -1.6432059e-06, 0.06613985, 2.3815074, -0.61358285)
+
+[node name="LeftHeel" parent="." index="4" unique_id=420911415]
+transform = Transform3D(-2.2592363, -7.7350194e-07, 3.6888812, -3.2802022, 1.9789952, -2.008942, -1.6876382, -3.8465018, -1.0335857, 0.14435881, 0.16833256, -0.30745053)
+
+[node name="LeftLeg" parent="." index="5" unique_id=157364055]
+transform = Transform3D(31.295872, 0, 0, 0, -3.7307586e-06, 31.29587, 0, -31.29587, -3.7307586e-06, 0.07602903, 2.0237844, -0.18983674)
+
+[node name="Neck" parent="." index="6" unique_id=215018113]
+transform = Transform3D(-10.31695, 4.9347506, -1.7041559e-07, 1.704156e-07, 6.816624e-07, 11.436397, 4.9347506, 10.316949, -1.3633247e-06, 0.08189911, 3.5306425, -0.02101028)
+
+[node name="RightArm" parent="." index="7" unique_id=1501799620]
+transform = Transform3D(7.8193436, -12.279935, -1.3015973e-06, 0, -1.7354633e-06, 14.55812, -12.279934, -7.8193445, -1.7354631e-06, 0.100158006, 3.3062909, 0.3984816)
+
+[node name="RightHand" parent="." index="8" unique_id=1810263310]
+transform = Transform3D(27.56842, 0, 0, 0, 1.6432059e-06, 27.56842, 0, -27.56842, 1.6432059e-06, 0.06613985, 2.3815074, 0.5331819)
+
+[node name="RightHeel" parent="." index="9" unique_id=1491166201]
+transform = Transform3D(-2.2592363, -7.7350194e-07, 3.6888812, -3.2802022, 1.9789952, -2.008942, -1.6876382, -3.8465018, -1.0335857, 0.14435881, 0.16833256, 0.23975682)
+
+[node name="RightLeg" parent="." index="10" unique_id=1687124512]
+transform = Transform3D(31.295872, 4.4474109e-13, -2.735972e-06, 2.735972e-06, -5.596138e-06, 31.29587, 0, 31.29587, 3.7307586e-06, 0.07602903, 2.0237844, 0.13098168)
