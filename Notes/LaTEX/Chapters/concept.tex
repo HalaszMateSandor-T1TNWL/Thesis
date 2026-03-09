@@ -1,10 +1,10 @@
 \chapter{Koncepció}
 
-Az évek alatt sok olyan játékkal játszottam, amelyek mélyen kidolgozott mozgásrendszerekre vannak építve, ilyen műfajok például a: Movement-Shooter, bizonyos Sport játékok többnyire azok, amik gördeszkákra, görkorcsolyákra és a hasonlókra épülnek. Fontosnak tartottam itt megemlíteni a Movement-Shooter műfajt, mivel az ebbe tartozó játékok szerettették meg igazán velem a szofisztikált mozgásrendszereket és belőlük tanultam sokat. Ezen játékok tökéletesen összehangolják a finom mozdulatokat az aréna-lövöldék gyors döntéshozatalával és precíz célzás igényével. Erre már az eredeti Quake játék többjátékos módját is fel tudnám hozni, de manapság inkább az "Ultrakill" nevű játékot szokták felhozni, mint ékes példája. A projekt maga viszont egy játszható prototípus, amely egyben egy hordozható rendszer is, így nincs műfajhoz és programhoz kötve, hanem mint egy Lego darab, kivehető és átrakható egy másik programba.
+Az évek alatt sok olyan játékkal játszottam, amelyek mélyen kidolgozott mozgásrendszerekre vannak építve, ilyen műfajok például a Movement-Shooter, bizonyos Sport játékok többnyire azok, amik gördeszkákra, görkorcsolyákra és a hasonlókra épülnek. Fontosnak tartottam itt megemlíteni a Movement-Shooter műfajt, mivel az ebbe tartozó játékok szerettették meg igazán velem a szofisztikált mozgásrendszereket és belőlük tanultam sokat. Ezen játékok tökéletesen összehangolják a finom mozdulatokat az aréna-lövöldék gyors döntéshozatalával és precíz célzás igényével. Erre már az eredeti Quake játék többjátékos módját is fel tudnám hozni, de manapság inkább az "Ultrakill" nevű játékot szokták felhozni, mint ékes példája. A projekt maga viszont egy játszható prototípus, amely egyben egy hordozható rendszer is, így nincs műfajhoz és programhoz kötve, hanem mint egy Lego darab, kivehető és átrakható egy másik programba.
 
 \subsection{Játékmenet}
 
-Játékról, mint úgy nem lehet beszélni, viszont hordozható rendszerről már inkább. A mozgásrendszert úgy terveztem meg, hogy akármilyen olyan környezetben használható legyen, amelyben a játékos karakteren, vagy esetleg nem-játékos karakteren (NPC-n) valamilyen gurulásra vagy csúszásra alkalmas eszköz van (pl.: gördeszka, görkorcsolya, síléc, jégkorcsolya). Ehhez a Tony Hawk's Proskater játéksorozatot és Bomb Rush Cyberfunk / Jet Set Radio játékmenetét és mozgásrendszerét vettem alapul. Azzal az eltéréssel, hogy a prototípusban, megnyerési pont nincs, mivel ez túlmutatott a prototípusnak megszabott feladaton.
+Játékmenetről nem igazán lehet beszélni. A projekt sokkal inkább egy prototípus lenne, amely egy játékomotorban elkészített színtérrel együtt jár. A színtér maga arra szolgálna, hogy mindent, amit a rendszerem képes csinálni, ki lehessen próbálni. A mozgásrendszert úgy terveztem meg, hogy akármilyen környezetben használható legyen, akár egyszerű mozgásra, akár olyan esetekre, amelyben a játékos karakteren, vagy esetleg nem-játékos karakteren (NPC-n) valamilyen gurulásra vagy csúszásra alkalmas eszköz van (pl.: gördeszka, görkorcsolya, síléc, jégkorcsolya). Ehhez a Tony Hawk's Proskater játéksorozatot és Bomb Rush Cyberfunk / Jet Set Radio játékmenetét és mozgásrendszerét vettem alapul. Azzal az eltéréssel, hogy a prototípusban, megnyerési pont nincs, mivel ez túlmutatott a projektnek megszabott feladaton.
 
 \subsection{Használt technológiák}
 
@@ -12,10 +12,10 @@ A használt technológiákat két részre osztanám fel: Szoftver és Hardver. M
 \\
 \textbf{Szoftver szempontjából:}
 \begin{itemize}
-\item \href{https://www.blender.org/download/}{\underline{Blender}}-t használtam a 3Ds modellek elkészítéséhez.
-\item \href{https://krita.org/en/}{\underline{Krita}}-t használtam a Modellek textúráinak megrajzolásához és \href{https://captain4lk.itch.io/slk-img2pixel}{\underline{SLK\_img2pixel}}-t használtam a színek állításához.
-\item A hangok megvágásához \href{https://www.audacityteam.org/download/}{\underline{Audacity}}-t és \href{https://lmms.io/}{\underline{LMMS}}-t használtam.
-\item A diagramok megszerkesztéséhez \href{https://www.drawio.com/}{\underline{Draw.io}}-t használtam.
+\item \href{https://www.blender.org/download/}{\underline{Blender}}\cite{Blender}-t használtam a 3Ds modellek elkészítéséhez.
+\item \href{https://krita.org/en/}{\underline{Krita}}\cite{Krita}-t használtam a Modellek textúráinak megrajzolásához és \href{https://captain4lk.itch.io/slk-img2pixel}{\underline{SLK\_img2pixel}}\cite{SLKimg2pixel}-t használtam a színek állításához.
+\item A hangok megvágásához \href{https://www.audacityteam.org/download/}{\underline{Audacity}}\cite{Audacity}-t és \href{https://lmms.io/}{\underline{LMMS}}\cite{LMMS}-t használtam.
+\item A diagramok megszerkesztéséhez \href{https://www.drawio.com/}{\underline{Draw.io}}\cite{Draw.io}-t használtam.
 \item A verziókövetéshez Git-et használtam.
 \end{itemize}
 
@@ -60,9 +60,9 @@ Fontos volt, hogy ezek közül az egyikhez legalább támogatást nyújtson a fe
 
 \subsection{Játékmotor Választása}
 
-A játékmotor megválasztása során fontos volt számomra az elérhetőség, kompatibilitás és a hordozhatóság.
+A játékmotor megválasztása során fontos volt számomra a platformfüggetlenség, kompatibilitás és a hordozhatóság.
 \begin{itemize}
-\item \underline{Elérhetőség:} Mivel a szoftvert két különböző operációs rendszeren fejlesztettem ezért az elérhetőségi szempont elengedhetetlen volt. A játékmotorok  mindig szóba jön a Unity és az Unreal Engine, viszont ezeknél az opcióknál a licensz kérdése is szóba jön. Nem egy utolsó szempont az se, hogy ezzel a rendszerrel én majd a jövőben tovább dolgozzak akármilyen fennakadás vagy hátráltatás nélkül.
+\item \underline{Kompatibilitás:} Mivel a szoftvert két különböző operációs rendszeren fejlesztettem ezért az elérhetőségi szempont elengedhetetlen volt. A játékmotorok  mindig szóba jön a Unity és az Unreal Engine, viszont ezeknél az opcióknál a licensz kérdése is szóba jön. Nem egy utolsó szempont az se, hogy ezzel a rendszerrel én majd a jövőben tovább dolgozzak akármilyen fennakadás vagy hátráltatás nélkül.
 \item \underline{Verziókezelés támogatása:} Akármilyen rendszer fejlesztése során fontos a megbízható verziókezelés. Háromdimenziós terekben
 \item \underline{Tapasztalat:} Végül, de nem utoljára fontos volt a meglévő tapasztalat a választott motorral, hogy a lehető legjobbat tudjam kihozni a választott projektből reális időn belül.
 \end{itemize}
@@ -79,7 +79,7 @@ A vizuális világ, amint már említettem a Shibuya punk esztétikára alapszik
 \label{JSR_Logo}
 \end{figure}
 
-A JSR 2000-ben jött ki a DreamCast konzolra. És korszakalkotó volt a játék vizuális világa, [\ref{JSR_Gameplay}] játékmenete és mozgásrendszere. Százezreket fogott meg és évekig utána nem volt semmi olyan játék, ami el tudta volna csípni, hogy mi is tette a játékot annyira ikonikussá.
+A JSR 2000-ben jött ki a DreamCast konzolra. És korszakalkotó volt a játék vizuális világa, [\ref{JSR_Gameplay}] játékmenete és mozgásrendszere. Százezreket fogott meg, sajnos évekre rá sem jött ki olyan játék, ami el tudta volna csípni, hogy mi is tette a játékot annyira ikonikussá.
 A játékmenetében is megtartja a dinamikusságot és az agresszív vonalakat, ami a játékosban azt az érzést kelti, hogy gyorsabb és pontosabb mint valójában.
 
 \begin{figure}[H]
@@ -155,7 +155,7 @@ Ebből az állapotból a játékos visszatérhet a Grounded állapotba ha abba h
 \label{Moving_InAir}
 \end{figure}
 
-Az ugrás időhöz van kötve, amit a gravitációs vonzóerőből és a sebességből számol ki a program. Amint ez az idő lejár és a karakter földet ér a program kiad egy "földet ért" (LANDED) eseményt, amiből, abban az esetben ha a játékos még mindig mozog, akkor visszatér a Moving állapotba. Ammenyiben, viszont a játékos már nem ad meg bemenetet a mozgásra, akkor az InAir állapotból visszatérünk a Grounded állapotra, amit a [\ref{Grounded_InAir}] kép demonstrál.
+Az ugrás időhöz van kötve, amit a gravitációs vonzóerőből és a sebességből számol ki a program. Amint ez az idő lejár és a karakter földet ér a program kiad egy "földet ért" (LANDED) eseményt, amiből, abban az esetben ha a játékos még mindig mozog, akkor visszatér a Moving állapotba. Amennyiben, viszont a játékos már nem ad meg bemenetet a mozgásra, akkor az InAir állapotból visszatérünk a Grounded állapotra, amit a [\ref{Grounded_InAir}] kép demonstrál.
 
 \begin{figure}[H]
 \centering

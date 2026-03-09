@@ -1,8 +1,9 @@
-\chapter{Véges Állapotú Automaták}
+\chapter{Véges állapotú automaták}
+\label{chap:FSM}
 
 Ahogyan az informatika fejlődött és egyre több matematikai koncepciót adaptált, hogy segítse a fejlesztést, úgy távolodott is tőle. Meglepő módon nem kell ismernie az embernek a pontos matematikai definícióit egyes koncepcióknak annak érdekében, hogy használja őket fejlesztés során. Ez leginkább itt fog majd érződni, az automaták terén.
 
-\subsection{Matematikai szempont}
+\subsection{Matematikai szemszög}
 
 A véges állapotú automata (Finite State Machine, avagy FSM) egy matematikai model, amely képes ábrázolni a dinamikus viselkedését egy rendszernek véges számú állapotot alkalmazva, valamint ezen állapotok közötti átmenéseket, és az átmenetekhez szükséges cselekvéseket. Bármely adott pillanatban egy rendszer egy bizonyos állapotot vesz fel és egy átmenet egy válasz egy bizonyos cselekvésre, vagy történésre.\\
 
@@ -12,7 +13,7 @@ A véges állapotú automaták kategorizálhatóak \textbf{determinisztikus} és
 \item \textbf{A non-determinisztikus automaták (NDFSM)} esetében több átmenet létezhet egy inputra és a jelenlegi állapotra. A rendszer következő állapota nem egyedien lesz eldöntve, ami rugalmasságot eredményez, de egyben kiszámíthatatlanságot és komplexitást is bevezet.
 \end{itemize}
 A mi esetünkben csak determinisztikus automatákkal fogunk foglalkozni, de érdemes volt megemlíteni a non-determinisztikus automatákat, mivel matematikai és tervezésbeli jelentőséggel bírnak.\\
-Egy determinisztikus véges automata hivatalos definíciója így szól:\\
+Ahhoz, hogy tovább tudjunk beszélni róla, először definiáljuk. Legyen \textbf{M} egy determinisztikus véges automata, ekkor igaz, hogy:\\
 $M = (Q, \Sigma, \delta, q_{0},F)$\\
 Ahol:
 \begin{itemize}
@@ -43,7 +44,7 @@ Nézzük meg ezeket a részeket egy kicsit részletesebben is.
 \label{ExampleStateMachine}
 \end{figure}
 
-Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására.\\
+Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására, amit Georges Ltief papírjából\cite{Georges2024} szereztem.\\
 
 \textbf{Állapotok:}
 \begin{itemize}
@@ -66,7 +67,7 @@ Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására.\
 \item A példában a válaszokat (responses) az $R_{1},R_{2},R_{3}$ ábrázolja, az  $S_{1},S_{2},S_{3}$ ingerekre.
 \end{itemize}
 
-\subsection{Programozói szempont}
+\subsection{Programozói szemszög}
 
 Programozás szempontjából az automaták egy nagyon hasznos része az informatikának, mivel végtelenül egyszerűvé teszi egyes rendszerek nyomonkövetését, megtervezését és automatizálását.
 Egy rendszeren belül, vegyünk most egy játékot példának, akármilyen objektumnak lehet állapota és, ahogyan ezt már említettem, az állapottól függően fognak változni az objektumok viselkedése is, például:\\
@@ -77,7 +78,7 @@ Egy rendszeren belül, vegyünk most egy játékot példának, akármilyen objek
 \item a fegyver állapota, amivel támadni akarunk (készenlétben, töltődik újra, elhasználva)
 \end{itemize}
 
-Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közbe vagyunk és a csúszda végén ott van egy ellenfél, akit meg akarunk támadni, ezért elővesszük a fegyverünk, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk vele, hogy milyen állapotban vannak a világunk egyes részei, megkönnyebbítjük a magunk dolgát a hibakeresésben és a játékosok dolgát azzal, hogy nem zavarjuk őket össze.\\
+Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közben vagyunk és a csúszda végén ott van egy ellenfél, akit meg akarunk támadni, ezért elővesszük a fegyverünket, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk vele, hogy milyen állapotban vannak a világunk egyes részei, megkönnyebbítjük a magunk dolgát a hibakeresésben és a játékosok dolgát azzal, hogy nem zavarjuk őket össze.\\
 Amikor egy rendszernél állapotgépeket használunk, akkor általában kéz-a-kézben jár a
 "kompozíció", és az "öröklődés" használata mint Objektum Orientált Programozásban használt tervezési minta. Ahhoz, hogy jobban megértsük hogyan is nézne ez ki kódban kezdés képpen készítettem egy mintaprogramot, amely mintaprogram egy egyszerű jelzőlámpa működését mutatja be.\\
 Elsőként is létrehoztam egy vázat az állapotok számára, minden állapot egy külön Node lesz a Godot-n belül. Ez egy teljesen absztrakt osztály, amit valójában nem fogunk futtatni mint script, ezt csak örökölni fogják az egyes állapotaink.\\
@@ -102,7 +103,7 @@ public partial class State : Node
 }
 \end{lstlisting}
 
-Lehet, hogy megfordul a gondolat: "De, akkor miért nem egy absztrakt osztály?" Azért mert, akkor nem tudnánk felvenni az állapotokat egy Dictionary-be, erre később vissza is térek. Egy állapotnak 5 metódusa van: Enter, Exit, Update, PhysicsUpdate, HandleInput. Ezek mind a megfelelő pillanatban lesznek meghívva, lehet, hogy nem mindegyik állapot enged majd inputot feldolgozni, vagy lehet, hogy nem mindegyikre fog kihatni a fizika, viszont ez a metódus-ötös az alapja a legtöbb állapotnak. Az "Enter" metódusban az állapot ellenőrizni fog egy pár feltételt és fel fogja építeni az állapotban végrehajtható cselekvésekhez szükséges környezetet. Az "Exit" egyértelműen ennek az ellenkezőjét fogja csinálni. Az "Update" és "PhysicsUpdate" metódusok mind az eltelt (delta) idő szerint fognak végrehajtani eseményeket, pl.: a levegőben töltött idő mérése, esési sebesség, féktáv, stb. Végül a HandleInput akármilyen bemenetre fog reagálni és azokat lekezelni. Ha például a karakter éppen a levegőben van és elkezd mozogni, akkor azt elkapja a HandleInput metódus és megoldja, hogy ne csak egyhelyben tudjon a karakter ugrani, de különböző irányokba is. A metódusokon kívül van még egy változónk, ami az "fsm".\\
+Lehet, hogy megfordul a fejünkben a gondolat: "De, akkor miért nem egy absztrakt osztály?" Azért mert, akkor nem tudnánk felvenni az állapotokat egy Dictionary-be, erre később vissza is térek. Egy állapotnak 5 metódusa van: Enter, Exit, Update, PhysicsUpdate, HandleInput. Ezek mind a megfelelő pillanatban lesznek meghívva, lehet, hogy nem mindegyik állapot enged majd inputot feldolgozni, vagy lehet, hogy nem mindegyikre fog kihatni a fizika, viszont ez a metódus-ötös az alapja a legtöbb állapotnak. Az "Enter" metódusban az állapot ellenőrizni fog egy pár feltételt és fel fogja építeni az állapotban végrehajtható cselekvésekhez szükséges környezetet. Az "Exit" egyértelműen ennek az ellenkezőjét fogja csinálni. Az "Update" és "PhysicsUpdate" metódusok mind az eltelt (delta) idő szerint fognak végrehajtani eseményeket, pl.: a levegőben töltött idő mérése, esési sebesség, féktáv, stb. Végül a HandleInput akármilyen bemenetre fog reagálni és azokat lekezelni. Ha például a karakter éppen a levegőben van és elkezd mozogni, akkor azt elkapja a HandleInput metódus és megoldja, hogy ne csak egyhelyben tudjon a karakter ugrani, de különböző irányokba is. A metódusokon kívül van még egy változónk, ami az "fsm".\\
 
 \lstset{style=sharpc}
 \begin{lstlisting}
@@ -169,7 +170,7 @@ public partial class StateMachine : Node
 }
 \end{lstlisting}
 
-Ez itt a "StateMachine" osztályunk. Ő fel lesz használva mint futtatható script, ő lesz nekünk az állapotgépünk gyökere, minden más Node, ami állapot, hozzá fog tartozni. Itt sok minden történik, de leegyszerűsítve az "initialState" változónk, egy "NodePath", avagy Node-hoz vezető út. Az [Export], ami elé van írva egyszerűen annyit jelent, hogy az editor-ból is meg tudjuk változtatni annak értékét.\\
+Ez itt a "StateMachine" osztályunk. A State.cs-el ellentétben ez a script hozzá lesz csatolva egy Node-hoz és futtatva lesz, ő lesz az állapotgépünk gyökere, mint egy vezérlő. Minden más Node, ami állapot, hozzá fog tartozni. Itt sok minden történik, de leegyszerűsítve az "initialState" változónk, egy "NodePath", avagy Node-hoz vezető út. Az [Export], ami elé van írva egyszerűen annyit jelent, hogy az editor-ból is meg tudjuk változtatni annak értékét.\\
 
 \begin{figure}[H]
 \centering
