@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 project/assembly_name="Yagster"
 
+[global_group]
+
+Rails=""
+
 [input]
 
 Forward={

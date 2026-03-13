@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dl2qcila11tf5"]
+
+[ext_resource type="Script" uid="uid://b5ctl5tsylldg" path="res://Rails/PathFollower.cs" id="1_8nsv5"]
+
+[node name="PathFollow3D" type="PathFollow3D" unique_id=2041218497]
+script = ExtResource("1_8nsv5")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=2068262619]

@@ -14,6 +14,7 @@ public partial class Running : State
 	
 	public override void Enter()
 	{
+		GD.Print("Entering Running State");
 		parent = GetNode<CharacterBody3D>($"../../..");
 		_meshRoot = GetNode<Node3D>($"../..");
 		_speed = new Player().speed;
@@ -38,6 +39,11 @@ public partial class Running : State
 		var targetAngle = Vector3.Left.SignedAngleTo(_lastMoveDirection, Vector3.Up);
 		
 		_meshRoot.Rotation = new Vector3(0, Mathf.LerpAngle(_meshRoot.Rotation.Y, targetAngle, _rotationSpeed * delta), 0);
+	}
+	
+	public override void Exit()
+	{
+		GD.Print("Exiting Running State");
 	}
 	
 	

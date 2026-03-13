@@ -9,6 +9,8 @@ public partial class PlayerController : Node
 	
 	private Dictionary<string, State> _states;
 	private State _currentState;
+	private Control _ui;
+	private Dictionary<string, CheckBox> _elements;
 	
 	public override void _Ready()
 	{
@@ -31,11 +33,23 @@ public partial class PlayerController : Node
 		}
 		else
 			GD.Print("[ERROR] Initial state not set.");
+		
+		_ui = GetNode<Control>($"../../CamRoot/Control");
+		_elements = new Dictionary<string, CheckBox>();
+		foreach(Node node in _ui.GetChildren())
+		{
+			if(node is CheckBox box)
+			{
+				_elements[node.Name] = box;
+			}
+		}
+		_elements[_currentState.Name].ButtonPressed = true;
 	}
 	
 	public override void _Process(double delta)
 	{
 		_currentState.Update((float)delta);
+		
 	}
 	
 	public override void _PhysicsProcess(double delta)
@@ -55,10 +69,12 @@ public partial class PlayerController : Node
 			return;
 		}
 		
+		_elements[_currentState.Name].ButtonPressed = false;
 		_currentState.Exit();
 		_currentState = _states[key];
 		_currentState.Enter();
 		_currentState.movementDirection = movementDirection;
+		_elements[_currentState.Name].ButtonPressed = true;
 	}
 	
 	public void OnSetMovementState(string key, Vector3 movementDirection)

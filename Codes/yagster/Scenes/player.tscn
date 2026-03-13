@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://dgvpb7462y7b3" path="res://Player/Jumping.cs" id="6_x3wgy"]
 [ext_resource type="Script" uid="uid://274ffdg60mbk" path="res://Player/CameraController.cs" id="7_3smsa"]
 [ext_resource type="Script" uid="uid://cgf70c6obmjmb" path="res://Player/Falling.cs" id="7_8erm5"]
-[ext_resource type="Script" uid="uid://cfpc6vsewjoav" path="res://Player/Grinding.cs" id="8_f1ek2"]
+[ext_resource type="Script" uid="uid://bsg5684ltkvci" path="res://Player/Grinding.cs" id="8_f1ek2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vgqql"]
 radius = 0.31103516
@@ -18,11 +18,13 @@ height = 2.881958
 
 [node name="Node3D" type="Node3D" unique_id=1887688088]
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=2140244596]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=2140244596 node_paths=PackedStringArray("_grindRays")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02233845, 0)
+floor_snap_length = 0.2
 script = ExtResource("2_vgqql")
 speed = 25.0
 accel = 10.0
+_grindRays = [NodePath("RayGrinds")]
 
 [node name="Yagi" parent="CharacterBody3D" unique_id=1090901705 instance=ExtResource("2_3smsa")]
 
@@ -76,11 +78,72 @@ offset_right = 185.0
 offset_bottom = 31.0
 text = "Is Player on ground?"
 
+[node name="Idle" type="CheckBox" parent="CharacterBody3D/CamRoot/Control" unique_id=845741613]
+layout_mode = 0
+offset_left = 1051.0
+offset_top = 61.0
+offset_right = 1130.0
+offset_bottom = 92.0
+text = "Idle"
+
+[node name="Running" type="CheckBox" parent="CharacterBody3D/CamRoot/Control" unique_id=177397741]
+layout_mode = 0
+offset_left = 1051.0
+offset_top = 20.0
+offset_right = 1154.0
+offset_bottom = 51.0
+text = "Runnning"
+
+[node name="Jumping" type="CheckBox" parent="CharacterBody3D/CamRoot/Control" unique_id=1170737736]
+layout_mode = 0
+offset_left = 1051.0
+offset_top = 40.0
+offset_right = 1143.0
+offset_bottom = 71.0
+text = "Jumping"
+
+[node name="Falling" type="CheckBox" parent="CharacterBody3D/CamRoot/Control" unique_id=199037739]
+layout_mode = 0
+offset_left = 1051.0
+offset_right = 1108.0
+offset_bottom = 31.0
+text = "Falling"
+
+[node name="Grinding" type="CheckBox" parent="CharacterBody3D/CamRoot/Control" unique_id=1513137220]
+layout_mode = 0
+offset_left = 1051.0
+offset_top = 81.0
+offset_right = 1146.0
+offset_bottom = 112.0
+text = "Grinding"
+
+[node name="Label" type="Label" parent="CharacterBody3D/CamRoot/Control" unique_id=128612206]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 73.0
+offset_right = 168.0
+offset_bottom = 96.0
+text = "Movement Direction:"
+
+[node name="Label" type="Label" parent="CharacterBody3D/CamRoot/Control/Label" unique_id=1385739611]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 2.0
+offset_right = 211.0
+offset_bottom = 25.0
+
+[node name="IsGrinding" type="CheckBox" parent="CharacterBody3D/CamRoot/Control" unique_id=24349328]
+layout_mode = 0
+offset_top = 26.0
+offset_right = 24.0
+offset_bottom = 50.0
+text = "Is Player Grinding?"
+
 [node name="RayGrinds" type="Node3D" parent="CharacterBody3D" unique_id=571961635]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02233845, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/RayGrinds" unique_id=817204061]
-transform = Transform3D(2.505, 0, 0, 0, 2.505, 0, 0, 0, 2.505, 0, 0.3147884, 0)
+transform = Transform3D(2.505, 0, 0, 0, 2.505, 0, 0, 0, 2.505, 0, 0.6305352, 0)
 
 [connection signal="SetMovementDirection" from="CharacterBody3D" to="CharacterBody3D/Yagi/PlayerController" method="OnSetMovementDirection"]
 [connection signal="SetMovementState" from="CharacterBody3D" to="CharacterBody3D/Yagi/PlayerController" method="OnSetMovementState"]

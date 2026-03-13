@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://2slx7g40ffqt"]
+
+[ext_resource type="Script" uid="uid://b26a506752gbj" path="res://Rails/RailGrinding.cs" id="1_gis1j"]
+
+[sub_resource type="Curve3D" id="Curve3D_lis6b"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 5.71, 0, 0, 0.01, 0.045, 0, 0, 0, 0, 0, 2.34, -3.38, 5.2101183, 1.4432154, -2.4973063, 0, 0, 0, 0, 0, 0, -1.6974984, 2.5177624, -6.4757805),
+"tilts": PackedFloat32Array(0, 0, 0.6981317)
+}
+point_count = 3
+
+[node name="Path3D" type="Path3D" unique_id=52671247 groups=["Rails"]]
+curve = SubResource("Curve3D_lis6b")
+script = ExtResource("1_gis1j")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=179362982 groups=["Rails"]]
+use_collision = true
+polygon = PackedVector2Array(0.6, -0.06, 0.324, 0.441, 0.02, -0.055)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 1.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
