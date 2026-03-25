@@ -9,7 +9,7 @@ public partial class Player : CharacterBody3D
 	
 	[Export] public float speed = 50.0f;
 	[Export] public float accel = 20.0f;
-	[Export] public Array<Node3D> _grindRays;
+	public ShapeCast3D _grindRays;
 	
 	[Export] public float mouseSensitivity = 0.25f;
 	
@@ -26,6 +26,8 @@ public partial class Player : CharacterBody3D
 	private CheckBox _checkBox;
 	private CheckBox _isGrindingDebug;
 	private Label _speed;
+	private Label _globalPosition;
+	private Label _localPosition;
 	
 	private Vector3 _velocity;
 	
@@ -46,7 +48,12 @@ public partial class Player : CharacterBody3D
 		_camera = GetNode<Camera3D>($"CamRoot/CamYaw/CamPitch/SpringArm3D/Camera3D");
 		_checkBox = GetNode<CheckBox>($"CamRoot/Control/CheckBox");
 		_isGrindingDebug = GetNode<CheckBox>($"CamRoot/Control/IsGrinding");
-		_speed = GetNode<Label>($"CamRoot/Control/Label/Label");
+
+		_speed = GetNode<Label>($"CamRoot/Control/Speed/Label");
+		_globalPosition = GetNode<Label>($"CamRoot/Control/GlobalPosition/Label");
+		_localPosition = GetNode<Label>($"CamRoot/Control/LocalPosition/Label");
+
+		_grindRays = GetNode<ShapeCast3D>($"ShapeCast3D");
 	}
 
 	public bool IsMoving()
@@ -54,16 +61,13 @@ public partial class Player : CharacterBody3D
 		return Mathf.Abs(_movementDirection.X) > 0 || Mathf.Abs(_movementDirection.Z) > 0;
 	}
 
-	public RayCast3D GetValidRay()
+	public ShapeCast3D GetValidRay()
 	{
-		foreach(Node3D ray in _grindRays)
+		if(_grindRays != null)
 		{
-			if(ray.GetChild(0) is RayCast3D rayCast)
+			if(_grindRays.IsColliding() && _grindRays.GetCollider(0) is StaticBody3D body && body.IsInGroup("Rails"))
 			{
-				if(rayCast.IsColliding() && rayCast.GetCollider() is CsgPolygon3D path && path.IsInGroup("Rails"))
-				{
-					return rayCast;
-				}
+				return _grindRays;
 			}
 		}
 		return null;
@@ -71,11 +75,7 @@ public partial class Player : CharacterBody3D
 
 	public bool IsGrinding()
 	{
-		/*if(Input.IsActionJustPressed("Jump"))
-		{
-			return false;
-		}*/
-		RayCast3D grindRay = GetValidRay();
+		ShapeCast3D grindRay = GetValidRay();
 		if(grindRay != null)
 		{
 			return true;
@@ -116,11 +116,6 @@ public partial class Player : CharacterBody3D
 		{
 			CurrentState = PlayerState.Falling;
 		}
-		
-		if(IsGrinding())
-		{
-			CurrentState = PlayerState.Grinding;
-		}
 
 		if (IsMoving())
 		{
@@ -130,19 +125,15 @@ public partial class Player : CharacterBody3D
 		switch(CurrentState)
 		{
 			case PlayerState.Idle:
-				//GD.Print("[SIGNAL] Change to Idle");
 				EmitSignal(nameof(SetMovementState), nameof(PlayerState.Idle), _movementDirection);
 				break;
 			case PlayerState.Running:
-				//GD.Print("[SIGNAL] Change to Running");
 				EmitSignal(nameof(SetMovementState), nameof(PlayerState.Running), _movementDirection);
 				break;
 			case PlayerState.Jumping:
-				//GD.Print("[SIGNAL] Change to Jumping");
 				EmitSignal(nameof(SetMovementState), nameof(PlayerState.Jumping), _movementDirection);
 				break;
 			case PlayerState.Falling:
-				//GD.Print("[SIGNAL] Change to Falling state");
 				EmitSignal(nameof(SetMovementState), nameof(PlayerState.Falling), _movementDirection);
 				break;
 			case PlayerState.Grinding:
@@ -176,6 +167,8 @@ public partial class Player : CharacterBody3D
 		_movementDirection = _movementDirection.Normalized();
 		
 		_speed.Text = _movementDirection.ToString();
+		_globalPosition.Text = this.GlobalPosition.ToString();
+		_localPosition.Text = this.Position.ToString();
 		
 		if(this.IsOnFloor())
 		{
@@ -192,7 +185,12 @@ public partial class Player : CharacterBody3D
 		{
 			CurrentState = PlayerState.Falling;
 		}
-		
+
+		if(IsGrinding())
+		{
+			CurrentState = PlayerState.Grinding;
+		}
+
 		if(Input.IsActionJustPressed("Jump"))
 		{
 			CurrentState = PlayerState.Jumping;

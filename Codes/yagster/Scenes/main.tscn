@@ -1,77 +1,56 @@
 [gd_scene format=3 uid="uid://bnpxiyoiimhb8"]
 
 [ext_resource type="Texture2D" uid="uid://ci7hogfp7yvh7" path="res://Textures/YagiBoweep.png" id="1_jjgbg"]
-[ext_resource type="PackedScene" uid="uid://br14xhtlrntr5" path="res://Scenes/player.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://2slx7g40ffqt" path="res://Scenes/RailGrinding.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" path="res://Scenes/Yagi2.tscn" id="4_21xkr"]
+[ext_resource type="PackedScene" uid="uid://byfee14yvxbc0" path="res://Scenes/RailTest.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://cxogkwf022axe" path="res://Scenes/GroundedRail.tscn" id="4_kry3j"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bo1nx"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjgbg"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[sub_resource type="Sky" id="Sky_8gbba"]
-sky_material = SubResource("ProceduralSkyMaterial_bo1nx")
+[sub_resource type="Sky" id="Sky_bo1nx"]
+sky_material = SubResource("ProceduralSkyMaterial_jjgbg")
 
-[sub_resource type="Environment" id="Environment_jjvhh"]
+[sub_resource type="Environment" id="Environment_8gbba"]
 background_mode = 2
-sky = SubResource("Sky_8gbba")
+sky = SubResource("Sky_bo1nx")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bo1nx"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjvhh"]
 albedo_texture = ExtResource("1_jjgbg")
-uv1_offset = Vector3(-0.05, -0.1, 1.4)
 
-[sub_resource type="BoxMesh" id="BoxMesh_8gbba"]
+[sub_resource type="BoxMesh" id="BoxMesh_jjgbg"]
 size = Vector3(100, 0.5, 100)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
-size = Vector3(100, 1, 100)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_bo1nx"]
-size = Vector3(8.17, 4.05, 12.7)
+size = Vector3(100, 0.5, 100)
 
-[node name="Main" type="Node3D" unique_id=732028469]
+[node name="Main" type="Node3D" unique_id=1507138279]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=267691509]
-environment = SubResource("Environment_jjvhh")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1117121211]
+environment = SubResource("Environment_8gbba")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1096275009]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1019967512]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Ground" type="MeshInstance3D" parent="." unique_id=1984443988]
-transform = Transform3D(1.975, 0, 0, 0, 1.975, 0, 0, 0, 1.975, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_bo1nx")
-mesh = SubResource("BoxMesh_8gbba")
+[node name="Player" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
+accel = 5.0
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Ground" unique_id=289651398]
+[node name="Ground" type="StaticBody3D" parent="." unique_id=729708842]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D" unique_id=338456189]
-shape = SubResource("BoxShape3D_jjgbg")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=1398152465]
+material_override = SubResource("StandardMaterial3D_jjvhh")
+mesh = SubResource("BoxMesh_jjgbg")
 
-[node name="Player" parent="." unique_id=1887688088 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.61668515, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=3235055]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.222944, 2.346139, 5.8916016)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2011179536]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1231383685]
 shape = SubResource("BoxShape3D_bo1nx")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D/CollisionShape3D" unique_id=906464752]
-size = Vector3(8.174377, 4.0585938, 12.783203)
+[node name="RailTest" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
+transform = Transform3D(5.43, 0, 0, 0, 5.43, 0, 0, 0, 5.43, 1.8620243, 0.33141187, 20.635307)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=2032040084]
-
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="StaticBody3D2" unique_id=706998069]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.866457, 0.069040775, 5.7568045)
-depth = 3.835
-polygon = PackedVector2Array(1.170188, 2.1799588, -3.503817, -0.055380583, 5.463537, -0.102879524, 5.239087, 4.358291)
-
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="StaticBody3D2" unique_id=1728846356]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.866457, 0.069040775, 7.691585)
-polygon = PackedVector2Array(-4.2099466, -0.2885456, -0.08138752, 1.8098096, 5.20693, 4.333479, 5.3430777, -0.28603816)
-depth = 4.06
-
-[node name="Rail" parent="." unique_id=52671247 groups=["Rails"] instance=ExtResource("3_8gbba")]
-transform = Transform3D(1.89, 0, 0, 0, 1.89, 0, 0, 0, 1.89, 18.211948, 3.6386642, 11.088408)
+[node name="GroundedRail" parent="." unique_id=1499673604 instance=ExtResource("4_kry3j")]
+transform = Transform3D(1.715, 0, 0, 0, 1.715, 0, 0, 0, 1.715, -10.340909, 0.24999952, -1.2853479)

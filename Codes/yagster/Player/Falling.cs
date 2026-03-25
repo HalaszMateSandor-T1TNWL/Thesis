@@ -30,7 +30,7 @@ public partial class Falling : State
 		_velocity.Y -= gravity * delta;
 		if(Mathf.Abs(movementDirection.X) > 0 || Mathf.Abs(movementDirection.Z) > 0)
 		{
-			_velocity = _velocity.MoveToward(movementDirection * _speed, delta);
+			_velocity = _velocity.MoveToward(movementDirection * _speed, _accel/3 * delta);
 		}
 		parent.Velocity = _velocity;
 		parent.MoveAndSlide();

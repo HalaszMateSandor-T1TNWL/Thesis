@@ -28,7 +28,7 @@ public partial class Jumping : State
 
 		parent.Velocity = velocity;
 		
-		parent.Velocity = parent.Velocity.MoveToward(movementDirection, delta);
+		parent.Velocity = parent.Velocity.MoveToward(movementDirection, new Player().accel * delta);
 
 		parent.MoveAndSlide();
 
