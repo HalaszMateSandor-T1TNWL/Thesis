@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://br14xhtlrntr5"]
-
-[ext_resource type="PackedScene" uid="uid://c6k36qp1fjvcp" path="res://Scenes/Yagi.tscn" id="1_v0iea"]
-
-[node name="Node3D" type="Node3D" unique_id=1887688088]
-
-[node name="CharacterBody3D" parent="." unique_id=498162917 instance=ExtResource("1_v0iea")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02233845, 0)

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dke7x2eyn3j2y"
+path="res://.godot/imported/Yagi.obj-4d260cf072230b2cecb07d809fbc5911.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Yagi.obj-4d260cf072230b2cecb07d809fbc5911.mesh"]
+
+source_file="res://Player/Yagi.obj"
+dest_files=["res://.godot/imported/Yagi.obj-4d260cf072230b2cecb07d809fbc5911.mesh", "res://.godot/imported/Yagi.obj-4d260cf072230b2cecb07d809fbc5911.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

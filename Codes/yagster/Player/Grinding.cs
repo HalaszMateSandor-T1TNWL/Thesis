@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks.Dataflow;
 
@@ -81,7 +82,26 @@ public partial class Grinding : State
 
     public override void Update(float delta)
     {
-        StartRail();
+        
+    }
+
+    public override void PhysicsUpdate(float delta)
+    {
+		if(_usedRail != null)
+		{
+			if(_usedRail.pathFollow.ProgressRatio == 1)
+			{
+				EmitSignal(nameof(Transition), "Jumping", movementDirection);
+				Exit();
+			}
+			else if(_usedRail.pathFollow.ProgressRatio < 1)
+			{
+				_usedRail.remoteTransform.RemotePath = parent.GetPath();
+				_usedRail.pathFollow.Progress += 7f * delta;
+			}	
+		}
+		else
+			StartRail();
     }
 
 
@@ -93,7 +113,6 @@ public partial class Grinding : State
 		if(onRail)
 		{
 			_usedRail = (RailGrinding)_grindCast.GetCollider(0);
-			_path = _usedRail.path;
 			SetRailPosition();
 		}
 	}
@@ -102,7 +121,13 @@ public partial class Grinding : State
     {
 		Vector3 railPoint;
         _usedRail.CalculateTargetRailPoint(parent.GlobalPosition, out railPoint);
-        _usedRail.CalculateDirection(_usedRail.pathFollow.GlobalTransform.Basis.Z, parent.GlobalTransform.Basis.Z);
+        if(_usedRail.CalculateDirection(_usedRail.pathFollow.GlobalTransform.Basis.Z, -parent.GlobalTransform.Basis.Z))
+		{
+			GD.Print("Lol");
+		}
+		else
+			GD.Print("HiHi");
+		
 		GD.Print(railPoint);
 
 		parent.GlobalPosition = new Vector3((float)Mathf.Lerp(parent.GlobalPosition.X, railPoint.X, 0.35),
@@ -110,5 +135,17 @@ public partial class Grinding : State
 		  									(float)Mathf.Lerp(parent.GlobalPosition.Z, railPoint.Z, 0.35)
 		);
     }
+
+    public override void Exit()
+	{
+		if(_usedRail != null)
+		{
+			_usedRail.remoteTransform.RemotePath = ".";
+			_usedRail.remoteTransform.ForceUpdateCache();
+			_usedRail.pathFollow.ProgressRatio = 0f;
+			_usedRail = null;
+		}
+	}
+
 
 }

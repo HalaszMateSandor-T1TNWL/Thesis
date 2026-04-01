@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnpxiyoiimhb8"]
 
 [ext_resource type="Texture2D" uid="uid://ci7hogfp7yvh7" path="res://Textures/YagiBoweep.png" id="1_jjgbg"]
-[ext_resource type="PackedScene" path="res://Scenes/Yagi2.tscn" id="4_21xkr"]
+[ext_resource type="PackedScene" uid="uid://1jsfgbspiekt" path="res://Scenes/Yagi2.tscn" id="4_21xkr"]
 [ext_resource type="PackedScene" uid="uid://byfee14yvxbc0" path="res://Scenes/RailTest.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://cxogkwf022axe" path="res://Scenes/GroundedRail.tscn" id="4_kry3j"]
 
@@ -20,6 +20,7 @@ glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjvhh"]
 albedo_texture = ExtResource("1_jjgbg")
+uv1_offset = Vector3(-0.07, -0.15, 0)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jjgbg"]
 size = Vector3(100, 0.5, 100)
@@ -37,10 +38,11 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2558293, 0)
 accel = 5.0
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=729708842]
-transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=1398152465]
 material_override = SubResource("StandardMaterial3D_jjvhh")
@@ -49,8 +51,8 @@ mesh = SubResource("BoxMesh_jjgbg")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1231383685]
 shape = SubResource("BoxShape3D_bo1nx")
 
-[node name="RailTest" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
-transform = Transform3D(5.43, 0, 0, 0, 5.43, 0, 0, 0, 5.43, 1.8620243, 0.33141187, 20.635307)
-
 [node name="GroundedRail" parent="." unique_id=1499673604 instance=ExtResource("4_kry3j")]
-transform = Transform3D(1.715, 0, 0, 0, 1.715, 0, 0, 0, 1.715, -10.340909, 0.24999952, -1.2853479)
+transform = Transform3D(1.715, 0, 0, 0, 1.715, 0, 0, 0, 1.715, -10.340909, 2.4554667, -1.2853479)
+
+[node name="StaticBody3D" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
+transform = Transform3D(5.43, 0, 0, 0, 5.43, 0, 0, 0, 5.43, -3.057373, 2.5814118, 18.000975)

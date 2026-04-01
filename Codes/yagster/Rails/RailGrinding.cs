@@ -77,6 +77,7 @@ public partial class RailGrinding : StaticBody3D
 	public float length;
 	public Path3D path;
 	public PathFollow3D pathFollow;
+	public RemoteTransform3D remoteTransform;
 	
     public override void _Ready()
     {
@@ -84,6 +85,7 @@ public partial class RailGrinding : StaticBody3D
 		path = GetNode<Path3D>($"Path3D");
         length = path.Curve.GetBakedLength();
 		pathFollow = GetNode<PathFollow3D>($"Path3D/PathFollow3D");
+		remoteTransform = GetNode<RemoteTransform3D>($"Path3D/PathFollow3D/RemoteTransform3D");
     }
 
 	public Vector3 CalculateTargetRailPoint(Vector3 playerPosition, out Vector3 railPosition)

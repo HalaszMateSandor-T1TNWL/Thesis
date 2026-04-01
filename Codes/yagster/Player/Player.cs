@@ -9,7 +9,7 @@ public partial class Player : CharacterBody3D
 	
 	[Export] public float speed = 50.0f;
 	[Export] public float accel = 20.0f;
-	public ShapeCast3D _grindRays;
+	public ShapeCast3D _shapecast;
 	
 	[Export] public float mouseSensitivity = 0.25f;
 	
@@ -53,7 +53,7 @@ public partial class Player : CharacterBody3D
 		_globalPosition = GetNode<Label>($"CamRoot/Control/GlobalPosition/Label");
 		_localPosition = GetNode<Label>($"CamRoot/Control/LocalPosition/Label");
 
-		_grindRays = GetNode<ShapeCast3D>($"ShapeCast3D");
+		_shapecast = GetNode<ShapeCast3D>($"ShapeCast3D");
 	}
 
 	public bool IsMoving()
@@ -61,22 +61,10 @@ public partial class Player : CharacterBody3D
 		return Mathf.Abs(_movementDirection.X) > 0 || Mathf.Abs(_movementDirection.Z) > 0;
 	}
 
-	public ShapeCast3D GetValidRay()
-	{
-		if(_grindRays != null)
-		{
-			if(_grindRays.IsColliding() && _grindRays.GetCollider(0) is StaticBody3D body && body.IsInGroup("Rails"))
-			{
-				return _grindRays;
-			}
-		}
-		return null;
-	}
-
 	public bool IsGrinding()
 	{
-		ShapeCast3D grindRay = GetValidRay();
-		if(grindRay != null)
+		bool rail = _shapecast.IsColliding() && _shapecast.GetCollider(0) is RailGrinding;
+		if(rail)
 		{
 			return true;
 		}

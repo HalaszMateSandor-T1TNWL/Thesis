@@ -18,7 +18,7 @@ public partial class Falling : State
 		_meshRoot = GetNode<Node3D>($"../..");
 		
 		_velocity = parent.Velocity;
-		_accel = new Player().accel;
+		_accel = new Player().accel/5;
 		_speed = new Player().speed;
 		_lastMoveDirection = Vector3.Back;
 		
@@ -30,7 +30,7 @@ public partial class Falling : State
 		_velocity.Y -= gravity * delta;
 		if(Mathf.Abs(movementDirection.X) > 0 || Mathf.Abs(movementDirection.Z) > 0)
 		{
-			_velocity = _velocity.MoveToward(movementDirection * _speed, _accel/3 * delta);
+			_velocity = _velocity.MoveToward(movementDirection * _speed, _accel * delta);
 		}
 		parent.Velocity = _velocity;
 		parent.MoveAndSlide();

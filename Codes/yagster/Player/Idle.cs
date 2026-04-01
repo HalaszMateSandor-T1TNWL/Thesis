@@ -18,11 +18,11 @@ public partial class Idle : State
 	
 	public override void Update(float delta)
 	{
-		if(Mathf.Abs(movementDirection.X) > 0 || Mathf.Abs(movementDirection.Z) > 0)
+		/*if(Mathf.Abs(movementDirection.X) > 0 || Mathf.Abs(movementDirection.Z) > 0)
 		{
 			GD.Print("Enter Running!");
 			EmitSignal(nameof(Transition), "Running", movementDirection);
-		}
+		}*/
 	}
 	
 	public override void PhysicsUpdate(float delta)
