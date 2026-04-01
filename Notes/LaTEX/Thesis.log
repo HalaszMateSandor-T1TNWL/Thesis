@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  9 MAR 2026 23:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  31 MAR 2026 12:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -350,24 +350,24 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 (./Chapters/introduction.aux) (./Chapters/FSM.aux) (./Chapters/concept.aux))
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -391,7 +391,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 42.
+Package hyperref Info: Link coloring ON on input line 23.
 
 (./Thesis.out) (./Thesis.out)
 \@outlinefile=\write3
@@ -536,7 +536,7 @@ Overfull \hbox (35.08934pt too wide) in paragraph at lines 157--164
  []
 
 )
-Overfull \hbox (42.14502pt too wide) in paragraph at lines 167--50
+Overfull \hbox (42.14502pt too wide) in paragraph at lines 167--31
 \OT1/cmr/m/n/12 Miskolc, [] |  [] 
  []
 
@@ -598,13 +598,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 )
-Overfull \hbox (39.52332pt too wide) in paragraph at lines 9--64
+Overfull \hbox (39.52332pt too wide) in paragraph at lines 9--45
 \OT1/cmr/m/n/12 mozg^^Sasrendszer-protot^^S^^Ppust elk^^Sesz^^S^^Pteni, amely b
 e-mu-tatja az ^^Sallapotg^^Sepek fontoss^^Sag^^Sat
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--64
+Underfull \hbox (badness 10000) in paragraph at lines 9--45
 
  []
 
@@ -622,7 +622,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.64 \include{Chapters/introduction}
+l.45 \include{Chapters/introduction}
                                      [2]
 \openout2 = `Chapters/FSM.aux'.
 
@@ -1526,13 +1526,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.13})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.66 \include{Chapters/concept}
+l.47 \include{Chapters/concept}
                                
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.14})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.66 \include{Chapters/concept}
+l.47 \include{Chapters/concept}
                                 <./Diagrams/InAirTrio.png> <./Diagrams/BaseTrio
 .png>] (./Thesis.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 29--32
@@ -1578,7 +1578,7 @@ onts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (32 pages, 2110656 bytes).
+Output written on Thesis.pdf (32 pages, 2110672 bytes).
 PDF statistics:
  721 PDF objects out of 1000 (max. 8388607)
  534 compressed objects within 6 object streams
