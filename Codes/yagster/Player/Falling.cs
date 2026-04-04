@@ -21,8 +21,6 @@ public partial class Falling : State
 		_accel = new Player().accel/5;
 		_speed = new Player().speed;
 		_lastMoveDirection = Vector3.Back;
-		
-		GD.Print("Entering Falling State");
 	}
 
 	public override void PhysicsUpdate(float delta)
@@ -52,10 +50,4 @@ public partial class Falling : State
 			Exit();
 		}
 	}
-	
-	public override void Exit()
-	{
-		GD.Print("Exiting Falling State");
-	}
-	
 }

@@ -1,7 +1,4 @@
 using Godot;
-using Godot.NativeInterop;
-using System;
-using System.Linq;
 
 [GlobalClass]
 public partial class RailGrinding : StaticBody3D
@@ -79,21 +76,21 @@ public partial class RailGrinding : StaticBody3D
 	public PathFollow3D pathFollow;
 	public RemoteTransform3D remoteTransform;
 	
-    public override void _Ready()
-    {
-		this.AddToGroup("Rails");
+  public override void _Ready()
+  {
+		AddToGroup("Rails");
 		path = GetNode<Path3D>($"Path3D");
-        length = path.Curve.GetBakedLength();
+		length = path.Curve.GetBakedLength();
 		pathFollow = GetNode<PathFollow3D>($"Path3D/PathFollow3D");
 		remoteTransform = GetNode<RemoteTransform3D>($"Path3D/PathFollow3D/RemoteTransform3D");
-    }
+  }
 
-	public Vector3 CalculateTargetRailPoint(Vector3 playerPosition, out Vector3 railPosition)
+	public Vector3 CalculateTargetRailPoint(Vector3 playerPosition)
 	{
 		Vector3 nearestPoint =	path.Curve.GetClosestPoint(path.ToLocal(playerPosition));
-		railPosition = path.ToGlobal(nearestPoint);
+  	Vector3 railPoint = playerPosition + path.ToGlobal(nearestPoint);
 
-		return nearestPoint;
+		return railPoint;
 	}
 	
 	public bool CalculateDirection(Vector3 railForward, Vector3 playerForward)

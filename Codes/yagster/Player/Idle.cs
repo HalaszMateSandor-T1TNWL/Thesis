@@ -13,16 +13,6 @@ public partial class Idle : State
 		parent = GetNode<CharacterBody3D>($"../../..");
 		_speed = new Player().speed;
 		_accel = new Player().accel;
-		GD.Print("Entering Idle State");
-	}
-	
-	public override void Update(float delta)
-	{
-		/*if(Mathf.Abs(movementDirection.X) > 0 || Mathf.Abs(movementDirection.Z) > 0)
-		{
-			GD.Print("Enter Running!");
-			EmitSignal(nameof(Transition), "Running", movementDirection);
-		}*/
 	}
 	
 	public override void PhysicsUpdate(float delta)
@@ -32,10 +22,5 @@ public partial class Idle : State
 		parent.Velocity = _velocity;
 		
 		parent.MoveAndSlide();
-	}
-	
-	public override void Exit()
-	{
-		GD.Print("Exiting Idle State");
 	}
 }

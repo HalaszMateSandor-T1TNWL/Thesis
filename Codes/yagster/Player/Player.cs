@@ -1,6 +1,5 @@
 using Godot;
 using System;
-using Godot.Collections;
 
 public partial class Player : CharacterBody3D
 {
@@ -17,7 +16,8 @@ public partial class Player : CharacterBody3D
 	private const double _tiltLowerLimit = -Math.PI / 6.0f;
 	
 	private Vector3 _movementDirection;
-	
+  private MeshInstance3D _playerBody; 
+
 	private Node3D _cameraYaw;
 	private Node3D _cameraPitch;
 	private Vector2 _cameraInputDirection = Vector2.Zero;
@@ -48,6 +48,7 @@ public partial class Player : CharacterBody3D
 		_camera = GetNode<Camera3D>($"CamRoot/CamYaw/CamPitch/SpringArm3D/Camera3D");
 		_checkBox = GetNode<CheckBox>($"CamRoot/Control/CheckBox");
 		_isGrindingDebug = GetNode<CheckBox>($"CamRoot/Control/IsGrinding");
+	  _playerBody = GetNode<MeshInstance3D>($"Yagi");
 
 		_speed = GetNode<Label>($"CamRoot/Control/Speed/Label");
 		_globalPosition = GetNode<Label>($"CamRoot/Control/GlobalPosition/Label");
@@ -63,13 +64,7 @@ public partial class Player : CharacterBody3D
 
 	public bool IsGrinding()
 	{
-		bool rail = _shapecast.IsColliding() && _shapecast.GetCollider(0) is RailGrinding;
-		if(rail)
-		{
-			return true;
-		}
-		else
-			return false;
+		return _shapecast.IsColliding() && _shapecast.GetCollider(0) is RailGrinding;
 	}
 	
 	public override void _Input(InputEvent @event)
@@ -100,7 +95,7 @@ public partial class Player : CharacterBody3D
 	
 	public override void _Process(double delta)
 	{
-		if(this.IsOnFloor() == false && !IsGrinding())
+		if(IsOnFloor() == false && !IsGrinding())
 		{
 			CurrentState = PlayerState.Falling;
 		}
@@ -129,7 +124,7 @@ public partial class Player : CharacterBody3D
 				break;
 		}
 
-		_checkBox.ButtonPressed = this.IsOnFloor();
+		_checkBox.ButtonPressed = IsOnFloor();
 		_isGrindingDebug.ButtonPressed = IsGrinding();
 	}
 	
@@ -155,10 +150,10 @@ public partial class Player : CharacterBody3D
 		_movementDirection = _movementDirection.Normalized();
 		
 		_speed.Text = _movementDirection.ToString();
-		_globalPosition.Text = this.GlobalPosition.ToString();
-		_localPosition.Text = this.Position.ToString();
+		_globalPosition.Text = GlobalPosition.ToString();
+		_localPosition.Text = Position.ToString();
 		
-		if(this.IsOnFloor())
+		if(IsOnFloor())
 		{
 			if(Input.IsActionJustPressed("Movement"))
 			{
@@ -169,7 +164,7 @@ public partial class Player : CharacterBody3D
 				CurrentState = PlayerState.Idle;
 			}
 		}
-		else if(this.IsOnFloor() == false)
+		else if(IsOnFloor() == false)
 		{
 			CurrentState = PlayerState.Falling;
 		}

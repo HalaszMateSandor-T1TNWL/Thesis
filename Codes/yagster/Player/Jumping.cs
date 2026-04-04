@@ -7,19 +7,16 @@ public partial class Jumping : State
 	
 	public Vector3 velocity;
 	public Vector3 direction;
+  private ShapeCast3D _shapeCast;
 	
 	public override void Enter()
 	{
-		GD.Print("Entering Jumping State");
-		this.parent = GetNode<CharacterBody3D>($"../../..");
+		parent = GetNode<CharacterBody3D>($"../../..");
+		_shapeCast = GetNode<ShapeCast3D>($"../../../ShapeCast3D");
+		_shapeCast.Enabled = false;
 		velocity = parent.Velocity;
 		velocity.Y = jumpForce;
 		parent.Velocity = velocity;
-	}
-	
-	public override void Exit()
-	{
-		GD.Print("Exiting Jumping State");
 	}
 	
 	public override void PhysicsUpdate(float delta)
@@ -37,5 +34,10 @@ public partial class Jumping : State
 			EmitSignal(nameof(Transition), "Falling", movementDirection);
 		}
 	}
-	
+
+  public override void Exit()
+	{
+		if(_shapeCast != null)
+			_shapeCast.Enabled = true;
+	}
 }

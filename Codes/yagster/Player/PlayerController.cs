@@ -1,6 +1,5 @@
 using Godot;
 using Godot.Collections;
-using System;
 
 public partial class PlayerController : Node
 {
@@ -61,7 +60,7 @@ public partial class PlayerController : Node
 	{
 		_currentState.HandleInput(@event);
 	}
-	
+
 	public void OnTransitionTo(string key, Vector3 movementDirection)
 	{
 		if(!_states.ContainsKey(key) || _currentState == _states[key])
