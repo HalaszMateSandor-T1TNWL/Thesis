@@ -36,11 +36,12 @@ shape = SubResource("ConcavePolygonShape3D_ndgd1")
 
 [node name="Path3D" type="Path3D" parent="." unique_id=1146373984]
 transform = Transform3D(1.0000011, 0, 0, 0, 0.98980945, -0.14240451, 0, 0.14240451, 0.98980945, 0.5157943, 1.0203737, -0.56741613)
+rotation_edit_mode = 2
 curve = SubResource("Curve3D_ndgd1")
 debug_custom_color = Color(0.913887, 0, 0.49888182, 1)
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1628008930]
-transform = Transform3D(-0.9170009, -0.060537968, -0.39422277, 5.587839e-09, 0.9884174, -0.15177916, 0.39884216, -0.13918632, -0.9063802, -0.2337012, -0.020111203, -0.050366282)
+transform = Transform3D(-0.9170009, -0.060538013, -0.39422283, 5.587839e-09, 0.9884181, -0.15177919, 0.39884216, -0.13918643, -0.90638036, -0.2337012, -0.020111203, -0.050366282)
 use_model_front = true
 loop = false
 

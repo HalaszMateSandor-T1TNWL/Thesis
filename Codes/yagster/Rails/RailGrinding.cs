@@ -87,8 +87,8 @@ public partial class RailGrinding : StaticBody3D
 
 	public Vector3 CalculateTargetRailPoint(Vector3 playerPosition)
 	{
-		Vector3 nearestPoint =	path.Curve.GetClosestPoint(path.ToLocal(playerPosition));
-  	Vector3 railPoint = playerPosition + path.ToGlobal(nearestPoint);
+		Vector3 nearestPoint = path.Curve.GetClosestPoint(path.ToLocal(playerPosition));
+  		Vector3 railPoint = path.ToGlobal(nearestPoint);
 
 		return railPoint;
 	}
@@ -96,6 +96,8 @@ public partial class RailGrinding : StaticBody3D
 	public bool CalculateDirection(Vector3 railForward, Vector3 playerForward)
 	{
 		float angle = Mathf.RadToDeg(playerForward.AngleTo(railForward));
+		
+		GD.Print("Angle:\t" + angle);
 		
 		return angle > 90 ? true : false;
 	}

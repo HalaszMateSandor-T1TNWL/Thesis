@@ -40,7 +40,8 @@ transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0.
 curve = SubResource("Curve3D_xd4t3")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=36658932]
-transform = Transform3D(-0.0047549936, 1.647464e-05, -0.9998273, 0, 0.99999696, 1.647222e-05, 0.9998273, 7.835034e-08, -0.0047549936, 0, 0, 0)
+transform = Transform3D(-0.004754968, 1.6474642e-05, -0.9998274, 0, 0.9999971, 1.647222e-05, 0.9998274, 7.834992e-08, -0.004754968, 0, 0, 0)
+rotation_mode = 4
 loop = false
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="Path3D/PathFollow3D" unique_id=251679088]

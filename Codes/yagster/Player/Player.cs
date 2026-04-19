@@ -16,7 +16,7 @@ public partial class Player : CharacterBody3D
 	private const double _tiltLowerLimit = -Math.PI / 6.0f;
 	
 	private Vector3 _movementDirection;
-  private MeshInstance3D _playerBody; 
+  	public MeshInstance3D playerBody;
 
 	private Node3D _cameraYaw;
 	private Node3D _cameraPitch;
@@ -48,13 +48,14 @@ public partial class Player : CharacterBody3D
 		_camera = GetNode<Camera3D>($"CamRoot/CamYaw/CamPitch/SpringArm3D/Camera3D");
 		_checkBox = GetNode<CheckBox>($"CamRoot/Control/CheckBox");
 		_isGrindingDebug = GetNode<CheckBox>($"CamRoot/Control/IsGrinding");
-	  _playerBody = GetNode<MeshInstance3D>($"Yagi");
+		playerBody = GetNode<MeshInstance3D>($"Yagi");
 
 		_speed = GetNode<Label>($"CamRoot/Control/Speed/Label");
 		_globalPosition = GetNode<Label>($"CamRoot/Control/GlobalPosition/Label");
 		_localPosition = GetNode<Label>($"CamRoot/Control/LocalPosition/Label");
 
 		_shapecast = GetNode<ShapeCast3D>($"ShapeCast3D");
+		
 	}
 
 	public bool IsMoving()
@@ -95,10 +96,7 @@ public partial class Player : CharacterBody3D
 	
 	public override void _Process(double delta)
 	{
-		if(IsOnFloor() == false && !IsGrinding())
-		{
-			CurrentState = PlayerState.Falling;
-		}
+
 
 		if (IsMoving())
 		{
@@ -165,6 +163,11 @@ public partial class Player : CharacterBody3D
 			}
 		}
 		else if(IsOnFloor() == false)
+		{
+			CurrentState = PlayerState.Falling;
+		}
+		
+		if(IsOnFloor() == false && !IsGrinding())
 		{
 			CurrentState = PlayerState.Falling;
 		}
