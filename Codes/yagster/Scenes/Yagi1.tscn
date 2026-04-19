@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://cehh8g76d3bkp"]
+
+[ext_resource type="Texture2D" uid="uid://u6bw4fqe1tbo" path="res://Player/Yagi_Atlas.png" id="1_0dtj6"]
+[ext_resource type="Script" uid="uid://n6dln5lon8ga" path="res://Player/Player.cs" id="1_4uteb"]
+[ext_resource type="ArrayMesh" uid="uid://dke7x2eyn3j2y" path="res://Player/Yagi.obj" id="2_ef7uh"]
+[ext_resource type="Script" uid="uid://b0bvgplf8xfoi" path="res://Player/PlayerController.cs" id="3_vmxa0"]
+[ext_resource type="Script" uid="uid://dfubdxh4tmtev" path="res://Player/Idle.cs" id="4_0q70y"]
+[ext_resource type="Script" uid="uid://bpqp8817ih8pu" path="res://Player/Running.cs" id="5_p4xkm"]
+[ext_resource type="Script" uid="uid://dgvpb7462y7b3" path="res://Player/Jumping.cs" id="6_6fi31"]
+[ext_resource type="Script" uid="uid://cgf70c6obmjmb" path="res://Player/Falling.cs" id="7_7odqc"]
+[ext_resource type="Script" uid="uid://bsg5684ltkvci" path="res://Player/Grinding.cs" id="8_2r0vc"]
+[ext_resource type="Script" uid="uid://274ffdg60mbk" path="res://Player/CameraController.cs" id="9_5583t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1d4lk"]
+albedo_texture = ExtResource("1_0dtj6")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2ws85"]
+radius = 0.31103516
+height = 2.881958
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fmavq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4acsc"]
+
+[node name="CharacterController" type="RigidBody3D" unique_id=2044473415]
+script = ExtResource("1_4uteb")
+
+[node name="Yagi" type="MeshInstance3D" parent="." unique_id=1177531642]
+material_override = SubResource("StandardMaterial3D_1d4lk")
+mesh = ExtResource("2_ef7uh")
+
+[node name="PlayerController" type="Node" parent="Yagi" unique_id=1145031498]
+script = ExtResource("3_vmxa0")
+initialState = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="Yagi/PlayerController" unique_id=871365363]
+script = ExtResource("4_0q70y")
+
+[node name="Running" type="Node" parent="Yagi/PlayerController" unique_id=909252003]
+script = ExtResource("5_p4xkm")
+
+[node name="Jumping" type="Node" parent="Yagi/PlayerController" unique_id=526882064]
+script = ExtResource("6_6fi31")
+
+[node name="Falling" type="Node" parent="Yagi/PlayerController" unique_id=1760109778]
+script = ExtResource("7_7odqc")
+
+[node name="Grinding" type="Node" parent="Yagi/PlayerController" unique_id=2086688627]
+script = ExtResource("8_2r0vc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1675919991]
+transform = Transform3D(1.46, 0, 0, 0, 1.46, 0, 0, 0, 1.46, 0, 2.1234264, 0)
+shape = SubResource("CapsuleShape3D_2ws85")
+
+[node name="CamRoot" type="Node3D" parent="." unique_id=8286742]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 3.920629, 0)
+script = ExtResource("9_5583t")
+
+[node name="CamYaw" type="Node3D" parent="CamRoot" unique_id=1222369233]
+
+[node name="CamPitch" type="Node3D" parent="CamRoot/CamYaw" unique_id=1785702658]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CamRoot/CamYaw/CamPitch" unique_id=2085283138]
+transform = Transform3D(-3.9328583e-08, -0.43644065, 0.89973307, -1.9077426e-08, 0.89973307, 0.43644065, -1, 0, -4.371139e-08, 0, 0, 0)
+shape = SubResource("SphereShape3D_fmavq")
+spring_length = 7.5
+
+[node name="Camera3D" type="Camera3D" parent="CamRoot/CamYaw/CamPitch/SpringArm3D" unique_id=977230022]
+
+[node name="Control" type="Control" parent="CamRoot" unique_id=1948980141]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CheckBox" type="CheckBox" parent="CamRoot/Control" unique_id=1152926662]
+layout_mode = 0
+offset_right = 185.0
+offset_bottom = 31.0
+text = "Is Player on ground?"
+
+[node name="Idle" type="CheckBox" parent="CamRoot/Control" unique_id=1885119746]
+layout_mode = 0
+offset_left = 1051.0
+offset_top = 61.0
+offset_right = 1130.0
+offset_bottom = 92.0
+text = "Idle"
+
+[node name="Running" type="CheckBox" parent="CamRoot/Control" unique_id=843192872]
+layout_mode = 0
+offset_left = 1051.0
+offset_top = 20.0
+offset_right = 1154.0
+offset_bottom = 51.0
+text = "Runnning"
+
+[node name="Jumping" type="CheckBox" parent="CamRoot/Control" unique_id=462146542]
+layout_mode = 0
+offset_left = 1051.0
+offset_top = 40.0
+offset_right = 1143.0
+offset_bottom = 71.0
+text = "Jumping"
+
+[node name="Falling" type="CheckBox" parent="CamRoot/Control" unique_id=47894945]
+layout_mode = 0
+offset_left = 1051.0
+offset_right = 1108.0
+offset_bottom = 31.0
+text = "Falling"
+
+[node name="Grinding" type="CheckBox" parent="CamRoot/Control" unique_id=1495046797]
+layout_mode = 0
+offset_left = 1051.0
+offset_top = 81.0
+offset_right = 1146.0
+offset_bottom = 112.0
+text = "Grinding"
+
+[node name="IsGrinding" type="CheckBox" parent="CamRoot/Control" unique_id=1166842969]
+layout_mode = 0
+offset_top = 26.0
+offset_right = 172.0
+offset_bottom = 57.0
+text = "Is Player Grinding?"
+
+[node name="Speed" type="Label" parent="CamRoot/Control" unique_id=2127688398]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 73.0
+offset_right = 168.0
+offset_bottom = 96.0
+text = "Movement Direction:"
+
+[node name="Label" type="Label" parent="CamRoot/Control/Speed" unique_id=358029866]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 2.0
+offset_right = 211.0
+offset_bottom = 25.0
+
+[node name="GlobalPosition" type="Label" parent="CamRoot/Control" unique_id=1218542110]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 103.0
+offset_right = 125.0
+offset_bottom = 126.0
+text = "Global Position:"
+
+[node name="Label" type="Label" parent="CamRoot/Control/GlobalPosition" unique_id=1210996389]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 2.0
+offset_right = 167.0
+offset_bottom = 25.0
+
+[node name="LocalPosition" type="Label" parent="CamRoot/Control" unique_id=137582552]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 124.0
+offset_right = 117.0
+offset_bottom = 147.0
+text = "Local Position:"
+
+[node name="Label" type="Label" parent="CamRoot/Control/LocalPosition" unique_id=2010550211]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 2.0
+offset_right = 156.0
+offset_bottom = 25.0
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="." unique_id=6918727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2439795, 0)
+shape = SubResource("BoxShape3D_4acsc")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1512266239]

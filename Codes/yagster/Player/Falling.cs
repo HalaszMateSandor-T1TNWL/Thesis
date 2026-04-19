@@ -7,19 +7,19 @@ public partial class Falling : State
 	private Vector3 _lastMoveDirection;
 	
 	private Node3D _meshRoot;
-	
+	public new Player parent;
 	private float _accel;
 	private float _speed;
 	private float _rotationSpeed = 10.0f;
 	
 	public override void Enter()
 	{
-		parent = GetNode<CharacterBody3D>($"../../..");
+		parent = (Player)GetNode<CharacterBody3D>($"../../..");
 		_meshRoot = GetNode<Node3D>($"../..");
 		
 		_velocity = parent.Velocity;
-		_accel = new Player().accel/5;
-		_speed = new Player().speed;
+		_accel = parent.accel/5;
+		_speed = parent.speed;
 		_lastMoveDirection = Vector3.Back;
 	}
 
@@ -38,7 +38,7 @@ public partial class Falling : State
 			_lastMoveDirection = movementDirection;
 		}
 		
-		var targetAngle = Vector3.Left.SignedAngleTo(_lastMoveDirection, Vector3.Up);
+		var targetAngle = Vector3.Forward.SignedAngleTo(_lastMoveDirection, Vector3.Up);
 		_meshRoot.Rotation = new Vector3(0, Mathf.LerpAngle(_meshRoot.Rotation.Y, targetAngle, _rotationSpeed * delta), 0);
 	}
 	
@@ -47,7 +47,6 @@ public partial class Falling : State
 		if(parent.IsOnFloor())
 		{
 			EmitSignal(nameof(Transition), "Running", movementDirection);
-			Exit();
 		}
 	}
 }

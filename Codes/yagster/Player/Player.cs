@@ -8,13 +8,16 @@ public partial class Player : CharacterBody3D
 	
 	[Export] public float speed = 50.0f;
 	[Export] public float accel = 20.0f;
+	[Export] public double DisableGroundRayTime { get; set; }
 	public ShapeCast3D _shapecast;
-	
+	public RayCast3D RayCast;
+
 	[Export] public float mouseSensitivity = 0.25f;
 	
-	private const double _tiltUpperLimit = Math.PI / 3.0f;
-	private const double _tiltLowerLimit = -Math.PI / 6.0f;
+	private const double _tiltUpperLimit = Math.PI / 3.0;
+	private const double _tiltLowerLimit = -Math.PI / 6.0;
 	
+	public bool Grounded = false;
 	private Vector3 _movementDirection;
   	public MeshInstance3D playerBody;
 
@@ -46,9 +49,12 @@ public partial class Player : CharacterBody3D
 		_cameraYaw = GetNode<Node3D>($"CamRoot/CamYaw");
 		_cameraPitch = GetNode<Node3D>($"CamRoot/CamYaw/CamPitch");
 		_camera = GetNode<Camera3D>($"CamRoot/CamYaw/CamPitch/SpringArm3D/Camera3D");
+		
 		_checkBox = GetNode<CheckBox>($"CamRoot/Control/CheckBox");
 		_isGrindingDebug = GetNode<CheckBox>($"CamRoot/Control/IsGrinding");
+
 		playerBody = GetNode<MeshInstance3D>($"Yagi");
+		RayCast = GetNodeOrNull<RayCast3D>($"RayCast3D");
 
 		_speed = GetNode<Label>($"CamRoot/Control/Speed/Label");
 		_globalPosition = GetNode<Label>($"CamRoot/Control/GlobalPosition/Label");
@@ -96,8 +102,6 @@ public partial class Player : CharacterBody3D
 	
 	public override void _Process(double delta)
 	{
-
-
 		if (IsMoving())
 		{
 			EmitSignal(nameof(SetMovementDirection), _movementDirection);
@@ -122,7 +126,7 @@ public partial class Player : CharacterBody3D
 				break;
 		}
 
-		_checkBox.ButtonPressed = IsOnFloor();
+		_checkBox.ButtonPressed = Grounded;
 		_isGrindingDebug.ButtonPressed = IsGrinding();
 	}
 	
@@ -151,7 +155,7 @@ public partial class Player : CharacterBody3D
 		_globalPosition.Text = GlobalPosition.ToString();
 		_localPosition.Text = Position.ToString();
 		
-		if(IsOnFloor())
+		if(Grounded)
 		{
 			if(Input.IsActionJustPressed("Movement"))
 			{
@@ -162,12 +166,12 @@ public partial class Player : CharacterBody3D
 				CurrentState = PlayerState.Idle;
 			}
 		}
-		else if(IsOnFloor() == false)
+		else if(Grounded == false)
 		{
 			CurrentState = PlayerState.Falling;
 		}
 		
-		if(IsOnFloor() == false && !IsGrinding())
+		if(Grounded == false && !IsGrinding())
 		{
 			CurrentState = PlayerState.Falling;
 		}

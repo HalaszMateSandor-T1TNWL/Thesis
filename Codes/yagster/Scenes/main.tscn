@@ -37,10 +37,6 @@ environment = SubResource("Environment_8gbba")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Player" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2558293, 0)
-accel = 5.0
-
 [node name="Ground" type="StaticBody3D" parent="." unique_id=729708842]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
@@ -56,3 +52,6 @@ transform = Transform3D(1.715, 0, 0, 0, 1.715, 0, 0, 0, 1.715, -10.340909, 2.455
 
 [node name="StaticBody3D" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
 transform = Transform3D(5.43, 0, 0, 0, 5.43, 0, 0, 0, 5.43, -3.057373, 2.5814118, 18.000975)
+
+[node name="CharacterBody3D" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
+transform = Transform3D(0.90838426, 0, 0.4181367, 0, 1, 0, -0.4181367, 0, 0.90838426, -6.250348, 2.5, 7.1432714)

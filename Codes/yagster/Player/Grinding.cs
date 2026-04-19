@@ -8,45 +8,44 @@ public partial class Grinding : State
 	private MeshInstance3D _playerBody;
   	private bool _frontFacing = false;
 	private float grindSpeed = 10f;
+
+	float railSwapWeight = 1.0f;
   
 	public override void Enter()
   	{
 		_grindCast = GetNode<ShapeCast3D>($"../../../ShapeCast3D");
+
 		parent = (Player)GetNode<Node3D>($"../../..");
-		_playerBody = parent.playerBody; 
+		_playerBody = parent.playerBody;
+
 		if(_usedRail == null) StartRail();
   	}
 
-  public override void PhysicsUpdate(float delta)
-  {
-	if(_usedRail != null)
+	public override void PhysicsUpdate(float delta)
 	{
-		switch (_frontFacing)
+		if(_usedRail != null)
 		{
-			case true:
-				if(_usedRail.pathFollow.ProgressRatio == 1)
-				{
-					_frontFacing = false;
-				}
-				else if(_usedRail.pathFollow.ProgressRatio < 1)
-				{
-					_usedRail.pathFollow.Progress += 6.5f * delta;
-				}
-			break;
+			railSwapWeight = Mathf.Clamp(railSwapWeight + (float)delta * 2f, -1, 1);
 
-			case false:
-				if(_usedRail.pathFollow.ProgressRatio == 0)
-				{
-					_frontFacing = true;
-				}
-				else if(_usedRail.pathFollow.ProgressRatio > 0)
-				{
-					_usedRail.pathFollow.Progress -= 6.5f * delta;
-				}
-			break;
+			float progress = _usedRail.pathFollow.Progress + -_usedRail.pathFollow.Basis.Z.Normalized().Dot(parent.Velocity.Normalized()) * parent.Velocity.Length() * (float)delta;
+			_usedRail.pathFollow.Progress = progress;
+
+			if(railSwapWeight >= 1)
+			{
+				parent.GlobalPosition = _usedRail.pathFollow.GlobalPosition;
+			}
+			else
+			{
+				parent.GlobalPosition = parent.GlobalPosition.Lerp(_usedRail.pathFollow.GlobalPosition, Mathf.Clamp(railSwapWeight, 0, 1));	
+			}
+			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
+
+			parent.Velocity = -_usedRail.pathFollow.Basis.Z.Normalized() * parent.Velocity.Length() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(parent.Velocity.Normalized());
+			parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * (float)delta;
+
+			parent.MoveAndSlide();	
 		}
 	}
-  }
 
 
 	public void StartRail()
@@ -56,49 +55,29 @@ public partial class Grinding : State
 		if(onRail)
 		{
 			_usedRail = (RailGrinding)_grindCast.GetCollider(0);
-			
-			SetRailPosition();
-			
-			_usedRail.remoteTransform.RemotePath = parent.GetPath();
-		
+
+			/* float progress = _usedRail.path.Curve.GetClosestOffset(parent.GlobalPosition - _usedRail.path.GlobalPosition);
+			Transform3D sample = _usedRail.path.GlobalTransform * _usedRail.path.Curve.SampleBakedWithRotation(progress);
+
+			_usedRail.pathFollow.Progress = progress;
+			_usedRail.pathFollow.GlobalTransform = sample;
+			_usedRail.pathFollow.ResetPhysicsInterpolation(); */
+
+			_frontFacing = _usedRail.CalculateTargetRailPoint(parent.GlobalPosition, parent.Velocity);
+
+			GD.Print("Front Facing: " + _frontFacing.ToString());
 		}
 	}
-
-	public void SetRailPosition()
-	{
-		Vector3 railPoint = _usedRail.CalculateTargetRailPoint(_playerBody.Position);
-		
-		if(_usedRail.CalculateDirection(_usedRail.pathFollow.GlobalTransform.Basis.Z, _playerBody.GlobalTransform.Basis.Z))
-		{
-			GD.Print("Facing the Front");
-			_frontFacing = true;
-		}
-		else
-		{
-			GD.Print("Facing the back");
-			_frontFacing = false;
-		}
-		
-		parent.GlobalPosition = new Vector3(
-			(float)Mathf.Lerp(parent.GlobalPosition.X, railPoint.X, 0.5),
-			(float)Mathf.Lerp(parent.GlobalPosition.Y, railPoint.Y, 0.5),
-			(float)Mathf.Lerp(parent.GlobalPosition.Z, railPoint.Z, 0.5)
-		);
-	
-		Vector3 firstPoint = _playerBody.GlobalPosition + _usedRail.path.Curve.GetBakedPoints()[0];
-		_usedRail.pathFollow.Progress = firstPoint.DistanceTo(railPoint);
-	}
-
 
 	public override void Exit()
 	{
 		if(_usedRail != null)
 		{
-			_usedRail.remoteTransform.RemotePath = ".";
-			_usedRail.remoteTransform.ForceUpdateCache();
 			_usedRail.pathFollow.ProgressRatio = 0.0f;
 			_usedRail = null;
 			parent.GlobalRotation = new Vector3(0,0,0);
 		}
 	}
+
+
 }

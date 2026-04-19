@@ -9,9 +9,6 @@ public partial class CameraController : Node3D
 	
 	private Vector2 _cameraInputDirection = Vector2.Zero;
 	
-	private const double _tiltUpperLimit = Math.PI / 3.0f;
-	private const double _tiltLowerLimit = -Math.PI / 6.0f;
-	
 	private Camera3D _camera;
 	private Node3D _yawCam;
 	private Node3D _pitchCam;
@@ -22,7 +19,6 @@ public partial class CameraController : Node3D
 		_yawCam = GetNode<Node3D>($"CamYaw");
 		_pitchCam = GetNode<Node3D>($"CamYaw/CamPitch");
 	}
-	
 	
 	public override void _Input(InputEvent @event)
 	{

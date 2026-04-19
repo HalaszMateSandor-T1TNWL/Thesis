@@ -28,7 +28,7 @@ point_count = 37
 transform = Transform3D(5.43, 0, 0, 0, 5.43, 0, 0, 0, 5.43, 0, 0, 0)
 script = ExtResource("1_xd4t3")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=310363025]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=310363025]
 mesh = SubResource("ArrayMesh_cysdb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1264217116]
@@ -40,9 +40,6 @@ transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0.
 curve = SubResource("Curve3D_xd4t3")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=36658932]
-transform = Transform3D(-0.004754968, 1.6474642e-05, -0.9998274, 0, 0.9999971, 1.647222e-05, 0.9998274, 7.834992e-08, -0.004754968, 0, 0, 0)
+transform = Transform3D(-0.0047549824, 1.6474714e-05, -0.9998333, 0, 1.0000014, 1.6472317e-05, 0.9998304, 7.835026e-08, -0.004754996, 0, 0, 0)
 rotation_mode = 4
 loop = false
-
-[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Path3D/PathFollow3D" unique_id=251679088]
-update_scale = false

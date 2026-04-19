@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://1jsfgbspiekt"]
 
 [ext_resource type="Script" uid="uid://n6dln5lon8ga" path="res://Player/Player.cs" id="1_txrj1"]
+[ext_resource type="Texture2D" uid="uid://u6bw4fqe1tbo" path="res://Player/Yagi_Atlas.png" id="2_5ctan"]
 [ext_resource type="ArrayMesh" uid="uid://dke7x2eyn3j2y" path="res://Player/Yagi.obj" id="2_txrj1"]
-[ext_resource type="Script" uid="uid://b5t80jpavofec" path="res://Player/Yagi.cs" id="3_5ctan"]
 [ext_resource type="Script" uid="uid://b0bvgplf8xfoi" path="res://Player/PlayerController.cs" id="3_rgmdh"]
 [ext_resource type="Script" uid="uid://dfubdxh4tmtev" path="res://Player/Idle.cs" id="4_ug0h4"]
 [ext_resource type="Script" uid="uid://bpqp8817ih8pu" path="res://Player/Running.cs" id="5_s41ug"]
@@ -10,6 +10,9 @@
 [ext_resource type="Script" uid="uid://cgf70c6obmjmb" path="res://Player/Falling.cs" id="7_d2rtk"]
 [ext_resource type="Script" uid="uid://bsg5684ltkvci" path="res://Player/Grinding.cs" id="8_u1vgq"]
 [ext_resource type="Script" uid="uid://274ffdg60mbk" path="res://Player/CameraController.cs" id="9_lcp2a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgmdh"]
+albedo_texture = ExtResource("2_5ctan")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vgqql"]
 radius = 0.31103516
@@ -20,14 +23,13 @@ height = 2.881958
 [sub_resource type="BoxShape3D" id="BoxShape3D_f1ek2"]
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=498162917]
-floor_snap_length = 0.2
 script = ExtResource("1_txrj1")
 speed = 25.0
 accel = 10.0
 
 [node name="Yagi" type="MeshInstance3D" parent="." unique_id=2090386080]
+material_override = SubResource("StandardMaterial3D_rgmdh")
 mesh = ExtResource("2_txrj1")
-script = ExtResource("3_5ctan")
 
 [node name="PlayerController" type="Node" parent="Yagi" unique_id=323458084]
 script = ExtResource("3_rgmdh")

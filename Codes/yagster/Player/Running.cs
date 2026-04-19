@@ -35,7 +35,7 @@ public partial class Running : State
 			_lastMoveDirection = movementDirection;
 		}
 		
-		var targetAngle = Vector3.Left.SignedAngleTo(_lastMoveDirection, Vector3.Up);
+		var targetAngle = Vector3.Forward.SignedAngleTo(_lastMoveDirection, Vector3.Up);
 		
 		_meshRoot.Rotation = new Vector3(0, Mathf.LerpAngle(_meshRoot.Rotation.Y, targetAngle, _rotationSpeed * delta), 0);
 	}
