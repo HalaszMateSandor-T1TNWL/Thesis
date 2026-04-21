@@ -41,7 +41,7 @@ public partial class Grinding : State
 			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
 
 			parent.Velocity = -_usedRail.pathFollow.Basis.Z.Normalized() * parent.Velocity.Length() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(parent.Velocity.Normalized());
-			parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * (float)delta;
+			parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * 5f * (float)delta;
 
 			parent.MoveAndSlide();	
 		}
@@ -55,13 +55,6 @@ public partial class Grinding : State
 		if(onRail)
 		{
 			_usedRail = (RailGrinding)_grindCast.GetCollider(0);
-
-			/* float progress = _usedRail.path.Curve.GetClosestOffset(parent.GlobalPosition - _usedRail.path.GlobalPosition);
-			Transform3D sample = _usedRail.path.GlobalTransform * _usedRail.path.Curve.SampleBakedWithRotation(progress);
-
-			_usedRail.pathFollow.Progress = progress;
-			_usedRail.pathFollow.GlobalTransform = sample;
-			_usedRail.pathFollow.ResetPhysicsInterpolation(); */
 
 			_frontFacing = _usedRail.CalculateTargetRailPoint(parent.GlobalPosition, parent.Velocity);
 

@@ -48,10 +48,10 @@ mesh = SubResource("BoxMesh_jjgbg")
 shape = SubResource("BoxShape3D_bo1nx")
 
 [node name="GroundedRail" parent="." unique_id=1499673604 instance=ExtResource("4_kry3j")]
-transform = Transform3D(1.715, 0, 0, 0, 1.715, 0, 0, 0, 1.715, -10.340909, 2.4554667, -1.2853479)
+transform = Transform3D(1.715, 0, 0, 0, 1.715, 0, 0, 0, 1.715, -70.52506, 2.6715002, -1.2853479)
 
 [node name="StaticBody3D" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
-transform = Transform3D(5.43, 0, 0, 0, 5.43, 0, 0, 0, 5.43, -3.057373, 2.5814118, 18.000975)
+transform = Transform3D(5.43, 0, 0, 0, 5.43, 0, 0, 0, 5.43, -3.057373, 3.0429997, 18.000975)
 
 [node name="CharacterBody3D" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
 transform = Transform3D(0.90838426, 0, 0.4181367, 0, 1, 0, -0.4181367, 0, 0.90838426, -6.250348, 2.5, 7.1432714)
