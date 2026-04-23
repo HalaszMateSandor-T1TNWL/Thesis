@@ -37,7 +37,7 @@ public partial class Jumping : State
 		if(parent.Velocity.Y > 0.0f)
 		{
 			EmitSignal(nameof(Transition), "Falling", movementDirection);
-			Exit();
+			//Exit();
 		}
 	}
 

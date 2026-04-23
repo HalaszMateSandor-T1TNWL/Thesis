@@ -1,7 +1,7 @@
 \chapter{Véges állapotú automaták}
 \label{chap:FSM}
 
-Ahogyan az informatika fejlődött és egyre több matematikai koncepciót adaptált, hogy segítse a fejlesztést, úgy távolodott is tőle. Meglepő módon nem kell ismernie az embernek a pontos matematikai definícióit egyes koncepcióknak annak érdekében, hogy használja őket fejlesztés során. Ez leginkább itt fog majd érződni, az automaták terén.
+Ahogyan az informatika fejlődött és egyre több matematikai koncepciót adap\-tált, hogy segítse a fejlesztést, úgy távolodott is tőle. Meglepő módon nem kell ismernie az embernek a pontos matematikai definícióit egyes koncepcióknak annak érdekében, hogy használja őket fejlesztés során. Ez leginkább itt fog majd érződni, az automaták terén.
 
 \subsection{Matematikai szemszög}
 
@@ -10,7 +10,7 @@ A véges állapotú automata (Finite State Machine, avagy FSM) egy matematikai m
 A véges állapotú automaták kategorizálhatóak \textbf{determinisztikus} és \textbf{non-determinisztikus} automatákra a viselkedésük szempontjából:
 \begin{itemize}
 \item \textbf{A determinisztikus véges automaták (DFSM)} esetében minden állapotnak van egy egyedi átmenete minden lehetséges bemenetre (input). A következő állapotot csakis a jelenlegi állapot és a kapott input dönti el, amely egy kiszámítható és egyértelmű viselkedést eredményez.
-\item \textbf{A non-determinisztikus automaták (NDFSM)} esetében több átmenet létezhet egy inputra és a jelenlegi állapotra. A rendszer következő állapota nem egyedien lesz eldöntve, ami rugalmasságot eredményez, de egyben kiszámíthatatlanságot és komplexitást is bevezet.
+\item \textbf{A non-determinisztikus automaták (NDFSM)} esetében több át\-menet létezhet egy inputra és a jelenlegi állapotra. A rendszer következő állapota nem egyedien lesz eldöntve, ami rugalmasságot eredményez, de egyben kiszámíthatatlanságot és komplexitást is bevezet.
 \end{itemize}
 A mi esetünkben csak determinisztikus automatákkal fogunk foglalkozni, de érdemes volt megemlíteni a non-determinisztikus automatákat, mivel matematikai és tervezésbeli jelentőséggel bírnak.\\
 Ahhoz, hogy tovább tudjunk beszélni róla, először definiáljuk. Legyen \textbf{M} egy determinisztikus véges automata, ekkor igaz, hogy:\\
@@ -59,7 +59,7 @@ Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására, 
 \end{itemize} 
 \textbf{Ingerek:}
 \begin{itemize}
-\item Az ingerek olyan események, vagy bemenetek, amelyek átmenetet eredményeznek az automatán belül. Lehetnek pl. felhasználói parancsok, szenzor érzékelések, hálózati üzenetek, stb.
+\item Az ingerek olyan események, vagy bemenetek, amelyek átmenetet ered\-ményeznek az automatán belül. Lehetnek pl. felhasználói parancsok, szenzor érzékelések, hálózati üzenetek, stb.
 \end{itemize}
 \textbf{Válaszok:}
 \begin{itemize}
@@ -68,8 +68,9 @@ Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására, 
 \end{itemize}
 
 \subsection{Programozói szemszög}
+\label{subsec:Prog}
 
-Programozás szempontjából az automaták egy nagyon hasznos része az informatikának, mivel végtelenül egyszerűvé teszi egyes rendszerek nyomonkövetését, megtervezését és automatizálását.
+Programozás szempontjából az automaták egy nagyon hasznos része az informatikának, mivel végtelenül egyszerűvé teszi egyes rendszerek nyomonköveté\-sét, megtervezését és automatizálását.
 Egy rendszeren belül, vegyünk most egy játékot példának, akármilyen objektumnak lehet állapota és, ahogyan ezt már említettem, az állapottól függően fognak változni az objektumok viselkedése is, például:\\
 
 \begin{itemize}

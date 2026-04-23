@@ -6,7 +6,10 @@
 \contentsline {subsection}{\numberline {3.0.1}Játékmenet}{13}{subsection.3.0.1}%
 \contentsline {subsection}{\numberline {3.0.2}Használt technológiák}{14}{subsection.3.0.2}%
 \contentsline {subsection}{\numberline {3.0.3}Fejlesztési Környezet Választása}{15}{subsection.3.0.3}%
-\contentsline {subsection}{\numberline {3.0.4}Játékmotor Választása}{15}{subsection.3.0.4}%
-\contentsline {subsection}{\numberline {3.0.5}Vizuális Világ Megtervezése}{16}{subsection.3.0.5}%
+\contentsline {subsection}{\numberline {3.0.4}Játékmotor, programozási nyelv és fejlesztőkörnyezet}{15}{subsection.3.0.4}%
+\contentsline {subsection}{\numberline {3.0.5}Vizuális világ megtervezése}{16}{subsection.3.0.5}%
 \contentsline {subsection}{\numberline {3.0.6}Mozgásrendszer megtervezése}{19}{subsection.3.0.6}%
 \contentsline {subsubsection}{Állapotok}{20}{section*.2}%
+\contentsline {chapter}{\numberline {4}Megvalósítás}{27}{chapter.4}%
+\contentsline {subsection}{\numberline {4.0.1}RigidBody vs CharacterBody}{28}{subsection.4.0.1}%
+\contentsline {subsection}{\numberline {4.0.2}A játékos mozgatása}{28}{subsection.4.0.2}%

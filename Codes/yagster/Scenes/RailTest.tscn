@@ -32,6 +32,7 @@ curve = SubResource("Curve3D_b8ssh")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1137044314]
 transform = Transform3D(-4.3711182e-08, 0, -0.999995, 0, 0.99999744, 0, 0.9999953, 0, -4.3711168e-08, 0, 0, 0)
+loop = false
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="Path3D" unique_id=1873562184]
 polygon = PackedVector2Array(-0.1, -0.1, 0.1, -0.1, 0.1, 0, -0.1, 0)
