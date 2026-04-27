@@ -85,10 +85,4 @@ public partial class PlayerController : Node
 	{
 		_currentState.movementDirection = movementDirection;
 	}
-	
-	public void OnSetCameraDirection(Vector2 cameraDirection)
-	{
-		_currentState.cameraDirection = cameraDirection;
-	}
-	
 }

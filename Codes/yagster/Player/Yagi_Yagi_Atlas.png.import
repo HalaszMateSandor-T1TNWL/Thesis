@@ -2,16 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u6bw4fqe1tbo"
-path="res://.godot/imported/Yagi_Atlas.png-1181423fd9683d78df289ffaf3cb7908.ctex"
+uid="uid://raietvudn3aw"
+path="res://.godot/imported/Yagi_Yagi_Atlas.png-77e8e2edbfcf150b42b51b447e041f29.ctex"
 metadata={
 "vram_texture": false
+}
+generator_parameters={
+"md5": "9509a82918350658596e2f073a9542a2"
 }
 
 [deps]
 
-source_file="res://Player/Yagi_Atlas.png"
-dest_files=["res://.godot/imported/Yagi_Atlas.png-1181423fd9683d78df289ffaf3cb7908.ctex"]
+source_file="res://Player/Yagi_Yagi_Atlas.png"
+dest_files=["res://.godot/imported/Yagi_Yagi_Atlas.png-77e8e2edbfcf150b42b51b447e041f29.ctex"]
 
 [params]
 

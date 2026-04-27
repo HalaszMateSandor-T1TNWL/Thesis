@@ -10,7 +10,6 @@ public partial class State : Node
 	public CharacterBody3D parent;
 	
 	public Vector3 movementDirection;
-	public Vector2 cameraDirection;
 	
 	public virtual void Enter() {}
 	public virtual void Exit() {}

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://u6bw4fqe1tbo" path="res://Player/Yagi_Atlas.png" id="2_5ctan"]
 [ext_resource type="ArrayMesh" uid="uid://dke7x2eyn3j2y" path="res://Player/Yagi.obj" id="2_txrj1"]
 [ext_resource type="Script" uid="uid://b0bvgplf8xfoi" path="res://Player/PlayerController.cs" id="3_rgmdh"]
+[ext_resource type="Shader" uid="uid://jjvmoxtj75my" path="res://Shaders/outline.gdshader" id="3_ug0h4"]
 [ext_resource type="Script" uid="uid://dfubdxh4tmtev" path="res://Player/Idle.cs" id="4_ug0h4"]
 [ext_resource type="Script" uid="uid://bpqp8817ih8pu" path="res://Player/Running.cs" id="5_s41ug"]
 [ext_resource type="Script" uid="uid://dgvpb7462y7b3" path="res://Player/Jumping.cs" id="6_m613u"]
@@ -14,9 +15,15 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgmdh"]
 albedo_texture = ExtResource("2_5ctan")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s41ug"]
+render_priority = 0
+shader = ExtResource("3_ug0h4")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 2.5
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vgqql"]
-radius = 0.31103516
-height = 2.881958
+radius = 0.5439453
+height = 2.9951782
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x3wgy"]
 
@@ -29,6 +36,7 @@ accel = 10.0
 
 [node name="Yagi" type="MeshInstance3D" parent="." unique_id=2090386080]
 material_override = SubResource("StandardMaterial3D_rgmdh")
+material_overlay = SubResource("ShaderMaterial_s41ug")
 mesh = ExtResource("2_txrj1")
 
 [node name="PlayerController" type="Node" parent="Yagi" unique_id=323458084]
@@ -51,7 +59,7 @@ script = ExtResource("7_d2rtk")
 script = ExtResource("8_u1vgq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=153195142]
-transform = Transform3D(1.46, 0, 0, 0, 1.46, 0, 0, 0, 1.46, 0, 2.1234264, 0)
+transform = Transform3D(1.46, 0, 0, 0, 1.46, 0, 0, 0, 1.46, 0, 2.206077, 0)
 shape = SubResource("CapsuleShape3D_vgqql")
 
 [node name="CamRoot" type="Node3D" parent="." unique_id=2076898164]
@@ -140,36 +148,6 @@ layout_mode = 0
 offset_left = 171.0
 offset_top = 2.0
 offset_right = 211.0
-offset_bottom = 25.0
-
-[node name="GlobalPosition" type="Label" parent="CamRoot/Control" unique_id=1407709487]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 103.0
-offset_right = 125.0
-offset_bottom = 126.0
-text = "Global Position:"
-
-[node name="Label" type="Label" parent="CamRoot/Control/GlobalPosition" unique_id=931851137]
-layout_mode = 0
-offset_left = 127.0
-offset_top = 2.0
-offset_right = 167.0
-offset_bottom = 25.0
-
-[node name="LocalPosition" type="Label" parent="CamRoot/Control" unique_id=1136788075]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 124.0
-offset_right = 117.0
-offset_bottom = 147.0
-text = "Local Position:"
-
-[node name="Label" type="Label" parent="CamRoot/Control/LocalPosition" unique_id=1173383386]
-layout_mode = 0
-offset_left = 116.0
-offset_top = 2.0
-offset_right = 156.0
 offset_bottom = 25.0
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="." unique_id=1412880048]

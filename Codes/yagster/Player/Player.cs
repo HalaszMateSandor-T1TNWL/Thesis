@@ -29,8 +29,6 @@ public partial class Player : CharacterBody3D
 	private CheckBox _checkBox;
 	private CheckBox _isGrindingDebug;
 	private Label _speed;
-	private Label _globalPosition;
-	private Label _localPosition;
 	
 	private Vector3 _velocity;
 	
@@ -57,8 +55,6 @@ public partial class Player : CharacterBody3D
 		RayCast = GetNodeOrNull<RayCast3D>($"RayCast3D");
 
 		_speed = GetNode<Label>($"CamRoot/Control/Speed/Label");
-		_globalPosition = GetNode<Label>($"CamRoot/Control/GlobalPosition/Label");
-		_localPosition = GetNode<Label>($"CamRoot/Control/LocalPosition/Label");
 
 		_shapecast = GetNode<ShapeCast3D>($"ShapeCast3D");
 		
@@ -152,8 +148,6 @@ public partial class Player : CharacterBody3D
 		_movementDirection = _movementDirection.Normalized();
 		
 		_speed.Text = _movementDirection.ToString();
-		_globalPosition.Text = GlobalPosition.ToString();
-		_localPosition.Text = Position.ToString();
 		
 		if(Grounded)
 		{

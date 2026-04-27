@@ -20,13 +20,17 @@ glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjvhh"]
 albedo_texture = ExtResource("1_jjgbg")
-uv1_offset = Vector3(-0.07, -0.15, 0)
+uv1_scale = Vector3(181.21, 181.21, 181.21)
+uv1_offset = Vector3(-0.395, 0.275, 0)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jjgbg"]
 size = Vector3(100, 0.5, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bo1nx"]
 size = Vector3(100, 0.5, 100)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jjvhh"]
+data = PackedVector3Array(0, 0, 0, 0, 0, -1, 0, 1, -1, 0, 0, -1, 1, 0, -1, 0, 1, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, -1, 1, 0, -1, 0, 1, -1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, -1, 0, 0, -1, 1, 0, -1, 1, 0, 0, 0, 1, 0)
 
 [node name="Main" type="Node3D" unique_id=1507138279]
 
@@ -47,11 +51,21 @@ mesh = SubResource("BoxMesh_jjgbg")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1231383685]
 shape = SubResource("BoxShape3D_bo1nx")
 
-[node name="GroundedRail" parent="." unique_id=1499673604 instance=ExtResource("4_kry3j")]
-transform = Transform3D(1.715, 0, 0, 0, 1.715, 0, 0, 0, 1.715, -70.52506, 2.6715002, -1.2853479)
+[node name="LoopRail" parent="." unique_id=1499673604 instance=ExtResource("4_kry3j")]
+transform = Transform3D(1.715, 0, 0, 0, 1.715, 0, 0, 0, 1.715, -70.52506, 2.6715, -1.2853479)
 
-[node name="StaticBody3D" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
+[node name="UpwardsRail" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
 transform = Transform3D(5.43, 0, 0, 0, 5.43, 0, 0, 0, 5.43, -3.057373, 3.0429997, 18.000975)
 
-[node name="CharacterBody3D" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
-transform = Transform3D(0.90838426, 0, 0.4181367, 0, 1, 0, -0.4181367, 0, 0.90838426, -6.250348, 2.5, 7.1432714)
+[node name="Yagi" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
+transform = Transform3D(0.90838426, 0, 0.4181367, 0, 1, 0, -0.4181367, 0, 0.90838426, -6.250348, 2.480403, 7.1432714)
+
+[node name="Ramp" type="StaticBody3D" parent="." unique_id=788961515]
+transform = Transform3D(6.355, 0, 0, 0, 6.355, 0, 0, 0, 6.355, 0, 2.376995, 0)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Ramp" unique_id=1266285304]
+process_mode = 4
+polygon = PackedVector2Array(0, 0, 0, 1, 0, 1, 1, 0)
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Ramp" unique_id=1836828649]
+shape = SubResource("ConcavePolygonShape3D_jjvhh")

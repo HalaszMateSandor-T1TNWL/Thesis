@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://clo278ifws2xj"]
+
+[ext_resource type="PackedScene" uid="uid://hu73eurelini" path="res://Player/Yagi.glb" id="1_i4o7n"]
+[ext_resource type="Shader" uid="uid://jjvmoxtj75my" path="res://Shaders/outline.gdshader" id="2_80wp4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_muxqj"]
+render_priority = 0
+shader = ExtResource("2_80wp4")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 2.5
+
+[node name="Yagi" unique_id=416418728 instance=ExtResource("1_i4o7n")]
+
+[node name="Yagi_Model" parent="." index="0" unique_id=1273606862]
+material_overlay = SubResource("ShaderMaterial_muxqj")
