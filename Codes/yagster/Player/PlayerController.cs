@@ -47,8 +47,10 @@ public partial class PlayerController : Node
 	
 	public override void _Process(double delta)
 	{
-		_currentState.Update((float)delta);
-		
+		if(_currentState != null)
+			_currentState.Update((float)delta);
+		else
+			_currentState = GetNode<State>(initialState);
 	}
 	
 	public override void _PhysicsProcess(double delta)

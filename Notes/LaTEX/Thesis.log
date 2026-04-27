@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  31 MAR 2026 12:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  23 APR 2026 16:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -347,7 +347,8 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (./Thesis.aux (./Cover/TitleCard.aux) (./Cover/ThesisDetails.aux)
-(./Chapters/introduction.aux) (./Chapters/FSM.aux) (./Chapters/concept.aux))
+(./Chapters/introduction.aux) (./Chapters/FSM.aux) (./Chapters/concept.aux)
+(./Chapters/implementation.aux))
 \openout1 = `Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -405,7 +406,7 @@ Package hyperref Info: Link coloring ON on input line 23.
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 7.
 
-<Images/me_logo.png, id=48, 1204.5pt x 1148.29pt>
+<Images/me_logo.png, id=60, 1204.5pt x 1148.29pt>
 File: Images/me_logo.png Graphic file (type png)
 <use Images/me_logo.png>
 Package pdftex.def Info: Images/me_logo.png  used on input line 9.
@@ -445,36 +446,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
  []
 
 
-Overfull \hbox (4.12457pt too wide) in paragraph at lines 25--26
-\OT1/cmr/m/it/12 meg-val^^Sos^^S^^Pt^^Sasa ^^Sallapotg^^Sepek al-ka-lmaz^^Sas^^
-Saval. A munka k^^?oz^^Seppontj^^Saban egy olyan
+Overfull \hbox (22.62137pt too wide) in paragraph at lines 22--23
+[]\OT1/cmr/m/it/12 K^^Sesz^^S^^Pts egy olyan Godot pro-jek-tet, amely-ben meg-v
+al^^Sos^^S^^Ptasz egy mozg^^Sasrendszert
  []
 
 
-Overfull \hbox (21.09369pt too wide) in paragraph at lines 25--26
-\OT1/cmr/m/it/12 szoftver-ar-chitekt^^Sura kialak^^S^^Pt^^Sasa ^^Sall, amely a 
-j^^Sat^^Sekos aktu^^Salis ^^Sallapot^^Sat ^^Sallapotg^^Seppel
+Overfull \hbox (10.43419pt too wide) in paragraph at lines 22--23
+\OT1/cmr/m/it/12 mod-ellezhet}oek (p^^Seld^^Saul az ugr^^Sas v^^Segrehajt^^Sas^
+^Sanak felt^^Setele a "Grounded" (f^^?old^^?on
  []
 
 
-Overfull \hbox (0.60469pt too wide) in paragraph at lines 25--26
-\OT1/cmr/m/it/12 k^^?otve, ame-lyek az ^^Sallapotg^^Sepben egy^^Sertelm}uen mod
--ellezhet}ok. P^^Seld^^Saul az ugr^^Sas
+Overfull \hbox (4.66006pt too wide) in paragraph at lines 22--23
+\OT1/cmr/m/it/12 k^^?oz^^?otti z^^?okken}omentes ^^Satmenet (pl. "Grounded" \TS
+1/cmr/m/it/12 ^^Y \OT1/cmr/m/it/12 "Jump-ing", "Grounded"\TS1/cmr/m/it/12 ^^Y
  []
 
 
-Overfull \hbox (7.3146pt too wide) in paragraph at lines 25--26
-\OT1/cmr/m/it/12 A t^^Sema je-lent}os^^Sege ab-ban re-j-lik, hogy az ^^Sallapot
-g^^Sepek haszn^^Salat^^Saval a j^^Sat^^Seklogika
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 45
+Underfull \hbox (badness 10000) detected at line 46
 \OT1/cmr/m/n/12 szakfelel}os
  []
 
@@ -485,58 +480,58 @@ Underfull \hbox (badness 10000) detected at line 45
 
 
 ]
-Overfull \hbox (4.12453pt too wide) in paragraph at lines 55--58
+Overfull \hbox (4.12453pt too wide) in paragraph at lines 56--59
 []\OT1/cmr/m/n/12 Alul^^S^^Prott \OT1/cmr/bx/n/12 Hal^^Sasz M^^Sat^^Se S^^Sando
 r\OT1/cmr/m/n/12 ; Neptun-k^^Sod: \OT1/cmtt/m/n/12 T1TNWL \OT1/cmr/m/n/12 a Mis
 kolci Egyetem
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--58
+Underfull \hbox (badness 10000) in paragraph at lines 56--59
 
  []
 
 
-Overfull \hbox (0.41817pt too wide) in paragraph at lines 66--68
+Overfull \hbox (0.41817pt too wide) in paragraph at lines 67--69
 []\OT1/cmr/m/n/12 Alul^^S^^Prott ki-je-len-tem, hogy a pl^^Sagium fo-galm^^Sat 
 megis-mertem, ^^Ses tu-dom^^Sasul
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 75.
+(Font)              <12> on input line 76.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 75.
+(Font)              <8> on input line 76.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 75.
+(Font)              <6> on input line 76.
 
-Overfull \hbox (37.9634pt too wide) in paragraph at lines 75--79
+Overfull \hbox (37.9634pt too wide) in paragraph at lines 76--80
 []| [] 
  []
 
 
 
 [3]
-Overfull \hbox (5.94478pt too wide) in paragraph at lines 86--94
+Overfull \hbox (5.94478pt too wide) in paragraph at lines 87--95
 [][] 
  []
 
 
-Overfull \hbox (40.52455pt too wide) in paragraph at lines 100--106
+Overfull \hbox (40.52455pt too wide) in paragraph at lines 101--107
 [][] 
  []
 
 
-Overfull \hbox (45.07271pt too wide) in paragraph at lines 120--130
+Overfull \hbox (45.07271pt too wide) in paragraph at lines 121--131
 \OT1/cmr/m/n/12 4. [] 
  []
 
 
-Overfull \hbox (35.08934pt too wide) in paragraph at lines 157--164
+Overfull \hbox (35.08934pt too wide) in paragraph at lines 158--165
 \OT1/cmr/m/n/12 6. [] 
  []
 
 )
-Overfull \hbox (42.14502pt too wide) in paragraph at lines 167--31
+Overfull \hbox (42.14502pt too wide) in paragraph at lines 168--31
 \OT1/cmr/m/n/12 Miskolc, [] |  [] 
  []
 
@@ -564,15 +559,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
  []
 
 
-Overfull \hbox (21.8985pt too wide) in paragraph at lines 5--6
+Overfull \hbox (2.96814pt too wide) in paragraph at lines 5--6
 \OT1/cmr/m/n/12 hogy ne kell-jen ^^Sujabb v^^Saltoz^^Sokat l^^Setrehozni an-nak
- ^^Serdek^^Seben, hogy kik^^?usz^^?ob^^?olj^^?unk
- []
-
-
-Overfull \hbox (50.89783pt too wide) in paragraph at lines 5--6
-\OT1/cmr/m/n/12 egyes mozg^^Sassorozatoknak. A j^^Sat^^Sekosok k^^Sepesek k^^?u
-l^^?onb^^?oz}o moz-du-la-tok v^^Segrehajt^^Sas^^Sara,
+ ^^Serdek^^Seben, hogy kik^^?usz^^?ob^^?ol-
  []
 
 
@@ -598,9 +587,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 )
-Overfull \hbox (39.52332pt too wide) in paragraph at lines 9--45
+Overfull \hbox (1.85843pt too wide) in paragraph at lines 9--45
 \OT1/cmr/m/n/12 mozg^^Sasrendszer-protot^^S^^Ppust elk^^Sesz^^S^^Pteni, amely b
-e-mu-tatja az ^^Sallapotg^^Sepek fontoss^^Sag^^Sat
+e-mu-tatja az ^^Sallapotg^^Sepek fon-
  []
 
 
@@ -629,9 +618,9 @@ l.45 \include{Chapters/introduction}
  (./Chapters/FSM.tex
 Chapter 2.
 
-Overfull \hbox (16.73744pt too wide) in paragraph at lines 4--5
-\OT1/cmr/m/n/12 Ahogyan az in-for-matika fejl}od^^?ott ^^Ses egyre t^^?obb mate
-m-atikai kon-cepci^^Sot adapt^^Salt,
+Overfull \hbox (9.3653pt too wide) in paragraph at lines 4--5
+\OT1/cmr/m/n/12 kell is-mernie az em-bernek a pon-tos matem-atikai defin^^S^^Pc
+i^^Soit egyes kon-cepci^^Soknak
  []
 
 
@@ -651,9 +640,9 @@ Overfull \hbox (2.4251pt too wide) in paragraph at lines 10--11
  []
 
 
-Overfull \hbox (21.51659pt too wide) in paragraph at lines 13--14
-[]\OT1/cmr/bx/n/12 A non-determinisztikus au-tomat^^Sak (NDFSM) \OT1/cmr/m/n/12
- eset^^Seben t^^?obb ^^Satmenet
+Overfull \hbox (1.6789pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/12 menet l^^Setezhet egy in-pu-tra ^^Ses a je-len-legi ^^Sallapotr
+a. A rend-szer k^^?ovetkez}o
  []
 
 
@@ -690,7 +679,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-<Diagrams/ExampleStateMachine.png, id=116, 500.62032pt x 189.70876pt>
+<Diagrams/ExampleStateMachine.png, id=131, 500.62032pt x 189.70876pt>
 File: Diagrams/ExampleStateMachine.png Graphic file (type png)
 <use Diagrams/ExampleStateMachine.png>
 Package pdftex.def Info: Diagrams/ExampleStateMachine.png  used on input line 4
@@ -729,12 +718,6 @@ Overfull \hbox (2.8824pt too wide) in paragraph at lines 57--58
  []
 
 
-Overfull \hbox (47.61351pt too wide) in paragraph at lines 62--63
-[]\OT1/cmr/m/n/12 Az in-gerek olyan esem^^Senyek, vagy be-menetek, ame-lyek ^^S
-atmenetet eredm^^Senyeznek
- []
-
-
 Overfull \hbox (3.19453pt too wide) in paragraph at lines 66--67
 []\OT1/cmr/m/n/12 Egy au-tomata v^^Salasza (vagy kimenete) mindig egyedi az ^^S
 allapotot n^^Sezve.
@@ -763,18 +746,18 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.68 \end{itemize}
                    <./Diagrams/ExampleStateMachine.png>]
-Overfull \hbox (14.65274pt too wide) in paragraph at lines 72--74
+Overfull \hbox (0.87927pt too wide) in paragraph at lines 73--75
 \OT1/cmr/m/n/12 matik^^Sanak, mivel v^^Segtelen^^?ul egyszer}uv^^Se teszi egyes
- rend-sz-erek ny-omonk^^?ovet^^Ses^^Set,
+ rend-sz-erek ny-omonk^^?ovet^^Se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--74
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--85
+Underfull \hbox (badness 10000) in paragraph at lines 82--86
 
  []
 
@@ -791,20 +774,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 9
-2.
+3.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
 
-Overfull \hbox (9.23154pt too wide) in paragraph at lines 106--107
+Overfull \hbox (9.23154pt too wide) in paragraph at lines 107--108
 \OT1/cmr/m/n/12 van: En-ter, Exit, Up-date, Physic-sUp-date, Han-dleIn-put. Eze
 k mind a megfelel}o
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
@@ -819,12 +802,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7]
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
-17.
+18.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 117.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 118.
 
 
 
@@ -835,19 +818,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
-<Images/TreeExample.png, id=214, 176.15813pt x 38.39343pt>
+<Images/TreeExample.png, id=229, 176.15813pt x 38.39343pt>
 File: Images/TreeExample.png Graphic file (type png)
 <use Images/TreeExample.png>
-Package pdftex.def Info: Images/TreeExample.png  used on input line 177.
+Package pdftex.def Info: Images/TreeExample.png  used on input line 178.
 (pdftex.def)             Requested size: 390.0pt x 85.00064pt.
-<Images/CurrentStateSet.png, id=215, 191.21437pt x 42.91031pt>
+<Images/CurrentStateSet.png, id=230, 191.21437pt x 42.91031pt>
 File: Images/CurrentStateSet.png Graphic file (type png)
 <use Images/CurrentStateSet.png>
-Package pdftex.def Info: Images/CurrentStateSet.png  used on input line 178.
+Package pdftex.def Info: Images/CurrentStateSet.png  used on input line 179.
 (pdftex.def)             Requested size: 390.0pt x 87.53125pt.
 
 
@@ -859,24 +842,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [9]
-Overfull \hbox (5.24867pt too wide) in paragraph at lines 183--185
+Overfull \hbox (5.24867pt too wide) in paragraph at lines 184--186
 []\OT1/cmr/m/n/12 Az ^^Sallapotg^^Sep^^?unknek min-den k^^Seppen kell egy ki-in
 -dul^^Sopont, egy els}o ^^Sallapot
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
 File: Images/TreeExample.png Graphic file (type png)
 <use Images/TreeExample.png>
-Package pdftex.def Info: Images/TreeExample.png  used on input line 190.
+Package pdftex.def Info: Images/TreeExample.png  used on input line 191.
 (pdftex.def)             Requested size: 390.0pt x 85.00064pt.
 
 
@@ -892,13 +875,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.196 
+l.197 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.196 
+l.197 
        <./Images/TreeExample.png> <./Images/CurrentStateSet.png>]
 
 
@@ -909,13 +892,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [11]
-Overfull \hbox (12.04166pt too wide) in paragraph at lines 246--248
+Overfull \hbox (12.04166pt too wide) in paragraph at lines 247--249
 \OT1/cmr/m/n/12 kil^^Sepj^^?unk ^^Ses megsz^^?untess^^?unk min-den olyan dol-go
 t, ami bezavarna m^^Sas ^^Sallapotok
  []
 
 
-Overfull \hbox (1.61493pt too wide) in paragraph at lines 246--248
+Overfull \hbox (1.61493pt too wide) in paragraph at lines 247--249
 \OT1/cmr/m/n/12 m}uk^^?od^^Ses^^Sebe. Ez^^Sert az ^^Sallapotg^^Sep^^?unk meg fo
 gja h^^S^^Pvni a State3-nak az "Exit()"
  []
@@ -945,12 +928,6 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 5.
 
 
-Overfull \hbox (12.84724pt too wide) in paragraph at lines 7--8
-\OT1/cmr/m/n/12 Proskater j^^Sat^^Seksorozatot ^^Ses Bomb Rush Cy-ber-funk / Je
-t Set Ra-dio j^^Sat^^Sekmenet^^Set
- []
-
-
 
 [13
 
@@ -958,15 +935,9 @@ t Set Ra-dio j^^Sat^^Sekmenet^^Set
 
 
 ]
-Overfull \hbox (62.70169pt too wide) in paragraph at lines 16--17
-[][][]$[]$[][]\OT1/cmr/m/n/12 [[]]-t haszn^^Saltam a Mod-ellek text^^Sur^^Saina
-k megra-j-zol^^Sas^^Sahoz ^^Ses [][]$[]$[][][[]]-
- []
-
-
-Overfull \hbox (17.9777pt too wide) in paragraph at lines 40--42
+Overfull \hbox (4.26952pt too wide) in paragraph at lines 40--42
 \OT1/cmr/m/n/12 Valamint a digit^^Salis kon-cepci^^So ra-j-zok elk^^Sesz^^S^^Pt
-^^Ses^^Sehez ^^Ses a text^^Sur^^Sak megalkot^^Sas^^Sahoz
+^^Ses^^Sehez ^^Ses a text^^Sur^^Sak megalkot^^Sas^^Sa-
  []
 
 
@@ -979,9 +950,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [14]
-Overfull \hbox (13.79868pt too wide) in paragraph at lines 63--64
-\OT1/cmr/m/n/12 A j^^Sat^^Sekmotor megv^^Salaszt^^Sasa sor^^San fontos volt sz^
-^Samomra a plat-formf^^?uggetlens^^Seg,
+Overfull \hbox (29.97955pt too wide) in paragraph at lines 61--61
+[]\OT1/cmr/bx/sc/14.4 J^^Sat^^Sekmotor, pro-gramoz^^Sasi nyelv ^^Ses fe-jleszt}
+ok^^?ornyezet 
+ []
+
+
+Overfull \hbox (14.71802pt too wide) in paragraph at lines 63--64
+\OT1/cmr/m/n/12 fontos volt sz^^Samomra a plat-formf^^?uggetlens^^Seg, kom-pat-
+i-bilit^^Sas ^^Ses a hor-dozhat^^Sos^^Sag. 
+ []
+
+
+Overfull \hbox (11.49686pt too wide) in paragraph at lines 65--66
+\OT1/cmr/m/n/12 egy Linux k^^?ornyezet, mind egy Win-dows k^^?ornyezet alatt. A
+ j^^Sat^^Sekmotorok,
+ []
+
+
+Overfull \hbox (13.18193pt too wide) in paragraph at lines 66--67
+[]$[]$ \OT1/cmr/m/n/12 Fontos volt a megl^^Sev}o tapasz-ta-lat a v^^Salasztott 
+tech-nol^^Sogi^^Saval,
  []
 
 
@@ -994,10 +983,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [15]
-<Images/JetSetRadio_Logo.jpg, id=338, 1084.05pt x 1084.05pt>
+<Images/JetSetRadio_Logo.jpg, id=353, 1084.05pt x 1084.05pt>
 File: Images/JetSetRadio_Logo.jpg Graphic file (type jpg)
 <use Images/JetSetRadio_Logo.jpg>
-Package pdftex.def Info: Images/JetSetRadio_Logo.jpg  used on input line 77.
+Package pdftex.def Info: Images/JetSetRadio_Logo.jpg  used on input line 76.
 (pdftex.def)             Requested size: 390.0pt x 389.99304pt.
 
 
@@ -1013,250 +1002,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.84 
+l.83 
       <./Images/JetSetRadio_Logo.jpg>]
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-0.png, id=346, 401.5pt x 225.84375p
-t>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-0.png Graphic file (type png)
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-0.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-0.png  used
- on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-0.png> <a0,fr0>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-1.png, id=350, 401.5pt x 225.84375p
-t>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-1.png Graphic file (type png)
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-1.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-1.png  used
- on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-1.png>
-<a0,fr1>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png, id=354, 401.5pt x 225.84375p
-t>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png Graphic file (type png)
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png  used
- on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png> <a0,fr2>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-3.png, id=358, 401.5pt x 225.84375p
-t>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-3.png Graphic file (type png)
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-3.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-3.png  used
- on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-3.png> <a0,fr3>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-4.png, id=362, 401.5pt x 225.84375p
-t>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-4.png Graphic file (type png)
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-4.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-4.png  used
- on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-4.png> <a0,fr4>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-5.png, id=366, 401.5pt x 225.84375p
-t>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-5.png Graphic file (type png)
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-5.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-5.png  used
- on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-5.png> <a0,fr5>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-6.png, id=370, 401.5pt x 225.84375p
-t>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-6.png Graphic file (type png)
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-6.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-6.png  used
- on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-6.png> <a0,fr6>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-7.png, id=374, 401.5pt x 225.84375p
-t>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-7.png Graphic file (type png)
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-7.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-7.png  used
- on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-7.png> <a0,fr7>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-8.png, id=378, 401.5pt x 225.84375p
-t>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-8.png Graphic file (type png)
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-8.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-8.png  used
- on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-8.png> <a0,fr8>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-9.png, id=382, 401.5pt x 225.84375p
-t>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-9.png Graphic file (type png)
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-9.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-9.png  used
- on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-9.png> <a0,fr9>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-10.png, id=386, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-10.png Graphic file (type png)
+<Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png, id=361, 401.5pt x 225.84375pt>
 
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-10.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-10.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-10.png> <a0,fr10>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-11.png, id=390, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-11.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-11.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-11.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-11.png> <a0,fr11>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-12.png, id=394, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-12.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-12.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-12.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-12.png> <a0,fr12>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-13.png, id=398, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-13.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-13.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-13.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-13.png> <a0,fr13>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-14.png, id=402, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-14.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-14.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-14.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-14.png>
-<a0,fr14>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-15.png, id=406, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-15.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-15.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-15.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-15.png> <a0,fr15>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-16.png, id=410, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-16.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-16.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-16.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-16.png> <a0,fr16>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-17.png, id=414, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-17.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-17.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-17.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-17.png> <a0,fr17>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-18.png, id=418, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-18.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-18.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-18.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-18.png> <a0,fr18>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-19.png, id=422, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-19.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-19.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-19.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-19.png>
-<a0,fr19>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-20.png, id=426, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-20.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-20.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-20.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-20.png> <a0,fr20>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-21.png, id=430, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-21.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-21.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-21.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-21.png> <a0,fr21>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-22.png, id=434, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-22.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-22.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-22.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-22.png> <a0,fr22>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-23.png, id=438, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-23.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-23.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-23.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-23.png> <a0,fr23>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-24.png, id=442, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-24.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-24.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-24.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-24.png>
-<a0,fr24>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-25.png, id=446, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-25.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-25.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-25.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-25.png> <a0,fr25>
-<./Images/JSR_Gameplay/JetSetRadio_Gameplay-26.png, id=450, 401.5pt x 225.84375
-pt>
-File: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-26.png Graphic file (type png)
-
-<use ./Images/JSR_Gameplay/JetSetRadio_Gameplay-26.png>
-Package pdftex.def Info: ./Images/JSR_Gameplay/JetSetRadio_Gameplay-26.png  use
-d on input line 87.
-(pdftex.def)             Requested size: 401.49901pt x 225.84319pt.
- <./Images/JSR_Gameplay/JetSetRadio_Gameplay-26.png> <a0,fr26>
-<Images/BombRushCyberfunk_Logo.jpg, id=514, 1003.75pt x 564.1075pt>
+File: Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png Graphic file (type png)
+<use Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png>
+Package pdftex.def Info: Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png  used o
+n input line 86.
+(pdftex.def)             Requested size: 390.0pt x 219.38864pt.
+<Images/BombRushCyberfunk_Logo.jpg, id=364, 1003.75pt x 564.1075pt>
 File: Images/BombRushCyberfunk_Logo.jpg Graphic file (type jpg)
 <use Images/BombRushCyberfunk_Logo.jpg>
 Package pdftex.def Info: Images/BombRushCyberfunk_Logo.jpg  used on input line 
-96.
+95.
 (pdftex.def)             Requested size: 390.0pt x 219.1833pt.
 
 
@@ -1272,13 +1031,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.100 
-      ]
-<Images/BombRushCyberfunk_InAction.jpg, id=525, 1284.8pt x 722.7pt>
+l.99 
+      <./Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png>]
+<Images/BombRushCyberfunk_InAction.jpg, id=376, 1284.8pt x 722.7pt>
 File: Images/BombRushCyberfunk_InAction.jpg Graphic file (type jpg)
 <use Images/BombRushCyberfunk_InAction.jpg>
 Package pdftex.def Info: Images/BombRushCyberfunk_InAction.jpg  used on input l
-ine 105.
+ine 104.
 (pdftex.def)             Requested size: 390.0pt x 219.37004pt.
 
 
@@ -1294,21 +1053,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.109 
+l.108 
        <./Images/BombRushCyberfunk_Logo.jpg>]
-Overfull \hbox (2.49825pt too wide) in paragraph at lines 121--123
+Overfull \hbox (2.49825pt too wide) in paragraph at lines 120--122
 \OT1/cmr/m/n/12 hanem a pro-gram maga is. El}ofordulhatnak esem^^Senyek, ame-ly
 ek be-foly^^Sasolj^^Sak
  []
 
 
-Overfull \hbox (3.18156pt too wide) in paragraph at lines 121--123
+Overfull \hbox (3.18156pt too wide) in paragraph at lines 120--122
 \OT1/cmr/m/n/12 a j^^Sat^^Sekos mozg^^Sas^^Sat ^^Ses egy-ben az ^^Sallapot^^Sat
  is. Ah-hoz, hogy megk^^?ul^^?onb^^?oztessem
  []
 
 
-Overfull \hbox (5.77505pt too wide) in paragraph at lines 121--123
+Overfull \hbox (5.77505pt too wide) in paragraph at lines 120--122
 \OT1/cmr/m/n/12 a pro-gram esem^^Senyeit a j^^Sat^^Sekos be-menteit}ol el-n-eve
 ztem azokat az esem^^Senyeket,
  []
@@ -1327,18 +1086,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.123 
+l.122 
        <./Images/BombRushCyberfunk_InAction.jpg>]
-<Diagrams/SpawnIn-Grounded.png, id=539, 439.6425pt x 162.6075pt>
+<Diagrams/SpawnIn-Grounded.png, id=391, 439.6425pt x 162.6075pt>
 File: Diagrams/SpawnIn-Grounded.png Graphic file (type png)
 <use Diagrams/SpawnIn-Grounded.png>
-Package pdftex.def Info: Diagrams/SpawnIn-Grounded.png  used on input line 126.
+Package pdftex.def Info: Diagrams/SpawnIn-Grounded.png  used on input line 125.
 
 (pdftex.def)             Requested size: 390.0pt x 144.25127pt.
-<Diagrams/Grounded-Idle.png, id=541, 238.64156pt x 496.10344pt>
+<Diagrams/Grounded-Idle.png, id=393, 238.64156pt x 496.10344pt>
 File: Diagrams/Grounded-Idle.png Graphic file (type png)
 <use Diagrams/Grounded-Idle.png>
-Package pdftex.def Info: Diagrams/Grounded-Idle.png  used on input line 135.
+Package pdftex.def Info: Diagrams/Grounded-Idle.png  used on input line 134.
 (pdftex.def)             Requested size: 390.02371pt x 592.04337pt.
 
 
@@ -1354,7 +1113,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.139 
+l.138 
        <./Diagrams/SpawnIn-Grounded.png>]
 Overfull \vbox (41.37668pt too high) has occurred while \output is active []
 
@@ -1372,23 +1131,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.139 
+l.138 
        <./Diagrams/Grounded-Idle.png>]
-<Diagrams/Grounded-Movement.png, id=559, 1017.04968pt x 152.06813pt>
+<Diagrams/Grounded-Movement.png, id=411, 1017.04968pt x 152.06813pt>
 File: Diagrams/Grounded-Movement.png Graphic file (type png)
 <use Diagrams/Grounded-Movement.png>
-Package pdftex.def Info: Diagrams/Grounded-Movement.png  used on input line 144
+Package pdftex.def Info: Diagrams/Grounded-Movement.png  used on input line 143
 .
 (pdftex.def)             Requested size: 390.0pt x 58.3132pt.
-<Diagrams/Moving-InAir.png, id=561, 741.52031pt x 313.9228pt>
+<Diagrams/Moving-InAir.png, id=413, 741.52031pt x 313.9228pt>
 File: Diagrams/Moving-InAir.png Graphic file (type png)
 <use Diagrams/Moving-InAir.png>
-Package pdftex.def Info: Diagrams/Moving-InAir.png  used on input line 153.
+Package pdftex.def Info: Diagrams/Moving-InAir.png  used on input line 152.
 (pdftex.def)             Requested size: 390.0pt x 165.10892pt.
-<Diagrams/InAir-Grounded.png, id=563, 564.60938pt x 313.17pt>
+<Diagrams/InAir-Grounded.png, id=415, 564.60938pt x 313.17pt>
 File: Diagrams/InAir-Grounded.png Graphic file (type png)
 <use Diagrams/InAir-Grounded.png>
-Package pdftex.def Info: Diagrams/InAir-Grounded.png  used on input line 162.
+Package pdftex.def Info: Diagrams/InAir-Grounded.png  used on input line 161.
 (pdftex.def)             Requested size: 390.0pt x 216.32167pt.
 
 
@@ -1404,18 +1163,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.166 
+l.165 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.166 
+l.165 
        <./Diagrams/Grounded-Movement.png> <./Diagrams/Moving-InAir.png>]
-<Diagrams/InAir-DoubleJump.png, id=575, 412.54124pt x 327.47343pt>
+<Diagrams/InAir-DoubleJump.png, id=427, 412.54124pt x 327.47343pt>
 File: Diagrams/InAir-DoubleJump.png Graphic file (type png)
 <use Diagrams/InAir-DoubleJump.png>
-Package pdftex.def Info: Diagrams/InAir-DoubleJump.png  used on input line 171.
+Package pdftex.def Info: Diagrams/InAir-DoubleJump.png  used on input line 170.
 
 (pdftex.def)             Requested size: 390.0pt x 309.58395pt.
 
@@ -1432,13 +1191,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.175 
+l.174 
        <./Diagrams/InAir-Grounded.png>]
-<Diagrams/InAirMovement-DoubleJump.png, id=584, 784.43062pt x 147.55125pt>
+<Diagrams/InAirMovement-DoubleJump.png, id=436, 784.43062pt x 147.55125pt>
 File: Diagrams/InAirMovement-DoubleJump.png Graphic file (type png)
 <use Diagrams/InAirMovement-DoubleJump.png>
 Package pdftex.def Info: Diagrams/InAirMovement-DoubleJump.png  used on input l
-ine 180.
+ine 179.
 (pdftex.def)             Requested size: 390.0pt x 73.35892pt.
 
 
@@ -1454,35 +1213,35 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.184 
+l.183 
        <./Diagrams/InAir-DoubleJump.png>]
-Overfull \hbox (1.41075pt too wide) in paragraph at lines 185--186
+Overfull \hbox (1.41075pt too wide) in paragraph at lines 184--185
 \OT1/cmr/m/n/12 (In-Air). Vis-zont, ha ism^^Set el kezd mo-zogni, akkor vis-sza
  lesz l^^?okve a leveg}oben
  []
 
-<Diagrams/InAir-InAirMovement.png, id=593, 484.81125pt x 308.65312pt>
+<Diagrams/InAir-InAirMovement.png, id=445, 484.81125pt x 308.65312pt>
 File: Diagrams/InAir-InAirMovement.png Graphic file (type png)
 <use Diagrams/InAir-InAirMovement.png>
 Package pdftex.def Info: Diagrams/InAir-InAirMovement.png  used on input line 1
-89.
+88.
 (pdftex.def)             Requested size: 390.0pt x 248.30275pt.
 
-Overfull \hbox (4.21175pt too wide) in paragraph at lines 194--196
+Overfull \hbox (4.21175pt too wide) in paragraph at lines 193--195
 \OT1/cmr/m/n/12 k^^?otve egym^^Sassal. Ezeket mozg^^Sas h^^Sarmasoknak h^^S^^Pv
 om. A legt^^?obb mozg^^Sasfajt^^Sat
  []
 
 
-Overfull \hbox (1.51909pt too wide) in paragraph at lines 194--196
+Overfull \hbox (1.51909pt too wide) in paragraph at lines 193--195
 \OT1/cmr/m/n/12 ^^Sallapothoz, amely ^^Satviszi }oket egy m^^Sasik cso-portba. 
 P^^Selda k^^Seppen a leveg}oben
  []
 
-<Diagrams/InAirTrio.png, id=595, 817.55438pt x 341.77687pt>
+<Diagrams/InAirTrio.png, id=447, 817.55438pt x 341.77687pt>
 File: Diagrams/InAirTrio.png Graphic file (type png)
 <use Diagrams/InAirTrio.png>
-Package pdftex.def Info: Diagrams/InAirTrio.png  used on input line 199.
+Package pdftex.def Info: Diagrams/InAirTrio.png  used on input line 198.
 (pdftex.def)             Requested size: 390.0pt x 163.0393pt.
 
 
@@ -1498,19 +1257,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.203 
+l.202 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.203 
+l.202 
        <./Diagrams/InAirMovement-DoubleJump.png> <./Diagrams/InAir-InAirMovemen
 t.png>]
-<Diagrams/BaseTrio.png, id=607, 639.89063pt x 222.8325pt>
+<Diagrams/BaseTrio.png, id=458, 639.89063pt x 222.8325pt>
 File: Diagrams/BaseTrio.png Graphic file (type png)
 <use Diagrams/BaseTrio.png>
-Package pdftex.def Info: Diagrams/BaseTrio.png  used on input line 208.
+Package pdftex.def Info: Diagrams/BaseTrio.png  used on input line 207.
 (pdftex.def)             Requested size: 390.0pt x 135.81201pt.
 )
 
@@ -1534,7 +1293,149 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.14})
                                                   \__shipout_drop_firstpage_...
 l.47 \include{Chapters/concept}
                                 <./Diagrams/InAirTrio.png> <./Diagrams/BaseTrio
-.png>] (./Thesis.bbl
+.png>]
+\openout2 = `Chapters/implementation.aux'.
+
+ (./Chapters/implementation.tex
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Overfull \hbox (7.9468pt too wide) in paragraph at lines 23--24
+\OT1/cmr/m/n/12 jav^^S^^Ptva az ^^Satl^^Sathat^^Sos^^Sagot. Valamint ezt a sz^^
+S^^Pnteret k^^?ul^^?on tu-dom p^^Seld^^Sanyos^^S^^Ptani,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+Overfull \hbox (14.68301pt too wide) in paragraph at lines 28--29
+[]\OT1/cmr/bx/n/12 MeshInstance3D: \OT1/cmr/m/n/12 Egy h^^Saromdimenzi^^Sos pol
+y-gon h^^Sal^^Sot tar-tal-maz, kiz^^Sar^^So-
+ []
+
+
+Overfull \hbox (13.99997pt too wide) in paragraph at lines 28--29
+\OT1/cmr/m/n/12 lag meg-je-len^^S^^Pt^^Sesi szem-pon-tja van, tel-je-sen f^^?ug
+getlen az ^^?utk^^?oz^^Sesvizsg^^Salatt^^Sol. 
+ []
+
+
+Overfull \hbox (5.35675pt too wide) in paragraph at lines 29--30
+[]\OT1/cmr/bx/n/12 CollisionShape3D: \OT1/cmr/m/n/12 Egy ^^Satl^^Satsz^^So poly
+-gon h^^Sal^^So, amely az ^^?utk^^?oz^^Sesvizsg^^Sa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+
+[27
+
+
+
+
+]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 44.
+
+
+Overfull \hbox (8.01958pt too wide) in paragraph at lines 46--47
+\OT1/cmr/m/n/12 A j^^Sat^^Sekos sz^^?ul}oj^^Senek k^^Set t^^S^^Ppust szok-tak g
+yakran megv^^Salasztani a: CharacterBo-
+ []
+
+
+Overfull \hbox (2.97614pt too wide) in paragraph at lines 46--47
+\OT1/cmr/m/n/12 dy3D-t ^^Ses a RigidBody3D-t. A l^^Senyeges dolog, amiben a ket
+t}o elt^^Ser egym^^Sasz^^Sol,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Overfull \hbox (3.48619pt too wide) in paragraph at lines 52--53
+\OT1/cmr/m/n/12 tam az au-tomat^^Sank k^^Set r^^Sesze a State ^^Ses StateMa-chi
+ne oszt^^Salyok nem v^^Saltoznak
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[28]
+Overfull \hbox (3.71259pt too wide) in paragraph at lines 59--60
+[]\OT1/cmr/m/n/12 Hozz^^Saadtam egy "move-ment-Di-rec-tion" nev}u v^^Saltoz^^So
+t, amely egy h^^Sarom-
+ []
+
+
+Overfull \hbox (10.0403pt too wide) in paragraph at lines 76--77
+[]\OT1/cmr/m/n/12 Hozz^^Saadtam egy "Tran-si-tion-To-Even-tHandler" nev}u signa
+l-t, ami a k^^?ul^^?on-
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[29]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[30])
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[31] (./Thesis.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 29--32
 []\OT1/cmr/m/n/12 Slkimg2pixel's itch.io page.  [][]$\OT1/cmtt/m/n/12 https : /
  / captain4lk . itch . io /
@@ -1542,12 +1443,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
 )
 
-[27
+[32
 
 
 
 ] (./Thesis.aux (./Cover/TitleCard.aux) (./Cover/ThesisDetails.aux)
-(./Chapters/introduction.aux) (./Chapters/FSM.aux) (./Chapters/concept.aux))
+(./Chapters/introduction.aux) (./Chapters/FSM.aux) (./Chapters/concept.aux)
+(./Chapters/implementation.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1557,16 +1459,16 @@ L3 programming layer <2025-01-18>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4114B56C748106EB08F0FD46B444D349;1859.
+(rerunfilecheck)             Checksum: 6E19A4C1556B4F931596AA5C95472A77;2515.
  ) 
 Here is how much of TeX's memory you used:
- 13543 strings out of 475135
- 230505 string characters out of 5765398
- 954071 words of memory out of 5000000
- 36157 multiletter control sequences out of 15000+600000
+ 13242 strings out of 475135
+ 214204 string characters out of 5765398
+ 968645 words of memory out of 5000000
+ 35790 multiletter control sequences out of 15000+600000
  566496 words of font info for 61 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 76i,13n,80p,1699b,1997s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 76i,13n,80p,1703b,1997s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/yagi/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600p
 k> </home/yagi/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1200.600p
 k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -1578,10 +1480,10 @@ onts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (32 pages, 2110672 bytes).
+Output written on Thesis.pdf (37 pages, 1282692 bytes).
 PDF statistics:
- 721 PDF objects out of 1000 (max. 8388607)
- 534 compressed objects within 6 object streams
- 195 named destinations out of 1000 (max. 500000)
- 539 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 669 PDF objects out of 1000 (max. 8388607)
+ 569 compressed objects within 6 object streams
+ 254 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

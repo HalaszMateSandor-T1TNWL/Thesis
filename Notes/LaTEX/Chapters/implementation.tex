@@ -1,0 +1,125 @@
+\chapter{Megvalósítás}
+
+A koncepció átbeszélése után megbeszélhetjük az implementáció lépéseit. A projektet egy alap színtérrel kezdtem:
+\begin{itemize}
+\item Egy egyszerű síkkal, átmeneti textúrával,
+\item egy kezdetleges, textúra nélküli, kapszula alakú játékos modellel,
+\item és egy pár akadállyal, amit majd a játékos mozgásának a tesztelésére használhatok.
+\end{itemize}
+
+Ahogyan azt az alábbi \iffalse [\ref{BasicScene}] \fi képen is láthatják.\\
+
+\iffalse
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Images/BasicScene.png}
+\caption{Képernyőkép a kezdetleges teszt színtérről}
+\label{BasicScene}
+\end{figure}
+
+\fi
+
+A teszt színtér felállítása után létrehoztam egy külön színteret a játékos számára. Az alábbi képen látható a színteren belül \iffalse [\ref{BasicPlayerScene}] \fi tudom a játékost bővíteni elkülönítve a többi dologtól, így csökkentve a hibalehetőségek számát és javítva az átláthatóságot. Valamint ezt a színteret külön tudom példányosítani, ha esetleg kódból szeretném meghívni a játékos modelljét valahol.\\
+
+Ez a színtér nem áll másból mint egy CharacterBody3D node-ból, egy MeshInstance3D és egy CollisionShape3D node-ból. A MeshInstance3D és CollisionShape3D node-ok magától értetődőek:\\
+
+\begin{itemize}
+\item \textbf{MeshInstance3D:} Egy háromdimenziós polygon hálót tartalmaz, kizáró\-lag megjelenítési szempontja van, teljesen független az ütközésvizsgálattól.
+\item \textbf{CollisionShape3D:} Egy átlátszó polygon háló, amely az ütközésvizsgá\-lathoz szükséges, független a MeshInstance3D által előállított polygon hálótól.
+\end{itemize}
+
+A CharacterBody3D már nem annyira triviális, viszont. Ez egy olyan node, amely a térben semmilyen polygon hálót nem jelenít meg, viszont előfeltétele az, hogy legalább egy CollisionShape3D node a gyermeke legyen a fában, mivel e nélkül nem tudna bizonyos metódusokat meghívni vagy feltételeket vizsgálni. Érdemes megjegyezni, hogy \textbf{nem} előfeltétele viszont az, hogy egy MeshInstance3D a gyermeke legyen.\\
+
+\iffalse
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Images/BasicPlayerScene.png}
+\caption{Képernyőkép a kezdetleges játékos színtérről}
+\label{BasicPlayerScene}
+\end{figure}
+
+\fi
+\subsection{RigidBody vs CharacterBody}
+
+A játékos szülőjének két típust szoktak gyakran megválasztani a: CharacterBo\-dy3D-t és a RigidBody3D-t. A lényeges dolog, amiben a kettő eltér egymászól, az hogy hogyan mozgathatod a testet. A CharacterBody3D típus esélyt ad neked arra, hogy egy saját fizikai motort implementálj, hogy a játékod a lehető legjobbnak érződjön, míg a RigidBody3D a valós fizika szabályai szerint jár el. Egy játék esetében szerintem világosan látható, hogy nem a való világot szeretnénk szimulálni, hanem a lehető legjobb élményt szeretnénk nyújtani a játékosunknak, így olyanra írjuk meg a gravitációt, az ugrás magasságát, a gyorsulást, a súrlódást, stb, hogy az a játékos számára a legjobb játékérzést nyújtsa. A RigidBody3D típus alkalmazásával ezek a lehetőségek mind elvesznének és a Godot alap fizikai motorjára lennénk utalva.\\
+
+Valami, amit érdekesnek találtam miközben ezt a részt kutattam az az, amit Ludonauta írt a Rigidbody vs characterbody: which one for your platfo\-rmer?\cite{Ludonauta2025} című posztjában, ami így szól: "Your character isn't his body", ami először fúrcsán hangzik, de ez igaz. Mint ahogy azt már leírtam a CharacterBody3D független a polygon hálótól, amit alárendelsz, így mindegy, hogy ha kicseréled a modellt, minden más ugyan úgy működik. Az egyetlen dolog ami változtatna egy kicsit a működésén az az ütközésvizsgálathoz használt polygon háló alakjának a megváltoztatása lenne. Ezzel ugyan csak arra szeretnék visszautalni, mint amit Ludonauta is megjegyzett: használhatod mind a kettőt egy karakteren belül. Kell valami amihez valós fizikai hatások kellenek? rendeld a RigidBody alá a játékost! Nem szeretnél gravitációt? Rendeld a CharacterBody alá a játékost!\\
+
+\subsection{A játékos mozgatása}
+
+Ahogyan azt már a \autoref{chap:FSM} fejezet \autoref{subsec:Prog} bekezdésében is megadtam az automatánk két része a State és StateMachine osztályok nem változnak sokat.\\
+
+A State osztályon belül:
+\begin{itemize}
+\item Hozzáadtam egy "TransitionEventHandler" signal-t (jelzőt), amellyel az állapotok közötti változást tudom szabályozni.
+\item A "StateMachine" osztályt átneveztem "PlayerController"-re
+\item Hozzáadtam egy "gravity" változót, amelyet, akármelyik állapot el tud érni, ha szüksége lenne rá.
+\item Hozzáadtam egy "movementDirection" nevű változót, amely egy három\-dimenziós vektor alakjában tárolja a felhasználói inputból kiszámított mozgási irányt
+\end{itemize}
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+[Signal] public delegate void TransitionEventHandler(string key, Vector3 movementDirection);
+
+public PlayerController fsm;
+
+public int gravity = (int)ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
+public CharacterBody3D parent;
+
+public Vector3 movementDirection;
+\end{lstlisting}
+
+Valamint az átnevezett PlayerController osztályon belül:
+\begin{itemize}
+\item Hozzáadtam egy "TransitionToEventHandler" nevű signal-t, ami a külön\-bőző állapotok közötti átmenetért felel.
+\item Hozzáadtam egy Control és egy új Dictionary osztályú objektumot, amik vizuális debug-olásért lettek létrehozva. Miután összegyűjtöttük az összes CheckBox Node-ot, amik kellettek a legelsőt már aktiváljuk is és az "OnTransitionTo" metóduson belül állítjuk a jelenleg megjelenített állapotot.
+\item Az OnSetMovementState a jelenlegi mozgásállapotot állítja és az OnSetMovementDirection frissíti a jelenlegi állapot movementDirection változóját.
+\end{itemize}
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+public partial class PlayerController : Node
+{
+	// ...
+	[Signal] public delegate void TransitionToEventHandler(string key, Vector3 movementDirection);
+	private Control _ui;
+	private Dictionary<string, CheckBox> _elements;
+	
+	public override void _Ready()
+	{
+		// ...
+		_ui = GetNode<Control>($"../../CamRoot/Control");
+		_elements = new Disctionary<string, CheckBox>();
+		foreach(Node node in _ui.GetChildren())
+		{
+			if(node is CheckBox box)
+				_elements[node.Name] = box;		
+		}
+		_elements[_currentState.Name].ButtonPressed = true;
+	}
+	
+	public void OnTransitionTo(string key, Vector3 movementDirection)
+	{
+		// ...
+		_elements[_currentState.Name].ButtonPressed = false;
+		// ...
+		_currentState.movementDirection = movementDirection;
+		_elements[_currentState.Name].ButtonPressed = true;
+	}
+	
+	public void OnSetMovementState(string key, Vector3 movementDirection)
+	{
+		OnTransitionTo(key, movementDirection);
+	}
+	
+	public void OnSetMovementDirection(Vector3 movementDirection)
+	{
+		_currentState.movementDirection = movementDirection;	
+	}
+	
+}
+\end{lstlisting}
+
+
