@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[12pt,a4paper,hungarian]{report}
 
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -10,7 +10,7 @@
     pdfpagemode=FullScreen,
 }
 \usepackage{float}
-
+\usepackage[provide=*]{babel}
 \usepackage{listings}
 \usepackage{filecontents}
 \usepackage{fancyhdr}
@@ -21,6 +21,9 @@
 \lstdefinestyle{sharpc}{language=[Sharp]C, frame=single, rulecolor=\color{blue!80!black}, columns=fullflexible, breaklines}
 
 \begin{document}
+
+%Local name $=$ magyar
+%Chapter $=$ \chaptername
 
 \include{Cover/TitleCard}
 

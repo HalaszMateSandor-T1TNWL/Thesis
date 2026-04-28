@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  23 APR 2026 16:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  27 APR 2026 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -197,27 +197,43 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks19
 \@floatcapt=\box53
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count284
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaT
+eX and XeLaTeX
+\babel@savecnt=\count284
+\U@D=\dimen148
+\l@unhyphenated=\language5
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count285
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/hu/babel-hungarian.tex)
+Package babel Info: Importing data for hungarian
+(babel)             from babel-hu.ini. Reported on input line 4167.
+Package babel Info: Hyphen rules for 'hungarian' set to \l@english
+(babel)             (\language0). Reported on input line 4167.
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count286
 \lst@gtempboxa=\box54
 \lst@token=\toks20
-\lst@length=\count285
-\lst@currlwidth=\dimen148
-\lst@column=\count286
-\lst@pos=\count287
-\lst@lostspace=\dimen149
-\lst@width=\dimen150
-\lst@newlines=\count288
-\lst@lineno=\count289
-\lst@maxwidth=\dimen151
+\lst@length=\count287
+\lst@currlwidth=\dimen149
+\lst@column=\count288
+\lst@pos=\count289
+\lst@lostspace=\dimen150
+\lst@width=\dimen151
+\lst@newlines=\count290
+\lst@lineno=\count291
+\lst@maxwidth=\dimen152
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count290
-\lst@skipnumbers=\count291
+\c@lstnumber=\count292
+\lst@skipnumbers=\count293
 \lst@framebox=\box55
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -265,15 +281,15 @@ Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count292
-\calc@Bcount=\count293
-\calc@Adimen=\dimen152
-\calc@Bdimen=\dimen153
+\calc@Acount=\count294
+\calc@Bcount=\count295
+\calc@Adimen=\dimen153
+\calc@Bdimen=\dimen154
 \calc@Askip=\skip66
 \calc@Bskip=\skip67
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count294
+\calc@Ccount=\count296
 \calc@Cskip=\skip68
 )
 (/usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty
@@ -282,11 +298,11 @@ atures
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count295
+\l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box56
 )
-\g_pbs_page_int=\count296
-\g_pbs_oc_int=\count297
+\g_pbs_page_int=\count298
+\g_pbs_oc_int=\count299
 )
 (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
@@ -304,7 +320,7 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count298
+\c@abspage=\count300
 Package zref Info: New property: abspage on input line 67.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ocgx2/ocgbase.sty
@@ -312,21 +328,21 @@ Package: ocgbase 2024/09/15 v0.24 support package for ocgx2.sty
 )
 \@anim@box=\box57
 \@anim@measbox=\box58
-\@anim@tmpdima=\dimen154
-\@anim@tmpdimb=\dimen155
-\@anim@num=\count299
-\@anim@curframe=\count300
-\@anim@curframe@zb=\count301
-\@anim@resizeflags=\count302
-\@anim@skipfram=\count303
-\@anim@mulframecnt=\count304
-\@anim@@tmlnfile=\read2
-\@anim@tmpcnt=\count305
-\c@@anim@ltxcnt=\count306
-\@anim@curlayer=\count307
-\@anim@lineno=\count308
-\@anim@curfield=\count309
-\@anim@@resizeflags=\count310
+\@anim@tmpdima=\dimen155
+\@anim@tmpdimb=\dimen156
+\@anim@num=\count301
+\@anim@curframe=\count302
+\@anim@curframe@zb=\count303
+\@anim@resizeflags=\count304
+\@anim@skipfram=\count305
+\@anim@mulframecnt=\count306
+\@anim@@tmlnfile=\read3
+\@anim@tmpcnt=\count307
+\c@@anim@ltxcnt=\count308
+\@anim@curlayer=\count309
+\@anim@lineno=\count310
+\@anim@curfield=\count311
+\@anim@@resizeflags=\count312
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
@@ -372,16 +388,16 @@ LaTeX Font Info:    ... okay on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count311
-\scratchdimen=\dimen156
+\scratchcounter=\count313
+\scratchdimen=\dimen157
 \scratchbox=\box59
-\nofMPsegments=\count312
-\nofMParguments=\count313
+\nofMPsegments=\count314
+\nofMParguments=\count315
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count314
-\MPscratchDim=\dimen157
-\MPnumerator=\count315
-\makeMPintoPDFobject=\count316
+\MPscratchCnt=\count316
+\MPscratchDim=\dimen158
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
 \everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -398,7 +414,7 @@ Package hyperref Info: Link coloring ON on input line 23.
 \@outlinefile=\write3
 \openout3 = `Thesis.out'.
 
-\c@lstlisting=\count317
+\c@lstlisting=\count319
 \openout2 = `Cover/TitleCard.aux'.
 
  (./Cover/TitleCard.tex
@@ -446,24 +462,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
  []
 
 
-Overfull \hbox (22.62137pt too wide) in paragraph at lines 22--23
-[]\OT1/cmr/m/it/12 K^^Sesz^^S^^Pts egy olyan Godot pro-jek-tet, amely-ben meg-v
-al^^Sos^^S^^Ptasz egy mozg^^Sasrendszert
- []
-
-
-Overfull \hbox (10.43419pt too wide) in paragraph at lines 22--23
-\OT1/cmr/m/it/12 mod-ellezhet}oek (p^^Seld^^Saul az ugr^^Sas v^^Segrehajt^^Sas^
-^Sanak felt^^Setele a "Grounded" (f^^?old^^?on
- []
-
-
-Overfull \hbox (4.66006pt too wide) in paragraph at lines 22--23
-\OT1/cmr/m/it/12 k^^?oz^^?otti z^^?okken}omentes ^^Satmenet (pl. "Grounded" \TS
-1/cmr/m/it/12 ^^Y \OT1/cmr/m/it/12 "Jump-ing", "Grounded"\TS1/cmr/m/it/12 ^^Y
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
@@ -483,7 +481,7 @@ Underfull \hbox (badness 10000) detected at line 46
 Overfull \hbox (4.12453pt too wide) in paragraph at lines 56--59
 []\OT1/cmr/m/n/12 Alul^^S^^Prott \OT1/cmr/bx/n/12 Hal^^Sasz M^^Sat^^Se S^^Sando
 r\OT1/cmr/m/n/12 ; Neptun-k^^Sod: \OT1/cmtt/m/n/12 T1TNWL \OT1/cmr/m/n/12 a Mis
-kolci Egyetem
+kol-ci Egyetem
  []
 
 
@@ -531,7 +529,7 @@ Overfull \hbox (35.08934pt too wide) in paragraph at lines 158--165
  []
 
 )
-Overfull \hbox (42.14502pt too wide) in paragraph at lines 168--31
+Overfull \hbox (42.14502pt too wide) in paragraph at lines 168--34
 \OT1/cmr/m/n/12 Miskolc, [] |  [] 
  []
 
@@ -552,7 +550,7 @@ Overfull \hbox (42.14502pt too wide) in paragraph at lines 168--31
 \openout2 = `Chapters/introduction.aux'.
 
  (./Chapters/introduction.tex
-Chapter 1.
+\bbl@ensure@hungarian {fejezet} 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
@@ -587,13 +585,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 )
-Overfull \hbox (1.85843pt too wide) in paragraph at lines 9--45
-\OT1/cmr/m/n/12 mozg^^Sasrendszer-protot^^S^^Ppust elk^^Sesz^^S^^Pteni, amely b
-e-mu-tatja az ^^Sallapotg^^Sepek fon-
+Overfull \hbox (1.85843pt too wide) in paragraph at lines 9--48
+\OT1/cmr/m/n/12 mozg^^Sasrendszer-protot^^S^^Ppust elk^^Sesz^^S^^Pteni, ame-ly 
+be-mu-tat-ja az ^^Sallapotg^^Sepek fon-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--45
+Underfull \hbox (badness 10000) in paragraph at lines 9--48
 
  []
 
@@ -611,18 +609,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.45 \include{Chapters/introduction}
+l.48 \include{Chapters/introduction}
                                      [2]
 \openout2 = `Chapters/FSM.aux'.
 
  (./Chapters/FSM.tex
-Chapter 2.
-
-Overfull \hbox (9.3653pt too wide) in paragraph at lines 4--5
-\OT1/cmr/m/n/12 kell is-mernie az em-bernek a pon-tos matem-atikai defin^^S^^Pc
-i^^Soit egyes kon-cepci^^Soknak
- []
-
+\bbl@ensure@hungarian {fejezet} 2.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 6.
@@ -641,8 +633,8 @@ Overfull \hbox (2.4251pt too wide) in paragraph at lines 10--11
 
 
 Overfull \hbox (1.6789pt too wide) in paragraph at lines 13--14
-\OT1/cmr/m/n/12 menet l^^Setezhet egy in-pu-tra ^^Ses a je-len-legi ^^Sallapotr
-a. A rend-szer k^^?ovetkez}o
+\OT1/cmr/m/n/12 menet l^^Setezhet egy in-pu-tra ^^Ses a je-len-le-gi ^^Sallapot
+ra. A rend-sz-er k^^?ovetkez}o
  []
 
 
@@ -660,8 +652,8 @@ l.19 \begin{itemize}
 
 ]
 Overfull \hbox (6.29015pt too wide) in paragraph at lines 26--27
-\OML/cmm/m/it/12 x[]; x[] [] x[]$ $\OT1/cmr/m/n/12 ^^F$-beli jelek sorozata. M 
-fe-lis-meri w-t, ha l^^Setezik olyan $\OML/cmm/m/it/12 r[]; r[]; [] ; r[]$
+\OML/cmm/m/it/12 x[]; x[] [] x[]$ $\OT1/cmr/m/n/12 ^^F$-beli jelek soroza-ta. M
+ fe-lis-meri w-t, ha l^^Setezik olyan $\OML/cmm/m/it/12 r[]; r[]; [] ; r[]$
  []
 
 
@@ -706,9 +698,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
  []
 
 
-Overfull \hbox (11.51944pt too wide) in paragraph at lines 56--57
-\OT1/cmr/m/n/12 esem^^Senyekre, ame-lyek ^^Satl^^?okik az au-tomat^^Sat az egyi
-k ^^Sallapotb^^Sol a m^^Sasikba. 
+Overfull \hbox (1.6626pt too wide) in paragraph at lines 56--57
+\OT1/cmr/m/n/12 em^^Senyekre, ame-lyek ^^Satl^^?okik az au-tomat^^Sat az egyik 
+^^Sallapotb^^Sol a m^^Sasikba. 
  []
 
 
@@ -719,15 +711,15 @@ Overfull \hbox (2.8824pt too wide) in paragraph at lines 57--58
 
 
 Overfull \hbox (3.19453pt too wide) in paragraph at lines 66--67
-[]\OT1/cmr/m/n/12 Egy au-tomata v^^Salasza (vagy kimenete) mindig egyedi az ^^S
-allapotot n^^Sezve.
+[]\OT1/cmr/m/n/12 Egy au-toma-ta v^^Salasza (vagy kimenete) mindig egye-di az ^
+^Sallapotot n^^Sezve.
  []
 
 
 Overfull \hbox (4.6136pt too wide) in paragraph at lines 67--68
-[]\OT1/cmr/m/n/12 A p^^Seld^^Saban a v^^Salaszokat (re-sponses) az $\OML/cmm/m/
-it/12 R[]; R[]; R[]$ \OT1/cmr/m/n/12 ^^Sabr^^Sazolja, az $\OML/cmm/m/it/12 S[];
- S[]; S[]$
+[]\OT1/cmr/m/n/12 A p^^Seld^^Saban a v^^Salaszokat (re-spons-es) az $\OML/cmm/m
+/it/12 R[]; R[]; R[]$ \OT1/cmr/m/n/12 ^^Sabr^^Sazolja, az $\OML/cmm/m/it/12 S[]
+; S[]; S[]$
  []
 
 
@@ -747,8 +739,8 @@ has been already used, duplicate ignored
 l.68 \end{itemize}
                    <./Diagrams/ExampleStateMachine.png>]
 Overfull \hbox (0.87927pt too wide) in paragraph at lines 73--75
-\OT1/cmr/m/n/12 matik^^Sanak, mivel v^^Segtelen^^?ul egyszer}uv^^Se teszi egyes
- rend-sz-erek ny-omonk^^?ovet^^Se-
+\OT1/cmr/m/n/12 matik^^Sanak, miv-el v^^Segtelen^^?ul egysz-er}uv^^Se teszi egy
+es rend-sz-erek ny-omonk^^?ovet^^Se-
  []
 
 
@@ -782,8 +774,8 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
 
 Overfull \hbox (9.23154pt too wide) in paragraph at lines 107--108
-\OT1/cmr/m/n/12 van: En-ter, Exit, Up-date, Physic-sUp-date, Han-dleIn-put. Eze
-k mind a megfelel}o
+\OT1/cmr/m/n/12 van: En-ter, Ex-it, Up-date, Physic-sUp-date, Han-dleIn-put. Ez
+ek mind a megfelel}o
  []
 
 
@@ -891,19 +883,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
-[11]
-Overfull \hbox (12.04166pt too wide) in paragraph at lines 247--249
-\OT1/cmr/m/n/12 kil^^Sepj^^?unk ^^Ses megsz^^?untess^^?unk min-den olyan dol-go
-t, ami bezavarna m^^Sas ^^Sallapotok
- []
-
-
-Overfull \hbox (1.61493pt too wide) in paragraph at lines 247--249
-\OT1/cmr/m/n/12 m}uk^^?od^^Ses^^Sebe. Ez^^Sert az ^^Sallapotg^^Sep^^?unk meg fo
-gja h^^S^^Pvni a State3-nak az "Exit()"
- []
-
-)
+[11])
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -916,7 +896,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \openout2 = `Chapters/concept.aux'.
 
  (./Chapters/concept.tex
-Chapter 3.
+\bbl@ensure@hungarian {fejezet} 3.
 
 Overfull \hbox (9.23058pt too wide) in paragraph at lines 3--4
 \OT1/cmr/m/n/12 mozg^^Sasrendszerekre van-nak ^^Sep^^S^^Ptve, ilyen m}ufajok p^
@@ -936,8 +916,8 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 ]
 Overfull \hbox (4.26952pt too wide) in paragraph at lines 40--42
-\OT1/cmr/m/n/12 Valamint a digit^^Salis kon-cepci^^So ra-j-zok elk^^Sesz^^S^^Pt
-^^Ses^^Sehez ^^Ses a text^^Sur^^Sak megalkot^^Sas^^Sa-
+\OT1/cmr/m/n/12 Valamint a dig-it^^Salis kon-cep-ci^^So ra-j-zok elk^^Sesz^^S^^
+Pt^^Ses^^Sehez ^^Ses a text^^Sur^^Sak megalkot^^Sas^^Sa-
  []
 
 
@@ -963,8 +943,8 @@ i-bilit^^Sas ^^Ses a hor-dozhat^^Sos^^Sag.
 
 
 Overfull \hbox (11.49686pt too wide) in paragraph at lines 65--66
-\OT1/cmr/m/n/12 egy Linux k^^?ornyezet, mind egy Win-dows k^^?ornyezet alatt. A
- j^^Sat^^Sekmotorok,
+\OT1/cmr/m/n/12 egy Lin-ux k^^?ornyezet, mind egy Win-dows k^^?ornyezet alatt. 
+A j^^Sat^^Sekmotorok,
  []
 
 
@@ -1056,8 +1036,8 @@ has been already used, duplicate ignored
 l.108 
        <./Images/BombRushCyberfunk_Logo.jpg>]
 Overfull \hbox (2.49825pt too wide) in paragraph at lines 120--122
-\OT1/cmr/m/n/12 hanem a pro-gram maga is. El}ofordulhatnak esem^^Senyek, ame-ly
-ek be-foly^^Sasolj^^Sak
+\OT1/cmr/m/n/12 hanem a pro-gram ma-ga is. El}ofordulhatnak es-em^^Senyek, ame-
+lyek be-foly^^Sasolj^^Sak
  []
 
 
@@ -1068,8 +1048,8 @@ Overfull \hbox (3.18156pt too wide) in paragraph at lines 120--122
 
 
 Overfull \hbox (5.77505pt too wide) in paragraph at lines 120--122
-\OT1/cmr/m/n/12 a pro-gram esem^^Senyeit a j^^Sat^^Sekos be-menteit}ol el-n-eve
-ztem azokat az esem^^Senyeket,
+\OT1/cmr/m/n/12 a pro-gram es-em^^Senyeit a j^^Sat^^Sekos be-menteit}ol el-n-ev
+eztem azokat az es-em^^Senyeket,
  []
 
 
@@ -1215,11 +1195,6 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
                                                   \__shipout_drop_firstpage_...
 l.183 
        <./Diagrams/InAir-DoubleJump.png>]
-Overfull \hbox (1.41075pt too wide) in paragraph at lines 184--185
-\OT1/cmr/m/n/12 (In-Air). Vis-zont, ha ism^^Set el kezd mo-zogni, akkor vis-sza
- lesz l^^?okve a leveg}oben
- []
-
 <Diagrams/InAir-InAirMovement.png, id=445, 484.81125pt x 308.65312pt>
 File: Diagrams/InAir-InAirMovement.png Graphic file (type png)
 <use Diagrams/InAir-InAirMovement.png>
@@ -1230,12 +1205,6 @@ Package pdftex.def Info: Diagrams/InAir-InAirMovement.png  used on input line 1
 Overfull \hbox (4.21175pt too wide) in paragraph at lines 193--195
 \OT1/cmr/m/n/12 k^^?otve egym^^Sassal. Ezeket mozg^^Sas h^^Sarmasoknak h^^S^^Pv
 om. A legt^^?obb mozg^^Sasfajt^^Sat
- []
-
-
-Overfull \hbox (1.51909pt too wide) in paragraph at lines 193--195
-\OT1/cmr/m/n/12 ^^Sallapothoz, amely ^^Satviszi }oket egy m^^Sasik cso-portba. 
-P^^Selda k^^Seppen a leveg}oben
  []
 
 <Diagrams/InAirTrio.png, id=447, 817.55438pt x 341.77687pt>
@@ -1285,19 +1254,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.13})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.47 \include{Chapters/concept}
+l.50 \include{Chapters/concept}
                                
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.14})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.47 \include{Chapters/concept}
+l.50 \include{Chapters/concept}
                                 <./Diagrams/InAirTrio.png> <./Diagrams/BaseTrio
 .png>]
 \openout2 = `Chapters/implementation.aux'.
 
  (./Chapters/implementation.tex
-Chapter 4.
+\bbl@ensure@hungarian {fejezet} 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
@@ -1327,14 +1296,14 @@ y-gon h^^Sal^^Sot tar-tal-maz, kiz^^Sar^^So-
 
 
 Overfull \hbox (13.99997pt too wide) in paragraph at lines 28--29
-\OT1/cmr/m/n/12 lag meg-je-len^^S^^Pt^^Sesi szem-pon-tja van, tel-je-sen f^^?ug
-getlen az ^^?utk^^?oz^^Sesvizsg^^Salatt^^Sol. 
+\OT1/cmr/m/n/12 lag meg-je-len^^S^^Pt^^Sesi szem-pon-t-ja van, tel-je-sen f^^?u
+ggetlen az ^^?utk^^?oz^^Sesvizsg^^Salatt^^Sol. 
  []
 
 
 Overfull \hbox (5.35675pt too wide) in paragraph at lines 29--30
 []\OT1/cmr/bx/n/12 CollisionShape3D: \OT1/cmr/m/n/12 Egy ^^Satl^^Satsz^^So poly
--gon h^^Sal^^So, amely az ^^?utk^^?oz^^Sesvizsg^^Sa-
+-gon h^^Sal^^So, ame-ly az ^^?utk^^?oz^^Sesvizsg^^Sa-
  []
 
 
@@ -1377,12 +1346,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
  []
 
 
-Overfull \hbox (3.48619pt too wide) in paragraph at lines 52--53
-\OT1/cmr/m/n/12 tam az au-tomat^^Sank k^^Set r^^Sesze a State ^^Ses StateMa-chi
-ne oszt^^Salyok nem v^^Saltoznak
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
@@ -1399,7 +1362,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [28]
 Overfull \hbox (3.71259pt too wide) in paragraph at lines 59--60
 []\OT1/cmr/m/n/12 Hozz^^Saadtam egy "move-ment-Di-rec-tion" nev}u v^^Saltoz^^So
-t, amely egy h^^Sarom-
+t, ame-ly egy h^^Sarom-
  []
 
 
@@ -1458,17 +1421,26 @@ L3 programming layer <2025-01-18>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 6E19A4C1556B4F931596AA5C95472A77;2515.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `Thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Thesis.out':
+(rerunfilecheck)             Before: 6E19A4C1556B4F931596AA5C95472A77;2515
+(rerunfilecheck)             After:  23FA76AE62D152D368ED0C47D6EF4E84;2567.
  ) 
 Here is how much of TeX's memory you used:
- 13242 strings out of 475135
- 214204 string characters out of 5765398
- 968645 words of memory out of 5000000
- 35790 multiletter control sequences out of 15000+600000
+ 14427 strings out of 475135
+ 237435 string characters out of 5765398
+ 1002024 words of memory out of 5000000
+ 36964 multiletter control sequences out of 15000+600000
  566496 words of font info for 61 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 76i,13n,80p,1703b,1997s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 76i,13n,90p,1696b,2011s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/yagi/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600p
 k> </home/yagi/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1200.600p
 k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -1480,7 +1452,7 @@ onts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (37 pages, 1282692 bytes).
+Output written on Thesis.pdf (37 pages, 1283191 bytes).
 PDF statistics:
  669 PDF objects out of 1000 (max. 8388607)
  569 compressed objects within 6 object streams

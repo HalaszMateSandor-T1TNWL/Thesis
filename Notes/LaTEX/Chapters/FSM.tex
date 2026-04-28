@@ -3,7 +3,7 @@
 
 Ahogyan az informatika fejlődött és egyre több matematikai koncepciót adap\-tált, hogy segítse a fejlesztést, úgy távolodott is tőle. Meglepő módon nem kell ismernie az embernek a pontos matematikai definícióit egyes koncepcióknak annak érdekében, hogy használja őket fejlesztés során. Ez leginkább itt fog majd érződni, az automaták terén.
 
-\subsection{Matematikai szemszög}
+\subsection{Matematikai megközelítés}
 
 A véges állapotú automata (Finite State Machine, avagy FSM) egy matematikai model, amely képes ábrázolni a dinamikus viselkedését egy rendszernek véges számú állapotot alkalmazva, valamint ezen állapotok közötti átmenéseket, és az átmenetekhez szükséges cselekvéseket. Bármely adott pillanatban egy rendszer egy bizonyos állapotot vesz fel és egy átmenet egy válasz egy bizonyos cselekvésre, vagy történésre.\\
 
@@ -67,7 +67,7 @@ Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására, 
 \item A példában a válaszokat (responses) az $R_{1},R_{2},R_{3}$ ábrázolja, az  $S_{1},S_{2},S_{3}$ ingerekre.
 \end{itemize}
 
-\subsection{Programozói szemszög}
+\subsection{Programozói megközelítés}
 \label{subsec:Prog}
 
 Programozás szempontjából az automaták egy nagyon hasznos része az informatikának, mivel végtelenül egyszerűvé teszi egyes rendszerek nyomonköveté\-sét, megtervezését és automatizálását.
@@ -76,7 +76,7 @@ Egy rendszeren belül, vegyünk most egy játékot példának, akármilyen objek
 \begin{itemize}
 \item A pálya időjárása (eshet, süthet a nap, fújhat a szél),
 \item a karakter fizikai állapota (futhat, ugorhat, csúszhat, támadhat),
-\item a fegyver állapota, amivel támadni akarunk (készenlétben, töltődik újra, elhasználva)
+\item a fegyver állapota, amivel támadni akarunk (készenlétben, töltődik újra, elhasználva).
 \end{itemize}
 
 Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közben vagyunk és a csúszda végén ott van egy ellenfél, akit meg akarunk támadni, ezért elővesszük a fegyverünket, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk vele, hogy milyen állapotban vannak a világunk egyes részei, megkönnyebbítjük a magunk dolgát a hibakeresésben és a játékosok dolgát azzal, hogy nem zavarjuk őket össze.\\
@@ -244,7 +244,7 @@ public partial class State3 : State
 }
 \end{lstlisting}
 
-A "State3"-nak elnevezett állapotban vagyunk jelenleg, ami ebben az esetben a "Piros" állapot a jelzőlámpánkon. Amikor erre az állapotra váltunk, akkor a State3-hoz csatolt fényforrást láthatóvá kell tennünk, valamint el kell indítanunk az időzítőnket, hogy nehogy benne ragadjunk. Amikor az időzítő lejár átmegyünk a "State1"-ba, ami a mi estünkben a "Zöld". *Amikor* átlépünk a következő állapotba fontos, hogy az előző állapotból sikeresen kilépjünk és megszüntessünk minden olyan dolgot, ami bezavarna más állapotok működésébe. Ezért az állapotgépünk meg fogja hívni a State3-nak az "Exit()" metódusát, amelyben is elrejtjük a fényforrását és megállítjuk az időzítőjét, arra az esetre, ha nem állna meg magától.\\
+A "State3"-nak elnevezett állapotban vagyunk jelenleg, ami ebben az esetben a "Piros" állapot a jelzőlámpánkon. Amikor erre az állapotra váltunk, akkor a State3-hoz csatolt fényforrást láthatóvá kell tennünk, valamint el kell indítanunk az időzítőnket, hogy nehogy benne ragadjunk. Amikor az időzítő lejár, a gép átkerül a "State1"-be, ami a mi estünkben a "Zöld". \textit{Amikor} átlépünk a következő állapotba fontos, hogy az előző állapotból sikeresen kilépjünk és megszüntessünk minden olyan dolgot, ami bezavarna más állapotok működésébe. Ezért az állapotgépünk meg fogja hívni a State3-nak az "Exit()" metódusát, amelyben is elrejtjük a fényforrását és megállítjuk az időzítőjét, arra az esetre, ha nem állna meg magától.\\
 Ezen felül van egy egyszerű switch statement, ami felhasználói bemenetre reagál ezzel lehetővé téve az állapotok közötti egyszerű ugrálást.
 
 
