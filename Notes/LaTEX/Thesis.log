@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  27 APR 2026 18:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  30 APR 2026 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -362,7 +362,8 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (./Thesis.aux (./Cover/TitleCard.aux) (./Cover/ThesisDetails.aux)
+) (./Thesis.aux (./Cover/TitleCard.aux) (./Cover/ThesisDetails.aux) (./Cover/Us
+eCase.aux)
 (./Chapters/introduction.aux) (./Chapters/FSM.aux) (./Chapters/concept.aux)
 (./Chapters/implementation.aux))
 \openout1 = `Thesis.aux'.
@@ -422,7 +423,7 @@ Package hyperref Info: Link coloring ON on input line 23.
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 7.
 
-<Images/me_logo.png, id=60, 1204.5pt x 1148.29pt>
+<Images/me_logo.png, id=72, 1204.5pt x 1148.29pt>
 File: Images/me_logo.png Graphic file (type png)
 <use Images/me_logo.png>
 Package pdftex.def Info: Images/me_logo.png  used on input line 9.
@@ -535,7 +536,16 @@ Overfull \hbox (42.14502pt too wide) in paragraph at lines 168--34
 
 
 
-[4] (./Thesis.toc)
+[4]
+\openout2 = `Cover/UseCase.aux'.
+
+ (./Cover/UseCase.tex)
+
+[5
+
+
+
+] (./Thesis.toc)
 \tf@toc=\write4
 \openout4 = `Thesis.toc'.
 
@@ -585,13 +595,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 )
-Overfull \hbox (1.85843pt too wide) in paragraph at lines 9--48
+Overfull \hbox (1.85843pt too wide) in paragraph at lines 9--50
 \OT1/cmr/m/n/12 mozg^^Sasrendszer-protot^^S^^Ppust elk^^Sesz^^S^^Pteni, ame-ly 
 be-mu-tat-ja az ^^Sallapotg^^Sepek fon-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--48
+Underfull \hbox (badness 10000) in paragraph at lines 9--50
 
  []
 
@@ -609,7 +619,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.48 \include{Chapters/introduction}
+l.50 \include{Chapters/introduction}
                                      [2]
 \openout2 = `Chapters/FSM.aux'.
 
@@ -671,7 +681,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-<Diagrams/ExampleStateMachine.png, id=131, 500.62032pt x 189.70876pt>
+<Diagrams/ExampleStateMachine.png, id=152, 500.62032pt x 189.70876pt>
 File: Diagrams/ExampleStateMachine.png Graphic file (type png)
 <use Diagrams/ExampleStateMachine.png>
 Package pdftex.def Info: Diagrams/ExampleStateMachine.png  used on input line 4
@@ -731,7 +741,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
-[5
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.68 \end{itemize}
+                   [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -814,12 +830,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
-<Images/TreeExample.png, id=229, 176.15813pt x 38.39343pt>
+<Images/TreeExample.png, id=249, 176.15813pt x 38.39343pt>
 File: Images/TreeExample.png Graphic file (type png)
 <use Images/TreeExample.png>
 Package pdftex.def Info: Images/TreeExample.png  used on input line 178.
 (pdftex.def)             Requested size: 390.0pt x 85.00064pt.
-<Images/CurrentStateSet.png, id=230, 191.21437pt x 42.91031pt>
+<Images/CurrentStateSet.png, id=250, 191.21437pt x 42.91031pt>
 File: Images/CurrentStateSet.png Graphic file (type png)
 <use Images/CurrentStateSet.png>
 Package pdftex.def Info: Images/CurrentStateSet.png  used on input line 179.
@@ -898,14 +914,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
  (./Chapters/concept.tex
 \bbl@ensure@hungarian {fejezet} 3.
 
-Overfull \hbox (9.23058pt too wide) in paragraph at lines 3--4
+Overfull \hbox (9.23058pt too wide) in paragraph at lines 4--5
 \OT1/cmr/m/n/12 mozg^^Sasrendszerekre van-nak ^^Sep^^S^^Ptve, ilyen m}ufajok p^
 ^Seld^^Saul a Movement-Shooter,
  []
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5.
+(hyperref)                than one, level fixed on input line 6.
 
 
 
@@ -915,7 +931,7 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 
 ]
-Overfull \hbox (4.26952pt too wide) in paragraph at lines 40--42
+Overfull \hbox (4.26952pt too wide) in paragraph at lines 41--43
 \OT1/cmr/m/n/12 Valamint a dig-it^^Salis kon-cep-ci^^So ra-j-zok elk^^Sesz^^S^^
 Pt^^Ses^^Sehez ^^Ses a text^^Sur^^Sak megalkot^^Sas^^Sa-
  []
@@ -930,25 +946,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [14]
-Overfull \hbox (29.97955pt too wide) in paragraph at lines 61--61
+Overfull \hbox (29.97955pt too wide) in paragraph at lines 62--62
 []\OT1/cmr/bx/sc/14.4 J^^Sat^^Sekmotor, pro-gramoz^^Sasi nyelv ^^Ses fe-jleszt}
 ok^^?ornyezet 
  []
 
 
-Overfull \hbox (14.71802pt too wide) in paragraph at lines 63--64
+Overfull \hbox (14.71802pt too wide) in paragraph at lines 64--65
 \OT1/cmr/m/n/12 fontos volt sz^^Samomra a plat-formf^^?uggetlens^^Seg, kom-pat-
 i-bilit^^Sas ^^Ses a hor-dozhat^^Sos^^Sag. 
  []
 
 
-Overfull \hbox (11.49686pt too wide) in paragraph at lines 65--66
+Overfull \hbox (11.49686pt too wide) in paragraph at lines 66--67
 \OT1/cmr/m/n/12 egy Lin-ux k^^?ornyezet, mind egy Win-dows k^^?ornyezet alatt. 
 A j^^Sat^^Sekmotorok,
  []
 
 
-Overfull \hbox (13.18193pt too wide) in paragraph at lines 66--67
+Overfull \hbox (13.18193pt too wide) in paragraph at lines 67--68
 []$[]$ \OT1/cmr/m/n/12 Fontos volt a megl^^Sev}o tapasz-ta-lat a v^^Salasztott 
 tech-nol^^Sogi^^Saval,
  []
@@ -963,10 +979,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [15]
-<Images/JetSetRadio_Logo.jpg, id=353, 1084.05pt x 1084.05pt>
+<Images/JetSetRadio_Logo.jpg, id=373, 1084.05pt x 1084.05pt>
 File: Images/JetSetRadio_Logo.jpg Graphic file (type jpg)
 <use Images/JetSetRadio_Logo.jpg>
-Package pdftex.def Info: Images/JetSetRadio_Logo.jpg  used on input line 76.
+Package pdftex.def Info: Images/JetSetRadio_Logo.jpg  used on input line 77.
 (pdftex.def)             Requested size: 390.0pt x 389.99304pt.
 
 
@@ -982,20 +998,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.83 
+l.84 
       <./Images/JetSetRadio_Logo.jpg>]
-<Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png, id=361, 401.5pt x 225.84375pt>
+<Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png, id=381, 401.5pt x 225.84375pt>
 
 File: Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png Graphic file (type png)
 <use Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png>
 Package pdftex.def Info: Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png  used o
-n input line 86.
+n input line 87.
 (pdftex.def)             Requested size: 390.0pt x 219.38864pt.
-<Images/BombRushCyberfunk_Logo.jpg, id=364, 1003.75pt x 564.1075pt>
+<Images/BombRushCyberfunk_Logo.jpg, id=384, 1003.75pt x 564.1075pt>
 File: Images/BombRushCyberfunk_Logo.jpg Graphic file (type jpg)
 <use Images/BombRushCyberfunk_Logo.jpg>
 Package pdftex.def Info: Images/BombRushCyberfunk_Logo.jpg  used on input line 
-95.
+96.
 (pdftex.def)             Requested size: 390.0pt x 219.1833pt.
 
 
@@ -1011,13 +1027,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.99 
-      <./Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png>]
-<Images/BombRushCyberfunk_InAction.jpg, id=376, 1284.8pt x 722.7pt>
+l.100 
+       <./Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png>]
+<Images/BombRushCyberfunk_InAction.jpg, id=397, 1284.8pt x 722.7pt>
 File: Images/BombRushCyberfunk_InAction.jpg Graphic file (type jpg)
 <use Images/BombRushCyberfunk_InAction.jpg>
 Package pdftex.def Info: Images/BombRushCyberfunk_InAction.jpg  used on input l
-ine 104.
+ine 105.
 (pdftex.def)             Requested size: 390.0pt x 219.37004pt.
 
 
@@ -1033,21 +1049,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.108 
+l.109 
        <./Images/BombRushCyberfunk_Logo.jpg>]
-Overfull \hbox (2.49825pt too wide) in paragraph at lines 120--122
+Overfull \hbox (2.49825pt too wide) in paragraph at lines 122--124
 \OT1/cmr/m/n/12 hanem a pro-gram ma-ga is. El}ofordulhatnak es-em^^Senyek, ame-
 lyek be-foly^^Sasolj^^Sak
  []
 
 
-Overfull \hbox (3.18156pt too wide) in paragraph at lines 120--122
+Overfull \hbox (3.18156pt too wide) in paragraph at lines 122--124
 \OT1/cmr/m/n/12 a j^^Sat^^Sekos mozg^^Sas^^Sat ^^Ses egy-ben az ^^Sallapot^^Sat
  is. Ah-hoz, hogy megk^^?ul^^?onb^^?oztessem
  []
 
 
-Overfull \hbox (5.77505pt too wide) in paragraph at lines 120--122
+Overfull \hbox (5.77505pt too wide) in paragraph at lines 122--124
 \OT1/cmr/m/n/12 a pro-gram es-em^^Senyeit a j^^Sat^^Sekos be-menteit}ol el-n-ev
 eztem azokat az es-em^^Senyeket,
  []
@@ -1066,18 +1082,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.122 
+l.124 
        <./Images/BombRushCyberfunk_InAction.jpg>]
-<Diagrams/SpawnIn-Grounded.png, id=391, 439.6425pt x 162.6075pt>
+<Diagrams/SpawnIn-Grounded.png, id=412, 439.6425pt x 162.6075pt>
 File: Diagrams/SpawnIn-Grounded.png Graphic file (type png)
 <use Diagrams/SpawnIn-Grounded.png>
-Package pdftex.def Info: Diagrams/SpawnIn-Grounded.png  used on input line 125.
+Package pdftex.def Info: Diagrams/SpawnIn-Grounded.png  used on input line 127.
 
 (pdftex.def)             Requested size: 390.0pt x 144.25127pt.
-<Diagrams/Grounded-Idle.png, id=393, 238.64156pt x 496.10344pt>
+<Diagrams/Grounded-Idle.png, id=414, 238.64156pt x 496.10344pt>
 File: Diagrams/Grounded-Idle.png Graphic file (type png)
 <use Diagrams/Grounded-Idle.png>
-Package pdftex.def Info: Diagrams/Grounded-Idle.png  used on input line 134.
+Package pdftex.def Info: Diagrams/Grounded-Idle.png  used on input line 136.
 (pdftex.def)             Requested size: 390.02371pt x 592.04337pt.
 
 
@@ -1093,7 +1109,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.138 
+l.140 
        <./Diagrams/SpawnIn-Grounded.png>]
 Overfull \vbox (41.37668pt too high) has occurred while \output is active []
 
@@ -1111,23 +1127,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.138 
+l.140 
        <./Diagrams/Grounded-Idle.png>]
-<Diagrams/Grounded-Movement.png, id=411, 1017.04968pt x 152.06813pt>
+<Diagrams/Grounded-Movement.png, id=431, 1017.04968pt x 152.06813pt>
 File: Diagrams/Grounded-Movement.png Graphic file (type png)
 <use Diagrams/Grounded-Movement.png>
-Package pdftex.def Info: Diagrams/Grounded-Movement.png  used on input line 143
+Package pdftex.def Info: Diagrams/Grounded-Movement.png  used on input line 145
 .
 (pdftex.def)             Requested size: 390.0pt x 58.3132pt.
-<Diagrams/Moving-InAir.png, id=413, 741.52031pt x 313.9228pt>
+<Diagrams/Moving-InAir.png, id=433, 741.52031pt x 313.9228pt>
 File: Diagrams/Moving-InAir.png Graphic file (type png)
 <use Diagrams/Moving-InAir.png>
-Package pdftex.def Info: Diagrams/Moving-InAir.png  used on input line 152.
+Package pdftex.def Info: Diagrams/Moving-InAir.png  used on input line 154.
 (pdftex.def)             Requested size: 390.0pt x 165.10892pt.
-<Diagrams/InAir-Grounded.png, id=415, 564.60938pt x 313.17pt>
+<Diagrams/InAir-Grounded.png, id=435, 564.60938pt x 313.17pt>
 File: Diagrams/InAir-Grounded.png Graphic file (type png)
 <use Diagrams/InAir-Grounded.png>
-Package pdftex.def Info: Diagrams/InAir-Grounded.png  used on input line 161.
+Package pdftex.def Info: Diagrams/InAir-Grounded.png  used on input line 163.
 (pdftex.def)             Requested size: 390.0pt x 216.32167pt.
 
 
@@ -1143,18 +1159,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.165 
+l.167 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.165 
+l.167 
        <./Diagrams/Grounded-Movement.png> <./Diagrams/Moving-InAir.png>]
-<Diagrams/InAir-DoubleJump.png, id=427, 412.54124pt x 327.47343pt>
+<Diagrams/InAir-DoubleJump.png, id=447, 412.54124pt x 327.47343pt>
 File: Diagrams/InAir-DoubleJump.png Graphic file (type png)
 <use Diagrams/InAir-DoubleJump.png>
-Package pdftex.def Info: Diagrams/InAir-DoubleJump.png  used on input line 170.
+Package pdftex.def Info: Diagrams/InAir-DoubleJump.png  used on input line 172.
 
 (pdftex.def)             Requested size: 390.0pt x 309.58395pt.
 
@@ -1171,13 +1187,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.174 
+l.176 
        <./Diagrams/InAir-Grounded.png>]
-<Diagrams/InAirMovement-DoubleJump.png, id=436, 784.43062pt x 147.55125pt>
+<Diagrams/InAirMovement-DoubleJump.png, id=456, 784.43062pt x 147.55125pt>
 File: Diagrams/InAirMovement-DoubleJump.png Graphic file (type png)
 <use Diagrams/InAirMovement-DoubleJump.png>
 Package pdftex.def Info: Diagrams/InAirMovement-DoubleJump.png  used on input l
-ine 179.
+ine 181.
 (pdftex.def)             Requested size: 390.0pt x 73.35892pt.
 
 
@@ -1193,24 +1209,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.183 
+l.185 
        <./Diagrams/InAir-DoubleJump.png>]
-<Diagrams/InAir-InAirMovement.png, id=445, 484.81125pt x 308.65312pt>
+<Diagrams/InAir-InAirMovement.png, id=465, 484.81125pt x 308.65312pt>
 File: Diagrams/InAir-InAirMovement.png Graphic file (type png)
 <use Diagrams/InAir-InAirMovement.png>
 Package pdftex.def Info: Diagrams/InAir-InAirMovement.png  used on input line 1
-88.
+90.
 (pdftex.def)             Requested size: 390.0pt x 248.30275pt.
 
-Overfull \hbox (4.21175pt too wide) in paragraph at lines 193--195
+Overfull \hbox (4.21175pt too wide) in paragraph at lines 195--197
 \OT1/cmr/m/n/12 k^^?otve egym^^Sassal. Ezeket mozg^^Sas h^^Sarmasoknak h^^S^^Pv
 om. A legt^^?obb mozg^^Sasfajt^^Sat
  []
 
-<Diagrams/InAirTrio.png, id=447, 817.55438pt x 341.77687pt>
+<Diagrams/InAirTrio.png, id=467, 817.55438pt x 341.77687pt>
 File: Diagrams/InAirTrio.png Graphic file (type png)
 <use Diagrams/InAirTrio.png>
-Package pdftex.def Info: Diagrams/InAirTrio.png  used on input line 198.
+Package pdftex.def Info: Diagrams/InAirTrio.png  used on input line 200.
 (pdftex.def)             Requested size: 390.0pt x 163.0393pt.
 
 
@@ -1226,19 +1242,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.202 
+l.204 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.202 
+l.204 
        <./Diagrams/InAirMovement-DoubleJump.png> <./Diagrams/InAir-InAirMovemen
 t.png>]
-<Diagrams/BaseTrio.png, id=458, 639.89063pt x 222.8325pt>
+<Diagrams/BaseTrio.png, id=479, 639.89063pt x 222.8325pt>
 File: Diagrams/BaseTrio.png Graphic file (type png)
 <use Diagrams/BaseTrio.png>
-Package pdftex.def Info: Diagrams/BaseTrio.png  used on input line 207.
+Package pdftex.def Info: Diagrams/BaseTrio.png  used on input line 209.
 (pdftex.def)             Requested size: 390.0pt x 135.81201pt.
 )
 
@@ -1254,13 +1270,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.13})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.50 \include{Chapters/concept}
+l.52 \include{Chapters/concept}
                                
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.14})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.50 \include{Chapters/concept}
+l.52 \include{Chapters/concept}
                                 <./Diagrams/InAirTrio.png> <./Diagrams/BaseTrio
 .png>]
 \openout2 = `Chapters/implementation.aux'.
@@ -1268,46 +1284,35 @@ l.50 \include{Chapters/concept}
  (./Chapters/implementation.tex
 \bbl@ensure@hungarian {fejezet} 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
+Overfull \hbox (1.46132pt too wide) in paragraph at lines 3--4
+\OT1/cmr/m/n/12 Stat-ic-Body3D (egy statikus, fizikai er}okkel nem moz-gath-at^
+^So test reprezent^^Sal^^Sa-
  []
 
 
-Overfull \hbox (7.9468pt too wide) in paragraph at lines 23--24
-\OT1/cmr/m/n/12 jav^^S^^Ptva az ^^Satl^^Sathat^^Sos^^Sagot. Valamint ezt a sz^^
-S^^Pnteret k^^?ul^^?on tu-dom p^^Seld^^Sanyos^^S^^Ptani,
+Overfull \hbox (8.21541pt too wide) in paragraph at lines 3--4
+\OT1/cmr/m/n/12 CollisionShape3D Node-ot (egy ^^Satl^^Satsz^^So poly-gonh^^Sal^
+^So, ame-ly ^^?utk^^?oz^^Sesvizsg^^Salatra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 5.
 
+
+Overfull \hbox (7.99031pt too wide) in paragraph at lines 7--8
+\OT1/cmr/m/n/12 Amint az el}obb azt eml^^S^^Ptettem a min-den pro-jekt egy main
+ sz^^S^^Pnt^^Ser kialak^^S^^Pt^^Sas^^Saval
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
+Overfull \hbox (2.96814pt too wide) in paragraph at lines 12--13
+[]\OT1/cmr/m/n/12 ^^Ses egy p^^Sar akad^^Saly, amit a j^^Sat^^Sekos mozg^^Sas^^
+Sanak a tesz-tel^^Ses^^Sere haszn^^Saltam. 
  []
 
 
-Overfull \hbox (14.68301pt too wide) in paragraph at lines 28--29
-[]\OT1/cmr/bx/n/12 MeshInstance3D: \OT1/cmr/m/n/12 Egy h^^Saromdimenzi^^Sos pol
-y-gon h^^Sal^^Sot tar-tal-maz, kiz^^Sar^^So-
- []
-
-
-Overfull \hbox (13.99997pt too wide) in paragraph at lines 28--29
-\OT1/cmr/m/n/12 lag meg-je-len^^S^^Pt^^Sesi szem-pon-t-ja van, tel-je-sen f^^?u
-ggetlen az ^^?utk^^?oz^^Sesvizsg^^Salatt^^Sol. 
- []
-
-
-Overfull \hbox (5.35675pt too wide) in paragraph at lines 29--30
-[]\OT1/cmr/bx/n/12 CollisionShape3D: \OT1/cmr/m/n/12 Egy ^^Satl^^Satsz^^So poly
--gon h^^Sal^^So, ame-ly az ^^?utk^^?oz^^Sesvizsg^^Sa-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
@@ -1319,34 +1324,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
 
 ]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 44.
-
-
-Overfull \hbox (8.01958pt too wide) in paragraph at lines 46--47
-\OT1/cmr/m/n/12 A j^^Sat^^Sekos sz^^?ul}oj^^Senek k^^Set t^^S^^Ppust szok-tak g
-yakran megv^^Salasztani a: CharacterBo-
- []
-
-
-Overfull \hbox (2.97614pt too wide) in paragraph at lines 46--47
-\OT1/cmr/m/n/12 dy3D-t ^^Ses a RigidBody3D-t. A l^^Senyeges dolog, amiben a ket
-t}o elt^^Ser egym^^Sasz^^Sol,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Overfull \hbox (14.68301pt too wide) in paragraph at lines 22--23
+[]\OT1/cmr/bx/n/12 MeshInstance3D: \OT1/cmr/m/n/12 Egy h^^Saromdimenzi^^Sos pol
+y-gon h^^Sal^^Sot tar-tal-maz, kiz^^Sar^^So-
+ []
+
+
+Overfull \hbox (13.99997pt too wide) in paragraph at lines 22--23
+\OT1/cmr/m/n/12 lag meg-je-len^^S^^Pt^^Sesi szem-pon-t-ja van, tel-je-sen f^^?u
+ggetlen az ^^?utk^^?oz^^Sesvizsg^^Salatt^^Sol. 
+ []
+
+
+Overfull \hbox (5.35675pt too wide) in paragraph at lines 23--24
+[]\OT1/cmr/bx/n/12 CollisionShape3D: \OT1/cmr/m/n/12 Egy ^^Satl^^Satsz^^So poly
+-gon h^^Sal^^So, ame-ly az ^^?utk^^?oz^^Sesvizsg^^Sa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
@@ -1360,13 +1366,67 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [28]
-Overfull \hbox (3.71259pt too wide) in paragraph at lines 59--60
+<Images/BasePlayerScene.png, id=500, 1224.575pt x 453.695pt>
+File: Images/BasePlayerScene.png Graphic file (type png)
+<use Images/BasePlayerScene.png>
+Package pdftex.def Info: Images/BasePlayerScene.png  used on input line 38.
+(pdftex.def)             Requested size: 390.0pt x 144.48616pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[29
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.46 	\item \textbf
+                   {CamYaw:} A kamera oldalirányú elmozdulásának nyílv�...
+ <./Images/BasePlayerScene.png (PNG copy)>]
+Overfull \hbox (17.78604pt too wide) in paragraph at lines 50--51
+\OT1/cmr/m/n/12 t^^?ok^^Seletesen megfelel-nek a k^^?ul^^?onb^^?oz}o ir^^Sanyok
+ ny^^S^^Plv^^Santart^^Sas^^Sara, ez^^Sert v^^Salasztottam
+ []
+
+
+Overfull \hbox (5.50978pt too wide) in paragraph at lines 59--60
+[]\OT1/cmr/m/n/12 Annak ^^Serdek^^Seben, hogy az ^^Sallapotok k^^?onnyen ny-omo
+nk^^?ove-thet}oek legyenek
+ []
+
+<Images/PlayerSceneComplete.png, id=509, 1183.42125pt x 525.965pt>
+File: Images/PlayerSceneComplete.png Graphic file (type png)
+<use Images/PlayerSceneComplete.png>
+Package pdftex.def Info: Images/PlayerSceneComplete.png  used on input line 63.
+
+(pdftex.def)             Requested size: 390.0pt x 173.32822pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+Overfull \hbox (3.71259pt too wide) in paragraph at lines 77--78
 []\OT1/cmr/m/n/12 Hozz^^Saadtam egy "move-ment-Di-rec-tion" nev}u v^^Saltoz^^So
 t, ame-ly egy h^^Sarom-
  []
 
 
-Overfull \hbox (10.0403pt too wide) in paragraph at lines 76--77
+Overfull \hbox (10.0403pt too wide) in paragraph at lines 82--83
 []\OT1/cmr/m/n/12 Hozz^^Saadtam egy "Tran-si-tion-To-Even-tHandler" nev}u signa
 l-t, ami a k^^?ul^^?on-
  []
@@ -1380,7 +1440,51 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
-[29]
+[31
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.85 \end{itemize}
+                   <./Images/PlayerSceneComplete.png (PNG copy)>]
+
+Package hyperref Warning: Suppressing empty link on input line 92.
+
+
+Overfull \hbox (1.5714pt too wide) in paragraph at lines 91--93
+\OT1/cmr/m/n/12 Ha vis-sza-eml^^Sekeznek, a [][][][]3[][]. fe-jezet[][], [][][]
+[]3.0.6[][]. al-sza-kasz^^Saban[][] v^^Sazoltam az ^^Sallapotg^^Se-
+ []
+
+
+Overfull \hbox (2.13713pt too wide) in paragraph at lines 91--93
+\OT1/cmr/m/n/12 ezek meg-val^^Sos^^S^^Pt^^Sas^^Sar^^Sol sz-eretn^^Sek besz^^Sel
+ni. Min-d-e-gyik ^^Sallapot im-ple-ment^^Saci^^Soj^^Sat
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
+
+ []
+
+
+Overfull \hbox (13.34303pt too wide) in paragraph at lines 96--99
+\OT1/cmr/m/n/12 mozg^^Sasban volt, akkor a be^^Sep^^S^^Ptett "Move-To-ward" met
+^^Sodus seg^^S^^Pts^^Seg^^Sevel cs^^?okken-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
+
+ []
+
+
+Overfull \hbox (8.4167pt too wide) in paragraph at lines 104--105
+[]\OT1/cmr/m/n/12 El}osz^^?or is, fontosnak tar-tot-tam, azt, hogy ha a j^^Sat^
+^Sekos valamerre ir^^Sanyitja
+ []
+
+)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1389,16 +1493,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
-[30])
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[31] (./Thesis.bbl
+[32] (./Thesis.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 29--32
 []\OT1/cmr/m/n/12 Slkimg2pixel's itch.io page.  [][]$\OT1/cmtt/m/n/12 https : /
  / captain4lk . itch . io /
@@ -1406,13 +1501,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
 )
 
-[32
+[33
 
 
 
 ] (./Thesis.aux (./Cover/TitleCard.aux) (./Cover/ThesisDetails.aux)
-(./Chapters/introduction.aux) (./Chapters/FSM.aux) (./Chapters/concept.aux)
-(./Chapters/implementation.aux))
+(./Cover/UseCase.aux) (./Chapters/introduction.aux) (./Chapters/FSM.aux)
+(./Chapters/concept.aux) (./Chapters/implementation.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1421,26 +1516,17 @@ L3 programming layer <2025-01-18>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Thesis.out':
-(rerunfilecheck)             Before: 6E19A4C1556B4F931596AA5C95472A77;2515
-(rerunfilecheck)             After:  23FA76AE62D152D368ED0C47D6EF4E84;2567.
+Package rerunfilecheck Info: File `Thesis.out' has not changed.
+(rerunfilecheck)             Checksum: D89298EACCF505924C886E907B07F980;3127.
  ) 
 Here is how much of TeX's memory you used:
- 14427 strings out of 475135
- 237435 string characters out of 5765398
- 1002024 words of memory out of 5000000
- 36964 multiletter control sequences out of 15000+600000
- 566496 words of font info for 61 fonts, out of 8000000 for 9000
+ 14404 strings out of 475135
+ 237688 string characters out of 5765398
+ 994224 words of memory out of 5000000
+ 36978 multiletter control sequences out of 15000+600000
+ 566803 words of font info for 62 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 76i,13n,90p,1696b,2011s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 76i,13n,90p,1722b,2011s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/yagi/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600p
 k> </home/yagi/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1200.600p
 k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -1452,10 +1538,10 @@ onts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmtt12.pfb>
-Output written on Thesis.pdf (37 pages, 1283191 bytes).
+Output written on Thesis.pdf (39 pages, 1852196 bytes).
 PDF statistics:
- 669 PDF objects out of 1000 (max. 8388607)
- 569 compressed objects within 6 object streams
- 254 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 645 PDF objects out of 1000 (max. 8388607)
+ 542 compressed objects within 6 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 243 words of extra memory for PDF output out of 10000 (max. 10000000)
 
