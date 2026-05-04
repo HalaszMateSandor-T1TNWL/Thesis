@@ -151,7 +151,7 @@ offset_right = 211.0
 offset_bottom = 25.0
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="." unique_id=1412880048]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2439795, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4772582, 0)
 shape = SubResource("BoxShape3D_f1ek2")
 
 [connection signal="SetMovementDirection" from="." to="Yagi/PlayerController" method="OnSetMovementDirection"]

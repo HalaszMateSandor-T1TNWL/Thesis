@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public partial class Running : State
 {
@@ -14,10 +13,10 @@ public partial class Running : State
 	
 	public override void Enter()
 	{
-		parent = GetNode<CharacterBody3D>($"../../..");
+		parent = GetNode<Player>($"../../..");
 		_meshRoot = GetNode<Node3D>($"../..");
-		_speed = new Player().speed;
-		_accel = new Player().accel;
+		_speed = parent.speed;
+		_accel = parent.accel;
 	}
 	
 	public override void PhysicsUpdate(float delta)

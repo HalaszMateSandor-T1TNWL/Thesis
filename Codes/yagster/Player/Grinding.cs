@@ -4,7 +4,7 @@ public partial class Grinding : State
 {
 	private RailGrinding _usedRail = null;
 	private ShapeCast3D _grindCast;
-	private new Player parent;
+
 	private MeshInstance3D _playerBody;
   	private bool _frontFacing = false;
 	private float grindSpeed = 10f;
@@ -15,7 +15,7 @@ public partial class Grinding : State
   	{
 		_grindCast = GetNode<ShapeCast3D>($"../../../ShapeCast3D");
 
-		parent = (Player)GetNode<Node3D>($"../../..");
+		parent = GetNode<Player>($"../../..");
 		_playerBody = parent.playerBody;
 
 		if(_usedRail == null) StartRail();

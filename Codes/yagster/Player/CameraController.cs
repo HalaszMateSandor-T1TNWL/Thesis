@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public partial class CameraController : Node3D
 {
@@ -42,7 +41,7 @@ public partial class CameraController : Node3D
 		}
 	}
 	
-	public bool IsCameraMotion(InputEvent @event)
+	public static bool IsCameraMotion(InputEvent @event)
 	{
 		return @event is InputEventMouseMotion && Input.GetMouseMode() == Input.MouseModeEnum.Captured;
 	}

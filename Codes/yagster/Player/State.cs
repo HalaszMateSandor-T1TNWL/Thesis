@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public partial class State : Node
 {
@@ -7,7 +6,7 @@ public partial class State : Node
 	public PlayerController fsm;
 	
 	public int gravity = (int)ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
-	public CharacterBody3D parent;
+	public Player parent;
 	
 	public Vector3 movementDirection;
 	

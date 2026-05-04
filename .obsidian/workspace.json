@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Fájlkezelő"
             }
           },
           {
@@ -174,13 +174,13 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Gyors váltó megnyitása": false,
+      "graph:Gráf nézet megnyitása": false,
+      "canvas:Új vászon létrehozása": false,
+      "daily-notes:Mai jegyzet megnyitása": false,
+      "templates:Sablon beszúrása": false,
+      "command-palette:Parancspaletta megnyitása": false,
+      "bases:Új bázis létrehozása": false
     }
   },
   "active": "85a987c48462d50f",

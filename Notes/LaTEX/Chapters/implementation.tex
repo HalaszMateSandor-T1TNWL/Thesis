@@ -91,12 +91,62 @@ A PlayerController script-et hozzácsatoltam a megosztozó nevű PlayerControlle
 Ha visszaemlékeznek, a \hyperref[chap:Concept]{\ref{chap:Concept}. fejezet}, \hyperref[subsec:States]{\ref{subsec:States}. alszakaszában} vázoltam az állapotgé\-pet és a különböző tervezett állapotokat és az azok közötti átmenetet. Most ezek megvalósításáról szeretnék beszélni.
 Mindegyik állapot implementációját röviden át fogom beszélni és a fontosabbakat ki fogom emelni és bele fogok menni a matekba is háttérben. A kódot nem minden esetben fogom ide beírni, viszont a CD mellékletben megtalálják a forráskódot, valamint a \hyperref[cover:UseCase]{\ref{cover:UseCase}CD Használati útmutató oldalon} elmondottak alapján tudják követni részletesebben a kódot.\\
 
-A megvalósítás során az állapotokat egy időben írtam a játékos script-jével. Létrehoztam egy Player scriptet és osztályt, amit a CharacterBody3D Node-hoz csatoltam. Ezen az osztályon belül hoztam létre azokat a metódusokat, amelyeket az állpotátmenetek vizsgálására használtam. Valamint itt számítottam ki a kamera mutatási irányát és a mozgásvektort is.\\
+A megvalósítás során az állapotokat egy időben írtam a játékos script-jével. Létrehoztam egy Player script-et és osztályt, amit a CharacterBody3D Node-hoz csatoltam. Ezen az osztályon belül hoztam létre azokat a metódusokat, amelyeket az állapotátmenetek vizsgálására használtam. Valamint itt számítottam ki a kamera mutatási irányát és a mozgásvektort is.\\
 
 Az állapotok implementáció sorrendjében:
 \begin{itemize}
 	\item \textbf{Idle:} Az Idle állapot azért felelős, hogy a mozgást megállítsa. Ha a játékos már mozgásban volt, akkor a beépített "MoveToward" metódus segítségével csökkenti a sebességét nullára. Ahhoz, hogy a játékos ide eljusson egy beépített metódust segítségével az "IsOnFloor"-ral megnézem, hogy a karakter a földön tartózkodik-e és, hogy e közben nincs-e letartva semelyik mozgás gomb.\\
-	\item \textbf{Running:} A mozgás (vagy futás) állapotnál a játékos sebességét befolyásoljuk a movementDirection attribútummal, ami megadj egy mozgás vektort. Ezt a vektort a "Player" osztályon belül számítjuk ki
+	\item \textbf{Running:} A mozgás (vagy futás) állapotnál a játékos sebességét befolyásoljuk a movementDirection attribútummal, ami megad egy mozgás vektort. Ezt a vektort a "Player" osztályon belül és annál is fontosabban a \_PhysicsProcess metóduson belül számítjuk ki. A \_PhysicsProcess egy felülírt metódus, ami az alap Node osztályból származik. Ezt a metódust hívja meg a Godot minden olyan frame előtt, amikor a motor fizikai számításokat végezne. Frame-nek, vagy keretnek hívjuk azt amikor a játékmotor újrarajzolja a képernyőt az új adatok szerint. Azért fontos ebben a metódusban kiszámítani a mozgásvektort, mivel nem szeretnénk minden frame-ben kiszámolni a játékos mozgásvektorát, ez csak számítási időt venne el, lassítaná a programot. Mivel felhasználjuk a CharacterBody3D "Velocity", avagy sebesség attribútumát, ezért a mozgás tulajdonképpen fizikai számításnak minősül. A mozgás számítása a következőképpen zajlik:
+	\lstset{style=sharpc}
+	\begin{lstlisting}
+	//...
+
+	Vector3 forward = _camera.GlobalBasis.Z;
+	Vector3 right = _camera.GlobalBasis.X;
+		
+	var rawInput = Input.GetVector("Left", "Right", "Forward", "Backward");
+		
+	_movementDirection = forward * rawInput.Y + right * rawInput.X;
+	_movementDirection.Y = 0.0f;
+	_movementDirection = _movementDirection.Normalized();
+
+	//...
+	\end{lstlisting}
+	Ha visszaemlékeznek említettem, hogy a kamera állását fel szeretném használni a mozgás kiszámításakor. Létrehozok két háromdimenziós vektort, a "forward"-ot és a "right"-ot, ezeket beállítom a kameránk globális bázisvektorának a Z és az X értékeire. A globális bázison belül minden objektumnak a helyi vektorjai ugyan abba az irányba mutatnak, így könnyen tudunk vele számolni. Az Input.GetVector-t ajánlja a Godot specifikáció az ún. "WASD" mozgáshoz, így azt használtam. Ebben az esetben visszakapunk egy kétdimenziós vektort, a pozitív és negatív X és Y tengelyek mentén, gondoljanak rá úgy, mint amikor egy kontrolleren egy joystick-et mozgatunk. Felmerülhet a kérdés, hogy minek szorozzuk meg a mozgásvektort még a kamera irányával is, nos, ha ezt a lépést nem tesszük meg akkor a karakterünk teljesen függetlenül fog mozogni a kamera állásától, ez azt fogja eredményezni, hogy az "Előre", ami a mi esetünkben a "W" gomb, mindig a globális bázis szerinti "Előre" lesz, tehát a Z irány, ami nagyon zavaros tud lenni a felhasználó számára. Viszont ha a vektorunk a kamerától függ akkor, ami a billentyűzeten előre lesz, az a monitoron is előre lesz. Miután megszoroztuk és összeadtuk a vektorjainkat fontos az Y koordinátákat nullára állítani másképpen ha felfele nézünk a kamerával akkor elrepülhetnénk. Az ugrást majd különszedjük a saját állapotába. A mozgásvektorunkat egy normalizálással véglegesítjük, hogy megtartsuk az irányt, amibe mozgunk, de ne legyen a hossz miatt baj a későbbi számításokkor. Ugyanis ez még nem a vége, a Player osztályon belül továbbá megvizsgáljuk, hogy a jelenlegi helyzetben a játékos átmehet-e a "Running" állapotba, ennek a teljesítése csupán annyi, hogy a játékos a földön tartózkodjon és, hogy a "Movement" action-group-on belül az egyik gomb le legyen nyomva. Az action-group-ok, avagy cselekvés csoportok, billentyű vagy kontroller bemenetekre hallgató egységek csoportjai, ezt a programozónak kell megadnia. 
+	\lstset{style=sharpc}
+	\begin{lstlisting}
+	// ...	
+	
+	if(Grounded)
+	{
+		if(Input.IsActionJustPressed("Movement"))
+		{
+			CurrentState = PlayerState.Running;
+		}
+		else if(_movementDirection.X == 0 && _movementDirection.Z == 0)
+		{
+			CurrentState = PlayerState.Idle;
+		}
+	}
+	
+	// ...
+	\end{lstlisting}
+Végül a "Running" állapoton belül beállítjuk a CharacterBody3D-nek a sebességét szintúgy a MoveToward metódussal, aminek a célvektorját beállítjuk a kiszámított mozgásvektorra szorozva a játékos sebességével (itt számít az, hogy a vektor normalizált-e vagy sem), és a változás gyorsaságát beállítjuk a játékos gyorsulására szorozva az előző frame kirajzolásával eltelt idővel, ezt hívjuk "deltának".
+	\item \textbf{Jumping és Falling:} A "Jumping", avagy ugrás állapot relatíve egyszerű; amint a játékos lenyomja az "Ugrás" gombot, ami a mi esetünkben a "Space" vagyis szóköz, átlökődik az állapotgép a az ugrás állapotba, ahol a játékos sebességvektorának az Y koordinátájához hozzáadunk egy előre megszabott értéket, az ugrás erősségét. Ezek után az irányítást átadjuk a "Falling", avagy zuhanás állapotnak. Itt csökkentjük a játékos sebességvektorjának az Y koordinátáját a gravitáció szorozva a súllyal és a deltával. Valamint az esésnek átadjuk még a mozgásvektort, hogy a momentum, amivel a játékos felugrott megmaradjon és kapjon egy kis navigálási lehetőséget a levegőben.
+	\item \textbf{Grinding:} Ez az állapot jelentette a legnagyobb kihívást számomra a projekt elkészítése során, de egyben ez volt a legélvezetesebb is. Kezdetnek beszéljük át az állapot funkcionalitását: a "grinding", egy sportjátékokban elterjedt mozgásfajta, amely egy kijelölt objektumon végigvezet, \textit{végigcsúsztat} egy játékost. Ahhoz, hogy egy ilyen objektumot létrehozzunk, a Godot-ban egy előre beépített Node, a Path3D. Ezzel a Node segítségével létre tudunk hozni egy utat egy pár pont megadásával. A Godot ezek között a pontok között a fejlesztő által megadott paraméterek alapján interpolálja az utat. Ehhez, ha hozzárendelünk ehhez a Path3D Node-hoz egy PathFollow3D Node-ot 
 \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

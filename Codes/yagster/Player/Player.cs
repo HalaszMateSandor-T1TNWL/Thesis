@@ -149,6 +149,8 @@ public partial class Player : CharacterBody3D
 		
 		_speed.Text = _movementDirection.ToString();
 		
+		Grounded = IsOnFloor();
+
 		if(Grounded)
 		{
 			if(Input.IsActionJustPressed("Movement"))
