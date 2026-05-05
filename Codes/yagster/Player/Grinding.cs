@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Godot;
 
 public partial class Grinding : State
@@ -8,8 +9,6 @@ public partial class Grinding : State
 	private MeshInstance3D _playerBody;
   	private bool _frontFacing = false;
 	private float grindSpeed = 10f;
-
-	float railSwapWeight = 1.0f;
   
 	public override void Enter()
   	{
@@ -17,7 +16,7 @@ public partial class Grinding : State
 
 		parent = GetNode<Player>($"../../..");
 		_playerBody = parent.playerBody;
-
+		
 		if(_usedRail == null) StartRail();
   	}
 
@@ -25,25 +24,16 @@ public partial class Grinding : State
 	{
 		if(_usedRail != null)
 		{
-			railSwapWeight = Mathf.Clamp(railSwapWeight + (float)delta * 2f, -1, 1);
-
 			float progress = _usedRail.pathFollow.Progress + -_usedRail.pathFollow.Basis.Z.Normalized().Dot(parent.Velocity.Normalized()) * parent.Velocity.Length() * (float)delta;
 			_usedRail.pathFollow.Progress = progress;
 
-			if(railSwapWeight >= 1)
-			{
-				parent.GlobalPosition = _usedRail.pathFollow.GlobalPosition;
-			}
-			else
-			{
-				parent.GlobalPosition = parent.GlobalPosition.Lerp(_usedRail.pathFollow.GlobalPosition, Mathf.Clamp(railSwapWeight, 0, 1));	
-			}
+			parent.GlobalPosition = _usedRail.pathFollow.GlobalPosition;
 			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
 
 			parent.Velocity = -_usedRail.pathFollow.Basis.Z.Normalized() * parent.Velocity.Length() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(parent.Velocity.Normalized());
 			parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * 5f * (float)delta;
 
-			parent.MoveAndSlide();	
+			parent.MoveAndSlide();
 		}
 	}
 
@@ -56,9 +46,7 @@ public partial class Grinding : State
 		{
 			_usedRail = (RailGrinding)_grindCast.GetCollider(0);
 
-			_frontFacing = _usedRail.CalculateTargetRailPoint(parent.GlobalPosition, parent.Velocity);
-
-			GD.Print("Front Facing: " + _frontFacing.ToString());
+			_usedRail.CalculateTargetRailPoint(parent.GlobalPosition);
 		}
 	}
 

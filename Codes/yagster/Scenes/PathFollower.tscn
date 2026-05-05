@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://dl2qcila11tf5"]
-
-[node name="PathFollow3D" type="PathFollow3D" unique_id=2041218497]
-
-[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=2068262619]

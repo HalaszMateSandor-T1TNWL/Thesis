@@ -3,17 +3,17 @@
 \contentsline {chapter}{\numberline {2}Véges állapotú automaták}{3}{chapter.2}%
 \contentsline {subsection}{\numberline {2.0.1}Matematikai megközelítés}{3}{subsection.2.0.1}%
 \contentsline {subsection}{\numberline {2.0.2}Programozói megközelítés}{6}{subsection.2.0.2}%
-\contentsline {chapter}{\numberline {3}Koncepció}{13}{chapter.3}%
-\contentsline {subsection}{\numberline {3.0.1}Játékmenet}{13}{subsection.3.0.1}%
-\contentsline {subsection}{\numberline {3.0.2}Használt technológiák}{14}{subsection.3.0.2}%
-\contentsline {subsection}{\numberline {3.0.3}Fejlesztési környezet választása}{15}{subsection.3.0.3}%
-\contentsline {subsection}{\numberline {3.0.4}Játékmotor, programozási nyelv és fejlesztőkörnyezet}{15}{subsection.3.0.4}%
-\contentsline {subsection}{\numberline {3.0.5}Vizuális világ megtervezése}{16}{subsection.3.0.5}%
-\contentsline {subsection}{\numberline {3.0.6}Mozgásrendszer megtervezése}{20}{subsection.3.0.6}%
-\contentsline {subsubsection}{Állapotok}{21}{section*.2}%
-\contentsline {chapter}{\numberline {4}Megvalósítás}{28}{chapter.4}%
-\contentsline {subsection}{\numberline {4.0.1}Az alapok}{28}{subsection.4.0.1}%
-\contentsline {subsection}{\numberline {4.0.2}RigidBody vs CharacterBody}{29}{subsection.4.0.2}%
-\contentsline {subsection}{\numberline {4.0.3}A játékos színtere}{30}{subsection.4.0.3}%
-\contentsline {subsection}{\numberline {4.0.4}Változtatások az állapotgéphez}{32}{subsection.4.0.4}%
-\contentsline {subsection}{\numberline {4.0.5}Az állapotok megvalósítása}{33}{subsection.4.0.5}%
+\contentsline {chapter}{\numberline {3}Koncepció}{12}{chapter.3}%
+\contentsline {subsection}{\numberline {3.0.1}Játékmenet}{12}{subsection.3.0.1}%
+\contentsline {subsection}{\numberline {3.0.2}Használt technológiák}{13}{subsection.3.0.2}%
+\contentsline {subsection}{\numberline {3.0.3}Fejlesztési környezet választása}{14}{subsection.3.0.3}%
+\contentsline {subsection}{\numberline {3.0.4}Játékmotor, programozási nyelv és fejlesztőkörnyezet}{14}{subsection.3.0.4}%
+\contentsline {subsection}{\numberline {3.0.5}Vizuális világ megtervezése}{15}{subsection.3.0.5}%
+\contentsline {subsection}{\numberline {3.0.6}Mozgásrendszer megtervezése}{18}{subsection.3.0.6}%
+\contentsline {subsubsection}{Állapotok}{19}{section*.2}%
+\contentsline {chapter}{\numberline {4}Megvalósítás}{26}{chapter.4}%
+\contentsline {subsection}{\numberline {4.0.1}Az alapok}{26}{subsection.4.0.1}%
+\contentsline {subsection}{\numberline {4.0.2}RigidBody vs CharacterBody}{27}{subsection.4.0.2}%
+\contentsline {subsection}{\numberline {4.0.3}A játékos színtere}{28}{subsection.4.0.3}%
+\contentsline {subsection}{\numberline {4.0.4}Változtatások az állapotgéphez}{30}{subsection.4.0.4}%
+\contentsline {subsection}{\numberline {4.0.5}Az állapotok megvalósítása}{31}{subsection.4.0.5}%

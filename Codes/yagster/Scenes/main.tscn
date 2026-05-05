@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bnpxiyoiimhb8"]
 
 [ext_resource type="Texture2D" uid="uid://ci7hogfp7yvh7" path="res://Textures/YagiBoweep.png" id="1_jjgbg"]
-[ext_resource type="PackedScene" uid="uid://1jsfgbspiekt" path="res://Scenes/Yagi2.tscn" id="4_21xkr"]
-[ext_resource type="PackedScene" uid="uid://byfee14yvxbc0" path="res://Scenes/RailTest.tscn" id="4_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://cxogkwf022axe" path="res://Scenes/GroundedRail.tscn" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://1jsfgbspiekt" path="res://Scenes/yagi.tscn" id="4_21xkr"]
+[ext_resource type="PackedScene" uid="uid://byfee14yvxbc0" path="res://Scenes/sharp_rail.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://cxogkwf022axe" path="res://Scenes/looped_rail.tscn" id="4_kry3j"]
+[ext_resource type="PackedScene" uid="uid://d18yofrkyj8iq" path="res://Scenes/curve_rail.tscn" id="5_kry3j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjgbg"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -57,9 +58,6 @@ transform = Transform3D(1.715, 0, 0, 0, 1.715, 0, 0, 0, 1.715, -70.52506, 2.6715
 [node name="UpwardsRail" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
 transform = Transform3D(5.43, 0, 0, 0, 5.43, 0, 0, 0, 5.43, -3.057373, 3.0429997, 18.000975)
 
-[node name="Yagi" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
-transform = Transform3D(0.90838426, 0, 0.4181367, 0, 1, 0, -0.4181367, 0, 0.90838426, -6.250348, 2.480403, 7.1432714)
-
 [node name="Ramp" type="StaticBody3D" parent="." unique_id=788961515]
 transform = Transform3D(6.355, 0, 0, 0, 6.355, 0, 0, 0, 6.355, 0, 2.376995, 0)
 
@@ -69,3 +67,9 @@ polygon = PackedVector2Array(0, 0, 0, 1, 0, 1, 1, 0)
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Ramp" unique_id=1836828649]
 shape = SubResource("ConcavePolygonShape3D_jjvhh")
+
+[node name="CurvedRail" parent="." unique_id=1685441984 instance=ExtResource("5_kry3j")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -22.62466, 2.5999901, -2.2520776)
+
+[node name="Yagi" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
+transform = Transform3D(0.90838426, 0, 0.4181367, 0, 1, 0, -0.4181367, 0, 0.90838426, -6.250348, 2.480403, 7.1432714)

@@ -1,274 +1,247 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.4)  4 MAY 2026 21:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  5 MAY 2026 11:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Thesis.tex
-(Thesis.tex
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-03-20>
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
-Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
-File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+**Thesis.tex
+(./Thesis.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count275
-\c@chapter=\count276
-\c@section=\count277
-\c@subsection=\count278
-\c@subsubsection=\count279
-\c@paragraph=\count280
-\c@subparagraph=\count281
-\c@figure=\count282
-\c@table=\count283
+\c@part=\count196
+\c@chapter=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
+\c@figure=\count269
+\c@table=\count270
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen150
+\bibindent=\dimen141
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen151
-\Gin@req@width=\dimen152
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
-keys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
-ty
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ))
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
-lestring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count284
+\c@section@level=\count271
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count285
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count272
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
-ty
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen153
-\Hy@linkcounter=\count286
-\Hy@pagecounter=\count287
- (C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+\@linkdim=\dimen144
+\Hy@linkcounter=\count273
+\Hy@pagecounter=\count274
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count288
- (C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+\Hy@SavedSpaceFactor=\count275
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4199.
-Package hyperref Info: Link nesting OFF on input line 4204.
-Package hyperref Info: Hyper index ON on input line 4207.
-Package hyperref Info: Plain pages OFF on input line 4214.
-Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4466.
-\c@Hy@tempcnt=\count289
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count276
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4805.
-\XeTeXLinkMargin=\dimen154
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen145
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
-.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count290
-\Field@Width=\dimen155
-\Fld@charsize=\dimen156
-Package hyperref Info: Hyper figures OFF on input line 6091.
-Package hyperref Info: Link nesting OFF on input line 6096.
-Package hyperref Info: Hyper index ON on input line 6099.
-Package hyperref Info: backreferencing OFF on input line 6106.
-Package hyperref Info: Link coloring OFF on input line 6111.
-Package hyperref Info: Link coloring with OCG OFF on input line 6116.
-Package hyperref Info: PDF/A mode OFF on input line 6121.
-\Hy@abspage=\count291
-\c@Item=\count292
-\c@Hfootnote=\count293
+\Fld@menulength=\count277
+\Field@Width=\dimen146
+\Fld@charsize=\dimen147
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count278
+\c@Item=\count279
+\c@Hfootnote=\count280
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
-\Fld@listcount=\count294
-\c@bookmark@seq@number=\count295
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
-echeck.sty
-Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count281
+\c@bookmark@seq@number=\count282
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
-ounter.sty
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-84.
+85.
 )
 \Hy@SectionHShift=\skip51
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 11.
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count296
+\c@float@type=\count283
 \float@exts=\toks18
-\float@box=\box53
+\float@box=\box52
 \@float@everytoks=\toks19
-\@floatcapt=\box54
+\@floatcapt=\box53
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2026/04/15 v26.6 The multilingual framework for LuaLaTeX, pdfLaT
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaT
 eX and XeLaTeX
-\babel@savecnt=\count297
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2078.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2080.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2082.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2083.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2084.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2086.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2111.
-\U@D=\dimen157
-\l@unhyphenated=\language79
+\babel@savecnt=\count284
+\U@D=\dimen148
+\l@unhyphenated=\language5
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count298
-Package babel Info: Configuration files are deprecated, as
-(babel)             they can break document portability.
-(babel)             Reported on input line 4206.
+\bbl@dirlevel=\count285
 
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/hu\babel
--hungarian.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/hu/babel-hungarian.tex)
 Package babel Info: Importing data for hungarian
-(babel)             from babel-hu.ini. Reported on input line 4330.
-)
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count299
-\lst@gtempboxa=\box55
+(babel)             from babel-hu.ini. Reported on input line 4167.
+Package babel Info: Hyphen rules for 'hungarian' set to \l@english
+(babel)             (\language0). Reported on input line 4167.
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count286
+\lst@gtempboxa=\box54
 \lst@token=\toks20
-\lst@length=\count300
-\lst@currlwidth=\dimen158
-\lst@column=\count301
-\lst@pos=\count302
-\lst@lostspace=\dimen159
-\lst@width=\dimen160
-\lst@newlines=\count303
-\lst@lineno=\count304
-\lst@maxwidth=\dimen161
+\lst@length=\count287
+\lst@currlwidth=\dimen149
+\lst@column=\count288
+\lst@pos=\count289
+\lst@lostspace=\dimen150
+\lst@width=\dimen151
+\lst@newlines=\count290
+\lst@lineno=\count291
+\lst@maxwidth=\dimen152
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
-File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count305
-\lst@skipnumbers=\count306
-\lst@framebox=\box56
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count292
+\lst@skipnumbers=\count293
+\lst@framebox=\box55
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2025/11/14 1.11b listings configuration
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
-Package: listings 2025/11/14 1.11b (Carsten Heinz)
-==> First Aid for listings.sty no longer applied!
-    Expected:
-        2024/09/23 1.10c (Carsten Heinz)
-    but found:
-        2025/11/14 1.11b (Carsten Heinz)
-    so I'm assuming it got fixed.
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/filecontents\fileconten
-ts.sty
+(/usr/share/texlive/texmf-dist/tex/latex/filecontents/filecontents.sty
 Package: filecontents 2023/04/02 v1.5a Create an external file from within a La
 TeX document
 
@@ -277,7 +250,7 @@ Package filecontents Warning: This package is obsolete. Disabling it and
 (filecontents)                passing control to the filecontents environment
 (filecontents)                defined by the LaTeX kernel.
 
-) (C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
 \f@nch@headwidth=\skip52
@@ -295,87 +268,91 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip64
 \f@nch@widthR=\skip65
 \@temptokenb=\toks21
-) (C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/animate\animate.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/animate/animate.sty
 Package: animate 2024/10/14 PDF & SVG animations from files and inline graphics
 
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\ifdraft.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty
 Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
-Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count307
-\calc@Bcount=\count308
-\calc@Adimen=\dimen162
-\calc@Bdimen=\dimen163
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count294
+\calc@Bcount=\count295
+\calc@Adimen=\dimen153
+\calc@Bdimen=\dimen154
 \calc@Askip=\skip66
 \calc@Bskip=\skip67
-LaTeX Info: Redefining \setlength on input line 86.
-LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count309
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count296
 \calc@Cskip=\skip68
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/media9\pdfbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty
 Package: pdfbase 2024/09/16 v0.59 driver independent access to low-level PDF fe
 atures
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count310
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count297
+\l__pdf_internal_box=\box56
 )
-\g_pbs_page_int=\count311
-\g_pbs_oc_int=\count312
+\g_pbs_page_int=\count298
+\g_pbs_oc_int=\count299
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
-Package: zref-abspage 2026-03-07 v2.37 Module abspage for zref (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
-Package: zref-base 2026-03-07 v2.37 Module base for zref (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-) (C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count313
+\c@abspage=\count300
 Package zref Info: New property: abspage on input line 67.
-) (C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/ocgx2\ocgbase.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ocgx2/ocgbase.sty
 Package: ocgbase 2024/09/15 v0.24 support package for ocgx2.sty
 )
 \@anim@box=\box57
 \@anim@measbox=\box58
-\@anim@tmpdima=\dimen164
-\@anim@tmpdimb=\dimen165
-\@anim@num=\count314
-\@anim@curframe=\count315
-\@anim@curframe@zb=\count316
-\@anim@resizeflags=\count317
-\@anim@skipfram=\count318
-\@anim@mulframecnt=\count319
+\@anim@tmpdima=\dimen155
+\@anim@tmpdimb=\dimen156
+\@anim@num=\count301
+\@anim@curframe=\count302
+\@anim@curframe@zb=\count303
+\@anim@resizeflags=\count304
+\@anim@skipfram=\count305
+\@anim@mulframecnt=\count306
 \@anim@@tmlnfile=\read3
-\@anim@tmpcnt=\count320
-\c@@anim@ltxcnt=\count321
-\@anim@curlayer=\count322
-\@anim@lineno=\count323
-\@anim@curfield=\count324
-\@anim@@resizeflags=\count325
+\@anim@tmpcnt=\count307
+\c@@anim@ltxcnt=\count308
+\@anim@curlayer=\count309
+\@anim@lineno=\count310
+\@anim@curfield=\count311
+\@anim@@resizeflags=\count312
 )
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -385,69 +362,71 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (Thesis.aux (Cover/TitleCard.aux) (Cover/ThesisDetails.aux)
-(Cover/UseCase.aux) (Chapters/introduction.aux) (Chapters/FSM.aux)
-(Chapters/concept.aux) (Chapters/implementation.aux))
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+) (./Thesis.aux
+(./Cover/TitleCard.aux) (./Cover/ThesisDetails.aux) (./Cover/UseCase.aux)
+(./Chapters/introduction.aux) (./Chapters/FSM.aux) (./Chapters/concept.aux)
+(./Chapters/implementation.aux))
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count326
-\scratchdimen=\dimen166
+\scratchcounter=\count313
+\scratchdimen=\dimen157
 \scratchbox=\box59
-\nofMPsegments=\count327
-\nofMParguments=\count328
+\nofMPsegments=\count314
+\nofMParguments=\count315
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count329
-\MPscratchDim=\dimen167
-\MPnumerator=\count330
-\makeMPintoPDFobject=\count331
+\MPscratchCnt=\count316
+\MPscratchDim=\dimen158
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
 \everyMPtoPDFconversion=\toks23
-)
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
-Package hyperref Info: Link coloring ON on input line 23.
- (Thesis.out) (Thesis.out)
+Package hyperref Info: Link coloring ON on input line 75.
+
+(./Thesis.out) (./Thesis.out)
 \@outlinefile=\write3
 \openout3 = `Thesis.out'.
 
-\c@lstlisting=\count332
+\c@lstlisting=\count319
 \openout2 = `Cover/TitleCard.aux'.
 
- (Cover/TitleCard.tex
+ (./Cover/TitleCard.tex
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 7.
 
-<Images/me_logo.png, id=71, 1204.5pt x 1148.29pt>
+<Images/me_logo.png, id=72, 1204.5pt x 1148.29pt>
 File: Images/me_logo.png Graphic file (type png)
 <use Images/me_logo.png>
 Package pdftex.def Info: Images/me_logo.png  used on input line 9.
@@ -456,14 +435,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 25.
+
+
 [1
 
 
-{C:/Users/halas/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Images/me_
-logo.png>])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/me_logo.png>])
 \openout2 = `Cover/ThesisDetails.aux'.
 
- (Cover/ThesisDetails.tex
+
+(./Cover/ThesisDetails.tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
@@ -475,8 +456,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
 
 Overfull \hbox (32.82317pt too wide) in paragraph at lines 16--17
-\OT1/cmr/bx/n/12 A szak-dol-go-zat c^^S^^Pme: \OT1/cmr/m/n/12 Ka-rak-ter-moz-ga
-t^^Sas ^^Sallapotg^^Sepekkel a Go-dot j^^Sat^^Sekmotorban 
+\OT1/cmr/bx/n/12 A sza-k-dol-go-zat c^^S^^Pme: \OT1/cmr/m/n/12 Karak-ter-moz-ga
+t^^Sas ^^Sallapotg^^Sepekkel a Godot j^^Sat^^Sekmotorban 
  []
 
 
@@ -494,14 +475,17 @@ Underfull \hbox (badness 10000) detected at line 46
 \OT1/cmr/m/n/12 szakfelel}os
  []
 
+
+
 [2
 
 
 
 ]
-Overfull \hbox (49.53625pt too wide) in paragraph at lines 56--59
-\OT1/cmr/m/n/12 dat^^Saban nyi-lat-ko-zom ^^Ses al^^Sa^^S^^Pr^^Sasommal iga-zo-
-lom, hogy \OT1/cmr/m/it/12 Ka-rak-ter-moz-gat^^Sas ^^Sallapotg^^Sepekkel
+Overfull \hbox (4.12453pt too wide) in paragraph at lines 56--59
+[]\OT1/cmr/m/n/12 Alul^^S^^Prott \OT1/cmr/bx/n/12 Hal^^Sasz M^^Sat^^Se S^^Sando
+r\OT1/cmr/m/n/12 ; Neptun-k^^Sod: \OT1/cmtt/m/n/12 T1TNWL \OT1/cmr/m/n/12 a Mis
+kol-ci Egyetem
  []
 
 
@@ -512,7 +496,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--59
 
 Overfull \hbox (0.41817pt too wide) in paragraph at lines 67--69
 []\OT1/cmr/m/n/12 Alul^^S^^Prott ki-je-len-tem, hogy a pl^^Sagium fo-galm^^Sat 
-meg-is-mer-tem, ^^Ses tu-dom^^Sasul
+megis-mertem, ^^Ses tu-dom^^Sasul
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -525,6 +509,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Overfull \hbox (37.9634pt too wide) in paragraph at lines 76--80
 []| [] 
  []
+
+
 
 [3]
 Overfull \hbox (5.94478pt too wide) in paragraph at lines 87--95
@@ -547,22 +533,28 @@ Overfull \hbox (35.08934pt too wide) in paragraph at lines 158--165
  []
 
 )
-Overfull \hbox (42.14502pt too wide) in paragraph at lines 168--34
+Overfull \hbox (42.14502pt too wide) in paragraph at lines 168--86
 \OT1/cmr/m/n/12 Miskolc, [] |  [] 
  []
+
+
 
 [4]
 \openout2 = `Cover/UseCase.aux'.
 
- (Cover/UseCase.tex) [5
+ (./Cover/UseCase.tex)
+
+[5
 
 
 
-] (Thesis.toc)
+] (./Thesis.toc)
 \tf@toc=\write4
 \openout4 = `Thesis.toc'.
 
- [1
+
+
+[1
 
 
 
@@ -570,7 +562,7 @@ Overfull \hbox (42.14502pt too wide) in paragraph at lines 168--34
 ]
 \openout2 = `Chapters/introduction.aux'.
 
- (Chapters/introduction.tex
+ (./Chapters/introduction.tex
 \bbl@ensure@hungarian {fejezet} 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -581,9 +573,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 LaTeX Warning: Citation `charles2024' on page 1 undefined on input line 5.
 
 
+Overfull \hbox (2.96814pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/n/12 hogy ne kell-jen ^^Sujabb v^^Saltoz^^Sokat l^^Setrehozni an-nak
+ ^^Serdek^^Seben, hogy kik^^?usz^^?ob^^?ol-
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -605,15 +605,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 )
-Overfull \hbox (1.85843pt too wide) in paragraph at lines 9--49
-\OT1/cmr/m/n/12 mozg^^Sasrendszer-protot^^S^^Ppust elk^^Sesz^^S^^Pteni, amely b
-e-mu-tat-ja az ^^Sallapotg^^Sepek fon-
+Overfull \hbox (1.85843pt too wide) in paragraph at lines 9--101
+\OT1/cmr/m/n/12 mozg^^Sasrendszer-protot^^S^^Ppust elk^^Sesz^^S^^Pteni, ame-ly 
+be-mu-tat-ja az ^^Sallapotg^^Sepek fon-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--49
+Underfull \hbox (badness 10000) in paragraph at lines 9--101
 
  []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -627,11 +629,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.49 \include{Chapters/introduction}
-                                     [2]
+l.101 \include{Chapters/introduction}
+                                      [2]
 \openout2 = `Chapters/FSM.aux'.
 
- (Chapters/FSM.tex
+ (./Chapters/FSM.tex
 \bbl@ensure@hungarian {fejezet} 2.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
@@ -644,16 +646,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
 
 Overfull \hbox (2.4251pt too wide) in paragraph at lines 10--11
-[]\OT1/cmr/m/n/12 A v^^Seges ^^Sallapot^^Su au-to-mat^^Sak ka-te-go-riz^^Salhat
-^^Soak \OT1/cmr/bx/n/12 de-ter-mi-nisz-ti-kus \OT1/cmr/m/n/12 ^^Ses \OT1/cmr/bx
-/n/12 non-
+[]\OT1/cmr/m/n/12 A v^^Seges ^^Sallapot^^Su au-tomat^^Sak kat-e-go-riz^^Salhat^
+^Soak \OT1/cmr/bx/n/12 de-ter-min-isztikus \OT1/cmr/m/n/12 ^^Ses \OT1/cmr/bx/n/
+12 non-
  []
 
 
-Overfull \hbox (8.32086pt too wide) in paragraph at lines 13--14
-\OT1/cmr/m/n/12 kez}o ^^Sallapota nem egye-di-en lesz eld^^?ont-ve, ami ru-gal-
-mass^^Sagot eredm^^Senyez,
+Overfull \hbox (1.6789pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/12 menet l^^Setezhet egy in-pu-tra ^^Ses a je-len-le-gi ^^Sallapot
+ra. A rend-sz-er k^^?ovetkez}o
  []
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
@@ -668,9 +672,8 @@ l.19 \begin{itemize}
 
 ]
 Overfull \hbox (6.29015pt too wide) in paragraph at lines 26--27
-\OML/cmm/m/it/12 x[]; x[] [] x[]$ $\OT1/cmr/m/n/12 ^^F$-beli je-lek so-ro-za-ta
-. M fel-is-me-ri w-t, ha l^^Setezik olyan $\OML/cmm/m/it/12 r[]; r[]; [] ; r[]$
-
+\OML/cmm/m/it/12 x[]; x[] [] x[]$ $\OT1/cmr/m/n/12 ^^F$-beli jelek soroza-ta. M
+ fe-lis-meri w-t, ha l^^Setezik olyan $\OML/cmm/m/it/12 r[]; r[]; [] ; r[]$
  []
 
 
@@ -688,12 +691,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-<Diagrams/ExampleStateMachine.png, id=147, 500.62032pt x 189.70876pt>
+<Diagrams/ExampleStateMachine.png, id=148, 500.62032pt x 189.70876pt>
 File: Diagrams/ExampleStateMachine.png Graphic file (type png)
 <use Diagrams/ExampleStateMachine.png>
 Package pdftex.def Info: Diagrams/ExampleStateMachine.png  used on input line 4
 2.
 (pdftex.def)             Requested size: 390.0pt x 147.79564pt.
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.71667pt, for example:
@@ -717,29 +722,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
  []
 
 
-Overfull \hbox (11.51944pt too wide) in paragraph at lines 56--57
-\OT1/cmr/m/n/12 esem^^Senyekre, ame-lyek ^^Satl^^?okik az au-to-mat^^Sat az egy
-ik ^^Sallapotb^^Sol a m^^Sasikba. 
+Overfull \hbox (1.6626pt too wide) in paragraph at lines 56--57
+\OT1/cmr/m/n/12 em^^Senyekre, ame-lyek ^^Satl^^?okik az au-tomat^^Sat az egyik 
+^^Sallapotb^^Sol a m^^Sasikba. 
  []
 
 
 Overfull \hbox (2.8824pt too wide) in paragraph at lines 57--58
-[]\OT1/cmr/m/n/12 Csak bi-zo-nyos in-ge-rek (sti-mu-li, a p^^Seld^^Saban $\OML/
-cmm/m/it/12 S[]; S[]; S[]$\OT1/cmr/m/n/12 ) eredm^^Senyezhetnek
+[]\OT1/cmr/m/n/12 Csak bi-zonyos in-gerek (stim-uli, a p^^Seld^^Saban $\OML/cmm
+/m/it/12 S[]; S[]; S[]$\OT1/cmr/m/n/12 ) eredm^^Senyezhetnek
  []
 
 
 Overfull \hbox (3.19453pt too wide) in paragraph at lines 66--67
-[]\OT1/cmr/m/n/12 Egy au-to-ma-ta v^^Salasza (vagy ki-me-ne-te) min-dig egye-di
- az ^^Sallapotot n^^Sezve.
+[]\OT1/cmr/m/n/12 Egy au-toma-ta v^^Salasza (vagy kimenete) mindig egye-di az ^
+^Sallapotot n^^Sezve.
  []
 
 
 Overfull \hbox (4.6136pt too wide) in paragraph at lines 67--68
-[]\OT1/cmr/m/n/12 A p^^Seld^^Saban a v^^Salaszokat (res-pon-ses) az $\OML/cmm/m
+[]\OT1/cmr/m/n/12 A p^^Seld^^Saban a v^^Salaszokat (re-spons-es) az $\OML/cmm/m
 /it/12 R[]; R[]; R[]$ \OT1/cmr/m/n/12 ^^Sabr^^Sazolja, az $\OML/cmm/m/it/12 S[]
 ; S[]; S[]$
  []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -762,8 +769,8 @@ has been already used, duplicate ignored
 l.68 \end{itemize}
                    <./Diagrams/ExampleStateMachine.png>]
 Overfull \hbox (0.87927pt too wide) in paragraph at lines 73--75
-\OT1/cmr/m/n/12 ma-tik^^Sanak, mi-vel v^^Segtelen^^?ul egy-szer}uv^^Se te-szi e
-gyes rend-sze-rek nyo-monk^^?ovet^^Se-
+\OT1/cmr/m/n/12 matik^^Sanak, miv-el v^^Segtelen^^?ul egysz-er}uv^^Se teszi egy
+es rend-sz-erek ny-omonk^^?ovet^^Se-
  []
 
 
@@ -776,9 +783,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--86
 
  []
 
-(C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.71667pt, for example:
@@ -787,17 +795,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [6]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 9
-3.
- (C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
+Overfull \hbox (9.23154pt too wide) in paragraph at lines 107--108
+\OT1/cmr/m/n/12 van: En-ter, Ex-it, Up-date, Physic-sUp-date, Han-dleIn-put. Ez
+ek mind a megfelel}o
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -807,13 +815,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [7]
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
-18.
- (C:\Users\halas\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
-File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 118.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -827,33 +828,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
-<Images/TreeExample.png, id=241, 176.15813pt x 38.39343pt>
+<Images/TreeExample.png, id=256, 176.15813pt x 38.39343pt>
 File: Images/TreeExample.png Graphic file (type png)
 <use Images/TreeExample.png>
 Package pdftex.def Info: Images/TreeExample.png  used on input line 178.
 (pdftex.def)             Requested size: 390.0pt x 85.00064pt.
-<Images/CurrentStateSet.png, id=242, 191.21437pt x 42.91031pt>
+<Images/CurrentStateSet.png, id=257, 191.21437pt x 42.91031pt>
 File: Images/CurrentStateSet.png Graphic file (type png)
 <use Images/CurrentStateSet.png>
 Package pdftex.def Info: Images/CurrentStateSet.png  used on input line 179.
 (pdftex.def)             Requested size: 390.0pt x 87.53125pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[9]
 Overfull \hbox (5.24867pt too wide) in paragraph at lines 184--186
-[]\OT1/cmr/m/n/12 Az ^^Sallapotg^^Sep^^?unk-nek min-den k^^Seppen kell egy ki-i
-n-dul^^Sopont, egy els}o ^^Sallapot
- []
-
-
-Overfull \hbox (23.76497pt too wide) in paragraph at lines 184--186
-\OT1/cmr/m/n/12 A []Process(), []PhysicsProcess() ^^Ses []UnhandledInput() met^
-^Sodusok mind megh^^S^^Pvj^^Sak
+[]\OT1/cmr/m/n/12 Az ^^Sallapotg^^Sep^^?unknek min-den k^^Seppen kell egy ki-in
+-dul^^Sopont, egy els}o ^^Sallapot
  []
 
 
@@ -862,6 +850,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--186
  []
 
 
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.186 
+       <./Images/TreeExample.png> <./Images/CurrentStateSet.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
@@ -871,6 +874,8 @@ File: Images/TreeExample.png Graphic file (type png)
 Package pdftex.def Info: Images/TreeExample.png  used on input line 191.
 (pdftex.def)             Requested size: 390.0pt x 85.00064pt.
 
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.71667pt, for example:
 (fancyhdr)                \setlength{\headheight}{15.71667pt}.
@@ -878,18 +883,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.197 
-      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.197 
-       <./Images/TreeExample.png> <./Images/CurrentStateSet.png>]
+l.230 			}
+          ])
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.71667pt, for example:
@@ -898,23 +898,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [11]
-Overfull \hbox (1.84131pt too wide) in paragraph at lines 247--249
-\OT1/cmr/m/n/12 eset-ben a "Pi-ros" ^^Sallapot a jelz}ol^^Samp^^Sankon. Ami-kor
- er-re az ^^Sallapotra v^^Saltunk,
- []
-
-)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[12]
 \openout2 = `Chapters/concept.aux'.
 
- (Chapters/concept.tex
+ (./Chapters/concept.tex
 \bbl@ensure@hungarian {fejezet} 3.
 
 Overfull \hbox (9.23058pt too wide) in paragraph at lines 4--5
@@ -926,29 +912,72 @@ Overfull \hbox (9.23058pt too wide) in paragraph at lines 4--5
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 6.
 
-[13
+
+
+[12
 
 
 
 
 ]
 
-LaTeX Warning: Citation `Blender' on page 14 undefined on input line 16.
+LaTeX Warning: Citation `Blender' on page 13 undefined on input line 16.
 
 
-LaTeX Warning: Citation `Krita' on page 14 undefined on input line 17.
+LaTeX Warning: Citation `Krita' on page 13 undefined on input line 17.
 
 
-LaTeX Warning: Citation `SLKimg2pixel' on page 14 undefined on input line 17.
+LaTeX Warning: Citation `SLKimg2pixel' on page 13 undefined on input line 17.
 
 
-LaTeX Warning: Citation `Audacity' on page 14 undefined on input line 18.
+LaTeX Warning: Citation `Audacity' on page 13 undefined on input line 18.
 
 
-LaTeX Warning: Citation `LMMS' on page 14 undefined on input line 18.
+LaTeX Warning: Citation `LMMS' on page 13 undefined on input line 18.
 
 
-LaTeX Warning: Citation `Draw.io' on page 14 undefined on input line 19.
+LaTeX Warning: Citation `Draw.io' on page 13 undefined on input line 19.
+
+
+Overfull \hbox (4.26952pt too wide) in paragraph at lines 41--43
+\OT1/cmr/m/n/12 Valamint a dig-it^^Salis kon-cep-ci^^So ra-j-zok elk^^Sesz^^S^^
+Pt^^Ses^^Sehez ^^Ses a text^^Sur^^Sak megalkot^^Sas^^Sa-
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[13]
+Overfull \hbox (29.97955pt too wide) in paragraph at lines 62--62
+[]\OT1/cmr/bx/sc/14.4 J^^Sat^^Sekmotor, pro-gramoz^^Sasi nyelv ^^Ses fe-jleszt}
+ok^^?ornyezet 
+ []
+
+
+Overfull \hbox (14.71802pt too wide) in paragraph at lines 64--65
+\OT1/cmr/m/n/12 fontos volt sz^^Samomra a plat-formf^^?uggetlens^^Seg, kom-pat-
+i-bilit^^Sas ^^Ses a hor-dozhat^^Sos^^Sag. 
+ []
+
+
+Overfull \hbox (11.49686pt too wide) in paragraph at lines 66--67
+\OT1/cmr/m/n/12 egy Lin-ux k^^?ornyezet, mind egy Win-dows k^^?ornyezet alatt. 
+A j^^Sat^^Sekmotorok,
+ []
+
+
+Overfull \hbox (13.18193pt too wide) in paragraph at lines 67--68
+[]$[]$ \OT1/cmr/m/n/12 Fontos volt a megl^^Sev}o tapasz-ta-lat a v^^Salasztott 
+tech-nol^^Sogi^^Saval,
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -958,31 +987,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [14]
-Overfull \hbox (14.4879pt too wide) in paragraph at lines 62--62
-[]\OT1/cmr/bx/sc/14.4 J^^Sat^^Sekmotor, prog-ra-moz^^Sasi nyelv ^^Ses fej-leszt
-}ok^^?ornye-
- []
-
-
-Overfull \hbox (11.49686pt too wide) in paragraph at lines 66--67
-\OT1/cmr/m/n/12 egy Li-nux k^^?ornye-zet, mind egy Win-dows k^^?ornye-zet alatt
-. A j^^Sat^^Sekmotorok,
- []
-
-
-Overfull \hbox (13.18193pt too wide) in paragraph at lines 67--68
-[]$[]$ \OT1/cmr/m/n/12 Fon-tos volt a megl^^Sev}o ta-pasz-ta-lat a v^^Salasztot
-t tech-nol^^Sogi^^Saval,
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[15]
 <Images/JetSetRadio_Logo.jpg, id=352, 1084.05pt x 1084.05pt>
 File: Images/JetSetRadio_Logo.jpg Graphic file (type jpg)
 <use Images/JetSetRadio_Logo.jpg>
@@ -990,13 +994,20 @@ Package pdftex.def Info: Images/JetSetRadio_Logo.jpg  used on input line 77.
 (pdftex.def)             Requested size: 390.0pt x 389.99304pt.
 
 
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.71667pt, for example:
 (fancyhdr)                \setlength{\headheight}{15.71667pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
-[16]
+[15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.84 
+      <./Images/JetSetRadio_Logo.jpg>]
 <Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png, id=360, 401.5pt x 225.84375pt>
 
 File: Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png Graphic file (type png)
@@ -1004,6 +1015,38 @@ File: Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png Graphic file (type png)
 Package pdftex.def Info: Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png  used o
 n input line 87.
 (pdftex.def)             Requested size: 390.0pt x 219.38864pt.
+<Images/BombRushCyberfunk_Logo.jpg, id=363, 1003.75pt x 564.1075pt>
+File: Images/BombRushCyberfunk_Logo.jpg Graphic file (type jpg)
+<use Images/BombRushCyberfunk_Logo.jpg>
+Package pdftex.def Info: Images/BombRushCyberfunk_Logo.jpg  used on input line 
+96.
+(pdftex.def)             Requested size: 390.0pt x 219.1833pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.100 
+       <./Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png>]
+
+LaTeX Warning: Citation `reptile2020' on page 17 undefined on input line 101.
+
+<Images/BombRushCyberfunk_InAction.jpg, id=374, 1284.8pt x 722.7pt>
+File: Images/BombRushCyberfunk_InAction.jpg Graphic file (type jpg)
+<use Images/BombRushCyberfunk_InAction.jpg>
+Package pdftex.def Info: Images/BombRushCyberfunk_InAction.jpg  used on input l
+ine 105.
+(pdftex.def)             Requested size: 390.0pt x 219.37004pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1013,18 +1056,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [17
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.91 
-      <./Images/JetSetRadio_Logo.jpg>]
-<Images/BombRushCyberfunk_Logo.jpg, id=369, 1003.75pt x 564.1075pt>
-File: Images/BombRushCyberfunk_Logo.jpg Graphic file (type jpg)
-<use Images/BombRushCyberfunk_Logo.jpg>
-Package pdftex.def Info: Images/BombRushCyberfunk_Logo.jpg  used on input line 
-96.
-(pdftex.def)             Requested size: 390.0pt x 219.1833pt.
+l.109 
+       <./Images/BombRushCyberfunk_Logo.jpg>]
+Overfull \hbox (2.49825pt too wide) in paragraph at lines 122--124
+\OT1/cmr/m/n/12 hanem a pro-gram ma-ga is. El}ofordulhatnak es-em^^Senyek, ame-
+lyek be-foly^^Sasolj^^Sak
+ []
+
+
+Overfull \hbox (3.18156pt too wide) in paragraph at lines 122--124
+\OT1/cmr/m/n/12 a j^^Sat^^Sekos mozg^^Sas^^Sat ^^Ses egy-ben az ^^Sallapot^^Sat
+ is. Ah-hoz, hogy megk^^?ul^^?onb^^?oztessem
+ []
+
+
+Overfull \hbox (5.77505pt too wide) in paragraph at lines 122--124
+\OT1/cmr/m/n/12 a pro-gram es-em^^Senyeit a j^^Sat^^Sekos be-menteit}ol el-n-ev
+eztem azokat az es-em^^Senyeket,
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1034,21 +1089,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [18
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.100 
-       <./Images/JSR_Gameplay/JetSetRadio_Gameplay-2.png>]
+l.124 
+       <./Images/BombRushCyberfunk_InAction.jpg>]
+<Diagrams/SpawnIn-Grounded.png, id=388, 439.6425pt x 162.6075pt>
+File: Diagrams/SpawnIn-Grounded.png Graphic file (type png)
+<use Diagrams/SpawnIn-Grounded.png>
+Package pdftex.def Info: Diagrams/SpawnIn-Grounded.png  used on input line 127.
 
-LaTeX Warning: Citation `reptile2020' on page 19 undefined on input line 101.
+(pdftex.def)             Requested size: 390.0pt x 144.25127pt.
+<Diagrams/Grounded-Idle.png, id=390, 238.64156pt x 496.10344pt>
+File: Diagrams/Grounded-Idle.png Graphic file (type png)
+<use Diagrams/Grounded-Idle.png>
+Package pdftex.def Info: Diagrams/Grounded-Idle.png  used on input line 136.
+(pdftex.def)             Requested size: 390.02371pt x 592.04337pt.
 
-<Images/BombRushCyberfunk_InAction.jpg, id=379, 1284.8pt x 722.7pt>
-File: Images/BombRushCyberfunk_InAction.jpg Graphic file (type jpg)
-<use Images/BombRushCyberfunk_InAction.jpg>
-Package pdftex.def Info: Images/BombRushCyberfunk_InAction.jpg  used on input l
-ine 105.
-(pdftex.def)             Requested size: 390.0pt x 219.37004pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.71667pt, for example:
@@ -1057,57 +1116,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [19
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.109 
-       <./Images/BombRushCyberfunk_Logo.jpg>]
-Overfull \hbox (2.49825pt too wide) in paragraph at lines 122--124
-\OT1/cmr/m/n/12 ha-nem a prog-ram ma-ga is. El}ofordulhatnak esem^^Senyek, ame-
-lyek be-foly^^Sasolj^^Sak
- []
-
-
-Overfull \hbox (28.03455pt too wide) in paragraph at lines 122--124
-\OT1/cmr/m/n/12 sem a prog-ram esem^^Senyeit a j^^Sat^^Sekos be-men-te-it}ol el
--ne-vez-tem azo-kat az esem^^Senyeket,
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[20
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.124 
-       <./Images/BombRushCyberfunk_InAction.jpg>]
-<Diagrams/SpawnIn-Grounded.png, id=393, 439.6425pt x 162.6075pt>
-File: Diagrams/SpawnIn-Grounded.png Graphic file (type png)
-<use Diagrams/SpawnIn-Grounded.png>
-Package pdftex.def Info: Diagrams/SpawnIn-Grounded.png  used on input line 127.
-
-(pdftex.def)             Requested size: 390.0pt x 144.25127pt.
-<Diagrams/Grounded-Idle.png, id=395, 238.64156pt x 496.10344pt>
-File: Diagrams/Grounded-Idle.png Graphic file (type png)
-<use Diagrams/Grounded-Idle.png>
-Package pdftex.def Info: Diagrams/Grounded-Idle.png  used on input line 136.
-(pdftex.def)             Requested size: 390.02371pt x 592.04337pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[21
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1118,35 +1126,37 @@ Overfull \vbox (41.37668pt too high) has occurred while \output is active []
 
 
 
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.71667pt, for example:
 (fancyhdr)                \setlength{\headheight}{15.71667pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
-[22
+[20
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.140 
        <./Diagrams/Grounded-Idle.png>]
-<Diagrams/Grounded-Movement.png, id=412, 1017.04968pt x 152.06813pt>
+<Diagrams/Grounded-Movement.png, id=408, 1017.04968pt x 152.06813pt>
 File: Diagrams/Grounded-Movement.png Graphic file (type png)
 <use Diagrams/Grounded-Movement.png>
 Package pdftex.def Info: Diagrams/Grounded-Movement.png  used on input line 145
 .
 (pdftex.def)             Requested size: 390.0pt x 58.3132pt.
-<Diagrams/Moving-InAir.png, id=414, 741.52031pt x 313.9228pt>
+<Diagrams/Moving-InAir.png, id=410, 741.52031pt x 313.9228pt>
 File: Diagrams/Moving-InAir.png Graphic file (type png)
 <use Diagrams/Moving-InAir.png>
 Package pdftex.def Info: Diagrams/Moving-InAir.png  used on input line 154.
 (pdftex.def)             Requested size: 390.0pt x 165.10892pt.
-<Diagrams/InAir-Grounded.png, id=416, 564.60938pt x 313.17pt>
+<Diagrams/InAir-Grounded.png, id=412, 564.60938pt x 313.17pt>
 File: Diagrams/InAir-Grounded.png Graphic file (type png)
 <use Diagrams/InAir-Grounded.png>
 Package pdftex.def Info: Diagrams/InAir-Grounded.png  used on input line 163.
 (pdftex.def)             Requested size: 390.0pt x 216.32167pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1155,7 +1165,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
-[23
+[21
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1168,12 +1178,68 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.167 
        <./Diagrams/Grounded-Movement.png> <./Diagrams/Moving-InAir.png>]
-<Diagrams/InAir-DoubleJump.png, id=428, 412.54124pt x 327.47343pt>
+<Diagrams/InAir-DoubleJump.png, id=424, 412.54124pt x 327.47343pt>
 File: Diagrams/InAir-DoubleJump.png Graphic file (type png)
 <use Diagrams/InAir-DoubleJump.png>
 Package pdftex.def Info: Diagrams/InAir-DoubleJump.png  used on input line 172.
 
 (pdftex.def)             Requested size: 390.0pt x 309.58395pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[22
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.176 
+       <./Diagrams/InAir-Grounded.png>]
+<Diagrams/InAirMovement-DoubleJump.png, id=433, 784.43062pt x 147.55125pt>
+File: Diagrams/InAirMovement-DoubleJump.png Graphic file (type png)
+<use Diagrams/InAirMovement-DoubleJump.png>
+Package pdftex.def Info: Diagrams/InAirMovement-DoubleJump.png  used on input l
+ine 181.
+(pdftex.def)             Requested size: 390.0pt x 73.35892pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[23
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.185 
+       <./Diagrams/InAir-DoubleJump.png>]
+<Diagrams/InAir-InAirMovement.png, id=442, 484.81125pt x 308.65312pt>
+File: Diagrams/InAir-InAirMovement.png Graphic file (type png)
+<use Diagrams/InAir-InAirMovement.png>
+Package pdftex.def Info: Diagrams/InAir-InAirMovement.png  used on input line 1
+90.
+(pdftex.def)             Requested size: 390.0pt x 248.30275pt.
+
+Overfull \hbox (4.21175pt too wide) in paragraph at lines 195--197
+\OT1/cmr/m/n/12 k^^?otve egym^^Sassal. Ezeket mozg^^Sas h^^Sarmasoknak h^^S^^Pv
+om. A legt^^?obb mozg^^Sasfajt^^Sat
+ []
+
+<Diagrams/InAirTrio.png, id=444, 817.55438pt x 341.77687pt>
+File: Diagrams/InAirTrio.png Graphic file (type png)
+<use Diagrams/InAirTrio.png>
+Package pdftex.def Info: Diagrams/InAirTrio.png  used on input line 200.
+(pdftex.def)             Requested size: 390.0pt x 163.0393pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1183,58 +1249,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [24
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.176 
-       <./Diagrams/InAir-Grounded.png>]
-<Diagrams/InAirMovement-DoubleJump.png, id=437, 784.43062pt x 147.55125pt>
-File: Diagrams/InAirMovement-DoubleJump.png Graphic file (type png)
-<use Diagrams/InAirMovement-DoubleJump.png>
-Package pdftex.def Info: Diagrams/InAirMovement-DoubleJump.png  used on input l
-ine 181.
-(pdftex.def)             Requested size: 390.0pt x 73.35892pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[25
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.185 
-       <./Diagrams/InAir-DoubleJump.png>]
-<Diagrams/InAir-InAirMovement.png, id=447, 484.81125pt x 308.65312pt>
-File: Diagrams/InAir-InAirMovement.png Graphic file (type png)
-<use Diagrams/InAir-InAirMovement.png>
-Package pdftex.def Info: Diagrams/InAir-InAirMovement.png  used on input line 1
-90.
-(pdftex.def)             Requested size: 390.0pt x 248.30275pt.
-
-Overfull \hbox (4.21175pt too wide) in paragraph at lines 195--197
-\OT1/cmr/m/n/12 k^^?otve egym^^Sassal. Eze-ket mozg^^Sas h^^Sarmasoknak h^^S^^P
-vom. A legt^^?obb mozg^^Sasfajt^^Sat
- []
-
-<Diagrams/InAirTrio.png, id=449, 817.55438pt x 341.77687pt>
-File: Diagrams/InAirTrio.png Graphic file (type png)
-<use Diagrams/InAirTrio.png>
-Package pdftex.def Info: Diagrams/InAirTrio.png  used on input line 200.
-(pdftex.def)             Requested size: 390.0pt x 163.0393pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[26
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1248,12 +1262,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
 l.204 
        <./Diagrams/InAirMovement-DoubleJump.png> <./Diagrams/InAir-InAirMovemen
 t.png>]
-<Diagrams/BaseTrio.png, id=460, 639.89063pt x 222.8325pt>
+<Diagrams/BaseTrio.png, id=455, 639.89063pt x 222.8325pt>
 File: Diagrams/BaseTrio.png Graphic file (type png)
 <use Diagrams/BaseTrio.png>
 Package pdftex.def Info: Diagrams/BaseTrio.png  used on input line 209.
 (pdftex.def)             Requested size: 390.0pt x 135.81201pt.
 )
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.71667pt, for example:
@@ -1261,28 +1276,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
-[27
+[25
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.13})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.51 \include{Chapters/concept}
-                               
+l.103 \include{Chapters/concept}
+                                
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.14})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.51 \include{Chapters/concept}
-                                <./Diagrams/InAirTrio.png> <./Diagrams/BaseTrio
-.png>]
+l.103 \include{Chapters/concept}
+                                 <./Diagrams/InAirTrio.png> <./Diagrams/BaseTri
+o.png>]
 \openout2 = `Chapters/implementation.aux'.
 
- (Chapters/implementation.tex
+ (./Chapters/implementation.tex
 \bbl@ensure@hungarian {fejezet} 4.
+
+Overfull \hbox (1.46132pt too wide) in paragraph at lines 3--4
+\OT1/cmr/m/n/12 Stat-ic-Body3D (egy statikus, fizikai er}okkel nem moz-gath-at^
+^So test reprezent^^Sal^^Sa-
+ []
+
 
 Overfull \hbox (8.21541pt too wide) in paragraph at lines 3--4
 \OT1/cmr/m/n/12 CollisionShape3D Node-ot (egy ^^Satl^^Satsz^^So poly-gonh^^Sal^
-^So, amely ^^?utk^^?oz^^Sesvizsg^^Salatra
+^So, ame-ly ^^?utk^^?oz^^Sesvizsg^^Salatra
  []
 
 
@@ -1292,7 +1313,7 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 Overfull \hbox (7.99031pt too wide) in paragraph at lines 7--8
 \OT1/cmr/m/n/12 Amint az el}obb azt eml^^S^^Ptettem a min-den pro-jekt egy main
- sz^^S^^Pnt^^Ser ki-a-lak^^S^^Pt^^Sas^^Saval
+ sz^^S^^Pnt^^Ser kialak^^S^^Pt^^Sas^^Saval
  []
 
 
@@ -1306,7 +1327,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-[28
+
+
+[26
 
 
 
@@ -1324,14 +1347,14 @@ y-gon h^^Sal^^Sot tar-tal-maz, kiz^^Sar^^So-
 
 
 Overfull \hbox (13.99997pt too wide) in paragraph at lines 22--23
-\OT1/cmr/m/n/12 lag meg-je-len^^S^^Pt^^Sesi szem-pont-ja van, tel-je-sen f^^?ug
-get-len az ^^?utk^^?oz^^Sesvizsg^^Salatt^^Sol. 
+\OT1/cmr/m/n/12 lag meg-je-len^^S^^Pt^^Sesi szem-pon-t-ja van, tel-je-sen f^^?u
+ggetlen az ^^?utk^^?oz^^Sesvizsg^^Salatt^^Sol. 
  []
 
 
 Overfull \hbox (5.35675pt too wide) in paragraph at lines 23--24
 []\OT1/cmr/bx/n/12 CollisionShape3D: \OT1/cmr/m/n/12 Egy ^^Satl^^Satsz^^So poly
--gon h^^Sal^^So, amely az ^^?utk^^?oz^^Sesvizsg^^Sa-
+-gon h^^Sal^^So, ame-ly az ^^?utk^^?oz^^Sesvizsg^^Sa-
  []
 
 
@@ -1340,12 +1363,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
  []
 
 
-LaTeX Warning: Citation `Ludonauta2025' on page 29 undefined on input line 30.
+LaTeX Warning: Citation `Ludonauta2025' on page 27 undefined on input line 30.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[27]
+<Images/BasePlayerScene.png, id=476, 1224.575pt x 453.695pt>
+File: Images/BasePlayerScene.png Graphic file (type png)
+<use Images/BasePlayerScene.png>
+Package pdftex.def Info: Images/BasePlayerScene.png  used on input line 38.
+(pdftex.def)             Requested size: 390.0pt x 144.48616pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[28
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.46 	\item \textbf
+                   {CamYaw:} A kamera oldalirányú elmozdulásának nyílv�...
+ <./Images/BasePlayerScene.png (PNG copy)>]
+Overfull \hbox (17.78604pt too wide) in paragraph at lines 50--51
+\OT1/cmr/m/n/12 t^^?ok^^Seletesen megfelel-nek a k^^?ul^^?onb^^?oz}o ir^^Sanyok
+ ny^^S^^Plv^^Santart^^Sas^^Sara, ez^^Sert v^^Salasztottam
+ []
+
+
+Overfull \hbox (5.50978pt too wide) in paragraph at lines 59--60
+[]\OT1/cmr/m/n/12 Annak ^^Serdek^^Seben, hogy az ^^Sallapotok k^^?onnyen ny-omo
+nk^^?ove-thet}oek legyenek
+ []
+
+<Images/PlayerSceneComplete.png, id=484, 1183.42125pt x 525.965pt>
+File: Images/PlayerSceneComplete.png Graphic file (type png)
+<use Images/PlayerSceneComplete.png>
+Package pdftex.def Info: Images/PlayerSceneComplete.png  used on input line 63.
+
+(pdftex.def)             Requested size: 390.0pt x 173.32822pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1355,11 +1429,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [29]
-<Images/BasePlayerScene.png, id=480, 1224.575pt x 453.695pt>
-File: Images/BasePlayerScene.png Graphic file (type png)
-<use Images/BasePlayerScene.png>
-Package pdftex.def Info: Images/BasePlayerScene.png  used on input line 38.
-(pdftex.def)             Requested size: 390.0pt x 144.48616pt.
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+Overfull \hbox (3.71259pt too wide) in paragraph at lines 77--78
+[]\OT1/cmr/m/n/12 Hozz^^Saadtam egy "move-ment-Di-rec-tion" nev}u v^^Saltoz^^So
+t, ame-ly egy h^^Sarom-
+ []
+
+
+Overfull \hbox (10.0403pt too wide) in paragraph at lines 82--83
+[]\OT1/cmr/m/n/12 Hozz^^Saadtam egy "Tran-si-tion-To-Even-tHandler" nev}u signa
+l-t, ami a k^^?ul^^?on-
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1369,56 +1455,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [30
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.46 	\item \textbf
-                   {CamYaw:} A kamera oldalirányú elmozdulásának nyílv�...
- <./Images/BasePlayerScene.png (PNG copy)>]
-Overfull \hbox (17.78604pt too wide) in paragraph at lines 50--51
-\OT1/cmr/m/n/12 t^^?ok^^Seletesen meg-fe-lel-nek a k^^?ul^^?onb^^?oz}o ir^^Sany
-ok ny^^S^^Plv^^Santart^^Sas^^Sara, ez^^Sert v^^Salasztottam
- []
-
-<Images/PlayerSceneComplete.png, id=488, 1183.42125pt x 525.965pt>
-File: Images/PlayerSceneComplete.png Graphic file (type png)
-<use Images/PlayerSceneComplete.png>
-Package pdftex.def Info: Images/PlayerSceneComplete.png  used on input line 63.
-
-(pdftex.def)             Requested size: 390.0pt x 173.32822pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
-
- []
-
-
-Overfull \hbox (3.71259pt too wide) in paragraph at lines 77--78
-[]\OT1/cmr/m/n/12 Hozz^^Saadtam egy "mo-ve-ment-Di-rec-ti-on" nev}u v^^Saltoz^^
-Sot, amely egy h^^Sarom-
- []
-
-
-Overfull \hbox (10.0403pt too wide) in paragraph at lines 82--83
-[]\OT1/cmr/m/n/12 Hozz^^Saadtam egy "Tran-sit-ion-To-E-vent-Hand-ler" nev}u sig
-nal-t, ami a k^^?ul^^?on-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[32
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1430,25 +1466,37 @@ Package hyperref Warning: Suppressing empty link on input line 92.
 
 
 Overfull \hbox (1.5714pt too wide) in paragraph at lines 91--93
-\OT1/cmr/m/n/12 Ha vissza-eml^^Sekeznek, a [][][][]3[][]. fe-je-zet[][], [][][]
+\OT1/cmr/m/n/12 Ha vis-sza-eml^^Sekeznek, a [][][][]3[][]. fe-jezet[][], [][][]
 []3.0.6[][]. al-sza-kasz^^Saban[][] v^^Sazoltam az ^^Sallapotg^^Se-
  []
 
 
 Overfull \hbox (2.13713pt too wide) in paragraph at lines 91--93
-\OT1/cmr/m/n/12 ezek meg-val^^Sos^^S^^Pt^^Sas^^Sar^^Sol sze-retn^^Sek besz^^Sel
-ni. Mind-egyik ^^Sallapot imp-le-ment^^Saci^^Soj^^Sat
+\OT1/cmr/m/n/12 ezek meg-val^^Sos^^S^^Pt^^Sas^^Sar^^Sol sz-eretn^^Sek besz^^Sel
+ni. Min-d-e-gyik ^^Sallapot im-ple-ment^^Saci^^Soj^^Sat
  []
 
 
 Overfull \hbox (13.60414pt too wide) in paragraph at lines 91--93
-\OT1/cmr/m/n/12 Haszn^^Salati ^^Sutmutat^^So ol-da-lon[][] el-mon-dot-tak alapj
-^^San tudj^^Sak k^^?ovet-ni r^^Seszletesebben
+\OT1/cmr/m/n/12 Haszn^^Salati ^^Sutmutat^^So oldalon[][] el-mon-dot-tak alapj^^
+San tudj^^Sak k^^?ovet-ni r^^Seszletesebben
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
+ []
+
+
+Overfull \hbox (16.26755pt too wide) in paragraph at lines 94--95
+\OT1/cmr/m/n/12 Node-hoz csatoltam. Ezen az os-zt^^Salyon bel^^?ul hoz-tam l^^S
+etre azokat a met^^Sodusokat,
+ []
+
+
+Overfull \hbox (26.94243pt too wide) in paragraph at lines 94--95
+\OT1/cmr/m/n/12 ame-lyeket az ^^Sallapot^^Satmenetek vizsg^^Sal^^Sas^^Sara hasz
+n^^Saltam. Valamint itt sz^^Sam^^S^^Ptottam
  []
 
 
@@ -1463,8 +1511,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
 
 Overfull \hbox (4.17369pt too wide) in paragraph at lines 99--101
-\OT1/cmr/m/n/12 foly^^Sasoljuk a mo-ve-ment-Di-rec-ti-on att-rib^^Sutummal, ami
- meg-ad egy mozg^^Sas
+\OT1/cmr/m/n/12 foly^^Sasoljuk a move-ment-Di-rec-tion at-trib^^Sutummal, ami m
+egad egy mozg^^Sas
  []
 
 
@@ -1474,10 +1522,36 @@ ki. A []PhysicsProcess
  []
 
 
-Overfull \hbox (8.2066pt too wide) in paragraph at lines 99--101
-\OT1/cmr/m/n/12 mozg^^Sas tu-laj-donk^^Seppen fi-zi-kai sz^^Sam^^S^^Pt^^Sasnak 
-min}os^^?ul. A mozg^^Sas sz^^Sam^^S^^Pt^^Sasa
+Overfull \hbox (1.27094pt too wide) in paragraph at lines 99--101
+\OT1/cmr/m/n/12 nem sz-eretn^^Senk min-den frame-ben kisz^^Samolni a j^^Sat^^Se
+kos mozg^^Sasvektor^^Sat,
  []
+
+
+Overfull \hbox (6.7446pt too wide) in paragraph at lines 99--101
+\OT1/cmr/m/n/12 haszn^^Saljuk a Char-ac-ter-Body3D "Ve-loc-i-ty", av-agy sebess
+^^Seg at-trib^^Sutum^^Sat,
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[31]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[32]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1487,6 +1561,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [33]
+Overfull \hbox (12.82498pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/12 v^^Segig tudna cs^^Suszni min-den ob-jek-tum oldal^^San, ^^S^^P
+gy ezeket el kell k^^?ul^^?on^^S^^Pteni,
+ []
+
+
+Overfull \hbox (8.05975pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/12 meg kell k^^?ul^^?onb^^?oztet-ni, hogy ne legyen ^^?osszezavar^
+^So a fel-haszn^^Sal^^So sz^^Sam^^Sara.
+ []
+
+)
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.71667pt, for example:
@@ -1495,33 +1582,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
 
 [34]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[35])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[36]
 No file Thesis.bbl.
-
-LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (41 not 42).
-               Rerun to correct this.
-
-(Thesis.aux (Cover/TitleCard.aux) (Cover/ThesisDetails.aux) (Cover/UseCase.aux)
-(Chapters/introduction.aux) (Chapters/FSM.aux) (Chapters/concept.aux)
-(Chapters/implementation.aux))
+(./Thesis.aux (./Cover/TitleCard.aux) (./Cover/ThesisDetails.aux)
+(./Cover/UseCase.aux) (./Chapters/introduction.aux) (./Chapters/FSM.aux)
+(./Chapters/concept.aux) (./Chapters/implementation.aux))
  ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-03-20>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
  ***********
 
 
@@ -1534,29 +1601,30 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D89298EACCF505924C886E907B07F980;3127.
  ) 
 Here is how much of TeX's memory you used:
- 14431 strings out of 467690
- 241800 string characters out of 5414967
- 1016510 words of memory out of 5000000
- 43046 multiletter control sequences out of 15000+600000
- 635687 words of font info for 66 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 76i,13n,93p,2163b,2057s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\halas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1200.pk> <C:\Users\halas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcti1200.pk><C:/Users/halas/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb><C:/Users/halas/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi12.pfb><C:/Users/halas/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/halas/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/halas/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/halas/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/halas
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Us
-ers/halas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.p
-fb><C:/Users/halas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmtt12.pfb>
-Output written on Thesis.pdf (42 pages, 1921064 bytes).
+ 14387 strings out of 475135
+ 237370 string characters out of 5765398
+ 984679 words of memory out of 5000000
+ 36949 multiletter control sequences out of 15000+600000
+ 566971 words of font info for 63 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 76i,13n,92p,2591b,2099s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/yagi/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600p
+k> </home/yagi/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1200.600p
+k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt12.pfb>
+Output written on Thesis.pdf (40 pages, 1885647 bytes).
 PDF statistics:
- 660 PDF objects out of 1000 (max. 8388607)
- 230 named destinations out of 1000 (max. 500000)
+ 665 PDF objects out of 1000 (max. 8388607)
+ 557 compressed objects within 6 object streams
+ 228 named destinations out of 1000 (max. 500000)
  243 words of extra memory for PDF output out of 10000 (max. 10000000)
 
