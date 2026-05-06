@@ -16,8 +16,8 @@ public partial class RailGrinding : StaticBody3D
 	public void CalculateTargetRailPoint(Vector3 playerPosition)
 	{
 		float progress = path.Curve.GetClosestOffset(playerPosition - path.GlobalPosition);
-		
-		Transform3D sample = path.GlobalTransform * path.Curve.SampleBakedWithRotation(progress);
+
+		Transform3D sample = path.GlobalTransform * path.Curve.SampleBakedWithRotation(progress, cubic:true);
 
 		pathFollow.Progress = progress;
 		pathFollow.GlobalTransform = sample;

@@ -100,7 +100,6 @@ Az állapotok implementáció sorrendjében:
 	\lstset{style=sharpc}
 	\begin{lstlisting}
 	//...
-
 	Vector3 forward = _camera.GlobalBasis.Z;
 	Vector3 right = _camera.GlobalBasis.X;
 		
@@ -109,14 +108,12 @@ Az állapotok implementáció sorrendjében:
 	_movementDirection = forward * rawInput.Y + right * rawInput.X;
 	_movementDirection.Y = 0.0f;
 	_movementDirection = _movementDirection.Normalized();
-
 	//...
 	\end{lstlisting}
 	Ha visszaemlékeznek említettem, hogy a kamera állását fel szeretném használni a mozgás kiszámításakor. Létrehozok két háromdimenziós vektort, a "forward"-ot és a "right"-ot, ezeket beállítom a kameránk globális bázisvektorának a Z és az X értékeire. A globális bázison belül minden objektumnak a helyi vektorjai ugyan abba az irányba mutatnak, így könnyen tudunk vele számolni. Az Input.GetVector-t ajánlja a Godot specifikáció az ún. "WASD" mozgáshoz, így azt használtam. Ebben az esetben visszakapunk egy kétdimenziós vektort, a pozitív és negatív X és Y tengelyek mentén, gondoljanak rá úgy, mint amikor egy kontrolleren egy joystick-et mozgatunk. Felmerülhet a kérdés, hogy minek szorozzuk meg a mozgásvektort még a kamera irányával is, nos, ha ezt a lépést nem tesszük meg akkor a karakterünk teljesen függetlenül fog mozogni a kamera állásától, ez azt fogja eredményezni, hogy az "Előre", ami a mi esetünkben a "W" gomb, mindig a globális bázis szerinti "Előre" lesz, tehát a Z irány, ami nagyon zavaros tud lenni a felhasználó számára. Viszont ha a vektorunk a kamerától függ akkor, ami a billentyűzeten előre lesz, az a monitoron is előre lesz. Miután megszoroztuk és összeadtuk a vektorjainkat fontos az Y koordinátákat nullára állítani másképpen ha felfele nézünk a kamerával akkor elrepülhetnénk. Az ugrást majd különszedjük a saját állapotába. A mozgásvektorunkat egy normalizálással véglegesítjük, hogy megtartsuk az irányt, amibe mozgunk, de ne legyen a hossz miatt baj a későbbi számításokkor. Ugyanis ez még nem a vége, a Player osztályon belül továbbá megvizsgáljuk, hogy a jelenlegi helyzetben a játékos átmehet-e a "Running" állapotba, ennek a teljesítése csupán annyi, hogy a játékos a földön tartózkodjon és, hogy a "Movement" action-group-on belül az egyik gomb le legyen nyomva. Az action-group-ok, avagy cselekvés csoportok, billentyű vagy kontroller bemenetekre hallgató egységek csoportjai, ezt a programozónak kell megadnia. 
 	\lstset{style=sharpc}
 	\begin{lstlisting}
 	// ...	
-	
 	if(Grounded)
 	{
 		if(Input.IsActionJustPressed("Movement"))
@@ -128,23 +125,121 @@ Az állapotok implementáció sorrendjében:
 			CurrentState = PlayerState.Idle;
 		}
 	}
-	
 	// ...
 	\end{lstlisting}
 Végül a "Running" állapoton belül beállítjuk a CharacterBody3D-nek a sebességét szintúgy a MoveToward metódussal, aminek a célvektorját beállítjuk a kiszámított mozgásvektorra szorozva a játékos sebességével (itt számít az, hogy a vektor normalizált-e vagy sem), és a változás gyorsaságát beállítjuk a játékos gyorsulására szorozva az előző frame kirajzolásával eltelt idővel, ezt hívjuk "deltának".
 	\item \textbf{Jumping és Falling:} A "Jumping", avagy ugrás állapot relatíve egyszerű; amint a játékos lenyomja az "Ugrás" gombot, ami a mi esetünkben a "Space" vagyis szóköz, átlökődik az állapotgép a az ugrás állapotba, ahol a játékos sebességvektorának az Y koordinátájához hozzáadunk egy előre megszabott értéket, az ugrás erősségét. Ezek után az irányítást átadjuk a "Falling", avagy zuhanás állapotnak. Itt csökkentjük a játékos sebességvektorjának az Y koordinátáját a gravitáció szorozva a súllyal és a deltával. Valamint az esésnek átadjuk még a mozgásvektort, hogy a momentum, amivel a játékos felugrott megmaradjon és kapjon egy kis navigálási lehetőséget a levegőben.
-	\item \textbf{Grinding:} Ez az állapot jelentette a legnagyobb kihívást számomra a projekt elkészítése során, de egyben ez volt a legélvezetesebb is. Kezdetnek beszéljük át az állapot funkcionalitását: a "grinding" a gördeszkázásból és görkorcsolyázásból eredt. A grind egy felület oldalán való végigcsúszás. Egyértelműen nem lenne jó, ha a játékos véletlen végig tudna csúszni minden objektum oldalán, így ezeket el kell különíteni, meg kell különböztetni, hogy ne legyen összezavaró a felhasználó számára. Ahhoz, hogy el tudjuk kezdeni a kód részét, elsőnek létre kell hozni egy ilyen felületet. Szerencsére a Godot-ban van egy előre beépített Node, amit erre fel tudunk használni, a Path3D és PathFollow3D. A Path3D Node tartalmaz egy Curve3D-t, amely valójában egy Bézier görbe, amit a PathFollow3D Node-ok tudnak használni arra, hogy bejárjanak. Egy Path3D Node-ot létrehozni egyszerű, csupán meg kell adni neki egy pár pontot, fontos, hogy az első pont egy null-vektor legyen, másképpen a számításokba hiba léphet, mivel a PathFollow3D által mozgatott Node-ok relatívak a Pathfollow3D Node-hoz képest. Magának a Path3D-nek vagy PathFollow3D-nek nincs alapból ütközési hálója, így gyökér Node-ként egy StaticBody3D-t választottam, amihez hozzá tudok rendelni egy ütközési hálót. Szerencsére nem kell manuálisan létrehozni sem egy modelt, sem magát az ütközési hálót, mert a Godot-nak a CSGPolygon3D Node-ja támogatja, hogy egy Path3D Node-ot alapul véve generáljon annak mentén egy modelt, amelynek utána mind a polygon, mind az ütközési hálóját be tudjuk égetni a színtérbe. Azért fontos, hogy ütközést tudjunk vizsgálni, mert az implementációm arra hagyatkozik, hogy a játékos karakter lábához van csatolva egy téglatest alakú ütközési háló, ami folyamatosan figyeli, hogy esetleg nem egy csúszható felülettel érintkeztünk-e. Ezt a Player osztály "IsGrinding" metódusán keresztül tesszük, először meggyőződünk arról, hogy maga a háló ütközik-e egyáltalán valamivel, valamint, hogy az objektum, ami\-vel ütköztünk a RailGrinding osztályhoz tartozik-e. A RailGrinding a világban elhelyezett csúszható felületeknek az osztálya ennek nem csak megkülönböztető szerepe van, de ezen osztály metódusával számítjuk ki, hogy a játékos mely beégetett pontra landolt és, hogy honnan tudja elkezdeni a csúszást.
+	\item \textbf{Grinding:} Ez az állapot jelentette a legnagyobb kihívást számomra a projekt elkészítése során, de egyben ez volt a legélvezetesebb is. Kezdetnek beszéljük át az állapot funkcionalitását: a "grinding" a gördeszkázásból és görkorcsolyázásból eredt. A grind egy felület oldalán való végigcsúszás. Egyértelműen nem lenne jó, ha a játékos véletlen végig tudna csúszni minden objektum oldalán, így ezeket el kell különíteni, meg kell különböztetni, hogy ne legyen összezavaró a felhasználó számára. Ahhoz, hogy el tudjuk kezdeni a kód részét, elsőnek létre kell hozni egy ilyen felületet. Szerencsére a Godot-ban van egy előre beépített Node, amit erre fel tudunk használni, a Path3D és PathFollow3D. A Path3D Node tartalmaz egy Curve3D-t, amely valójában egy Bézier görbe, amit a PathFollow3D Node-ok tudnak használni arra, hogy bejárjanak. Egy Path3D Node-ot létrehozni egyszerű, csupán meg kell adni neki egy pár pontot, fontos, hogy az első pont egy null-vektor legyen, másképpen a számításokba hiba léphet, mivel a PathFollow3D által mozgatott Node-ok relatívak a Pathfollow3D Node-hoz képest. Magának a Path3D-nek vagy PathFollow3D-nek nincs alapból ütközési hálója, így gyökér Node-ként egy StaticBody3D-t választottam, amihez hozzá tudok rendelni egy ütközési hálót. Szerencsére nem kell manuálisan létrehozni sem egy modellt, sem magát az ütközési hálót, mert a Godot-nak a CSGPolygon3D Node-ja támogatja, hogy egy Path3D Node-ot alapul véve generáljon annak mentén egy modellt, amelynek utána mind a polygon, mind az ütközési hálóját be tudjuk égetni a színtérbe. Azért fontos, hogy ütközést tudjunk vizsgálni, mert az implementációm arra hagyatkozik, hogy a játékos karakter lábához van csatolva egy téglatest alakú ütközési háló, ami folyamatosan figyeli, hogy esetleg nem egy csúszható felülettel érintkeztünk-e. Ezt a Player osztály "IsGrinding" metódusán keresztül tesszük, először meggyőződünk arról, hogy maga a háló ütközik-e egyáltalán valamivel, valamint, hogy az objektum, ami\-vel ütköztünk a RailGrinding osztályhoz tartozik-e.
+	\lstset{style=sharpc}
+	\begin{lstlisting}
+	// ...
+	public bool	IsGrinding()
+	{
+		return _shapecast.IsColliding() && _shapecast.GetCollider(0) is RailGrinding;
+	}
+	// ...
+	\end{lstlisting}
+	 A RailGrinding a világban elhelyezett csúszható felületeknek az osztálya ennek nem csak megkülönböztető szerepe van, de ezen osztály metódusával számítjuk ki, hogy a játékos mely beégetett pontra landolt és, hogy honnan tudja elkezdeni a csúszást. Ezt a CalculateTargetRailPoint metódusban a következőképpen tesszük: 
+	\lstset{style=sharpc}
+	\begin{lstlisting}
+	public void CalculateTargetRailPoint(Vector3 playerPosition)
+	{
+		float progress = path.Curve.GetClosestOffset(playerPosition - path.GlobalPosition);
+		
+		Transform3D sample = path.GlobalTransform * path.Curve.SampleBakedWithRotation(progress);
+
+		pathFollow.Progress = progress;
+		pathFollow.GlobalTransform = sample;
+		
+		pathFollow.ResetPhysicsInterpolation();
+	}
+	\end{lstlisting}
+	Először is a PathFollow3D-hez tartozó attribútum az ún. "Progress", ami háromdimenziós egységekben adja meg a már megtett utat egy Path3D objektumon, ezt a Path-hez tartozó Curve3D metódusával a "GetClosestOffset"-tel kiszámítjuk. Ennek a metódusnak meg kell adni, hogy melyik ponthoz szeretnénk a legközelebbi eltolást megkapni (ez a "toPoint"), ezt pedig a játékos test globális pozíciójának és a Path globális pozíciójának a különbségeként fogjuk definiálni, mivel a Path globális pozíciója az összes beégetett pont legelső pontja lesz, így könnyen meg tudjuk mondani, hogy a játékos milyen messze van a kezdeti ponttól. 
+	Ezután a létrehozunk egy "sample" változót, ahol a kiszámítom a PathFollow3D-nek, hogy pontosan milyen utat kövessen. A Transform3D osztály csupán egy osztály alá vonja a globális pozíciót, a globális forgást és az objektum skáláját. A pontosabb számítás érdekében miután lekértem a beégetett pontokat ezt még megszorzom magának a Path-nek a globális transzformációjával.
+	Ezek után az egyes adatokat rögzítem és alaphelyzetbe állítom a fizikai interpolációkat. Ez ugyan nem szükséges, viszont sok helyen ajánlották, hogy ha esetleg túl éles szögből közelítené meg a játékos a pontot, akkor ne okozzon esetleges vizuális hibákat.
+	Amint a Player-en belül az "IsGrinding" igazat ad vissza, az állapotgép átkerül a Grinding állapotba. Elsőnek itt is megvizsgáljuk, hogy érintkezik-e olyan felülettel, ami nekünk kell, mivel a váltások között esély van arra, hogy az ilyen felületet elhagyjuk és beragadunk. Miután ezen átmentünk meghívjuk a jelenleg felhasznált felületnek a CalculateTargetRailPoint metódusát, amiben a PathFollow értékeit kiszámoljuk.
+	Ezután fizikai számításokként kiszámoljuk az eddig megtett utat a következőképpen:
+	\lstset{style=sharpc}
+	\begin{lstlisting}
+	// ...
+	float progress = _usedRail.pathFollow.Progress + -_usedRail.pathFollow.Basis.Z.Normalized().Dot(parent.Velocity.Normalized()) * parent.Velocity.Length() * grindSpeed * (float)delta;
+	_usedRail.pathFollow.Progress = progress;
+	// ...
+	\end{lstlisting}
+	A már meglévő úthoz hozzáadjuk a PathFollow bázisvektorának Z normalizáltját (mivel nem érdekel minket az, hogy milyen hosszú a vektor, csak az, hogy melyik irányba mutat), aminek utána vesszük a mínusz egyszeresét, mivel a Godot-n és a legtöbb játékmotoron belül az "előre" mutató vektor a -Z. Ezt utána skalárisan összeszorozzuk a játékos normalizált sebességvektorával. Ez a skaláris szorzat fogja megmondani nekünk a csúszás \textit{irányát}. Ezek után megszorozzuk még a játékos sebességvektorának a hosszával, a "grindSpeed" változóval, valamint a delta számmal. Mindezt azért, hogy legyen valami sebessége is a csúszásnak.
+	\lstset{style=sharpc}
+	\begin{lstlisting}
+	// ...
+	parent.GlobalPosition = _usedRail.pathFollow.GlobalPosition;
+	parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
+	// ...
+	\end{lstlisting}
+	A számítások után a játékost transzformáljuk a PathFollow helyzete és forgása alapján. Majd a módosítjuk a sebességét:
+	\lstset{style=sharpc}
+	\begin{lstlisting}
+	// ...
+	parent.Velocity = -_usedRail.pathFollow.Basis.Z.Normalized() * parent.Velocity.Length() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(parent.Velocity.Normalized());
+	parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * 5f * (float)delta;
+	// ...
+	\end{lstlisting}
+	Elsőnek beállítjuk a jelenlegi irány és sebesség szorzatával a játékos sebességét, majd hozzáadjuk a gravitációs ellenállást, hogy ha túl meredek lenne a csúszás iránya, akkor visszafele induljon meg. A gravitációs ellenállás a (-Vector3.Up.Normalized()) * 5f lenne. A Vector3 osztálynak a felfele mutató értéke az Y, ennek vesszük a mínusz egyszeresét, tehát már lefele mutat, normalizáljuk, így a hosszat mi állíthatjuk be, és ezt is tesszük azzal az ötös szorzóval. A skaláris szorzat itt szintén az irány miatt kell, hogy minden esetben a gravitációs vektor lefele mutasson.
 \end{itemize}
 
+\subsection{Modellezés és Textúrázás}
 
+Amint azt már a \hyperref[chap:Concept]{\ref{chap:Concept} fejezet} \hyperref[subsec:UsedTech]{\ref{subsec:UsedTech} alfejezetében} is említettem a modellezéshez a Blender nevű ingyenes, nyílt forráskódú 3D modellező programot használtam. Itt a karakter két iteráción esett keresztül. Az első iteráció, ahogy az alábbi képen is látható: [\ref{Yagi1st}], nem jutott el sokáig és nem a legigényesebb.
 
+\begin{figure}[H]
+\centering
+\includegraphics[height=654px/2, width=306px/2]{Images/Yagi1stItteration.png}
+\caption{Az első iteráció}
+\label{Yagi1st}
+\end{figure}
 
+Itt még újra kellett tanulnom a Blender alapjait és a Low-poly modellezés szabályait. Ebben nagyon segített Crashune Academy: Full Blender Character Modeling Tutorial\cite{CrashuneModeling} sorozata. Viszont a tesztelés során sokáig ez a modell volt használva.
+Amikor elkezdtem a vége felé közeledni a projektnek illőnek éreztem egy jobb modellt készíteni és a helyett, hogy ezt a modellt folytattam volna inkább kezdtem egy újat. Néha jobb csak újból kezdeni. Viszont örömmel jelentem be, hogy megérte, mivel a második iteráció sokkal jobban sikerült mint az első! A modell topológiájára sokkal jobban odafigyeltem és eltakarítottam a nem használt pontokat, szerintem az alábbi kép ezt jól átadja: [\ref{Yagi2nd}].
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Images/Yagi2ndItteration.png}
+\caption{A második iteráció}
+\label{Yagi2nd}
+\end{figure}
 
+Ezen a verzión már ún. "rig" is van, ami a háromdimenziós animációnál annyit tesz, hogy a modell rendelkezik csontokkal, amely csontokhoz környékén lévő pontokhoz hozzá vannak rendelve értékek, ún. "súlyok". Ezek a súlyok mondják meg, hogy az egyes csontok mennyire befolyásolhatják az azon a ponton történő deformációt. A Blender legújabb változatában elérhető egy "Rigify" nevű kiegészítő, ami ezt a folyamatot egyszerűbbé teszi. Generál egy csont struktúrát, amelyet hozzá kell illeszteni a modellhez és a többit a kiegészítő elvégzi. Meg kell jegyezni, hogy ez nem a legjobb minőséget vagy eredményt adja, de gyors és könnyen szerkeszthető. A Blender-ön belül a súlyok színekként jelennek meg, pirostól feketéig. A piros a legnagyobb befolyást, míg a fekete a legkisebb (nem létező) befolyást jelenti és az e között lévő színek eloszlanak, ahogyan az alábbi képen is látható: [\ref{WeightPaint}].
 
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{Images/WeightPaintExample.png}
+\caption{Példa a csontok súlyozására}
+\label{WeightPaint}
+\end{figure}
 
+Végül a modell textúráit úgy döntöttem, hogy egy textúra atlaszként fogom tárolni, lásd: [\ref{TextureAtlas}], mivel eléggé egyszerűre csináltam a szín palettáját. A textúra atlaszok olyan képek, amelyek egy modell teljes textúráját tartalmazzák. Tehát nem külön-külön képekre vannak szétbontva. Így a végső modellt a következő képen láthatják: [\ref{FinishedModel}].
 
+\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{Images/Yagi_Atlas.png}
+		\caption{A modell textúra atlasza}
+		\label{TextureAtlas}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[width=\linewidth]{Images/YagiModelFinal.png}
+		\caption{A textúrázott modell}
+		\label{FinishedModel}
+	\end{minipage}
+\end{figure}
 
+A játékos színterén belül kicseréltem a régi modellt, behelyeztem az újat és hozzáadtam a geometriához egy shader-t, hogy jobban illjen ahhoz a JSR / képregény témához, amire hajaztam[\ref{InEditorFinal}]. A shader-t nem én írtam, ennek a készítője Xtarsia a GodotShaders-ön publikálta\cite{Xtarsia}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{Images/InEditorShot.png}
+	\caption{A végső modell shader-el együtt a Godot szerkesztőjében}
+	\label{InEditorFinal}
+\end{figure}
 
 
 

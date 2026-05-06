@@ -57,7 +57,7 @@ public partial class Player : CharacterBody3D
 		_speed = GetNode<Label>($"CamRoot/Control/Speed/Label");
 
 		_shapecast = GetNode<ShapeCast3D>($"ShapeCast3D");
-		
+		GlobalRotation = new Vector3(0,0,0);
 	}
 
 	public bool IsMoving()
@@ -147,7 +147,7 @@ public partial class Player : CharacterBody3D
 		_movementDirection.Y = 0.0f;
 		_movementDirection = _movementDirection.Normalized();
 		
-		_speed.Text = _movementDirection.ToString();
+		_speed.Text = Velocity.ToString();
 		
 		Grounded = IsOnFloor();
 

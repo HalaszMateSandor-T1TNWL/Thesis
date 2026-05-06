@@ -9,11 +9,12 @@
 \contentsline {subsection}{\numberline {3.0.3}Fejlesztési környezet választása}{14}{subsection.3.0.3}%
 \contentsline {subsection}{\numberline {3.0.4}Játékmotor, programozási nyelv és fejlesztőkörnyezet}{14}{subsection.3.0.4}%
 \contentsline {subsection}{\numberline {3.0.5}Vizuális világ megtervezése}{15}{subsection.3.0.5}%
-\contentsline {subsection}{\numberline {3.0.6}Mozgásrendszer megtervezése}{18}{subsection.3.0.6}%
-\contentsline {subsubsection}{Állapotok}{19}{section*.2}%
-\contentsline {chapter}{\numberline {4}Megvalósítás}{26}{chapter.4}%
-\contentsline {subsection}{\numberline {4.0.1}Az alapok}{26}{subsection.4.0.1}%
-\contentsline {subsection}{\numberline {4.0.2}RigidBody vs CharacterBody}{27}{subsection.4.0.2}%
-\contentsline {subsection}{\numberline {4.0.3}A játékos színtere}{28}{subsection.4.0.3}%
-\contentsline {subsection}{\numberline {4.0.4}Változtatások az állapotgéphez}{30}{subsection.4.0.4}%
-\contentsline {subsection}{\numberline {4.0.5}Az állapotok megvalósítása}{31}{subsection.4.0.5}%
+\contentsline {subsection}{\numberline {3.0.6}Mozgásrendszer megtervezése}{19}{subsection.3.0.6}%
+\contentsline {subsubsection}{Állapotok}{20}{section*.2}%
+\contentsline {chapter}{\numberline {4}Megvalósítás}{27}{chapter.4}%
+\contentsline {subsection}{\numberline {4.0.1}Az alapok}{27}{subsection.4.0.1}%
+\contentsline {subsection}{\numberline {4.0.2}RigidBody vs CharacterBody}{28}{subsection.4.0.2}%
+\contentsline {subsection}{\numberline {4.0.3}A játékos színtere}{29}{subsection.4.0.3}%
+\contentsline {subsection}{\numberline {4.0.4}Változtatások az állapotgéphez}{31}{subsection.4.0.4}%
+\contentsline {subsection}{\numberline {4.0.5}Az állapotok megvalósítása}{32}{subsection.4.0.5}%
+\contentsline {subsection}{\numberline {4.0.6}Modellezés és Textúrázás}{38}{subsection.4.0.6}%

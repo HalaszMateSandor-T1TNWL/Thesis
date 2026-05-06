@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using Godot;
 
 public partial class Grinding : State
@@ -8,7 +7,7 @@ public partial class Grinding : State
 
 	private MeshInstance3D _playerBody;
   	private bool _frontFacing = false;
-	private float grindSpeed = 10f;
+	[Export] public float grindSpeed = 2f;
   
 	public override void Enter()
   	{
@@ -24,7 +23,7 @@ public partial class Grinding : State
 	{
 		if(_usedRail != null)
 		{
-			float progress = _usedRail.pathFollow.Progress + -_usedRail.pathFollow.Basis.Z.Normalized().Dot(parent.Velocity.Normalized()) * parent.Velocity.Length() * (float)delta;
+			float progress = _usedRail.pathFollow.Progress + -_usedRail.pathFollow.Basis.Z.Normalized().Dot(parent.Velocity.Normalized()) * parent.Velocity.Length() * grindSpeed * (float)delta;
 			_usedRail.pathFollow.Progress = progress;
 
 			parent.GlobalPosition = _usedRail.pathFollow.GlobalPosition;
@@ -32,11 +31,8 @@ public partial class Grinding : State
 
 			parent.Velocity = -_usedRail.pathFollow.Basis.Z.Normalized() * parent.Velocity.Length() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(parent.Velocity.Normalized());
 			parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * 5f * (float)delta;
-
-			parent.MoveAndSlide();
 		}
 	}
-
 
 	public void StartRail()
 	{
