@@ -19,7 +19,6 @@ public partial class Player : CharacterBody3D
 	
 	public bool Grounded = false;
 	private Vector3 _movementDirection;
-  	public MeshInstance3D playerBody;
 
 	private Node3D _cameraYaw;
 	private Node3D _cameraPitch;
@@ -29,6 +28,9 @@ public partial class Player : CharacterBody3D
 	private CheckBox _checkBox;
 	private CheckBox _isGrindingDebug;
 	private Label _speed;
+
+	public Node3D playerBody;
+	public AnimationPlayer anim;
 	
 	private Vector3 _velocity;
 	
@@ -51,10 +53,12 @@ public partial class Player : CharacterBody3D
 		_checkBox = GetNode<CheckBox>($"CamRoot/Control/CheckBox");
 		_isGrindingDebug = GetNode<CheckBox>($"CamRoot/Control/IsGrinding");
 
-		playerBody = GetNode<MeshInstance3D>($"Yagi");
 		RayCast = GetNodeOrNull<RayCast3D>($"RayCast3D");
 
 		_speed = GetNode<Label>($"CamRoot/Control/Speed/Label");
+
+		playerBody = GetNodeOrNull<Node3D>($"Yagi");
+		anim = playerBody.GetNodeOrNull<AnimationPlayer>($"AnimationPlayer");
 
 		_shapecast = GetNode<ShapeCast3D>($"ShapeCast3D");
 		GlobalRotation = new Vector3(0,0,0);
@@ -146,7 +150,7 @@ public partial class Player : CharacterBody3D
 		_movementDirection = forward * rawInput.Y + right * rawInput.X;
 		_movementDirection.Y = 0.0f;
 		_movementDirection = _movementDirection.Normalized();
-		
+
 		_speed.Text = Velocity.ToString();
 		
 		Grounded = IsOnFloor();

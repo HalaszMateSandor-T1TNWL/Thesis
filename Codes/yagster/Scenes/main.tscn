@@ -31,9 +31,6 @@ size = Vector3(100, 0.5, 100)
 [sub_resource type="BoxShape3D" id="BoxShape3D_bo1nx"]
 size = Vector3(100, 0.5, 100)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jjvhh"]
-data = PackedVector3Array(0, 0, 0, 0, 0, -1, 0, 1, -1, 0, 0, -1, 1, 0, -1, 0, 1, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, -1, 1, 0, -1, 0, 1, -1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, -1, 0, 0, -1, 1, 0, -1, 1, 0, 0, 0, 1, 0)
-
 [node name="Main" type="Node3D" unique_id=1507138279]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1117121211]
@@ -54,23 +51,13 @@ mesh = SubResource("BoxMesh_jjgbg")
 shape = SubResource("BoxShape3D_bo1nx")
 
 [node name="LoopRail" parent="." unique_id=1499673604 instance=ExtResource("4_kry3j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.52506, 2.6715, -1.2853479)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.16602, 2.6715, 45.69119)
 
 [node name="UpwardsRail" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.057373, 2.5999968, 18.000975)
-
-[node name="Ramp" type="StaticBody3D" parent="." unique_id=788961515]
-transform = Transform3D(6.355, 0, 0, 0, 6.355, 0, 0, 0, 6.355, 0, 2.376995, 0)
-
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Ramp" unique_id=1266285304]
-process_mode = 4
-polygon = PackedVector2Array(0, 0, 0, 1, 0, 1, 1, 0)
-
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Ramp" unique_id=1836828649]
-shape = SubResource("ConcavePolygonShape3D_jjvhh")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.59093, 2.5999968, -37.26881)
 
 [node name="CurvedRail" parent="." unique_id=1685441984 instance=ExtResource("5_kry3j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.62466, 2.6109228, -2.7970529)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.08177, 2.6109228, -37.562855)
 
 [node name="Yagi" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
 transform = Transform3D(0.90838426, 0, 0.4181367, 0, 1, 0, -0.4181367, 0, 0.90838426, -6.250348, 2.480403, 7.1432714)
@@ -78,5 +65,5 @@ transform = Transform3D(0.90838426, 0, 0.4181367, 0, 1, 0, -0.4181367, 0, 0.9083
 [node name="Tent" parent="." unique_id=1957202349 instance=ExtResource("7_6bp64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.772537, 2.5787196, -87.642654)
 
-[node name="StaticBody3D" parent="." unique_id=776993801 instance=ExtResource("6_21xkr")]
+[node name="Looptie-Loop" parent="." unique_id=776993801 instance=ExtResource("6_21xkr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.673965, 2.6225195, 36.872917)

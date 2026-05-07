@@ -11,13 +11,14 @@ public partial class Idle : State
 	
 	public override void Enter()
 	{
-		parent = (Player)GetNode<CharacterBody3D>($"../../..");
+		parent = (Player)GetNodeOrNull<CharacterBody3D>($"../../..");
 		_speed = parent.speed;
 		_accel = parent.accel;
 	}
 	
 	public override void PhysicsUpdate(float delta)
 	{
+		parent.anim.Play("Idle");
 		_velocity = parent.Velocity;
 		_velocity = _velocity.MoveToward(Vector3.Zero * _speed, _accel * delta);
 		parent.Velocity = _velocity;

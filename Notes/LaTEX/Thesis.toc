@@ -18,3 +18,4 @@
 \contentsline {subsection}{\numberline {4.0.4}Változtatások az állapotgéphez}{31}{subsection.4.0.4}%
 \contentsline {subsection}{\numberline {4.0.5}Az állapotok megvalósítása}{32}{subsection.4.0.5}%
 \contentsline {subsection}{\numberline {4.0.6}Modellezés és Textúrázás}{38}{subsection.4.0.6}%
+\contentsline {chapter}{\numberline {5}Összefoglalás}{42}{chapter.5}%

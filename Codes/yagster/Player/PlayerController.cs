@@ -21,7 +21,7 @@ public partial class PlayerController : Node
 				_states[node.Name] = state;
 				state.fsm = this;
 				state.Transition += OnTransitionTo;
-				state._Ready();
+				state.Enter();
 				state.Exit();
 			}
 		}
@@ -55,12 +55,18 @@ public partial class PlayerController : Node
 	
 	public override void _PhysicsProcess(double delta)
 	{
-		_currentState.PhysicsUpdate((float)delta);
+		if(_currentState != null)
+			_currentState.PhysicsUpdate((float)delta);
+		else
+			_currentState = GetNode<State>(initialState);
 	}
 	
 	public override void _UnhandledInput(InputEvent @event)
 	{
-		_currentState.HandleInput(@event);
+		if(_currentState != null)
+			_currentState.HandleInput(@event);
+		else
+			_currentState = GetNode<State>(initialState);
 	}
 
 	public void OnTransitionTo(string key, Vector3 movementDirection)

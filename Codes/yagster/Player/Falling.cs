@@ -25,6 +25,7 @@ public partial class Falling : State
 
 	public override void PhysicsUpdate(float delta)
 	{
+		parent.anim.Play("Falling");
 		_velocity.Y -= gravity * _mass * delta;
 		if(Mathf.Abs(movementDirection.X) > 0 || Mathf.Abs(movementDirection.Z) > 0)
 		{

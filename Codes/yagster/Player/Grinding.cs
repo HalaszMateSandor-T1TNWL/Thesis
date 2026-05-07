@@ -1,3 +1,4 @@
+using System;
 using Godot;
 
 public partial class Grinding : State
@@ -14,7 +15,6 @@ public partial class Grinding : State
 		_grindCast = GetNode<ShapeCast3D>($"../../../ShapeCast3D");
 
 		parent = GetNode<Player>($"../../..");
-		_playerBody = parent.playerBody;
 		
 		if(_usedRail == null) StartRail();
   	}
@@ -23,11 +23,13 @@ public partial class Grinding : State
 	{
 		if(_usedRail != null)
 		{
+			parent.anim.Play("Grinding");
 			float progress = _usedRail.pathFollow.Progress + -_usedRail.pathFollow.Basis.Z.Normalized().Dot(parent.Velocity.Normalized()) * parent.Velocity.Length() * grindSpeed * (float)delta;
 			_usedRail.pathFollow.Progress = progress;
 
 			parent.GlobalPosition = _usedRail.pathFollow.GlobalPosition;
-			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
+			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation * -_usedRail.pathFollow.Basis.Z.Normalized().Dot(-parent.Basis.Z.Normalized());
+
 
 			parent.Velocity = -_usedRail.pathFollow.Basis.Z.Normalized() * parent.Velocity.Length() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(parent.Velocity.Normalized());
 			parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * 5f * (float)delta;

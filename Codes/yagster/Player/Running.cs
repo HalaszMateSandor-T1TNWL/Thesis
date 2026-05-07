@@ -21,6 +21,8 @@ public partial class Running : State
 	
 	public override void PhysicsUpdate(float delta)
 	{
+		parent.anim.Play("Running");
+
 		_velocity = parent.Velocity;
 		
 		_velocity = _velocity.MoveToward(movementDirection * _speed, _accel * delta);

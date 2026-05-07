@@ -21,6 +21,7 @@ public partial class Jumping : State
 	
 	public override void PhysicsUpdate(float delta)
 	{
+		parent.anim.Play("Jumping");
 		parent.MoveAndSlide();
 
 		if(parent.Velocity.Y > 0.0f)

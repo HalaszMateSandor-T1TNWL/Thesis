@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buoiwvox7os0r"
-path.s3tc="res://.godot/imported/Yagi_Yagi_Atlas.png-77e8e2edbfcf150b42b51b447e041f29.s3tc.ctex"
+uid="uid://nxhnkou6v1v7"
+path.s3tc="res://.godot/imported/rail_texture.png-c5740bb0147acf0da55ff7b5b3a8af5b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Player/Yagi_Yagi_Atlas.png"
-dest_files=["res://.godot/imported/Yagi_Yagi_Atlas.png-77e8e2edbfcf150b42b51b447e041f29.s3tc.ctex"]
+source_file="res://Map/rail_texture.png"
+dest_files=["res://.godot/imported/rail_texture.png-c5740bb0147acf0da55ff7b5b3a8af5b.s3tc.ctex"]
 
 [params]
 
