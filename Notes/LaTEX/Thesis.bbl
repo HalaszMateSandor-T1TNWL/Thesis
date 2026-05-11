@@ -10,6 +10,11 @@ Draw.io's website.
 \newblock \url{https://www.drawio.com/}.
 \newblock Accessed: 2026.03.01.
 
+\bibitem{GodotDocs}
+Godot documentation.
+\newblock \url{https://docs.godotengine.org/}.
+\newblock Accessed: 2026.05.06.
+
 \bibitem{Godot}
 Godot's website.
 \newblock \url{https://godotengine.org/}.
@@ -31,6 +36,11 @@ Crashune Academy.
 Charles Burgar.
 \newblock How omnimovement works in black ops 6.
 \newblock 2024.
+
+\bibitem{Kyong2015}
+Chang \& David~Zhu Kyong-Sok.
+\newblock Finite state machine (fsm) concept and implementation.
+\newblock 2015.
 
 \bibitem{Georges2024}
 Georges Ltief.

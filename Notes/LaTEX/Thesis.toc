@@ -1,21 +1,22 @@
 \babel@toc {hungarian}{}\relax 
 \contentsline {chapter}{\numberline {1}Bevezetés}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Véges állapotú automaták}{3}{chapter.2}%
-\contentsline {subsection}{\numberline {2.0.1}Matematikai megközelítés}{3}{subsection.2.0.1}%
-\contentsline {subsection}{\numberline {2.0.2}Programozói megközelítés}{6}{subsection.2.0.2}%
+\contentsline {chapter}{\numberline {2}FSM}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Matematikai megközelítés}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Programozói megközelítés}{5}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Koncepció}{12}{chapter.3}%
-\contentsline {subsection}{\numberline {3.0.1}Játékmenet}{12}{subsection.3.0.1}%
-\contentsline {subsection}{\numberline {3.0.2}Használt technológiák}{13}{subsection.3.0.2}%
-\contentsline {subsection}{\numberline {3.0.3}Fejlesztési környezet választása}{14}{subsection.3.0.3}%
-\contentsline {subsection}{\numberline {3.0.4}Játékmotor, programozási nyelv és fejlesztőkörnyezet}{14}{subsection.3.0.4}%
-\contentsline {subsection}{\numberline {3.0.5}Vizuális világ megtervezése}{15}{subsection.3.0.5}%
-\contentsline {subsection}{\numberline {3.0.6}Mozgásrendszer megtervezése}{19}{subsection.3.0.6}%
-\contentsline {subsubsection}{Állapotok}{20}{section*.2}%
-\contentsline {chapter}{\numberline {4}Megvalósítás}{27}{chapter.4}%
-\contentsline {subsection}{\numberline {4.0.1}Az alapok}{27}{subsection.4.0.1}%
-\contentsline {subsection}{\numberline {4.0.2}RigidBody vs CharacterBody}{28}{subsection.4.0.2}%
-\contentsline {subsection}{\numberline {4.0.3}A játékos színtere}{29}{subsection.4.0.3}%
-\contentsline {subsection}{\numberline {4.0.4}Változtatások az állapotgéphez}{31}{subsection.4.0.4}%
-\contentsline {subsection}{\numberline {4.0.5}Az állapotok megvalósítása}{32}{subsection.4.0.5}%
-\contentsline {subsection}{\numberline {4.0.6}Modellezés és Textúrázás}{38}{subsection.4.0.6}%
-\contentsline {chapter}{\numberline {5}Összefoglalás}{42}{chapter.5}%
+\contentsline {section}{\numberline {3.1}Játékmenet}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Használt technológiák}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Fejlesztési Környezet}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Játékmotor, programozási nyelv és fejlesztőkörnyezet}{14}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Vizuális világ megtervezése}{15}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Mozgásrendszer}{18}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Állapotok}{19}{subsection.3.6.1}%
+\contentsline {chapter}{\numberline {4}Megvalósítás}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Az alapok}{26}{section.4.1}%
+\contentsline {section}{\numberline {4.2}RigidBody vs CharacterBody}{27}{section.4.2}%
+\contentsline {section}{\numberline {4.3}A játékos színtere}{28}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Változtatások az állapotgéphez}{30}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Az állapotok megvalósítása}{31}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Modellezés és Textúrázás}{37}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Összefoglalás}{41}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Summary}{42}{chapter.6}%

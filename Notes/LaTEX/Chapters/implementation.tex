@@ -1,8 +1,9 @@
 \chapter{Megvalósítás}
+\label{chap:implementation}
 
-A koncepció átbeszélése után áttérhetünk az implementációra. Egy Godot projekt Node-okból tevődik össze, amelyeket egy fa struktúrába rendezve tudunk kezelni. Érdemes egy Node-ra úgy tekinteni, mint egy osztályra, mivel valójában az is. Minden ilyen fát egy ún. "színteren" belül helyezünk el. Ez arra szolgál, hogy egyes részeit a projektünknek külön tudjuk kezelni a többitől, ez majd jobban világossá fog válni, amikor a játékos színteréről beszélek. Egy színtér felépítésében fontos szerepet játszik a Node hierarchia kialakítása. Vannak ugyanis Node-ok, amelyek megkövetelnek más Node-okat, mint gyermeket ahhoz, hogy rendesen működjön. Ilyen például egy StaticBody3D (egy statikus, fizikai erőkkel nem mozgatható test reprezentálá\-sára szolgál a háromdimenziós térben), amely megkövetel egy\\ CollisionShape3D Node-ot (egy átlátszó polygonháló, amely ütközésvizsgálatra van használva). Érdemes megjegyezni, hogy ugyan gyakran a felhasználók előre elkészített Node-okat használnak a fejlesztés során, viszont a felhasználó maga is létrehoz\-hat egy saját Node-ot, amely működését személyre szabhatja. Minden projekt egy "Main" színtér kiválasztásával kezdődik, ez az a színtér, amelyet a játékmotor mindig el fog indítani és elsőként meg fog jeleníteni.
+A koncepció átbeszélése után áttérhetünk az implementációra. Minden itt elhangzott, a Godot játékmotorral kapcsolatos információt a Godot saját dokumentációs oldaláról \cite{GodotDocs}, illetve a beépített súgókból szedtem. Ezek a jövőben változhatnak, én jelenleg a Godot 4.6-os verzióját használom. Egy Godot projekt Node-okból tevődik össze, amelyeket egy fa struktúrába rendezve tudunk kezelni. Érdemes egy Node-ra úgy tekinteni, mint egy osztályra, mivel valójában az is. Minden ilyen fát egy ún. "színteren" belül helyezünk el. Ez arra szolgál, hogy egyes részeit a projektünknek külön tudjuk kezelni a többitől, ez majd jobban világossá fog válni, amikor a játékos színteréről beszélek. Egy színtér felépítésében fontos szerepet játszik a Node hierarchia kialakítása. Vannak ugyanis Node-ok, amelyek megkövetelnek más Node-okat, mint gyermeket ahhoz, hogy rendesen működjön. Ilyen például egy StaticBody3D (egy statikus, fizikai erőkkel nem mozgatható test reprezentálá\-sára szolgál a háromdimenziós térben), amely megkövetel egy\\ CollisionShape3D Node-ot (egy átlátszó polygonháló, amely ütközésvizsgálatra van használva). Érdemes megjegyezni, hogy ugyan gyakran a felhasználók előre elkészített Node-okat használnak a fejlesztés során, viszont a felhasználó maga is létrehoz\-hat egy saját Node-ot, amely működését személyre szabhatja. Minden projekt egy "Main" színtér kiválasztásával kezdődik, ez az a színtér, amelyet a játékmotor mindig el fog indítani és elsőként meg fog jeleníteni.
 
-\subsection{Az alapok}
+\section{Az alapok}
 
 Amint az előbb azt említettem a minden projekt egy main színtér kialakításával kezdődik, tehát én így is tettem. Az alap színtér a következő volt:
 
@@ -23,13 +24,13 @@ Ezt a színteret a játékos gyökér Node-jának kiválasztásával kezdtem. A 
 	\item \textbf{CollisionShape3D:} Egy átlátszó polygon háló, amely az ütközésvizsgá\-lathoz szükséges, független a MeshInstance3D által előállított polygon hálótól.
 \end{itemize}
 
-\subsection{RigidBody vs CharacterBody}
+\section{RigidBody vs CharacterBody}
 
 A játékos szülőjének két típust szoktak gyakran megválasztani platformerek esetén: a CharacterBo\-dy3D-t és a RigidBody3D-t. A lényeges dolog, amiben a kettő eltér egymászól, az hogy hogyan mozgathatod a testet. A CharacterBody3D típus esélyt ad neked arra, hogy egy saját fizikai motort implementálj, hogy a játékod a lehető legjobbnak érződjön, míg a RigidBody3D a valós fizika szabályai szerint jár el. Egy játék esetében szerintem világosan látható, hogy nem a való világot szeretnénk szimulálni, hanem a lehető legjobb élményt szeretnénk nyújtani a játékosunknak, így olyanra írjuk meg a gravitációt, az ugrás magasságát, a gyorsulást, a súrlódást, stb, hogy az a játékos számára a legjobb játékérzést nyújtsa. A RigidBody3D típus alkalmazásával ezek a lehetőségek mind elvesznének és a Godot alap fizikai motorjára lennénk utalva.\\
 
 Valami, amit érdekesnek találtam miközben ezt a részt kutattam az az, amit Ludonauta írt a Rigidbody vs characterbody: which one for your platfo\-rmer?\cite{Ludonauta2025} című posztjában, ami így szól: "Your character isn't his body", ami először fúrcsán hangzik, de ez igaz. Mint ahogy azt már leírtam a CharacterBody3D független a polygon hálótól, amit alárendelsz, így mindegy, hogy ha kicseréled a modellt, minden más ugyan úgy működik. Az egyetlen dolog ami változtatna egy kicsit a működésén az az ütközésvizsgálathoz használt polygon háló alakjának a megváltoztatása lenne. Ezzel ugyan csak arra szeretnék visszautalni, mint amit Ludonauta is megjegyzett: használhatod mind a kettőt egy karakteren belül. Kell valami amihez valós fizikai hatások kellenek? rendeld a RigidBody alá a játékost! Nem szeretnél gravitációt? Rendeld a CharacterBody alá a játékost!\\
 
-\subsection{A játékos színtere}
+\section{A játékos színtere}
 
 Az előzőekben elmondottakból tehát, a játékos színtere egyenlőre így néz ki: egy CharacterBody3D Node mint a gyökér a fába, egy MeshInstance3D és CollisionShape3D mint gyerek Node-ok, lásd: \ref{BasicPlayerScene}.
 
@@ -65,7 +66,7 @@ Annak érdekében, hogy az állapotok könnyen nyomonkövethetőek legyenek csin
 	\label{PlayerSceneComplete}
 \end{figure}
 
-\subsection{Változtatások az állapotgéphez}
+\section{Változtatások az állapotgéphez}
 
 Ahogyan azt már a \hyperref[chap:FSM]{\ref{chap:FSM}. fejezet}, \hyperref[subsec:Prog]{\ref{subsec:Prog}. bekezdésében} is megadtam az automatánk két része a State és StateMachine osztályok nem változnak sokat.\\
 
@@ -86,7 +87,7 @@ Valamint az átnevezett PlayerController osztályon belül:
 
 A PlayerController script-et hozzácsatoltam a megosztozó nevű PlayerController Node-ra a játékos színterén belül. A State osztály meghagyjuk magát nem csatoltam hozzá semmihez, ezt csak arra használtam, hogy az állapotokat ebből az osztályból tudjam leszármaztatni.
 
-\subsection{Az állapotok megvalósítása}
+\section{Az állapotok megvalósítása}
 
 Ha visszaemlékeznek, a \hyperref[chap:Concept]{\ref{chap:Concept}. fejezet}, \hyperref[subsec:States]{\ref{subsec:States}. alszakaszában} vázoltam az állapotgé\-pet és a különböző tervezett állapotokat és az azok közötti átmenetet. Most ezek megvalósításáról szeretnék beszélni.
 Mindegyik állapot implementációját röviden át fogom beszélni és a fontosabbakat ki fogom emelni és bele fogok menni a matekba is háttérben. A kódot nem minden esetben fogom ide beírni, viszont a CD mellékletben megtalálják a forráskódot, valamint a \hyperref[cover:UseCase]{\ref{cover:UseCase}CD Használati útmutató oldalon} elmondottak alapján tudják követni részletesebben a kódot.\\
@@ -185,7 +186,7 @@ Végül a "Running" állapoton belül beállítjuk a CharacterBody3D-nek a sebes
 	Elsőnek beállítjuk a jelenlegi irány és sebesség szorzatával a játékos sebességét, majd hozzáadjuk a gravitációs ellenállást, hogy ha túl meredek lenne a csúszás iránya, akkor visszafele induljon meg. A gravitációs ellenállás a (-Vector3.Up.Normalized()) * 5f lenne. A Vector3 osztálynak a felfele mutató értéke az Y, ennek vesszük a mínusz egyszeresét, tehát már lefele mutat, normalizáljuk, így a hosszat mi állíthatjuk be, és ezt is tesszük azzal az ötös szorzóval. A skaláris szorzat itt szintén az irány miatt kell, hogy minden esetben a gravitációs vektor lefele mutasson.
 \end{itemize}
 
-\subsection{Modellezés és Textúrázás}
+\section{Modellezés és Textúrázás}
 
 Amint azt már a \hyperref[chap:Concept]{\ref{chap:Concept} fejezet} \hyperref[subsec:UsedTech]{\ref{subsec:UsedTech} alfejezetében} is említettem a modellezéshez a Blender nevű ingyenes, nyílt forráskódú 3D modellező programot használtam. Itt a karakter két iteráción esett keresztül. Az első iteráció, ahogy az alábbi képen is látható: [\ref{Yagi1st}], nem jutott el sokáig és nem a legigényesebb.
 

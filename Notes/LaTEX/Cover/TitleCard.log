@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  8 DEC 2025 00:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.4)  9 MAY 2026 11:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**TitleCard.tex
-(./TitleCard.tex
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
+**./TitleCard.tex
+(TitleCard.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
 ! Undefined control sequence.
 l.4 {\large
            
@@ -185,28 +185,23 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 17--17
  []
 
 
-Overfull \hbox (91.86194pt too wide) in paragraph at lines 18--19
- \OT1/cmr/bx/sc/10 Karaktermozgat^^Sas 
+Overfull \hbox (80.09262pt too wide) in paragraph at lines 18--19
+ \OT1/cmr/bx/sc/10 Mozg^^Sasrendszer 
  []
 
 
-Overfull \hbox (77.78429pt too wide) in paragraph at lines 18--19
- \OT1/cmr/bx/sc/10 ^^Sallapotg^^Sepekkel 
+Overfull \hbox (53.09128pt too wide) in paragraph at lines 18--19
+ \OT1/cmr/bx/sc/10 kialak^^S^^Pt^^Sasa 
  []
 
 
-Overfull \hbox (5.59023pt too wide) in paragraph at lines 18--19
- \OT1/cmr/bx/sc/10 a 
+Overfull \hbox (63.56908pt too wide) in paragraph at lines 18--19
+ \OT1/cmr/bx/sc/10 ^^Sallapotg^^Sepek 
  []
 
 
-Overfull \hbox (31.72205pt too wide) in paragraph at lines 18--19
- \OT1/cmr/bx/sc/10 Godot 
- []
-
-
-Overfull \hbox (73.57597pt too wide) in paragraph at lines 18--19
- \OT1/cmr/bx/sc/10 j^^Sat^^Sekmotorban 
+Overfull \hbox (66.66757pt too wide) in paragraph at lines 18--19
+ \OT1/cmr/bx/sc/10 haszn^^Salat^^Saval 
  []
 
 ! Undefined control sequence.
@@ -320,10 +315,8 @@ Overfull \hbox (41.64699pt too wide) in paragraph at lines 41--42
 
 
 Overfull \hbox (22.99988pt too wide) in paragraph at lines 41--42
- \OT1/cmr/bx/sc/10 2025 
+ \OT1/cmr/bx/sc/10 2026 
  []
-
-
 
 
 ! LaTeX Error: The font size command \normalsize is not defined:
@@ -339,19 +332,19 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+[1{C:/Users/halas/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
 ! Emergency stop.
-<*> TitleCard.tex
-                 
+<*> ./TitleCard.tex
+                   
 *** (job aborted, no legal \end found)
 
  
 Here is how much of TeX's memory you used:
- 42 strings out of 475135
- 707 string characters out of 5765398
- 390998 words of memory out of 5000000
- 23141 multiletter control sequences out of 15000+600000
- 559145 words of font info for 37 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 23i,7n,32p,130b,220s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 46 strings out of 467690
+ 765 string characters out of 5414967
+ 438954 words of memory out of 5000000
+ 29204 multiletter control sequences out of 15000+600000
+ 628029 words of font info for 41 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 23i,7n,32p,134b,227s stack positions out of 10000i,1000n,20000p,200000b,200000s
 !  ==> Fatal error occurred, no output PDF file produced!
