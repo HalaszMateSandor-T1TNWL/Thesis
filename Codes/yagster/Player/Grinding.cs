@@ -28,8 +28,7 @@ public partial class Grinding : State
 			_usedRail.pathFollow.Progress = progress;
 
 			parent.GlobalPosition = _usedRail.pathFollow.GlobalPosition;
-			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation * -_usedRail.pathFollow.Basis.Z.Normalized().Dot(-parent.Basis.Z.Normalized());
-
+			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
 
 			parent.Velocity = -_usedRail.pathFollow.Basis.Z.Normalized() * parent.Velocity.Length() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(parent.Velocity.Normalized());
 			parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * 5f * (float)delta;

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://1jsfgbspiekt"]
 
 [ext_resource type="Script" uid="uid://n6dln5lon8ga" path="res://Player/Player.cs" id="1_txrj1"]
+[ext_resource type="Script" uid="uid://djw34pq01jug6" path="res://Player/ShapeCast3d.cs" id="3_jqs3m"]
 [ext_resource type="Script" uid="uid://b0bvgplf8xfoi" path="res://Player/PlayerController.cs" id="3_rgmdh"]
 [ext_resource type="Script" uid="uid://dfubdxh4tmtev" path="res://Player/Idle.cs" id="4_ug0h4"]
 [ext_resource type="Script" uid="uid://bpqp8817ih8pu" path="res://Player/Running.cs" id="5_s41ug"]
@@ -17,6 +18,7 @@ height = 2.9951782
 [sub_resource type="SphereShape3D" id="SphereShape3D_x3wgy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f1ek2"]
+size = Vector3(2, 2, 2)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=498162917]
 script = ExtResource("1_txrj1")
@@ -119,6 +121,11 @@ offset_bottom = 25.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018028855, 0.46146142, 0)
 shape = SubResource("BoxShape3D_f1ek2")
 target_position = Vector3(0, 0, 0)
+script = ExtResource("3_jqs3m")
+
+[node name="Timer" type="Timer" parent="ShapeCast3D" unique_id=1781934405]
+wait_time = 0.8
+one_shot = true
 
 [node name="Yagi" parent="." unique_id=426129693 instance=ExtResource("6_8k03c")]
 
@@ -145,3 +152,4 @@ grindSpeed = 3.5
 [connection signal="SetMovementDirection" from="." to="Yagi/PlayerController" method="OnSetMovementDirection"]
 [connection signal="SetMovementState" from="." to="Yagi/PlayerController" method="OnSetMovementState"]
 [connection signal="SetCameraDirection" from="CamRoot" to="Yagi/PlayerController" method="OnSetCameraDirection"]
+[connection signal="Disable" from="Yagi/PlayerController/Jumping" to="ShapeCast3D" method="OnDisable"]

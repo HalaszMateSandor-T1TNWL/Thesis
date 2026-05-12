@@ -2,6 +2,8 @@ using Godot;
 
 public partial class Jumping : State
 {
+	[Signal] public delegate void DisableEventHandler();
+
 	[Export] public float jumpForce = 8;
 
 	public Vector3 velocity;
@@ -11,8 +13,7 @@ public partial class Jumping : State
 	{
 		parent = GetNode<Player>($"../../..");
 
-		_shapeCast = GetNode<ShapeCast3D>($"../../../ShapeCast3D");
-		_shapeCast.Enabled = false;
+		EmitSignal(nameof(Disable));
 
 		velocity = parent.Velocity;
 		velocity.Y = jumpForce;
@@ -28,11 +29,5 @@ public partial class Jumping : State
 		{
 			EmitSignal(nameof(Transition), "Falling", movementDirection);
 		}
-	}
-
-  	public override void Exit()
-	{
-		if(_shapeCast != null)
-			_shapeCast.Enabled = true;
 	}
 }

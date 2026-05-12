@@ -51,7 +51,7 @@ mesh = SubResource("BoxMesh_jjgbg")
 shape = SubResource("BoxShape3D_bo1nx")
 
 [node name="LoopRail" parent="." unique_id=1499673604 instance=ExtResource("4_kry3j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.16602, 2.6715, 45.69119)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.31993, 2.6, 45.69119)
 
 [node name="UpwardsRail" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.59093, 2.5999968, -37.26881)
@@ -60,10 +60,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.59093, 2.5999968, -37.2688
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.08177, 2.6109228, -37.562855)
 
 [node name="Yagi" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
-transform = Transform3D(0.90838426, 0, 0.4181367, 0, 1, 0, -0.4181367, 0, 0.90838426, -6.250348, 2.480403, 7.1432714)
 
 [node name="Tent" parent="." unique_id=1957202349 instance=ExtResource("7_6bp64")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.772537, 2.5787196, -87.642654)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.772537, 2.5999997, -87.642654)
 
-[node name="Looptie-Loop" parent="." unique_id=776993801 instance=ExtResource("6_21xkr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.673965, 2.6225195, 36.872917)
+[node name="Looptie-Loop" parent="." unique_id=1299425810 instance=ExtResource("6_21xkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6352942, 191.04036)
