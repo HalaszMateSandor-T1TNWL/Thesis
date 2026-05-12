@@ -5,29 +5,29 @@ Ahogyan az informatika fejlődött és egyre több matematikai koncepciót adap\
 
 \section{Matematikai megközelítés}
 
-A véges állapotú automata (Finite State Machine, avagy FSM) egy matematikai modell, amely képes ábrázolni a dinamikus viselkedését egy rendszernek véges számú állapotot alkalmazva, valamint ezen állapotok közötti átmenéseket, és az átmenetekhez szükséges cselekvéseket. Bármely adott pillanatban egy rendszer egy bizonyos állapotot vesz fel és egy átmenet egy válasz egy bizonyos cselekvésre, vagy történésre.
+A véges állapotú automata (Finite State Machine, avagy FSM) egy matematikai modell, amely képes ábrázolni egy rendszer dinamikus viselkedését véges számú állapot használatával, valamint ezen állapotok közötti átmeneteket, és az átmenetekhez szükséges cselekvéseket számontartani. Bármely adott pillanatban egy rendszer egy bizonyos állapotot vesz fel és az átmenetek válaszok bizonyos cselekvésekre, vagy eseményekre.
 
-A véges állapotú automaták kategorizálhatóak \textbf{determinisztikus} és \textbf{non-determinisztikus} automatákra a viselkedésük szempontjából:
+A véges állapotú automaták kategorizálhatóak \textbf{determinisztikus} és \textbf{nemdeterminisztikus} automatákra a viselkedésük szempontjából:
 \begin{itemize}
 \item \textbf{A determinisztikus véges automaták (DFSM)} esetében minden állapotnak van egy egyedi átmenete minden lehetséges bemenetre (input). A következő állapotot csakis a jelenlegi állapot és a kapott input dönti el, amely egy kiszámítható és egyértelmű viselkedést eredményez.
-\item \textbf{A non-determinisztikus automaták (NDFSM)} esetében több át\-menet létezhet egy inputra és a jelenlegi állapotra. A rendszer következő állapota nem egyedien lesz eldöntve, ami rugalmasságot eredményez, de egyben kiszámíthatatlanságot és komplexitást is bevezet.
+\item \textbf{A nemdeterminisztikus automaták (NDFSM)} esetében több át\-menet létezhet egy inputra és a jelenlegi állapotra. A rendszer következő állapota nem egyedien lesz eldöntve, ami rugalmasságot eredményez, de egyben kiszámíthatatlanságot és komplexitást is bevezet, főleg az implementációban, de az eseménykezelésben is.
 \end{itemize}
-A mi esetünkben csak determinisztikus automatákkal fogunk foglalkozni, de érdemes volt megemlíteni a non-determinisztikus automatákat, mivel matematikai és tervezésbeli jelentőséggel bírnak.
-Ahhoz, hogy tovább tudjunk beszélni róla, először definiáljuk. Legyen \textbf{M} egy determinisztikus véges automata, ekkor igaz, hogy:
+A mi esetünkben csak determinisztikus automatákkal fogunk foglalkozni, de érdemes volt megemlíteni a nemdeterminisztikus automatákat, mivel matematikai és tervezésbeli jelentőséggel bírnak.
+Ahhoz, hogy tovább tudjunk beszélni determinisztikus vég automatákról, először definiáljuk. Legyen \textbf{M} egy determinisztikus véges automata, ekkor igaz, hogy:
 $M = (Q, \Sigma, \delta, q_{0},F)$\cite{Kyong2015}\\
 Ahol:
 \begin{itemize}
-\item[1] Q, egy véges halmaz, az állapotok halmaza
-\item[2] $\Sigma$, egy véges halmaz, az ABC
-\item[3] $\delta$, $Q \times \Sigma \to Q$ az állapotátmenet függvény
-\item[4] $q_{0} \in Q$ a kezdeti állapot
-\item[5] $F \subset Q$ a végállapotok halmaza
+	\item[1] Q, egy véges halmaz, az állapotok halmaza
+	\item[2] $\Sigma$, egy véges halmaz, az ABC
+	\item[3] $\delta$, $Q \times \Sigma \to Q$ az állapotátmenet függvény
+	\item[4] $q_{0} \in Q$ a kezdeti állapot
+	\item[5] $F \subset Q$ a végállapotok halmaza
 \end{itemize}
-Egy determinisztikus automata felismer (elfogad) egy jelsorozatot, ha $w = x_{1},x_{2}\dots x_{n}$ $\Sigma$-beli jelek sorozata. M felismeri w-t, ha létezik olyan $r_{0},r_{1},\dots,r_{n}$ Q-beli állapotok sorozata, hogy:
+Egy determinisztikus automata felismer (elfogad) a \textbf{w} jelsorozatot, ha $w = x_{1},x_{2}\dots x_{n}$ $\Sigma$-beli jelek sorozata. M felismeri w-t, ha létezik olyan $r_{0},r_{1},\dots,r_{n}$ Q-beli állapotok sorozata, hogy:
 \begin{itemize}
-\item $r_{0} = q_{0}$
-\item $\delta(r_{i},x_{i+1}=r_{i+1})$, ahol $i=1,\dots n-1$
-\item $r_{n} \in F$
+	\item $r_{0} = q_{0}$
+	\item $\delta(r_{i},x_{i+1}) = r_{i+1}$, ahol $i=1,\dots n-1$
+	\item $r_{n} \in F$
 \end{itemize}
 \textbf{Definíció:} M DFSM felismeri az A nyelvet, ha
 
@@ -38,51 +38,53 @@ $A = \{ w\ |\ M\ felismeri \ w-t\}$
 Nézzük meg ezeket a részeket egy kicsit részletesebben is, a \ref{ExampleStateMachine} ábrán készítettem egy egyszerű példát.
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{Diagrams/ExampleStateMachine.png}
-\caption{Példa állapotgép}
-\label{ExampleStateMachine}
+	\centering
+	\includegraphics[width=\linewidth]{Diagrams/ExampleStateMachine.png}
+	\caption{Példa állapotgép}
+	\label{ExampleStateMachine}
 \end{figure}
 
 Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására, amit Georges Ltief tanulmányából \cite{Georges2024} szereztem.\\
 
 \textbf{Állapotok:}
 \begin{itemize}
-\item Az állapotok segítségével tudjuk megmondani, hogy milyen feltételek és módok mellett operál a rendszerünk a jelenlegi pillanatban. Minden állapot egy egyedi viselkedést ír le, amit a rendszer produkál. Fontos, hogy az állapotok száma *egy véges halmaz.*
+	\item Az állapotok segítségével tudjuk megmondani, hogy milyen feltételek és módok mellett operál a rendszerünk a jelenlegi pillanatban. Minden állapot egy egyedi viselkedést ír le, amit a rendszer produkál. Fontos, hogy az állapotok száma \textit{egy véges halmaz}.
 - $Q_{1},\dots,Q_{n}$ -nel jelöljük az állapotokat, amikor vizualizáljuk az automatánk
 \end{itemize}
+
 \textbf{Átmenetek:}
 \begin{itemize}
-\item Az átmenetek írják le a rendszer válaszait egyes bemenetekre, vagy eseményekre, amelyek átlökik az automatát az egyik állapotból a másikba.
-\item Csak bizonyos ingerek (stimuli, a példában $S_{1},S_{2},S_{3}$) eredményezhetnek átmenetet a rendszeren belül, olyanok amelyek benne vannak az automata \textbf{nyelvében.}
-\item Az átmeneteket mindig irányított nyilakkal jelöljük az ábrákon.
-\end{itemize} 
+	\item Az átmenetek írják le a rendszer válaszait egyes bemenetekre, vagy eseményekre, amelyek átlökik az automatát az egyik állapotból a másikba.
+	\item Csak bizonyos ingerek (stimuli, a példában $S_{1},S_{2},S_{3}$) eredményezhetnek átmenetet a rendszeren belül, olyanok amelyek benne vannak az automata \textbf{nyelvében.}
+	\item Az átmeneteket mindig irányított nyilakkal jelöljük az ábrákon.
+	\item Lehetséges, hogy egy átmenet ugyan abba az állapotba viszi vissza az automatát, mint amiből kiindult (lásd: a \ref{ExampleStateMachine} ábrán a Q2 állapotból a saját magába visszavezető R3 nyíl).
+\end{itemize}
+
 \textbf{Ingerek:}
 \begin{itemize}
-\item Az ingerek olyan események, vagy bemenetek, amelyek átmenetet ered\-ményeznek az automatán belül. Lehetnek pl. felhasználói parancsok, szenzor érzékelések, hálózati üzenetek, stb.
+	\item Az ingerek olyan események, vagy bemenetek, amelyek átmenetet ered\-ményeznek az automatán belül. Lehetnek pl. felhasználói parancsok, szenzor érzékelések, hálózati üzenetek, stb.
 \end{itemize}
+
 \textbf{Válaszok:}
 \begin{itemize}
-\item Egy automata válasza (vagy kimenete) mindig egyedi az állapotot nézve. Ezek lehetnek: egy üzenet kiírása/elküldése, egy egész algoritmus lefuttatása, vagy csak egy változó felülírása.
-\item A példában a válaszokat (responses) az $R_{1},R_{2},R_{3}$ ábrázolja, az  $S_{1},S_{2},S_{3}$ ingerekre.
+	\item Egy automata válasza (vagy kimenete) mindig egyedi az állapotot nézve. Ezek lehetnek: egy üzenet kiírása/elküldése, egy egész algoritmus lefuttatása, vagy csak egy változó felülírása.
+	\item A példában a válaszokat (responses) az $R_{1},R_{2},R_{3}$ ábrázolja, az  $S_{1},S_{2},S_{3}$ ingerekre.
 \end{itemize}
 
 \section{Programozói megközelítés}
 \label{subsec:Prog}
 
-Programozás szempontjából az automaták egy nagyon hasznos része az informatikának, mivel végtelenül egyszerűvé teszi egyes rendszerek nyomonköveté\-sét, megtervezését és automatizálását.
-Egy rendszeren belül, vegyünk most egy játékot példának, akármilyen objektumnak lehet állapota és, ahogyan ezt már említettem, az állapottól függően fognak változni az objektumok viselkedése is, például:\\
-
+Programozás szempontjából az automaták egy hasznos része az informatikának, mivel végtelenül egyszerűvé teszik egyes rendszerek nyomonköveté\-sét, megtervezését és automatizálását.
+Egy rendszeren belül, vegyünk most egy játékot példának, akármilyen objektumnak lehet állapota és, ahogyan ezt már említettem, állapottól függően fog változni az objektumok viselkedése is, például:
 \begin{itemize}
-\item A pálya időjárása (eshet, süthet a nap, fújhat a szél),
-\item a karakter fizikai állapota (futhat, ugorhat, csúszhat, támadhat),
-\item a fegyver állapota, amivel támadni akarunk (készenlétben, töltődik újra, elhasználva).
+	\item A pálya időjárása (eshet, süthet a nap, fújhat a szél),
+	\item a karakter fizikai állapota (futhat, ugorhat, csúszhat, támadhat),
+	\item a fegyver állapota, amivel támadni akarunk (készenlétben, töltődik újra, elhasználva).
 \end{itemize}
 
-Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közben vagyunk és a csúszda végén ott van egy ellenfél, akit meg akarunk támadni, ezért elővesszük a fegyverünket, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk vele, hogy milyen állapotban vannak a világunk egyes részei, megkönnyebbítjük a magunk dolgát a hibakeresésben és a játékosok dolgát azzal, hogy nem zavarjuk őket össze.\\
-Amikor egy rendszernél állapotgépeket használunk, akkor általában kéz-a-kézben jár a
-"kompozíció", és az "öröklődés" használata mint Objektum Orientált Programozásban használt tervezési minta. Ahhoz, hogy jobban megértsük hogyan is nézne ez ki kódban kezdés képpen készítettem egy mintaprogramot, amely mintaprogram egy egyszerű jelzőlámpa működését mutatja be.\\
-Elsőként is létrehoztam egy vázat az állapotok számára, minden állapot egy külön Node lesz a Godot-n belül. Ez egy teljesen absztrakt osztály, amit valójában nem fogunk futtatni mint script, ezt csak örökölni fogják az egyes állapotaink.\\
+Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közben vagyunk és látjuk, hogy a csúszás végeztével, ott lesz egy ellenfél. Ezért elővesszük a fegyverünket, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk a világ egyes elemeinek a jelenlegi állapotával, könnyen felismerhetővé és beszédessé tehetjük azokat. Megkönnyebbítve nem csak a magunk dolgát a hibakeresésben, de a játékosét is, ezzel elkerülve a félreértéseket.\\
+Amikor egy rendszernél állapotgépeket használunk, akkor általában kéz-a-kézben jár a "kompozíció", és az "öröklődés" használata mint Objektum Orientált Programozásban használt tervezési minta. Ahhoz, hogy jobban megértsük hogyan is nézne ez ki kódban kezdésként készítettem egy mintaprogramot, amely egy egyszerű jelzőlámpa működését mutatja be.\\
+Elsőként is létrehoztam egy vázat az állapotok számára, minden állapot egy külön Node lesz a Godot-n belül. Ez egy minta osztály, amit valójában nem fogunk futtatni mint script, ezt csak örökölni fogják az egyes állapotaink.\\
 
 \lstset{style=sharpc}
 \begin{lstlisting}
@@ -104,7 +106,7 @@ public partial class State : Node
 }
 \end{lstlisting}
 
-Lehet, hogy megfordul a fejünkben a gondolat: "De, akkor miért nem egy absztrakt osztály?" Azért mert, akkor nem tudnánk felvenni az állapotokat egy Dictionary-be, erre később vissza is térek. Egy állapotnak 5 metódusa van: Enter, Exit, Update, PhysicsUpdate, HandleInput. Ezek mind a megfelelő pillanatban lesznek meghívva, lehet, hogy nem mindegyik állapot enged majd inputot feldolgozni, vagy lehet, hogy nem mindegyikre fog kihatni a fizika, viszont ez a metódus-ötös az alapja a legtöbb állapotnak. Az "Enter" metódusban az állapot ellenőrizni fog egy pár feltételt és fel fogja építeni az állapotban végrehajtható cselekvésekhez szükséges környezetet. Az "Exit" egyértelműen ennek az ellenkezőjét fogja csinálni. Az "Update" és "PhysicsUpdate" metódusok mind az eltelt (delta) idő szerint fognak végrehajtani eseményeket, pl.: a levegőben töltött idő mérése, esési sebesség, féktáv, stb. Végül a HandleInput akármilyen bemenetre fog reagálni és azokat lekezelni. Ha például a karakter éppen a levegőben van és elkezd mozogni, akkor azt elkapja a HandleInput metódus és megoldja, hogy ne csak egyhelyben tudjon a karakter ugrani, de különböző irányokba is. A metódusokon kívül van még egy változónk, ami az "fsm".
+Lehet, hogy megfordul a fejünkben a gondolat: "De, akkor miért nem egy absztrakt osztály?" Azért mert, akkor nem tudnánk felvenni az állapotokat egy Dictionary-be, ezt később jobban kifejtem. Egy állapotnak 5 metódusa van: Enter, Exit, Update, PhysicsUpdate és HandleInput. Ezek mind a megfelelő pillanatban lesznek meghívva. Lehet, hogy nem mindegyik állapot enged majd inputot feldolgozni, vagy lehet, hogy nem mindegyikre fog kihatni a fizika, viszont ez a metódus-ötös az alapja a legtöbb állapotnak. Az "Enter" metódusban az állapot ellenőrizni fog egy pár feltételt és fel fogja építeni az állapotban végrehajtható cselekvésekhez szükséges környezetet. Az "Exit" egyértelműen ennek az ellenkezőjét fogja csinálni, felkészíti az állapotot a kilépésre és alaphelyzetbe állít egyes tényezőket a következő állapotnak. Az "Update" és "PhysicsUpdate" metódusok mind az eltelt (delta) idő szerint fognak végrehajtani eseményeket, pl.: a levegőben töltött idő mérése, esési sebesség, féktáv, stb. Végül a HandleInput akármilyen bemenetre fog reagálni és azokat lekezelni. Ha például a karakter éppen a levegőben van és elkezd mozogni, akkor azt elkapja a HandleInput metódus és megoldja, hogy ne csak egyhelyben tudjon a karakter ugrani, de különböző irányokba is. A metódusokon kívül van még egy változónk, ami az "fsm". Ez az fsm változó fogja tárolni egyes állapotoknak azt, hogy melyik automatához tartozik. Ezzel át is térnék a StateMachine osztályra.
 
 \lstset{style=sharpc}
 \begin{lstlisting}

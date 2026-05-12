@@ -2,7 +2,7 @@
 \contentsline {chapter}{\numberline {1}Bevezetés}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}FSM}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Matematikai megközelítés}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Programozói megközelítés}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Programozói megközelítés}{6}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Koncepció}{12}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Játékmenet}{12}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Használt technológiák}{13}{section.3.2}%
@@ -18,5 +18,12 @@
 \contentsline {section}{\numberline {4.4}Változtatások az állapotgéphez}{30}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Az állapotok megvalósítása}{31}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Modellezés és Textúrázás}{37}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Összefoglalás}{41}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Summary}{42}{chapter.6}%
+\contentsline {chapter}{\numberline {5}Tesztelés}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}A tesztelés célja}{41}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Állapotátmenetek tesztelése}{41}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Mozgásfunkciók tesztelése}{42}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Összegzés}{43}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Összefoglalás}{44}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Továbbfejlesztés}{44}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Summary}{46}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Future improvements}{46}{section.7.1}%

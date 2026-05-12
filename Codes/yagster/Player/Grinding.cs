@@ -9,6 +9,7 @@ public partial class Grinding : State
 	private MeshInstance3D _playerBody;
   	private bool _frontFacing = false;
 	[Export] public float grindSpeed = 2f;
+	[Export] public float grindDrag = 5f;
   
 	public override void Enter()
   	{
@@ -26,12 +27,16 @@ public partial class Grinding : State
 			parent.anim.Play("Grinding");
 			float progress = _usedRail.pathFollow.Progress + -_usedRail.pathFollow.Basis.Z.Normalized().Dot(parent.Velocity.Normalized()) * parent.Velocity.Length() * grindSpeed * (float)delta;
 			_usedRail.pathFollow.Progress = progress;
-
-			parent.GlobalPosition = _usedRail.pathFollow.GlobalPosition;
+			
 			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
+			parent.GlobalPosition = _usedRail.pathFollow.GlobalPosition;
+<<<<<<< Updated upstream
+			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
+=======
+>>>>>>> Stashed changes
 
 			parent.Velocity = -_usedRail.pathFollow.Basis.Z.Normalized() * parent.Velocity.Length() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(parent.Velocity.Normalized());
-			parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * 5f * (float)delta;
+			parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * grindDrag * (float)delta;
 		}
 	}
 
@@ -44,6 +49,8 @@ public partial class Grinding : State
 			_usedRail = (RailGrinding)_grindCast.GetCollider(0);
 
 			_usedRail.CalculateTargetRailPoint(parent.GlobalPosition);
+			
+			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
 		}
 	}
 
@@ -56,6 +63,4 @@ public partial class Grinding : State
 			parent.GlobalRotation = new Vector3(0,0,0);
 		}
 	}
-
-
 }

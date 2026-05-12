@@ -23,7 +23,11 @@ script = ExtResource("1_xd4t3")
 curve = SubResource("Curve3D_b8ssh")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1137044314]
+<<<<<<< Updated upstream
 transform = Transform3D(0.060071867, 0.066544294, -0.99593645, 0, 0.997758, 0.06666339, 0.99816483, -0.0040047895, 0.059937757, 0, 0, 0)
+=======
+transform = Transform3D(-4.3710337e-08, 0, -0.9999725, 0, 0.99998033, 0, 0.9999759, 0, -4.3710187e-08, 0, 0, 0)
+>>>>>>> Stashed changes
 loop = false
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=1873562184]

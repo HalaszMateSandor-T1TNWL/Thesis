@@ -1,11 +1,11 @@
 \chapter{Koncepció}
 \label{chap:Concept}
 
-Az évek alatt sok olyan játékkal játszottam, amelyek mélyen kidolgozott mozgásrendszerekre vannak építve, ilyen műfajok például a Movement-Shooter, bizonyos Sport játékok többnyire azok, amik gördeszkákra, görkorcsolyákra és a hasonlókra épülnek. Fontosnak tartottam itt megemlíteni a Movement-Shooter műfajt, mivel az ebbe tartozó játékok szerettették meg igazán velem a szofisztikált mozgásrendszereket és belőlük tanultam sokat. Ezen játékok tökéletesen összehangolják a finom mozdulatokat az aréna-lövöldék (mint például a Quake) gyors döntéshozatalával és precíz célzás igényével. Ezeket a műfajok csupán motivációként hoztam fel, ha esetleg a kedves olvasónak megjönne a kedve jobban belemenni a gyorsabb videójátékok világába.
+Az évek alatt sok olyan játékkal játszottam, amelyek mélyen kidolgozott mozgásrendszerekre voltak építve. Ilyen műfajok például a Movement-Shooter, bizonyos Sport játékok többnyire azok, amik gördeszkákra, görkorcsolyákra és a hasonlókra épülnek. Fontosnak tartottam itt megemlíteni a Movement-Shooter műfajt, mivel az ebbe tartozó játékok szerettették meg igazán velem a szofisztikált mozgásrendszereket és belőlük tanultam sokat. Ezen játékok tökéletesen összehangolják a finom mozdulatokat az aréna-lövöldék (mint például a Quake) gyors döntéshozatalát és precíz célzást igényelnek. Ezeket a műfajok csupán motivációként hoztam fel, ha esetleg a kedves olvasónak megjönne a kedve jobban belemenni a gyorsabb videójátékok világába.
 
 \section{Játékmenet}
 
-A játékmenet nem komplikált, mivel ez túlmutatna a projektem lényegén. A játékos képes mozogni minden irányba (jobb, bal, előre, hátra), képes ugrani, valamint a levegőben mozogni. Ez kombinálva a játékos képességével, hogy "meglovagoljon" csöveket egy elég egyszerű, de erős alapot ad egy tényleges nagyobb játék elkészítéséhez. Mindezek ellenére, úgy érzem, hogy le kell szögeznem, hogy a színtér maga csupán arra szolgálna, hogy be tudjam mutatni a mozgásrendszert és vizualizálni tudjam az állapotgépet munka közben. Az állapotgépet úgy terveztem meg, hogy akármilyen projektben, amely a Godot játékmotoron belül készült, használható legyen. A saját felhasználásom egy olyan mozgásrendszert alakított ki, ahol valamilyen gurulásra vagy csúszásra alkalmas eszköz van (pl.: gördeszka, görkorcsolya, síléc, jégkorcsolya) a játékos karakteren. Ehhez a Tony Hawk's Proskater játéksorozatot és Bomb Rush Cyberfunk / Jet Set Radio játékmenetét és mozgásrendszerét vettem alapul. Azzal az eltéréssel, hogy a saját projektemben megnyerési pont nincs, mivel ez túlmutatott a projektnek megszabott feladaton.
+A játékmenet nem komplikált, mivel ez túlmutatna a projektem lényegén. A játékos képes mozogni minden irányba (jobb, bal, előre, hátra, valamint átlósan), képes ugrani, valamint a levegőben mozogni. Ez kombinálva a játékos képességével, hogy "meglovagoljon" csöveket egy elég egyszerű, de erős alapot ad egy tényleges nagyobb játék elkészítéséhez. Mindezek ellenére, úgy érzem, hogy le kell szögeznem, hogy a színtér maga csupán arra szolgálna, hogy be tudjam mutatni a mozgásrendszert és vizualizálni tudjam az állapotgépet munka közben. Az állapotgépet úgy terveztem meg, hogy akármilyen projektben, amely a Godot játékmotoron belül készült, használható legyen. A saját felhasználásom egy olyan mozgásrendszert alakított ki, ahol valamilyen gurulásra vagy csúszásra alkalmas eszköz van (pl.: gördeszka, görkorcsolya, síléc, jégkorcsolya) a játékos karakteren. Ehhez a Tony Hawk's Proskater játéksorozatot és Bomb Rush Cyberfunk / Jet Set Radio játékmenetét és mozgásrendszerét vettem alapul. Azzal az eltéréssel, hogy a saját projektemben megnyerési pont nincs, mivel ez túlmutatott a projektnek megszabott feladaton.
 
 \section{Használt technológiák}
 \label{subsec:UsedTech}
@@ -45,18 +45,22 @@ Valamint a digitális koncepció rajzok elkészítéséhez és a textúrák mega
 A fejlesztési környezet választásakor több szempontot is figyelembe kellett vennem:
 \begin{itemize}
 	\item \underline{Elérhetőség:} Mivel a fejlesztést két különböző rendszeren, két különböző operációs rendszer alatt végeztem fontos volt számomra, hogy a fejlesztési környezet elérhető legyen mind a két operációs rendszeren.
-	\item \underline{Programozási Nyelv Támogatása:} A Godot-n belül van számos programozási nyelvhez támogatás, ezek a:
-	      \begin{itemize}
-		      \item GDScript a Godot saját script nyelve,
-		      \item C\# a Godot Mono támogatásával,
-		      \item Valamint C és C++ számos kiegészítő támogatásával.
-	      \end{itemize}
-\end{itemize}
-
-Fontos volt, hogy ezek közül az egyikhez legalább támogatást nyújtson a fejlesztési környezet.
-\begin{itemize}
-	\item \underline{Kényelem:} A fejlesztési környezet által nyújtott kiegészítési, valamint emlékeztető segédletek fontosak voltak, mivel a rendszer sok hasonló kódrészt tartalmaz (pl. Dictionaries, Leképzések, stb.).
-	\item \textbf{Integráció a motorral:} Ez egy bónusz pont a listán, de sokat segít, ha a fejlesztési környezet integrálja a játékmotort az egyszerű dokumentáció olvasás és metódus / függvény hívás érdekében.
+	\item \underline{Programozási Nyelv Támogatása:} Fontos szempont volt a játékmotor kiválasztásakor a C\# nyelv támogatása. Mivel a C\# nyelvet gyakran használják videójátékok programozásánál, fontosnak tartottam, hogy a szakdolgozatomat egy olyan környezetben készítsem el, ami támogatja. Nem csak a nyelv miatt, de ha sikerül elsajátítani, vagy legalább megismerkedni egy hasznos játékmotorral, az sokat segíthet majd nekem a jövőben.\\
+	\begin{tabularx}{\textwidth}{
+  | >{\raggedright\arraybackslash}X
+  | >{\raggedright\arraybackslash}X
+  | >{\raggedright\arraybackslash}X
+  | >{\raggedright\arraybackslash}X | }
+	\hline
+	Szempont & Godot & Unity & Unreal Engine\\
+	\hline
+	Tanulási görbe & alacsony/közepes & közepes & magas\\
+	C\# támogatás & van & natív jellegű & csak pluginnal\\
+	Mozgásrendszer prototipizálás & alkalmas & alkalmas & túl nagy eszközkészlet\\
+	Licensz & nyílt forráskódú & üzleti feltételekhez kötött & üzleti feltételekhez kötött\\
+	Projektmérethez illeszkedés & megfelel & jó & nem alkalmas\\
+	\hline
+	\end{tabularx}
 \end{itemize}
 
 \section{Játékmotor, programozási nyelv és fejlesztőkörnyezet}
@@ -66,6 +70,7 @@ A játékmotor, programozási nyelv és fejlesztőkörnyezet megválasztása sor
 	\item \underline{Kompatibilitás / Platformfüggetlenség:} Mivel a szoftvert két különböző operációs rendszeren fejlesztettem ezért elengedhetetlen volt az, hogy az összes projektfejlesztéshez használt program elérhető legyen mind egy Linux környezet, mind egy Windows környezet alatt. A játékmotorok, amik mindig szóba jönnek az a Unity és az Unreal Engine, viszont ezeknél az motoroknál a licensz kérdése is szóba jön. Nem egy utolsó szempont az se, hogy ezzel a rendszerrel én majd a jövőben tovább dolgozhassak akármilyen fennakadás vagy hátráltatás nélkül.
 	\item \underline{Tapasztalat:} Fontos volt a meglévő tapasztalat a választott technológiával, hogy a lehető legjobbat ki tudjam hozni a projektből reális időn belül. Egy új rendszer vagy programozási nyelv megtanulása időt vett volna el, amit fejlesztésre tudtam volna használni.
 \end{itemize}
+
 \textbf{Így mindezeket a szempontokat összevetve a választásaim végül a: Godot motorra, C\# programozási nyelvre és a Visual Studio Code fejlesztőkörnyezetre esett.}
 
 \section{Vizuális világ megtervezése}
