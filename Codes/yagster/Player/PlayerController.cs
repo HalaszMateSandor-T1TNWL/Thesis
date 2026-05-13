@@ -22,7 +22,7 @@ public partial class PlayerController : Node
 				_states[node.Name] = state;
 				state.fsm = this;
 				state.Transition += OnTransitionTo;
-				state.Enter();
+				state._Ready();
 				state.Exit();
 			}
 		}
