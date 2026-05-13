@@ -26,6 +26,7 @@ public partial class PlayerController : Node
 				state.Exit();
 			}
 		}
+		GD.Print(_states.ToString());
 		if(initialState != null)
 		{
 			_currentState = GetNode<State>(initialState);
@@ -36,13 +37,21 @@ public partial class PlayerController : Node
 		
 		_ui = GetNode<Control>($"../../CamRoot/Control");
 		_elements = new Dictionary<string, CheckBox>();
-		foreach(Node node in _ui.GetChildren())
+
+		Vector2 position = new Vector2(1051,0);
+		foreach(string state in _states.Keys)
 		{
-			if(node is CheckBox box)
-			{
-				_elements[node.Name] = box;
-			}
+			CheckBox box = new CheckBox{
+				Name = state,
+				Text = state,
+				Position = position	
+			};
+			_ui.AddChild(box);
+
+			_elements[state] = box;
+			position.Y += 25f;
 		}
+
 		_elements[_currentState.Name].ButtonPressed = true;
 	}
 	

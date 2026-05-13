@@ -25,11 +25,7 @@ curve = SubResource("Curve3D_ndgd1")
 debug_custom_color = Color(1, 0, 1, 1)
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=213865642]
-<<<<<<< Updated upstream
-transform = Transform3D(-0.016383145, 0, -0.999848, 0, 0.9999981, 0, 0.999848, 0, -0.016383145, 0, 0, 0)
-=======
-transform = Transform3D(-4.371097e-08, 0, -0.9999904, 0, 1, 0, 0.9999904, 0, -4.371097e-08, 0, 0, 0)
->>>>>>> Stashed changes
+transform = Transform3D(-0.016383143, 0, -0.99984795, 0, 0.9999981, 0, 0.99984795, 0, -0.016383143, 0, 0, 0)
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=1556803771]
 material_override = SubResource("StandardMaterial3D_dch7n")

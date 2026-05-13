@@ -1,22 +1,22 @@
 \chapter{Koncepció}
 \label{chap:Concept}
 
-Az évek alatt sok olyan játékkal játszottam, amelyek mélyen kidolgozott mozgásrendszerekre voltak építve. Ilyen műfajok például a Movement-Shooter, bizonyos Sport játékok többnyire azok, amik gördeszkákra, görkorcsolyákra és a hasonlókra épülnek. Fontosnak tartottam itt megemlíteni a Movement-Shooter műfajt, mivel az ebbe tartozó játékok szerettették meg igazán velem a szofisztikált mozgásrendszereket és belőlük tanultam sokat. Ezen játékok tökéletesen összehangolják a finom mozdulatokat az aréna-lövöldék (mint például a Quake) gyors döntéshozatalát és precíz célzást igényelnek. Ezeket a műfajok csupán motivációként hoztam fel, ha esetleg a kedves olvasónak megjönne a kedve jobban belemenni a gyorsabb videójátékok világába.
+Az évek alatt sok olyan játékkal játszottam, amelyek mélyen kidolgozott mozgásrendszerekre épülnek. Ilyen műfajok például a Movement-Shooter, bizonyos Sport játékok többnyire azok, amik gördeszkákra, görkorcsolyákra és a hasonlókra épülnek. Fontosnak tartottam itt megemlíteni a Movement-Shooter műfajt, mivel az ebbe tartozó játékok szerettették meg igazán velem a szofisztikált mozgásrendszereket és belőlük tanultam sokat. Ezen játékok tökéletesen összehangolják a finom mozdulatokat az aréna-lövöldék (mint például a Quake) gyors döntéshozatalával. Ezeket a műfajok csupán motivációként hoztam fel, ha esetleg a kedves olvasónak megjönne a kedve jobban belemenni a gyorsabb videójátékok világába.
 
 \section{Játékmenet}
 
-A játékmenet nem komplikált, mivel ez túlmutatna a projektem lényegén. A játékos képes mozogni minden irányba (jobb, bal, előre, hátra, valamint átlósan), képes ugrani, valamint a levegőben mozogni. Ez kombinálva a játékos képességével, hogy "meglovagoljon" csöveket egy elég egyszerű, de erős alapot ad egy tényleges nagyobb játék elkészítéséhez. Mindezek ellenére, úgy érzem, hogy le kell szögeznem, hogy a színtér maga csupán arra szolgálna, hogy be tudjam mutatni a mozgásrendszert és vizualizálni tudjam az állapotgépet munka közben. Az állapotgépet úgy terveztem meg, hogy akármilyen projektben, amely a Godot játékmotoron belül készült, használható legyen. A saját felhasználásom egy olyan mozgásrendszert alakított ki, ahol valamilyen gurulásra vagy csúszásra alkalmas eszköz van (pl.: gördeszka, görkorcsolya, síléc, jégkorcsolya) a játékos karakteren. Ehhez a Tony Hawk's Proskater játéksorozatot és Bomb Rush Cyberfunk / Jet Set Radio játékmenetét és mozgásrendszerét vettem alapul. Azzal az eltéréssel, hogy a saját projektemben megnyerési pont nincs, mivel ez túlmutatott a projektnek megszabott feladaton.
+A játékmenet nem komplikált, mivel ez túlmutatna a projekt lényegén. A játékos képes mozogni minden irányba (jobb, bal, előre, hátra, és átlósan), képes ugrani, valamint a levegőben mozogni. Ez kombinálva a játékos képességé\-vel, hogy végigcsússzon az azokra kijelölt felületeken egy elég egyszerű, de erős alapot ad egy tényleges nagyobb játék elkészítéséhez. Mindezek ellenére, úgy érzem, hogy le kell szögeznem, hogy a színtér maga csupán arra szolgálna, hogy be tudjam mutatni a mozgásrendszert és vizualizálni tudjam az állapotgé\-pet munka közben. Az állapotgépet úgy terveztem meg, hogy akármilyen projektben, amely a Godot játékmotoron belül készült, használható legyen, de a logikát más játékmotorokra is ki lehet terjeszteni. A mozgásrendszerem a Tony Hawk's Proskater játéksorozatot és Bomb Rush Cyberfunk / Jet Set Radio játékmenetét vette alapul. Azzal az eltéréssel, hogy a saját projektemben megnyerési pont nincs, mivel ez túlmutatott a projektnek megszabott feladaton.
 
 \section{Használt technológiák}
 \label{subsec:UsedTech}
 
-A használt technológiákat két részre osztanám fel: \textbf{szoftver} és \textbf{hardver}. Most egyenlőre, csak egy rövidebb felsorolást tennék a technológiákról és a későbbiekben, amikor a megfelelő részekhez érek, bővebben beszámolok róluk.
+A használt technológiákat két részre osztanám fel: \textbf{szoftver} és \textbf{hardver}. 
 
 \textbf{Szoftver szempontjából:}
 \begin{itemize}
-	\item \href{https://www.blender.org/download/}{\underline{Blender}} \cite{Blender}-t használtam a 3Ds modellek elkészítéséhez.
-	\item \href{https://krita.org/en/}{\underline{Krita}} \cite{Krita}-t használtam a modellek textúráinak megrajzolásához.
-	\item A diagramok megszerkesztéséhez \href{https://www.drawio.com/}{\underline{Draw.io}} \cite{Draw.io}-t használtam.
+	\item \href{https://www.blender.org/download/}{\underline{Blender}-t} \cite{Blender} használtam a 3Ds modellek elkészítéséhez.
+	\item \href{https://krita.org/en/}{\underline{Krita}-t} \cite{Krita} használtam a modellek textúráinak megrajzolásához.
+	\item A diagramok megszerkesztéséhez \href{https://www.drawio.com/}{\underline{Draw.io-t}} \cite{Draw.io} használtam.
 	\item A verziókövetéshez Git-et használtam.
 \end{itemize}
 
@@ -29,7 +29,7 @@ A használt technológiákat két részre osztanám fel: \textbf{szoftver} és \
 		      \item AMD Radeon RX 6600
 		      \item Memória (RAM): 32GB
 	      \end{itemize}
-	\item LENOVO IdeaPad Slim 3 15AMN8:
+	\item LENOVO IdeaPad Slim 3 15AMN8 (Laptop):
 	      \begin{itemize}
 		      \item Kubuntu 25.10
 		      \item Processzor: 8 x AMD Ryzen 5 7520U with Radeon Graphics
@@ -38,8 +38,8 @@ A használt technológiákat két részre osztanám fel: \textbf{szoftver} és \
 	      \end{itemize}
 \end{itemize}
 
-Megjegyezném, hogy ez nem jelenti azt, hogy csak ezen gépigényeket elérő rendszereken működne a rendszer, egyszerűen csak ezeken tudtam kipróbálni.
-Valamint a digitális koncepció rajzok elkészítéséhez és a textúrák megalkotásá\-hoz az: XP-Pen Deco 02-őt használtam.
+Megjegyezném, hogy ez nem jelenti azt, hogy csak ezen gépigényeket elérő rendszereken működne a program, egyszerűen csak ezeken tudtam kipróbálni.
+A digitális koncepció rajzok elkészítéséhez és a textúrák megalkotásá\-hoz az: XP-Pen Deco 02-őt használtam.
 
 \section[Fejlesztési Környezet]{Fejlesztési környezet választása}
 A fejlesztési környezet választásakor több szempontot is figyelembe kellett vennem:
@@ -94,7 +94,7 @@ A játékmenetében is megtartja a dinamikusságot és az agresszív vonalakat, 
 	\label{JSR_Thumbnail}
 \end{figure}
 
-Ahhoz, hogy pontosan replikálni tudjam ezeket a tulajdonságokat mélyen bele kellett magam ásnom a játék világába, de mivel egy eléggé régi játékról van szó, nem könnyen hozzáférhető. Szerencsére erre a problémára megoldást találtam egy 2023-mas ún. "Szerelmi Vallomásban" (Love Letter), a \href{https://store.steampowered.com/app/1353230/Bomb_Rush_Cyberfunk/}{Bomb Rush Cyberfunk}-ban (amire mostatntól \textbf{BRCF}-ként fogok hivatkozni). A hasonlóságokat a \ref{BRCF_Logo} ábra jól mutatja.
+Ahhoz, hogy pontosan replikálni tudjam ezeket a tulajdonságokat mélyen bele kellett magam ásnom a játék világába, de mivel egy eléggé régi játékról van szó, nem könnyen hozzáférhető. Szerencsére erre a problémára megoldást találtam egy 2023-mas ún. "Szerelmi Vallomásban" (Love Letter), a \href{https://store.steampowered.com/app/1353230/Bomb_Rush_Cyberfunk/}{Bomb Rush Cyberfunk}-ban (amire mostantól \textbf{BRCF}-ként fogok hivatkozni). A hasonlóságokat a \ref{BRCF_Logo} ábra jól mutatja.
 
 \begin{figure}[H]
 	\centering
@@ -112,19 +112,19 @@ A játék teljes mértékben a JSR-t veszi alapul és megpróbálja replikálni 
 	\label{BRCF_InAction}
 \end{figure}
 
-Látszatra a két játék ugyan azt a stílust tartja, azzal a különbséggel, hogy míg a JSR egy földhöz-ragadtabb játékmenetet és világot ad át, mint ha egy, a 20-as éveiben lévő lázadó punk tini lennél, addig a BRCF egy sokkal sci-fi-sebb világba dob minket, ahol mindenkinek lehet egy jetpack a hátán, ami eszméletlen sebességekre gyorsít fel minket és rásegít a trükkjeinkre
+Látszatra a két játék ugyanazt a stílust tartja, azzal a különbséggel, hogy míg a JSR egy földhöz-ragadtabb játékmenetet és világot ad át, mint ha egy, a 20-as éveiben lévő lázadó punk tini lennél, addig a BRCF egy sokkal sci-fi-sebb világba dob minket, ahol mindenkinek lehet egy jetpack a hátán, ami eszméletlen sebességekre gyorsít fel minket és rásegít a trükkjeinkre
 A vizuális világ megtervezésében tehát ezeket a szempontokat vettem alapul és ezek szerint alakítottam a világot és a karaktert.
 
 
 \section[Mozgásrendszer]{Mozgásrendszer megtervezése}
 
 Most, hogy a vizuális világ megbeszélésre került, ideje áttérni arra, ami igazán fontos: a mozgásrendszer.
-Ahhoz, hogy egy minél folyékonyabb mozgásrendszert tudjak alkotni sok tervezés és előre gondolás kellet. A véges automaták egyik előnye az, hogy nagyon könnyen bővíthetőek, így ha el is rontottam volna valamit, vagy esetleg kellett volna még egy állapot ahhoz, hogy az animáció vagy a mozgás jól jöjjön ki, akkor azt könnyen megtehettem volna. Ennek a tulajdonságnak köszönhetően volt egy kis mozgásterem a kísérletezésre, ami újoncként nagy előny.
+Ahhoz, hogy egy minél folyékonyabb mozgásrendszert tudjak alkotni sok tervezés és előre gondolás kellett. A véges automaták egyik előnye az, hogy nagyon könnyen bővíthetőek, így ha el is rontottam volna valamit, vagy esetleg kellett volna még egy állapot ahhoz, hogy az animáció vagy a mozgás jól jöjjön ki, akkor azt könnyen megtehettem volna. Ennek a tulajdonságnak köszönhetően volt egy kis mozgásterem a kísérletezésre, ami újoncként nagy előny.
 
 \subsection{Állapotok}
 \label{subsec:States}
 
-Át kellet gondolnom, hogy hogyan is szeretném, hogy kinézzen egyes mozdulat és, hogy egyes, a játékos által megadott bemenetre, milyen mozdulat lehet végrehajtható, bizonyos időkben. Egyszóval, a mozgás-láncokat meg kellett alkotnom. Viszont, nem csak a játékos kezdeményezhet állapotváltozásokat, hanem a program maga is. Előfordulhatnak események, amelyek befolyásolják a játékos mozgását és egyben az állapotát is. Ahhoz, hogy megkülönböztessem a program eseményeit a játékos bementeitől elneveztem azokat az eseményeket, amik a játékos irányítása fölött vannak "E"-nek, mint "Event" és a játékos bemeneteit "I"-nek, mint "Input". Most már tárgyalásra kerülhet az állapot diagram.
+Át kellett gondolnom, hogy hogyan is szeretném, hogy kinézzen egyes mozdulat és, hogy egyes, a játékos által megadott bemenetre, milyen mozdulat lehet végrehajtható, bizonyos időkben. Egyszóval, a mozgás-láncokat meg kellett alkotnom. Viszont, nem csak a játékos kezdeményezhet állapotváltozásokat, hanem a program maga is. Előfordulhatnak események, amelyek befolyásolják a játékos mozgását és egyben az állapotát is. Ahhoz, hogy megkülönböztessem a program eseményeit a játékos bementeitől elneveztem azokat az eseményeket, amik a játékos irányítása fölött vannak "E"-nek, mint "Event" és a játékos bemeneteit "I"-nek, mint "Input". Most már tárgyalásra kerülhet az állapot diagram.
 Minden a belépéssel vagy leidézéssel (spawn) kezdődik. A felhasználó itt kapja meg az irányítást a karaktere fölött, ezt a \ref{Spawn_Grounded} ábra demonstrálja.
 
 \begin{figure}[H]
@@ -244,7 +244,7 @@ A Player osztály a játékost írja le. Itt kerül kiszámításra a mozgási i
 
 A movementDirection a játékos mozgási irányának a tárolására van. Ezt  adjuk tovább majd az egyes állapotoknak. A grounded változónk tárolja a játékos földön létét. A shapeCast egy ShapeCast3D objektumot tárol. Ezek az objektumok felvesznek egy primitív alakzatot és annak a határvonalait használja ütközésviszgálatra, akármi, ami ezen az alakzaton belül van, azt le lehet kérdezni. Végül az anim változó animációkat tárol a játékos modellünkhöz, ezeket el tudjuk indítani és meg tudjuk állítani.
 
-A PlayerState változónk egy enum, amely a meglévő állapotokat tárolja. Minden frame kirajzolásánál a jelenlegi állapotot, amit a CurrentState változóban tárolunk, továbbdobjuk a PlayerControllernek, ami ezek után átlökődik abba az állapotba.
+A PlayerState változónk egy enum, amely a meglévő állapotokat tárolja. Minden frame kirajzolásánál a jelenlegi állapotot, amit a CurrentState válto\-zóban tárolunk, továbbdobjuk a PlayerControllernek, ami ezek után átlökődik abba az állapotba.
 
 \begin{figure}[H]
 	\centering
@@ -342,7 +342,7 @@ A \ref{RailGrinding-Grinding} ábrán szintúgy látható RailGrinding osztály 
 	\label{RailGrinding-Grinding}
 \end{figure}
 
-A \ref{StateUse} ábra mutatja a PlayerController és a többi állapot közötti kapcsolatot. A PlayerController felhasználja az egyes állapotok metódusait, ezért függőség alakul ki köztük. Amikor az állapotgéphez hozzáadunk egy új állapotot ez a függőség egyből létrejön.
+A \ref{StateUse} ábra mutatja a PlayerController és a többi állapot közötti kap\-csolatot. A PlayerController felhasználja az egyes állapotok metódusait, ezért függőség alakul ki köztük. Amikor az állapotgéphez hozzáadunk egy új állapotot ez a függőség egyből létrejön.
 
 \begin{figure}[h]
 	\centering

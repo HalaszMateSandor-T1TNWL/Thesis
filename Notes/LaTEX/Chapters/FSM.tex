@@ -1,7 +1,7 @@
 \chapter[FSM]{Véges állapotú automaták}
 \label{chap:FSM}
 
-Ahogyan az informatika fejlődött és egyre több matematikai koncepciót adap\-tált, hogy segítse a fejlesztést, úgy távolodott is tőle. Meglepő módon nem kell ismernie az embernek a pontos matematikai definícióit egyes koncepcióknak annak érdekében, hogy használja őket fejlesztés során. Ez leginkább itt fog majd érződni, az automaták terén.
+Ahogyan az informatika fejlődött és egyre több matematikai modellt adap\-tált, hogy segítse a fejlesztést, úgy távolodott is tőle. Meglepő módon nem kell ismernie az embernek a pontos matematikai definícióit egyes koncepcióknak annak érdekében, hogy használja őket a fejlesztés során. Ez leginkább itt fog majd érződni, az automaták terén.
 
 \section{Matematikai megközelítés}
 
@@ -9,8 +9,8 @@ A véges állapotú automata (Finite State Machine, avagy FSM) egy matematikai m
 
 A véges állapotú automaták kategorizálhatóak \textbf{determinisztikus} és \textbf{nemdeterminisztikus} automatákra a viselkedésük szempontjából:
 \begin{itemize}
-\item \textbf{A determinisztikus véges automaták (DFSM)} esetében minden állapotnak van egy egyedi átmenete minden lehetséges bemenetre (input). A következő állapotot csakis a jelenlegi állapot és a kapott input dönti el, amely egy kiszámítható és egyértelmű viselkedést eredményez.
-\item \textbf{A nemdeterminisztikus automaták (NDFSM)} esetében több át\-menet létezhet egy inputra és a jelenlegi állapotra. A rendszer következő állapota nem egyedien lesz eldöntve, ami rugalmasságot eredményez, de egyben kiszámíthatatlanságot és komplexitást is bevezet, főleg az implementációban, de az eseménykezelésben is.
+	\item \textbf{A determinisztikus véges automaták (DFSM)} esetében minden állapotnak van egy egyedi átmenete minden lehetséges bemenetre (input). A következő állapotot csakis a jelenlegi állapot és a kapott input dönti el, amely egy kiszámítható és egyértelmű viselkedést eredményez.
+	\item \textbf{A nemdeterminisztikus automaták (NDFSM)} esetében több át\-menet létezhet egy inputra és a jelenlegi állapotra. A rendszer következő állapota nem egyedien lesz eldöntve, ami rugalmasságot eredményez, de egyben kiszámíthatatlanságot és komplexitást is bevezet, főleg az implementációban, de az eseménykezelésben is.
 \end{itemize}
 A mi esetünkben csak determinisztikus automatákkal fogunk foglalkozni, de érdemes volt megemlíteni a nemdeterminisztikus automatákat, mivel matematikai és tervezésbeli jelentőséggel bírnak.
 Ahhoz, hogy tovább tudjunk beszélni determinisztikus vég automatákról, először definiáljuk. Legyen \textbf{M} egy determinisztikus véges automata, ekkor igaz, hogy:
@@ -75,14 +75,14 @@ Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására, 
 \label{subsec:Prog}
 
 Programozás szempontjából az automaták egy hasznos része az informatikának, mivel végtelenül egyszerűvé teszik egyes rendszerek nyomonköveté\-sét, megtervezését és automatizálását.
-Egy rendszeren belül, vegyünk most egy játékot példának, akármilyen objektumnak lehet állapota és, ahogyan ezt már említettem, állapottól függően fog változni az objektumok viselkedése is, például:
+Egy rendszeren belül, vegyünk most egy játékot példának, akármilyen objektumnak lehet állapota és, ahogyan ezt már említet\-tem, állapottól függően fog változni az objektumok viselkedése is, például:
 \begin{itemize}
 	\item A pálya időjárása (eshet, süthet a nap, fújhat a szél),
 	\item a karakter fizikai állapota (futhat, ugorhat, csúszhat, támadhat),
 	\item a fegyver állapota, amivel támadni akarunk (készenlétben, töltődik újra, elhasználva).
 \end{itemize}
 
-Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közben vagyunk és látjuk, hogy a csúszás végeztével, ott lesz egy ellenfél. Ezért elővesszük a fegyverünket, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk a világ egyes elemeinek a jelenlegi állapotával, könnyen felismerhetővé és beszédessé tehetjük azokat. Megkönnyebbítve nem csak a magunk dolgát a hibakeresésben, de a játékosét is, ezzel elkerülve a félreértéseket.
+Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közben vagyunk és látjuk, hogy a csúszás végezté\-vel, ott lesz egy ellenfél. Ezért elővesszük a fegyverünket, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk a világ egyes elemeinek a jelenlegi állapotával, könnyen felismerhetővé és beszédessé tehetjük azokat. Megkönnyebbítve nem csak a magunk dolgát a hibakeresésben, de a játékosét is, ezzel elkerülve a félreértéseket.
 
 Amikor egy rendszernél állapotgépeket használunk, akkor általában kéz-a-kézben jár a "kompozíció", és az "öröklődés" használata mint Objektum Orientált Programozásban használt tervezési minta. Ahhoz, hogy jobban megértsük hogyan is nézne ez ki kódban kezdésként készítettem egy mintaprogramot, amely egy egyszerű jelzőlámpa működését mutatja be.
 

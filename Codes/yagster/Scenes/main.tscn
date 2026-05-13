@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://con0sblhd0wsb" path="res://Map/tile.png" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://1jsfgbspiekt" path="res://Scenes/yagi.tscn" id="4_21xkr"]
-[ext_resource type="PackedScene" uid="uid://byfee14yvxbc0" path="res://Scenes/sharp_rail.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://cxogkwf022axe" path="res://Scenes/looped_rail.tscn" id="4_kry3j"]
 [ext_resource type="PackedScene" uid="uid://d18yofrkyj8iq" path="res://Scenes/curve_rail.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://btv8xwm5k8hs0" path="res://Scenes/looptie-loop_rail.tscn" id="6_21xkr"]
@@ -53,13 +52,11 @@ shape = SubResource("BoxShape3D_bo1nx")
 [node name="LoopRail" parent="." unique_id=1499673604 instance=ExtResource("4_kry3j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.31993, 2.6, 45.69119)
 
-[node name="UpwardsRail" parent="." unique_id=1773885305 instance=ExtResource("4_jjvhh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.59093, 2.5999968, -37.26881)
-
 [node name="CurvedRail" parent="." unique_id=1685441984 instance=ExtResource("5_kry3j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.08177, 2.6109228, -37.562855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.91885, 2.6109228, -37.562855)
 
 [node name="Yagi" parent="." unique_id=498162917 instance=ExtResource("4_21xkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.480403, 0)
 
 [node name="Tent" parent="." unique_id=1957202349 instance=ExtResource("7_6bp64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.772537, 2.5999997, -87.642654)

@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://cgf70c6obmjmb" path="res://Player/Falling.cs" id="7_d2rtk"]
 [ext_resource type="Script" uid="uid://bsg5684ltkvci" path="res://Player/Grinding.cs" id="8_u1vgq"]
 [ext_resource type="Script" uid="uid://274ffdg60mbk" path="res://Player/CameraController.cs" id="9_lcp2a"]
+[ext_resource type="Script" uid="uid://duh5ve6cwgy5p" path="res://Player/CoolNewState.cs" id="11_gr6mo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vgqql"]
 radius = 0.5439453
@@ -50,57 +51,18 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CheckBox" type="CheckBox" parent="CamRoot/Control" unique_id=922858438]
-layout_mode = 0
-offset_right = 185.0
-offset_bottom = 31.0
-text = "Is Player on ground?"
-
-[node name="Idle" type="CheckBox" parent="CamRoot/Control" unique_id=1304709726]
-layout_mode = 0
-offset_left = 1051.0
-offset_top = 61.0
-offset_right = 1130.0
-offset_bottom = 92.0
-text = "Idle"
-
-[node name="Running" type="CheckBox" parent="CamRoot/Control" unique_id=631996970]
-layout_mode = 0
-offset_left = 1051.0
-offset_top = 20.0
-offset_right = 1154.0
-offset_bottom = 51.0
-text = "Runnning"
-
-[node name="Jumping" type="CheckBox" parent="CamRoot/Control" unique_id=660257834]
-layout_mode = 0
-offset_left = 1051.0
-offset_top = 40.0
-offset_right = 1143.0
-offset_bottom = 71.0
-text = "Jumping"
-
-[node name="Falling" type="CheckBox" parent="CamRoot/Control" unique_id=1798349471]
-layout_mode = 0
-offset_left = 1051.0
-offset_right = 1108.0
-offset_bottom = 31.0
-text = "Falling"
-
-[node name="Grinding" type="CheckBox" parent="CamRoot/Control" unique_id=1177148087]
-layout_mode = 0
-offset_left = 1051.0
-offset_top = 81.0
-offset_right = 1146.0
-offset_bottom = 112.0
-text = "Grinding"
-
 [node name="IsGrinding" type="CheckBox" parent="CamRoot/Control" unique_id=1215570021]
 layout_mode = 0
 offset_top = 26.0
 offset_right = 172.0
 offset_bottom = 57.0
 text = "Is Player Grinding?"
+
+[node name="Grounded" type="CheckBox" parent="CamRoot/Control" unique_id=922858438]
+layout_mode = 0
+offset_right = 185.0
+offset_bottom = 31.0
+text = "Grounded"
 
 [node name="Speed" type="Label" parent="CamRoot/Control" unique_id=1757060043]
 layout_mode = 0
@@ -148,6 +110,9 @@ script = ExtResource("7_d2rtk")
 [node name="Grinding" type="Node" parent="Yagi/PlayerController" unique_id=265100512]
 script = ExtResource("8_u1vgq")
 grindSpeed = 3.5
+
+[node name="CoolNewState" type="Node" parent="Yagi/PlayerController" unique_id=637508978]
+script = ExtResource("11_gr6mo")
 
 [connection signal="SetMovementDirection" from="." to="Yagi/PlayerController" method="OnSetMovementDirection"]
 [connection signal="SetMovementState" from="." to="Yagi/PlayerController" method="OnSetMovementState"]

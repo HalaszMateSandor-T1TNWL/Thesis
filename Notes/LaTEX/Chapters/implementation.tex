@@ -32,7 +32,7 @@ Valami, amit érdekesnek találtam miközben ezt a részt kutattam az az, amit L
 
 \section{A játékos színtere}
 
-Az előzőekben elmondottakból tehát, a játékos színtere egyenlőre így néz ki: egy CharacterBody3D Node mint a gyökér a fába, egy MeshInstance3D és CollisionShape3D mint gyerek Node-ok, lásd: \ref{BasicPlayerScene}.
+Az előzőekben elmondottakból tehát, a játékos színtere egyelőre így néz ki: egy CharacterBody3D Node mint a gyökér a fába, egy MeshInstance3D és CollisionShape3D mint gyerek Node-ok, lásd: \ref{BasicPlayerScene}.
 
 \begin{figure}[H]
 	\centering
@@ -48,7 +48,7 @@ Ahhoz, hogy a mozgásrendszert implementálni tudjam először el kellett gondol
 	\item \textbf{CamPitch:} A kamera magassági elmozdulásának nyílvántartásáért felel.
 \end{itemize} 
 
-A Node3D objektumok valójában pontok a háromdimenziós térben, így tökéletesen megfelelnek a különböző irányok nyílvántartására, ezért választottam inkább ezt a megoldást, mint azt, hogy változókat hozzak létre ezek figyelésére. 
+A Node3D objektumok valójában pontok a háromdimenziós térben, így tökéletesen megfelelnek a különböző irányok nyílvántartására, ezért választot\-tam inkább ezt a megoldást, mint azt, hogy változókat hozzak létre ezek figyelésére. 
 
 Létrehoztam továbbá még egy SpringArm3D és egy Camera3D Node-ot is.
 
@@ -57,7 +57,7 @@ Létrehoztam továbbá még egy SpringArm3D és egy Camera3D Node-ot is.
 	\item \textbf{Camera3D:} Ez a Node maga a kamera. Kivetít akármit amit a legközelebbi nézőtérből (viewport) lát, a fát felfelé bejárva. Ha nincs nézőtér a fában, akkor a globális nézőteret fogja használni.
 \end{itemize}
 
-Annak érdekében, hogy az állapotok könnyen nyomonkövethetőek legyenek csináltam egy pár CheckBox és Label Node-okból álló Control csoportot. A Control csoportok a Godot-on belül kétdimenziós síkok, amiket általában felhasználói felületnek szoktak használni. Ezt a csoportot a CamRoot alá rendeltem, így követni fogja a kamerát, ami annyit fog eredményezni, hogy a felhasználó képernyőjén folyamatosan láthatóak lesznek az elemek. Így egyenlőre a színtér az alábbi képen láthatóan néze ki[\ref{PlayerSceneComplete}].
+Annak érdekében, hogy az állapotok könnyen nyomonkövethetőek legyenek csináltam egy pár CheckBox és Label Node-okból álló Control csoportot. A Control csoportok a Godot-on belül kétdimenziós síkok, amiket általában felhasználói felületnek szoktak használni. Ezt a csoportot a CamRoot alá rendeltem, így követni fogja a kamerát, ami annyit fog eredményezni, hogy a felhasználó képernyőjén folyamatosan láthatóak lesznek az elemek. Így egyelőre a színtér az alábbi képen láthatóan néze ki[\ref{PlayerSceneComplete}].
 
 \begin{figure}[H]
 	\centering
@@ -92,7 +92,7 @@ A PlayerController szkriptet hozzácsatoltam a megosztozó nevű PlayerControlle
 Ha visszaemlékeznek, a \hyperref[chap:Concept]{\ref{chap:Concept}. fejezet}, \hyperref[subsec:States]{\ref{subsec:States}. alszakaszában} vázoltam az állapotgé\-pet és a különböző tervezett állapotokat és az azok közötti átmenetet. Most ezek megvalósításáról szeretnék beszélni.
 Mindegyik állapot implementációját röviden át fogom beszélni és a fontosabbakat ki fogom emelni és bele fogok menni a matekba is háttérben. A kódot nem minden esetben fogom ide beírni, viszont a CD mellékletben megtalálják a forráskódot, valamint a \hyperref[cover:UseCase]{\ref{cover:UseCase} CD Használati útmutató oldalon} elmondottak alapján tudják követni részletesebben a kódot.\\
 
-A megvalósítás során az állapotokat egy időben írtam a játékos szkriptjével. Létrehoztam egy Player szkriptet és osztályt, amit a CharacterBody3D Node-hoz csatoltam. Ezen az osztályon belül hoztam létre azokat a metódusokat, amelyeket az állapotátmenetek vizsgálására használtam. Valamint itt számítottam ki a kamera mutatási irányát és a mozgásvektort is.\\
+A megvalósítás során az állapotokat egy időben írtam a játékos szkriptjével. Létrehoztam egy Player szkriptet és osztályt, amit a CharacterBody3D Node-hoz csatoltam. Ezen az osztályon belül hoztam létre azokat a metódusokat, amelyeket az állapotátmenetek vizsgálására használtam. Vala\-mint itt számítottam ki a kamera mutatási irányát és a mozgásvektort is.\\
 
 Az állapotok implementáció sorrendjében:
 \begin{itemize}
@@ -130,7 +130,7 @@ Az állapotok implementáció sorrendjében:
 	\end{lstlisting}
 Végül a "Running" állapoton belül beállítjuk a CharacterBody3D-nek a sebességét szintúgy a MoveToward metódussal, aminek a célvektorját beállítjuk a kiszámított mozgásvektorra szorozva a játékos sebességével (itt számít az, hogy a vektor normalizált-e vagy sem), és a változás gyorsaságát beállítjuk a játékos gyorsulására szorozva az előző frame kirajzolásával eltelt idővel, ezt hívjuk "deltának".
 	\item \textbf{Jumping és Falling:} A "Jumping", avagy ugrás állapot relatíve egyszerű; amint a játékos lenyomja az "Ugrás" gombot, ami a mi esetünkben a "Space" vagyis szóköz, átlökődik az állapotgép a az ugrás állapotba, ahol a játékos sebességvektorának az Y koordinátájához hozzáadunk egy előre megszabott értéket, az ugrás erősségét. Ezek után az irányítást átadjuk a "Falling", avagy zuhanás állapotnak. Itt csökkentjük a játékos sebességvektorjának az Y koordinátáját a gravitáció szorozva a súllyal és a deltával. Valamint az esésnek átadjuk még a mozgásvektort, hogy a momentum, amivel a játékos felugrott megmaradjon és kapjon egy kis navigálási lehetőséget a levegőben.
-	\item \textbf{Grinding:} Ez az állapot jelentette a legnagyobb kihívást számomra a projekt elkészítése során, de egyben ez volt a legélvezetesebb is. Kezdetnek beszéljük át az állapot funkcionalitását: a "grinding" a gördeszkázásból és görkorcsolyázásból eredt. A grind egy felület oldalán való végigcsúszás. Egyértelműen nem lenne jó, ha a játékos véletlen végig tudna csúszni minden objektum oldalán, így ezeket el kell különíteni, meg kell különböztetni, hogy ne legyen összezavaró a felhasználó számára. Ahhoz, hogy el tudjuk kezdeni a kód részét, elsőnek létre kell hozni egy ilyen felületet. Szerencsére a Godot-ban van egy előre beépített Node, amit erre fel tudunk használni, a Path3D és PathFollow3D. A Path3D Node tartalmaz egy Curve3D-t, amely valójában egy Bézier görbe, amit a PathFollow3D Node-ok tudnak használni arra, hogy bejárjanak. Egy Path3D Node-ot létrehozni egyszerű, csupán meg kell adni neki egy pár pontot, fontos, hogy az első pont egy null-vektor legyen, másképpen a számításokba hiba léphet, mivel a PathFollow3D által mozgatott Node-ok relatívak a Pathfollow3D Node-hoz képest. Magának a Path3D-nek vagy PathFollow3D-nek nincs alapból ütközési hálója, így gyökér Node-ként egy StaticBody3D-t választottam, amihez hozzá tudok rendelni egy ütközési hálót. Szerencsére nem kell manuálisan létrehozni sem egy modellt, sem magát az ütközési hálót, mert a Godot-nak a CSGPolygon3D Node-ja támogatja, hogy egy Path3D Node-ot alapul véve generáljon annak mentén egy modellt, amelynek utána mind a polygon, mind az ütközési hálóját be tudjuk égetni a színtérbe. Azért fontos, hogy ütközést tudjunk vizsgálni, mert az implementációm arra hagyatkozik, hogy a játékos karakter lábához van csatolva egy téglatest alakú ütközési háló, ami folyamatosan figyeli, hogy esetleg nem egy csúszható felülettel érintkeztünk-e. Ezt a Player osztály "IsGrinding" metódusán keresztül tesszük, először meggyőződünk arról, hogy maga a háló ütközik-e egyáltalán valamivel, valamint, hogy az objektum, ami\-vel ütköztünk a RailGrinding osztályhoz tartozik-e.
+	\item \textbf{Grinding:} Ez az állapot jelentette a legnagyobb kihívást számomra a projekt elkészítése során, de egyben ez volt a legélvezetesebb is. Kezdetnek beszéljük át az állapot funkcionalitását: a "grinding" a gördeszkázásból és görkorcsolyázásból eredt. A grind egy felület oldalán való végigcsúszás. Egyértelműen nem lenne jó, ha a játékos véletlen végig tudna csúszni minden objektum oldalán, így ezeket el kell különíte\-ni, meg kell különböztetni, hogy ne legyen összezavaró a felhasználó számára. Ahhoz, hogy el tudjuk kezdeni a kód részét, elsőnek létre kell hozni egy ilyen felületet. Szerencsére a Godot-ban van egy előre beépített Node, amit erre fel tudunk használni, a Path3D és PathFollow3D. A Path3D Node tartalmaz egy Curve3D-t, amely valójában egy Bézier görbe, amit a PathFollow3D Node-ok tudnak használni arra, hogy bejárjanak. Egy Path3D Node-ot létrehozni egyszerű, csupán meg kell adni neki egy pár pontot, fontos, hogy az első pont egy null-vektor legyen, másképpen a számításokba hiba léphet, mivel a PathFollow3D által mozgatott Node-ok relatívak a Pathfollow3D Node-hoz képest. Magának a Path3D-nek vagy PathFollow3D-nek nincs alapból ütközési hálója, így gyökér Node-ként egy StaticBody3D-t választottam, amihez hozzá tudok rendelni egy ütközési hálót. Szerencsére nem kell manuálisan létrehozni sem egy modellt, sem magát az ütközési hálót, mert a Godot-nak a CSGPolygon3D Node-ja támogatja, hogy egy Path3D Node-ot alapul véve generáljon annak mentén egy modellt, amelynek utána mind a polygon, mind az ütközési hálóját be tudjuk égetni a színtérbe. Azért fontos, hogy ütközést tudjunk vizsgálni, mert az implementációm arra hagyatkozik, hogy a játékos karakter lábához van csatolva egy téglatest alakú ütközési háló, ami folyamatosan figyeli, hogy esetleg nem egy csúszható felülettel érintkeztünk-e. Ezt a Player osztály "IsGrinding" metódusán keresztül tesszük, először meggyőződünk arról, hogy maga a háló ütközik-e egyáltalán valamivel, valamint, hogy az objektum, ami\-vel ütköztünk a RailGrinding osztályhoz tartozik-e.
 	\lstset{style=sharpc}
 	\begin{lstlisting}
 	// ...
@@ -183,7 +183,7 @@ Végül a "Running" állapoton belül beállítjuk a CharacterBody3D-nek a sebes
 	parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * 5f * (float)delta;
 	// ...
 	\end{lstlisting}
-	Elsőnek beállítjuk a jelenlegi irány és sebesség szorzatával a játékos sebességét, majd hozzáadjuk a gravitációs ellenállást, hogy ha túl meredek lenne a csúszás iránya, akkor visszafele induljon meg. A gravitációs ellenállás a (-Vector3.Up.Normalized()) * 5f lenne. A Vector3 osztálynak a felfele mutató értéke az Y, ennek vesszük a mínusz egyszeresét, tehát már lefele mutat, normalizáljuk, így a hosszat mi állíthatjuk be, és ezt is tesszük azzal az ötös szorzóval. A skaláris szorzat itt szintén az irány miatt kell, hogy minden esetben a gravitációs vektor lefele mutasson.
+	Elsőnek beállítjuk a jelenlegi irány és sebesség szorzatával a játékos sebességét, majd hozzáadjuk a gra\-vitációs ellenállást, hogy ha túl meredek lenne a csúszás iránya, akkor visszafele induljon meg. A gravitációs ellenállás a (-Vector3.Up.Normalized()) * 5f lenne. A Vector3 osztálynak a felfele mutató értéke az Y, ennek vesszük a mínusz egyszeresét, tehát már lefele mutat, normalizáljuk, így a hosszat mi állíthatjuk be, és ezt is tesszük azzal az ötös szorzóval. A skaláris szorzat itt szintén az irány miatt kell, hogy minden esetben a gravitációs vektor lefele mutasson.
 \end{itemize}
 
 \section{Modellezés és Textúrázás}
@@ -242,7 +242,134 @@ A játékos színterén belül kicseréltem a régi modellt, behelyeztem az úja
 	\label{InEditorFinal}
 \end{figure}
 
+A játékos végső struktúrája a \ref{PlayerFinal} ábrán látható. A Node-ok sorrendje a fában nem számít, nem gyorsítja fel az elérést, csupán esztétika, egyedül a hierarchia fontos.
 
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{Images/PlayerSceneFinal.png}
+	\caption{A végső játékos színtér}
+	\label{PlayerFinal}
+\end{figure}
 
+\section[Új állapot Hozzáadása]{Az állapotgép bővítésének lépései}
 
+Számos alkalommal említettem a rendszer könnyű bővíthetőségét és ideje, hogy bemutassam ennek a lépéseit:
 
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{Images/AddState_1.png}
+		\caption{PlayerController jobb klikk menü}
+		\label{AddState_1}
+	\end{figure}
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.4\textwidth}
+		Ahogy a \ref{AddState_1} ábra is mutatja, első lépésként a játékos színterén belül gurítsunk le a "PlayerController" Node-hoz és a jobb egérbombbal kattintsunk rá és vállasszuk ki az "Add Child Node" opciót (vagy a PlayerController kiválasztása után nyomjuk le a gyorsbillentyűt: Ctrl + A).
+\end{minipage}
+
+\vspace{0.5cm}
+
+A \ref{AddState_2} ábrán látható menü felgurik és itt az alap "Node" nevű, objektumot kell kiválasztani. Ha nem látható a listán, akkor a felső "Search" mezőbe beírva lehet rákeresni. Erre duplán rákattintva, vagy a bal alsó sarokban lévő "Create" gombra kattintva adhatjuk hozzá a hierarchiához.
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Images/AddState_2.png}
+	\caption{Node választó menü}
+	\label{AddState_2}
+\end{figure}
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.4\textwidth}
+	Navigáljunk a fában az újonnan létrehozott Node-hoz és nevezzük át valami nekünk megfelelő névre vagy jobb-klikkelve a Node-ra és kiválasztva a "Rename" opciót, vagy használva a gyorsbillentyűt: F2, ahogy az a \ref{AddState_3} ábrán is látható.
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{Images/AddState_3.png}
+		\caption{Jobb-klikk menü az új Node-on}
+		\label{AddState_3}
+	\end{figure}
+\end{minipage}
+
+\vspace{0.5cm}
+
+Ezek után nyissuk meg ismét a jobb-klikk menüt és kattintsunk az "Attack Script" gombra, ahogy a \ref{AddState_4} ábra is mutatja, majd a felugró ablakban, amit a \ref{AddState_4,5} ábra mutat, hagyjuk a fájl nevét az automatikusan generáltan, mivel fontos, hogy mind a szkript neve és az osztály neve ugyan az legyen. A fájl elérési útját nyugodtan átírhatjuk. Végül a "Create" gombra kattintva létrehoz a megadott elérési úton egy szkriptet és hozzácsatolja a Node-hoz.
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.5\linewidth}
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{Images/AddState_4.png}
+		\caption{A Godot szkriptszerkesztője}
+		\label{AddState_4}
+	\end{figure}
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.5\linewidth}
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{Images/AddState_4,5.png}
+		\caption{A Node leszármaztatást megváltoztattuk State-re}
+		\label{AddState_4,5}
+	\end{figure}
+\end{minipage}
+
+\vspace{0.5cm}
+
+A Godot kezelőfelülete át fog váltani "Script" módba, ahogy a \ref{AddState_5} ábrán látható. A Godot szkriptszerkesztőjébe alapvetően nincs C\#-hoz LSP, viszont van szintaxis kiemelés. A szerkesztőn belül a leszármaztatást meg kell változtatni "Node"-ról "State"-re, mint a \ref{AddState_5,5} ábrán. Ha visszaemlékeznek a State osztályt direkt ezért hoztuk létre, hogy a abból származtassuk le az összes többi állapotot. Most már a PlayerController fel fogja ismerni és be fogja sorolni az elérhető állapotok közé.
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{Images/AddState_5.png}
+	\caption{Node jobb-klikk menü}
+	\label{AddState_5}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{Images/AddState_5,5.png}
+	\caption{Szkript hozzáadás menüje}
+	\label{AddState_5,5}
+\end{figure}
+
+Jelenleg nem tudunk ebbe az állapotba eljutni, mivel nincs hozzákötve feltétel a Player osztályon belül, viszont a debug menüben fel lesz sorolva, ahogy azt a \ref{CoolNewState} ábra is mutatja.
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{Images/CoolNewState.png}
+	\caption{Az új állapotunk felsorolva a meglévők mellett}
+	\label{CoolNewState}
+\end{figure}
+
+Ez a dinamikus debug menü létrehozásnak köszönhető, amit a PlayerController osztályon belül valósítottam meg. A felhasználó felület Node-ját lekérem, majd átiterálok az összes meglévő állapoton és azoknak a nevét felhasználva hozok létre új CheckBox objektumokat, amiket elhelyezek a képernyőn egymás alá.
+
+\newpage
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+//...
+_ui = GetNode<Control>($"../../CamRoot/Control");
+_elements = new Dictionary<string, CheckBox>();
+
+Vector2 position = new Vector2(1051,0);
+foreach(string state in _states.Keys)
+{
+	CheckBox box = new CheckBox{
+	Name = state,
+	Text = state,
+	Position = position	
+	};
+	_ui.AddChild(box);
+
+	_elements[state] = box;
+	position.Y += 25f;
+}
+
+_elements[_currentState.Name].ButtonPressed = true;
+//...
+\end{lstlisting}
+
+Amint látják 5 lépésben képesek voltunk hozzáadni egy teljesen új állapotot a rendszerünkhöz. Érdemes megjegyezni, hogy ha nem csináltam volna meg ezt a dinamikus debug menüt, akkor is létezne az állapot, egyszerűen nem lenne nyomon követve vizuálisan, lásd: \ref{CoolNewState_ToString} ábra.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{Images/CoolNewState_ToString.png}
+	\caption{Az új állapotunk kiiratva a konzolra}
+	\label{CoolNewState_ToString}
+\end{figure}

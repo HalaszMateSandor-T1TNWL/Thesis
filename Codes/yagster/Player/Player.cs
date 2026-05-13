@@ -46,7 +46,7 @@ public partial class Player : CharacterBody3D
 		_cameraPitch = GetNode<Node3D>($"CamRoot/CamYaw/CamPitch");
 		_camera = GetNode<Camera3D>($"CamRoot/CamYaw/CamPitch/SpringArm3D/Camera3D");
 		
-		_groundedDebug = GetNode<CheckBox>($"CamRoot/Control/CheckBox");
+		_groundedDebug = GetNode<CheckBox>($"CamRoot/Control/Grounded");
 		_isGrindingDebug = GetNode<CheckBox>($"CamRoot/Control/IsGrinding");
 
 		_speedLabel = GetNode<Label>($"CamRoot/Control/Speed/Label");
