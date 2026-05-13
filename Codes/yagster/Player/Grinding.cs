@@ -1,4 +1,3 @@
-using System;
 using Godot;
 
 public partial class Grinding : State
@@ -6,8 +5,6 @@ public partial class Grinding : State
 	private RailGrinding _usedRail = null;
 	private ShapeCast3D _grindCast;
 
-	private MeshInstance3D _playerBody;
-  	private bool _frontFacing = false;
 	[Export] public float grindSpeed = 2f;
 	[Export] public float grindDrag = 5f;
   
@@ -30,10 +27,6 @@ public partial class Grinding : State
 			
 			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
 			parent.GlobalPosition = _usedRail.pathFollow.GlobalPosition;
-<<<<<<< Updated upstream
-			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
-=======
->>>>>>> Stashed changes
 
 			parent.Velocity = -_usedRail.pathFollow.Basis.Z.Normalized() * parent.Velocity.Length() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(parent.Velocity.Normalized());
 			parent.Velocity += -_usedRail.pathFollow.Basis.Z.Normalized() * (-_usedRail.pathFollow.Basis.Z.Normalized()).Dot(-Vector3.Up.Normalized()) * grindDrag * (float)delta;

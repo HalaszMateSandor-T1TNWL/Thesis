@@ -8,16 +8,14 @@ public partial class Player : CharacterBody3D
 	
 	[Export] public float speed = 50.0f;
 	[Export] public float accel = 20.0f;
-	[Export] public double DisableGroundRayTime { get; set; }
-	public ShapeCast3D _shapecast;
-	public RayCast3D RayCast;
-
 	[Export] public float mouseSensitivity = 0.25f;
+	
+	public ShapeCast3D _shapecast;
 	
 	private const double _tiltUpperLimit = Math.PI / 3.0;
 	private const double _tiltLowerLimit = -Math.PI / 6.0;
 	
-	public bool Grounded = false;
+	public bool grounded = false;
 	private Vector3 _movementDirection;
 
 	private Node3D _cameraYaw;
@@ -25,14 +23,12 @@ public partial class Player : CharacterBody3D
 	private Vector2 _cameraInputDirection = Vector2.Zero;
 	private Camera3D _camera;
 
-	private CheckBox _checkBox;
+	private CheckBox _groundedDebug;
 	private CheckBox _isGrindingDebug;
-	private Label _speed;
+	private Label _speedLabel;
 
 	public Node3D playerBody;
 	public AnimationPlayer anim;
-	
-	private Vector3 _velocity;
 	
 	public enum PlayerState{
 		Idle,
@@ -50,12 +46,10 @@ public partial class Player : CharacterBody3D
 		_cameraPitch = GetNode<Node3D>($"CamRoot/CamYaw/CamPitch");
 		_camera = GetNode<Camera3D>($"CamRoot/CamYaw/CamPitch/SpringArm3D/Camera3D");
 		
-		_checkBox = GetNode<CheckBox>($"CamRoot/Control/CheckBox");
+		_groundedDebug = GetNode<CheckBox>($"CamRoot/Control/CheckBox");
 		_isGrindingDebug = GetNode<CheckBox>($"CamRoot/Control/IsGrinding");
 
-		RayCast = GetNodeOrNull<RayCast3D>($"RayCast3D");
-
-		_speed = GetNode<Label>($"CamRoot/Control/Speed/Label");
+		_speedLabel = GetNode<Label>($"CamRoot/Control/Speed/Label");
 
 		playerBody = GetNodeOrNull<Node3D>($"Yagi");
 		anim = playerBody.GetNodeOrNull<AnimationPlayer>($"AnimationPlayer");
@@ -126,7 +120,7 @@ public partial class Player : CharacterBody3D
 				break;
 		}
 
-		_checkBox.ButtonPressed = Grounded;
+		_groundedDebug.ButtonPressed = grounded;
 		_isGrindingDebug.ButtonPressed = IsGrinding();
 	}
 	
@@ -151,11 +145,11 @@ public partial class Player : CharacterBody3D
 		_movementDirection.Y = 0.0f;
 		_movementDirection = _movementDirection.Normalized();
 
-		_speed.Text = Velocity.ToString();
+		_speedLabel.Text = Velocity.ToString();
 		
-		Grounded = IsOnFloor();
+		grounded = IsOnFloor();
 
-		if(Grounded)
+		if(grounded)
 		{
 			if(Input.IsActionJustPressed("Movement"))
 			{
@@ -166,12 +160,12 @@ public partial class Player : CharacterBody3D
 				CurrentState = PlayerState.Idle;
 			}
 		}
-		else if(Grounded == false)
+		else if(grounded == false)
 		{
 			CurrentState = PlayerState.Falling;
 		}
 		
-		if(Grounded == false && !IsGrinding())
+		if(grounded == false && !IsGrinding())
 		{
 			CurrentState = PlayerState.Falling;
 		}

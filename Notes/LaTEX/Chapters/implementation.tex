@@ -28,7 +28,7 @@ Ezt a színteret a játékos gyökér Node-jának kiválasztásával kezdtem. A 
 
 A játékos szülőjének két típust szoktak gyakran megválasztani platformerek esetén: a CharacterBo\-dy3D-t és a RigidBody3D-t. A lényeges dolog, amiben a kettő eltér egymászól, az hogy hogyan mozgathatod a testet. A CharacterBody3D típus esélyt ad neked arra, hogy egy saját fizikai motort implementálj, hogy a játékod a lehető legjobbnak érződjön, míg a RigidBody3D a valós fizika szabályai szerint jár el. Egy játék esetében szerintem világosan látható, hogy nem a való világot szeretnénk szimulálni, hanem a lehető legjobb élményt szeretnénk nyújtani a játékosunknak, így olyanra írjuk meg a gravitációt, az ugrás magasságát, a gyorsulást, a súrlódást, stb, hogy az a játékos számára a legjobb játékérzést nyújtsa. A RigidBody3D típus alkalmazásával ezek a lehetőségek mind elvesznének és a Godot alap fizikai motorjára lennénk utalva.\\
 
-Valami, amit érdekesnek találtam miközben ezt a részt kutattam az az, amit Ludonauta írt a Rigidbody vs characterbody: which one for your platfo\-rmer?\cite{Ludonauta2025} című posztjában, ami így szól: "Your character isn't his body", ami először fúrcsán hangzik, de ez igaz. Mint ahogy azt már leírtam a CharacterBody3D független a polygon hálótól, amit alárendelsz, így mindegy, hogy ha kicseréled a modellt, minden más ugyan úgy működik. Az egyetlen dolog ami változtatna egy kicsit a működésén az az ütközésvizsgálathoz használt polygon háló alakjának a megváltoztatása lenne. Ezzel ugyan csak arra szeretnék visszautalni, mint amit Ludonauta is megjegyzett: használhatod mind a kettőt egy karakteren belül. Kell valami amihez valós fizikai hatások kellenek? rendeld a RigidBody alá a játékost! Nem szeretnél gravitációt? Rendeld a CharacterBody alá a játékost!\\
+Valami, amit érdekesnek találtam miközben ezt a részt kutattam az az, amit Ludonauta írt a Rigidbody vs characterbody: which one for your platfo\-rmer? \cite{Ludonauta2025} című posztjában, ami így szól: "Your character isn't his body", ami először fúrcsán hangzik, de ez igaz. Mint ahogy azt már leírtam a CharacterBody3D független a polygon hálótól, amit alárendelsz, így mindegy, hogy ha kicseréled a modellt, minden más ugyan úgy működik. Az egyetlen dolog ami változtatna egy kicsit a működésén az az ütközésvizsgálathoz használt polygon háló alakjának a megváltoztatása lenne. Ezzel ugyan csak arra szeretnék visszautalni, mint amit Ludonauta is megjegyzett: használhatod mind a kettőt egy karakteren belül. Kell valami amihez valós fizikai hatások kellenek? rendeld a RigidBody alá a játékost! Nem szeretnél gravitációt? Rendeld a CharacterBody alá a játékost!\\
 
 \section{A játékos színtere}
 
@@ -66,7 +66,7 @@ Annak érdekében, hogy az állapotok könnyen nyomonkövethetőek legyenek csin
 	\label{PlayerSceneComplete}
 \end{figure}
 
-\section{Változtatások az állapotgéphez}
+\section[Módosítások]{Módosítások az állapotgéphez}
 
 Ahogyan azt már a \hyperref[chap:FSM]{\ref{chap:FSM}. fejezet}, \hyperref[subsec:Prog]{\ref{subsec:Prog}. bekezdésében} is megadtam az automatánk két része a State és StateMachine osztályok nem változnak sokat.\\
 
@@ -85,14 +85,14 @@ Valamint az átnevezett PlayerController osztályon belül:
 	\item Az "OnSetMovementState"" a jelenlegi mozgásállapotot állítja és az "OnSetMovementDirection" frissíti a jelenlegi állapot movementDirection változóját.
 \end{itemize}
 
-A PlayerController script-et hozzácsatoltam a megosztozó nevű PlayerController Node-ra a játékos színterén belül. A State osztály meghagyjuk magát nem csatoltam hozzá semmihez, ezt csak arra használtam, hogy az állapotokat ebből az osztályból tudjam leszármaztatni.
+A PlayerController szkriptet hozzácsatoltam a megosztozó nevű PlayerController Node-ra a játékos színterén belül. A State osztály meghagyjuk magát nem csatoltam hozzá semmihez, ezt csak arra használtam, hogy az állapotokat ebből az osztályból tudjam leszármaztatni.
 
 \section{Az állapotok megvalósítása}
 
 Ha visszaemlékeznek, a \hyperref[chap:Concept]{\ref{chap:Concept}. fejezet}, \hyperref[subsec:States]{\ref{subsec:States}. alszakaszában} vázoltam az állapotgé\-pet és a különböző tervezett állapotokat és az azok közötti átmenetet. Most ezek megvalósításáról szeretnék beszélni.
-Mindegyik állapot implementációját röviden át fogom beszélni és a fontosabbakat ki fogom emelni és bele fogok menni a matekba is háttérben. A kódot nem minden esetben fogom ide beírni, viszont a CD mellékletben megtalálják a forráskódot, valamint a \hyperref[cover:UseCase]{\ref{cover:UseCase}CD Használati útmutató oldalon} elmondottak alapján tudják követni részletesebben a kódot.\\
+Mindegyik állapot implementációját röviden át fogom beszélni és a fontosabbakat ki fogom emelni és bele fogok menni a matekba is háttérben. A kódot nem minden esetben fogom ide beírni, viszont a CD mellékletben megtalálják a forráskódot, valamint a \hyperref[cover:UseCase]{\ref{cover:UseCase} CD Használati útmutató oldalon} elmondottak alapján tudják követni részletesebben a kódot.\\
 
-A megvalósítás során az állapotokat egy időben írtam a játékos script-jével. Létrehoztam egy Player script-et és osztályt, amit a CharacterBody3D Node-hoz csatoltam. Ezen az osztályon belül hoztam létre azokat a metódusokat, amelyeket az állapotátmenetek vizsgálására használtam. Valamint itt számítottam ki a kamera mutatási irányát és a mozgásvektort is.\\
+A megvalósítás során az állapotokat egy időben írtam a játékos szkriptjével. Létrehoztam egy Player szkriptet és osztályt, amit a CharacterBody3D Node-hoz csatoltam. Ezen az osztályon belül hoztam létre azokat a metódusokat, amelyeket az állapotátmenetek vizsgálására használtam. Valamint itt számítottam ki a kamera mutatási irányát és a mozgásvektort is.\\
 
 Az állapotok implementáció sorrendjében:
 \begin{itemize}
@@ -191,13 +191,13 @@ Végül a "Running" állapoton belül beállítjuk a CharacterBody3D-nek a sebes
 Amint azt már a \hyperref[chap:Concept]{\ref{chap:Concept} fejezet} \hyperref[subsec:UsedTech]{\ref{subsec:UsedTech} alfejezetében} is említettem a modellezéshez a Blender nevű ingyenes, nyílt forráskódú 3D modellező programot használtam. Itt a karakter két iteráción esett keresztül. Az első iteráció, ahogy az alábbi képen is látható: [\ref{Yagi1st}], nem jutott el sokáig és nem a legigényesebb.
 
 \begin{figure}[H]
-\centering
-\includegraphics[height=654px/2, width=306px/2]{Images/Yagi1stItteration.png}
-\caption{Az első iteráció}
-\label{Yagi1st}
+	\centering
+	\includegraphics[height=654px/2, width=306px/2]{Images/Yagi1stItteration.png}
+	\caption{Az első iteráció}
+	\label{Yagi1st}
 \end{figure}
 
-Itt még újra kellett tanulnom a Blender alapjait és a Low-poly modellezés szabályait. Ebben nagyon segített Crashune Academy: Full Blender Character Modeling Tutorial\cite{CrashuneModeling} sorozata. Viszont a tesztelés során sokáig ez a modell volt használva.
+Itt még újra kellett tanulnom a Blender alapjait és a Low-poly modellezés szabályait. Ebben nagyon segített Crashune Academy: Full Blender Character Modeling Tutorial \cite{CrashuneModeling} sorozata. Viszont a tesztelés során sokáig ez a modell volt használva.
 Amikor elkezdtem a vége felé közeledni a projektnek illőnek éreztem egy jobb modellt készíteni és a helyett, hogy ezt a modellt folytattam volna inkább kezdtem egy újat. Néha jobb csak újból kezdeni. Viszont örömmel jelentem be, hogy megérte, mivel a második iteráció sokkal jobban sikerült mint az első! A modell topológiájára sokkal jobban odafigyeltem és eltakarítottam a nem használt pontokat, szerintem az alábbi kép ezt jól átadja: [\ref{Yagi2nd}].
 
 \begin{figure}[H]
@@ -233,7 +233,7 @@ Végül a modell textúráit úgy döntöttem, hogy egy textúra atlaszként fog
 	\end{minipage}
 \end{figure}
 
-A játékos színterén belül kicseréltem a régi modellt, behelyeztem az újat és hozzáadtam a geometriához egy shader-t, hogy jobban illjen ahhoz a JSR / képregény témához, amire hajaztam[\ref{InEditorFinal}]. A shader-t nem én írtam, ennek a készítője Xtarsia a GodotShaders-ön publikálta\cite{Xtarsia}.
+A játékos színterén belül kicseréltem a régi modellt, behelyeztem az újat és hozzáadtam a geometriához egy shader-t, hogy jobban illjen ahhoz a JSR / képregény témához, amire hajaztam[\ref{InEditorFinal}]. A shader-t nem én írtam, ennek a készítője Xtarsia a GodotShaders-ön publikálta \cite{Xtarsia}.
 
 \begin{figure}[h]
 	\centering

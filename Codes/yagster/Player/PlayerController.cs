@@ -3,9 +3,10 @@ using Godot.Collections;
 
 public partial class PlayerController : Node
 {
-	[Export] public NodePath initialState;
 	[Signal] public delegate void TransitionToEventHandler(string key, Vector3 movementDirection);
-	
+
+	[Export] public NodePath initialState;
+
 	private Dictionary<string, State> _states;
 	private State _currentState;
 	private Control _ui;

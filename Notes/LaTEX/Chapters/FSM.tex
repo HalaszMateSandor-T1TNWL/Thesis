@@ -14,7 +14,7 @@ A véges állapotú automaták kategorizálhatóak \textbf{determinisztikus} és
 \end{itemize}
 A mi esetünkben csak determinisztikus automatákkal fogunk foglalkozni, de érdemes volt megemlíteni a nemdeterminisztikus automatákat, mivel matematikai és tervezésbeli jelentőséggel bírnak.
 Ahhoz, hogy tovább tudjunk beszélni determinisztikus vég automatákról, először definiáljuk. Legyen \textbf{M} egy determinisztikus véges automata, ekkor igaz, hogy:
-$M = (Q, \Sigma, \delta, q_{0},F)$\cite{Kyong2015}\\
+$M = (Q, \Sigma, \delta, q_{0},F)$ \cite{Kyong2015}\\
 Ahol:
 \begin{itemize}
 	\item[1] Q, egy véges halmaz, az állapotok halmaza
@@ -44,7 +44,7 @@ Nézzük meg ezeket a részeket egy kicsit részletesebben is, a \ref{ExampleSta
 	\label{ExampleStateMachine}
 \end{figure}
 
-Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására, amit Georges Ltief tanulmányából \cite{Georges2024} szereztem.\\
+Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására, amit Georges Ltief tanulmányából  \cite{Georges2024} szereztem.\\
 
 \textbf{Állapotok:}
 \begin{itemize}
@@ -62,7 +62,7 @@ Egy egyszerű példa egy ajtó nyitására, nyitva tartására és csukására, 
 
 \textbf{Ingerek:}
 \begin{itemize}
-	\item Az ingerek olyan események, vagy bemenetek, amelyek átmenetet ered\-ményeznek az automatán belül. Lehetnek pl. felhasználói parancsok, szenzor érzékelések, hálózati üzenetek, stb.
+	\item Az ingerek olyan események, vagy bemenetek, amelyek átmfenetet ered\-ményeznek az automatán belül. Lehetnek pl. felhasználói parancsok, szenzor érzékelések, hálózati üzenetek, stb.
 \end{itemize}
 
 \textbf{Válaszok:}
@@ -82,9 +82,11 @@ Egy rendszeren belül, vegyünk most egy játékot példának, akármilyen objek
 	\item a fegyver állapota, amivel támadni akarunk (készenlétben, töltődik újra, elhasználva).
 \end{itemize}
 
-Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közben vagyunk és látjuk, hogy a csúszás végeztével, ott lesz egy ellenfél. Ezért elővesszük a fegyverünket, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk a világ egyes elemeinek a jelenlegi állapotával, könnyen felismerhetővé és beszédessé tehetjük azokat. Megkönnyebbítve nem csak a magunk dolgát a hibakeresésben, de a játékosét is, ezzel elkerülve a félreértéseket.\\
-Amikor egy rendszernél állapotgépeket használunk, akkor általában kéz-a-kézben jár a "kompozíció", és az "öröklődés" használata mint Objektum Orientált Programozásban használt tervezési minta. Ahhoz, hogy jobban megértsük hogyan is nézne ez ki kódban kezdésként készítettem egy mintaprogramot, amely egy egyszerű jelzőlámpa működését mutatja be.\\
-Elsőként is létrehoztam egy vázat az állapotok számára, minden állapot egy külön Node lesz a Godot-n belül. Ez egy minta osztály, amit valójában nem fogunk futtatni mint script, ezt csak örökölni fogják az egyes állapotaink.\\
+Vegyük észre, hogy az állapotok kihathatnak egymásra is, példaképpen: A karakterrel éppen csúszás közben vagyunk és látjuk, hogy a csúszás végeztével, ott lesz egy ellenfél. Ezért elővesszük a fegyverünket, de ki van fogyva és ez átrak minket az "újratöltés" animációba, ami miatt csak belecsapódunk az ellenfélbe, a támadás helyett. Azzal, hogy mindig tisztában vagyunk a világ egyes elemeinek a jelenlegi állapotával, könnyen felismerhetővé és beszédessé tehetjük azokat. Megkönnyebbítve nem csak a magunk dolgát a hibakeresésben, de a játékosét is, ezzel elkerülve a félreértéseket.
+
+Amikor egy rendszernél állapotgépeket használunk, akkor általában kéz-a-kézben jár a "kompozíció", és az "öröklődés" használata mint Objektum Orientált Programozásban használt tervezési minta. Ahhoz, hogy jobban megértsük hogyan is nézne ez ki kódban kezdésként készítettem egy mintaprogramot, amely egy egyszerű jelzőlámpa működését mutatja be.
+
+Elsőként is létrehoztam egy vázat az állapotok számára, minden állapot egy külön Node lesz a Godot-n belül. Ez egy minta osztály, amit valójában nem fogunk futtatni mint szkript, ezt csak örökölni fogják az egyes állapotaink.
 
 \lstset{style=sharpc}
 \begin{lstlisting}
@@ -133,7 +135,7 @@ public override void _Ready()
 }
 \end{lstlisting}
 
-A State scriptükkel ellentétben a StateMachine script hozzá lesz csatolva egy Node-hoz. Amint az objektum, amely hierarchiáján belül elhelyezkedik az állapotgépünk, belép a színtérbe a StateMachine script elindul és egyből futtatja a "\_Ready" metódusát. A Godot-n belül minden Node rendelkezik egy ilyen metódussal, ez csak egyszer fog meghívásra kerülni és azt a célt szolgálja, hogy alaphelyzetbe állítsa a Node-ot.
+A State scriptükkel ellentétben a StateMachine szkript hozzá lesz csatolva egy Node-hoz. Amint az objektum, amely hierarchiáján belül elhelyezkedik az állapotgépünk, belép a színtérbe a StateMachine szkript elindul és egyből futtatja a "\_Ready" metódusát. A Godot-n belül minden Node rendelkezik egy ilyen metódussal, ez csak egyszer fog meghívásra kerülni és azt a célt szolgálja, hogy alaphelyzetbe állítsa a Node-ot.
 
 A mi esetünkben "\_states", avagy "állapotok" nevű változót inicializáljuk, amely egy olyan Dictionary lesz, ami tárolja az összes olyan "State" osztályú Node-ot, amik ez alá a StateMachine Node alá vannak rendelve. Kulcsként az Node nevét fogjuk használni és értékként magát a Node-ot. Ezt nagyon egyszerűen meg tudjuk tenni a "GetChildren" metódussal. Itt térek vissza az előbbi kijelentésemre, muszáj volt megtartani a "State" osztályt Node-ként, mivel a "GetChildren" beépített metódus Node típusú változókat ad vissza, ha absztrakt osztályként írtam volna meg a "State"-et, akkor hibát dobna itt. Amint találtunk egy ilyen Node-ot, felvesszük a Dictionary-be, eltároljuk a nevét mint kulcs, beállítjuk a hozzá tartozó állapotgépet a jelenlegire és meghívjuk a "\_Ready" és "Exit" metódusait, hogy alaphelyzetbe hozzuk. Ezen kívül van még egy "initialState" és egy "\_currentState" nevű változónk is.
 

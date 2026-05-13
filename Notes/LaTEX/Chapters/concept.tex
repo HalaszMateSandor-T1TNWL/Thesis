@@ -14,9 +14,9 @@ A használt technológiákat két részre osztanám fel: \textbf{szoftver} és \
 
 \textbf{Szoftver szempontjából:}
 \begin{itemize}
-	\item \href{https://www.blender.org/download/}{\underline{Blender}}\cite{Blender}-t használtam a 3Ds modellek elkészítéséhez.
-	\item \href{https://krita.org/en/}{\underline{Krita}}\cite{Krita}-t használtam a modellek textúráinak megrajzolásához.
-	\item A diagramok megszerkesztéséhez \href{https://www.drawio.com/}{\underline{Draw.io}}\cite{Draw.io}-t használtam.
+	\item \href{https://www.blender.org/download/}{\underline{Blender}} \cite{Blender}-t használtam a 3Ds modellek elkészítéséhez.
+	\item \href{https://krita.org/en/}{\underline{Krita}} \cite{Krita}-t használtam a modellek textúráinak megrajzolásához.
+	\item A diagramok megszerkesztéséhez \href{https://www.drawio.com/}{\underline{Draw.io}} \cite{Draw.io}-t használtam.
 	\item A verziókövetéshez Git-et használtam.
 \end{itemize}
 
@@ -103,7 +103,7 @@ Ahhoz, hogy pontosan replikálni tudjam ezeket a tulajdonságokat mélyen bele k
 	\label{BRCF_Logo}
 \end{figure}
 
-A játék teljes mértékben a JSR-t veszi alapul és megpróbálja replikálni a játékot annyira, amennyire csak tudja, miközben újít és iterál a meglévő koncepciókon. A játékmenet kifinomultabb, mint a JSR-nak, de képes megtartani azt az érzést, amit annak idején az elődje keltet. A \ref{BRCF_InAction} ábra is átadja ezt az érzést. A Team Reptile leírása alapján: "Dion Koster elmevilágában, ahol saját-stílusú bandák személyi jetpack-ekkel vannak felruházva, a graffiti művészet új magaslatokba szárnyal. Vágj bele te is a világba és táncolj, fess, trükköz, verd vissza a korrupt rendőrséget és foglald el a város minden zegét-zugát egy alternatív jövőben, amit életre kelt Hideki Naganuma zenéje"\cite{reptile2020}.
+A játék teljes mértékben a JSR-t veszi alapul és megpróbálja replikálni a játékot annyira, amennyire csak tudja, miközben újít és iterál a meglévő koncepciókon. A játékmenet kifinomultabb, mint a JSR-nak, de képes megtartani azt az érzést, amit annak idején az elődje keltet. A \ref{BRCF_InAction} ábra is átadja ezt az érzést. A Team Reptile leírása alapján: "Dion Koster elmevilágában, ahol saját-stílusú bandák személyi jetpack-ekkel vannak felruházva, a graffiti művészet új magaslatokba szárnyal. Vágj bele te is a világba és táncolj, fess, trükköz, verd vissza a korrupt rendőrséget és foglald el a város minden zegét-zugát egy alternatív jövőben, amit életre kelt Hideki Naganuma zenéje" \cite{reptile2020}.
 
 \begin{figure}[H]
 	\centering
@@ -217,3 +217,136 @@ Valamint a földön történő mozgáscsoport hármasa a \ref{GroundedTrio} ábr
 \end{figure}
 
 Ezen mozgáscsoportok közötti átjárást az \textbf{ugrás} cselekvés biztosítja, ami további mozgáslehetőségeket tár fel. Név szerint a dupla ugrás (DoubleJump) és a levegőbeli mozgás (InAirMovement), amikbe a már megszokott "MOVEMENT" cselekvés és "SPACE" gomb lenyomásával tud a felhasználó eljutni.
+
+\subsection{Osztályok}
+
+Az osztályok megtervezéséhez UML osztálydiagrammokat használtam. Első sorban a már \hyperref[subsec:Prog]{\ref{subsec:Prog} alfejezetben} is bemutattot StateMachine és State osztályokat fejlesztettem tovább úgy, hogy jobban illeszkedjenek a mi felhasználásunkhoz.
+
+Kezdve a StateMachine osztállyal, amit átneveztem egy jobban illő "PlayerController" névre. Ahogyan a \ref{PlayerController} ábrán is látható nem változott sokat az előző implementációtól. A módosításokhoz tartozik egy "ui" nevű Control típusú változó, amely a Godot-n belül egy Node, ami a kétdimenziós felületeket veszi maga alá, ebben az esetben arra kell, hogy egy felhasználói felületet alkosson, amin követni tudjuk a jelenlegi állapotokat, valamint egy új Dictionary "elements" néven, a megjeleítéshez szükséges CheckBox Node-ok referenciáit tárolja. Ezeken kívül három metódus lett még hozzáadva: az OnTransitionTo, OnSetMovementState és az OnSetMovementDirection. Ezek mind a Player osztályból jövő jelek (Signal) fogadására vannak.
+
+\begin{figure}[H]
+	\centering
+	 \includegraphics[width=\linewidth]{Diagrams/PlayerController.png}
+	\caption{A PlayerController osztálydiagramja}
+	\label{PlayerController}
+\end{figure}
+
+A State osztály még kevesebbet változott. Ahogy a \ref{State} ábrán is látható három attribútummal bővült az osztály: gravity, parent és movementDirection. A "parent" a játékos Node-ra tart egy referenciát, hogy annak a változóihoz hozzá tudjon jutni, ha arra szükség lenne. A "movementDirection" a mozgás kiszámításához tartozik, a gravity, pedig a gravitációs erőnek, ugráskor.
+
+\begin{figure}[H]
+	\centering
+	 \includegraphics[width=\linewidth]{Diagrams/State.png}
+	\caption{A State osztálydiagramja}
+	\label{State}
+\end{figure}
+
+A Player osztály a játékost írja le. Itt kerül kiszámításra a mozgási irány és a kamera mozgása.  Ahogyan a \ref{Player} ábrán is látható ez egy eléggé nagy osztály, viszont többnyire csak változókkal van tele, amiket az állapotgépünk figyel.  Ezek közül a legfontosabb értékek nekünk a movementDirection, grounded, shapeCast és anim változók.
+
+A movementDirection a játékos mozgási irányának a tárolására van. Ezt  adjuk tovább majd az egyes állapotoknak. A grounded változónk tárolja a játékos földön létét. A shapeCast egy ShapeCast3D objektumot tárol. Ezek az objektumok felvesznek egy primitív alakzatot és annak a határvonalait használja ütközésviszgálatra, akármi, ami ezen az alakzaton belül van, azt le lehet kérdezni. Végül az anim változó animációkat tárol a játékos modellünkhöz, ezeket el tudjuk indítani és meg tudjuk állítani.
+
+A PlayerState változónk egy enum, amely a meglévő állapotokat tárolja. Minden frame kirajzolásánál a jelenlegi állapotot, amit a CurrentState változóban tárolunk, továbbdobjuk a PlayerControllernek, ami ezek után átlökődik abba az állapotba.
+
+\begin{figure}[H]
+	\centering
+	 \includegraphics[width=\linewidth]{Diagrams/Player.png}
+	\caption{A Player osztálydiagramja}
+	\label{Player}
+\end{figure}
+\newpage
+
+A \ref{Inheritance} ábrán láthatjuk az összes állapotot, amelyet a State osztályból származtatunk le.  A tervezett állapotaink az Idle, a Running, a Jumping, a Falling és a Grinding állapotok, ezekről bővebben beszámolok majd a \hyperref[chap:implementation]{\ref{chap:implementation} fejezetben}.
+
+\begin{figure}[H]
+	\centering
+	 \includegraphics[width=\linewidth]{Diagrams/Inheritance.png}
+	\caption{Az állapotok osztálydiagramja}
+	\label{Inheritance}
+\end{figure}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\centering
+		 \includegraphics[width=0.9\textwidth]{Diagrams/Idle.png}
+		\caption{Az Idle osztálydiagramja}
+		\label{Idle}
+	\end{figure}
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.4\textwidth}
+	Ahogy a \ref{Idle} ábrán is látható Idle állapot a karakter egyhelyben állásáért felelős és kiegészül egy speed, accel és velocity változóval.
+\end{minipage}
+\vspace{1cm}
+
+\begin{minipage}{0.4\textwidth}
+	A \ref{Running} ábrán látható Running állapot a karakter mozgásáért felelős állapot. A már említett speed, accel és velocity változókon kívül kiegészül még egy rotationSpeed, lastMoveDirection és meshRoot változókkal. A lastMoveDirection, rotationSpeed és meshRoot változók a modell forgatásához kell, hogy ugyan abba az irányba nézzen, amelybe megy.
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\centering
+		 \includegraphics[width=\textwidth]{Diagrams/Running.png}
+		\caption{A Running osztálydiagramja}
+		\label{Running}
+	\end{figure}
+\end{minipage}
+\vspace{1cm}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\centering
+		 \includegraphics[width=0.9\textwidth]{Diagrams/Jumping.png}
+		\caption{A Jumping osztálydiagramja}
+		\label{Jumping}
+	\end{figure}
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.4\textwidth}
+	A \ref{Jumping} ábrán Jumping állapot a karakter ugrásáért felelős. Kiegészül a jumpForce, velocity és shapeCast változókkal és DisableEventHandler metódussal. Az ugráshoz fontos jumpForce befolyásolja, hogy milyen erővel rugaszkodik el a karakter a földtől.
+\end{minipage}
+\vspace{1cm}
+
+\begin{minipage}{0.4\textwidth}
+	A \ref{Falling} ábrán látható Falling állapot az ugrást követő esésnek a lebonyolítására szolgál, valamint ügyel arra, hogy a levegőben töltött idő közben a játékosnak legyen egy kis irányítása a karakter felett. Kiegészül az eséshez szükséges mass változóval, a mozgáshoz szükséges: velocity, accel és speed változókkal. Valamint a forgáshoz szükséges: meshRoot, rotationSpeed és lastMoveDirection változókkal.
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\centering
+		 \includegraphics[width=\textwidth]{Diagrams/Falling.png}
+		\caption{A Falling osztálydiagramja}
+		\label{Falling}
+	\end{figure}
+\end{minipage}
+\vspace{1cm}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+		\centering
+		 \includegraphics[width=0.9\textwidth]{Diagrams/Grinding.png}
+		\caption{A Grinding osztálydiagramja}
+		\label{Grinding}
+	\end{figure}
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.4\textwidth}
+	A \ref{Grinding} ábrán látható Grinding állapot felelős a csúszásért különböző erre alkalmas felületeken. Kiegészül egy usedRail, grindCast, grindSpeed és grindDrag változókkal, és a StartRail metódussal. Érdemes megjegyezni, hogy a usedRail RailGrinding típusú, tehát függősége lesz a Grinding osztálynak a RailGrinding osztály, ahogy azt a \ref{RailGrinding-Grinding} ábra is mutatja.
+\end{minipage}
+\vspace{1cm}
+
+A \ref{RailGrinding-Grinding} ábrán szintúgy látható RailGrinding osztály maguknak a csúszásra alkalmas objektumoknak a vezérlését felügyelik. Rendelkezik egy path és egy pathFollow változóval, valamint a Ready és CalculateTargetRailPoint metódusokkal. A path változó magát az utat tárolja, amit a játékos csúszás közben követni fog és a pathFollow ennek az útnak a pontjait tárolja.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=489px , width=270px]{Diagrams/Grinding-RailGrinding.png}
+	\caption{A Grinding és RailGrinding közötti kapcsolat}
+	\label{RailGrinding-Grinding}
+\end{figure}
+
+A \ref{StateUse} ábra mutatja a PlayerController és a többi állapot közötti kapcsolatot. A PlayerController felhasználja az egyes állapotok metódusait, ezért függőség alakul ki köztük. Amikor az állapotgéphez hozzáadunk egy új állapotot ez a függőség egyből létrejön.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.8\linewidth , angle=-90]{Diagrams/StateUses.png}
+	\caption{A PlayerController és a többi állapot kapcsolata}
+	\label{StateUse}
+\end{figure}
