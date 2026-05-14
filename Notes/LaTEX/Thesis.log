@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  13 MAY 2026 21:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.7)  14 MAY 2026 12:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2075,11 +2075,11 @@ File: Images/InEditorShot.png Graphic file (type png)
 <use Images/InEditorShot.png>
 Package pdftex.def Info: Images/InEditorShot.png  used on input line 240.
 (pdftex.def)             Requested size: 390.0pt x 204.13986pt.
-<Images/PlayerSceneFinal.png, id=778, 1119.43219pt x 712.16063pt>
+<Images/PlayerSceneFinal.png, id=778, 1112.65688pt x 709.14937pt>
 File: Images/PlayerSceneFinal.png Graphic file (type png)
 <use Images/PlayerSceneFinal.png>
 Package pdftex.def Info: Images/PlayerSceneFinal.png  used on input line 249.
-(pdftex.def)             Requested size: 390.0pt x 248.10808pt.
+(pdftex.def)             Requested size: 390.0pt x 248.56308pt.
 
 
 
@@ -2517,8 +2517,14 @@ L3 programming layer <2025-01-18>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A65ABFDB2FDE3C7097ED92D82B1D9014;4456.
+
+Package rerunfilecheck Warning: File `Thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Thesis.out':
+(rerunfilecheck)             Before: A65ABFDB2FDE3C7097ED92D82B1D9014;4456
+(rerunfilecheck)             After:  DF9BB644A5FA96122775252453130D60;4316.
  ) 
 Here is how much of TeX's memory you used:
  14992 strings out of 475135
@@ -2541,7 +2547,7 @@ lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt12.pfb>
-Output written on Thesis.pdf (69 pages, 4173803 bytes).
+Output written on Thesis.pdf (69 pages, 4193969 bytes).
 PDF statistics:
  1080 PDF objects out of 1200 (max. 8388607)
  878 compressed objects within 9 object streams

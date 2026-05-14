@@ -4,6 +4,7 @@ public partial class Grinding : State
 {
 	private RailGrinding _usedRail = null;
 	private ShapeCast3D _grindCast;
+	private Node3D _meshroot;
 
 	[Export] public float grindSpeed = 2f;
 	[Export] public float grindDrag = 5f;
@@ -13,6 +14,7 @@ public partial class Grinding : State
 		_grindCast = GetNode<ShapeCast3D>($"../../../ShapeCast3D");
 
 		parent = GetNode<Player>($"../../..");
+		_meshroot = GetNodeOrNull<Node3D>($"../..");
 		
 		if(_usedRail == null) StartRail();
   	}
@@ -43,7 +45,6 @@ public partial class Grinding : State
 
 			_usedRail.CalculateTargetRailPoint(parent.GlobalPosition);
 			
-			parent.GlobalRotation = _usedRail.pathFollow.GlobalRotation;
 		}
 	}
 
@@ -53,7 +54,7 @@ public partial class Grinding : State
 		{
 			_usedRail.pathFollow.ProgressRatio = 0.0f;
 			_usedRail = null;
-			parent.GlobalRotation = new Vector3(0,0,0);
+			parent.GlobalRotation = Vector3.Zero;
 		}
 	}
 }

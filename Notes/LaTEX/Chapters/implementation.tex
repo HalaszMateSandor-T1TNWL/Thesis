@@ -24,7 +24,7 @@ Ezt a színteret a játékos gyökér Node-jának kiválasztásával kezdtem. A 
 	\item \textbf{CollisionShape3D:} Egy átlátszó polygon háló, amely az ütközésvizsgá\-lathoz szükséges, független a MeshInstance3D által előállított polygon hálótól.
 \end{itemize}
 
-\section{RigidBody vs CharacterBody}
+\section[Rigid vs Character]{RigidBody vs CharacterBody}
 
 A játékos szülőjének két típust szoktak gyakran megválasztani platformerek esetén: a CharacterBo\-dy3D-t és a RigidBody3D-t. A lényeges dolog, amiben a kettő eltér egymászól, az hogy hogyan mozgathatod a testet. A CharacterBody3D típus esélyt ad neked arra, hogy egy saját fizikai motort implementálj, hogy a játékod a lehető legjobbnak érződjön, míg a RigidBody3D a valós fizika szabályai szerint jár el. Egy játék esetében szerintem világosan látható, hogy nem a való világot szeretnénk szimulálni, hanem a lehető legjobb élményt szeretnénk nyújtani a játékosunknak, így olyanra írjuk meg a gravitációt, az ugrás magasságát, a gyorsulást, a súrlódást, stb, hogy az a játékos számára a legjobb játékérzést nyújtsa. A RigidBody3D típus alkalmazásával ezek a lehetőségek mind elvesznének és a Godot alap fizikai motorjára lennénk utalva.\\
 
@@ -87,7 +87,7 @@ Valamint az átnevezett PlayerController osztályon belül:
 
 A PlayerController szkriptet hozzácsatoltam a megosztozó nevű PlayerController Node-ra a játékos színterén belül. A State osztály meghagyjuk magát nem csatoltam hozzá semmihez, ezt csak arra használtam, hogy az állapotokat ebből az osztályból tudjam leszármaztatni.
 
-\section{Az állapotok megvalósítása}
+\section[Állapotok]{Az állapotok megvalósítása}
 
 Ha visszaemlékeznek, a \hyperref[chap:Concept]{\ref{chap:Concept}. fejezet}, \hyperref[subsec:States]{\ref{subsec:States}. alszakaszában} vázoltam az állapotgé\-pet és a különböző tervezett állapotokat és az azok közötti átmenetet. Most ezek megvalósításáról szeretnék beszélni.
 Mindegyik állapot implementációját röviden át fogom beszélni és a fontosabbakat ki fogom emelni és bele fogok menni a matekba is háttérben. A kódot nem minden esetben fogom ide beírni, viszont a CD mellékletben megtalálják a forráskódot, valamint a \hyperref[cover:UseCase]{\ref{cover:UseCase} CD Használati útmutató oldalon} elmondottak alapján tudják követni részletesebben a kódot.\\

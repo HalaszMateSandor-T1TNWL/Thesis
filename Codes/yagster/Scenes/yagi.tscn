@@ -114,6 +114,11 @@ grindSpeed = 3.5
 [node name="CoolNewState" type="Node" parent="Yagi/PlayerController" unique_id=637508978]
 script = ExtResource("11_gr6mo")
 
+[node name="RayCast3D" type="RayCast3D" parent="Yagi" unique_id=1214762192]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3.9307978, 0)
+target_position = Vector3(0, 0, -1)
+debug_shape_custom_color = Color(1, 0, 1, 1)
+
 [connection signal="SetMovementDirection" from="." to="Yagi/PlayerController" method="OnSetMovementDirection"]
 [connection signal="SetMovementState" from="." to="Yagi/PlayerController" method="OnSetMovementState"]
 [connection signal="SetCameraDirection" from="CamRoot" to="Yagi/PlayerController" method="OnSetCameraDirection"]

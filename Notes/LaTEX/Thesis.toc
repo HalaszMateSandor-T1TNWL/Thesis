@@ -14,10 +14,10 @@
 \contentsline {subsection}{\numberline {3.6.2}Osztályok}{25}{subsection.3.6.2}%
 \contentsline {chapter}{\numberline {4}Megvalósítás}{34}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Az alapok}{34}{section.4.1}%
-\contentsline {section}{\numberline {4.2}RigidBody vs CharacterBody}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Rigid vs Character}{35}{section.4.2}%
 \contentsline {section}{\numberline {4.3}A játékos színtere}{36}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Módosítások}{38}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Az állapotok megvalósítása}{39}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Állapotok}{39}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Modellezés és Textúrázás}{45}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Új állapot Hozzáadása}{49}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Tesztelés}{55}{chapter.5}%
